@@ -15,12 +15,12 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "clever-ruby"
-  gem.homepage = "http://github.com/rgarcia/clever-ruby"
+  gem.homepage = "http://github.com/Clever/clever-ruby"
   gem.license = "MIT"
   gem.summary = %Q{TODO: one-line summary of your gem}
   gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "rgarcia2009@gmail.com"
-  gem.authors = ["Rafael Garcia"]
+  gem.email = "ruby@getclever.com"
+  gem.authors = ["Rafael Garcia","Alex Zylman"]
   # dependencies defined in Gemfile
 end
 #Jeweler::RubygemsDotOrgTasks.new
