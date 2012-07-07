@@ -1,5 +1,5 @@
 module Clever
   class Student
-    include Stripe::APIOperations::List
+    include Clever::APIOperations::List
   end
 end
