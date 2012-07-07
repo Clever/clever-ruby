@@ -17,7 +17,7 @@ module Clever
 
     def refresh
       response, api_key = Clever.request(:get, url, @api_key)
-      refresh_from(response, api_key)
+      refresh_from(response[:data], api_key)
       self
     end
 
