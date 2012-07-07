@@ -96,6 +96,12 @@ module Clever
       @values.each(&blk)
     end
 
+    def ==( other )
+      if other.respond_to?( :values )
+        self.values == other.values
+      end
+    end
+
     protected
 
     def metaclass
