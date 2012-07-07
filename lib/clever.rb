@@ -1,4 +1,7 @@
+require 'rest_client'
+
 require 'clever/util'
+require 'clever/json'
 
 module Clever
   @@api_key = nil
