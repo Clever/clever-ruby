@@ -87,6 +87,8 @@ module Clever
     [resp, api_key]
   end
 
+  private
+
   def self.execute_request(opts)
     RestClient::Request.execute(opts)
   end
