@@ -38,7 +38,13 @@ class TestClever < Test::Unit::TestCase
 
   should "retrieves teachers" do
     Clever.api_key = "DEMO_KEY"
-    Clever::Teacher.all()
+    teachers = Clever::Teacher.all()
+    for teacher in teachers
+    	teacher_obj = Clever::Teacher.retrieve teacher.id
+    	assert_instance_of(Clever::Teacher, teacher)
+    	assert_instance_of(Clever::Teacher, teacher_obj)
+    	assert_equal(teacher, teacher_obj)
+    end
   end
 
 end

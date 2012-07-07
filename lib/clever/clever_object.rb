@@ -13,11 +13,7 @@ module Clever
     def initialize(id=nil, api_key=nil)
       @api_key = api_key
       @values = {}
-      # This really belongs in APIResource, but not putting it there allows us
-      # to have a unified inspect method
-      @unsaved_values = Set.new
-      @transient_values = Set.new
-      self.id = id if id
+      @values[:id] = id if id
     end
 
     def self.construct_from(values, api_key=nil)
@@ -40,9 +36,6 @@ module Clever
 
       removed = partial ? Set.new : Set.new(@values.keys - values.keys)
       added = Set.new(values.keys - @values.keys)
-      # Wipe old state before setting new.  This is useful for e.g. updating a
-      # customer, where there is no persistent card parameter.  Mark those values
-      # which don't persist as transient
 
       instance_eval do
         remove_accessors(removed)
@@ -50,16 +43,12 @@ module Clever
       end
       removed.each do |k|
         @values.delete(k)
-        @transient_values.add(k)
-        @unsaved_values.delete(k)
       end
       values.each do |k, v|
         # Stripe apparently allows you to have nested object types (e.g.
         # InvoiceList of Charges). We don't and this was breaking our code
         # @values[k] = Util.convert_to_clever_object(v, api_key)
         @values[k] = v
-        @transient_values.delete(k)
-        @unsaved_values.delete(k)
       end
     end
 
@@ -96,6 +85,12 @@ module Clever
       @values.each(&blk)
     end
 
+    def ==( other )
+      if other.respond_to?( :values )
+        self.values == other.values
+      end
+    end
+
     protected
 
     def metaclass
@@ -121,33 +116,14 @@ module Clever
           define_method(k) { @values[k] }
           define_method(k_eq) do |v|
             @values[k] = v
-            @unsaved_values.add(k)
           end
         end
       end
     end
 
     def method_missing(name, *args)
-      # TODO: only allow setting in updateable classes.
-      if name.to_s.end_with?('=')
-        attr = name.to_s[0...-1].to_sym
-        @values[attr] = args[0]
-        @unsaved_values.add(attr)
-        add_accessors([attr])
-        return
-      else
-        return @values[name] if @values.has_key?(name)
-      end
-
-      begin
-        super
-      rescue NoMethodError => e
-        if @transient_values.include?(name)
-          raise NoMethodError.new(e.message + ".  HINT: The '#{name}' attribute was set in the past, however.  It was then wiped when refreshing the object with the result returned by Clever's API, probably as a result of a save().  The attributes currently available on this object are: #{@values.keys.join(', ')}")
-        else
-          raise
-        end
-      end
+      return @values[name] if @values.has_key?(name)
+      super
     end
   end
 end
