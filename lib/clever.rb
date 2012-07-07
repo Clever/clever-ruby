@@ -11,7 +11,11 @@ require 'clever/json'
 # Resources
 require 'clever/clever_object'
 require 'clever/api_resource'
+require 'clever/district'
+require 'clever/school'
 require 'clever/student'
+require 'clever/section'
+require 'clever/teacher'
 
 # Errors
 require 'clever/errors/clever_error'
