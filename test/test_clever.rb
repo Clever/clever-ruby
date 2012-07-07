@@ -27,7 +27,8 @@ class TestClever < Test::Unit::TestCase
 
   should "retrieves students" do
     Clever.api_key = "DEMO_KEY"
-    Clever::Student.all()
+    students = Clever::Student.all()
+    student = students[0]
   end
 
   should "retrieves sections" do
