@@ -1,8 +1,17 @@
 require 'rest_client'
 require 'multi_json'
 
+# API operations
+require 'clever/api_operations/list'
+
+# Helpers
 require 'clever/util'
 require 'clever/json'
+
+# Resources
+require 'clever/clever_object'
+require 'clever/api_resource'
+require 'clever/student'
 
 module Clever
   @@api_key = nil

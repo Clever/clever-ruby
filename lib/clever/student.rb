@@ -1,5 +1,5 @@
 module Clever
-  class Student
+  class Student < APIResource
     include Clever::APIOperations::List
   end
 end
