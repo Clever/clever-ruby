@@ -54,7 +54,10 @@ module Clever
         @unsaved_values.delete(k)
       end
       values.each do |k, v|
-        @values[k] = Util.convert_to_clever_object(v, api_key)
+        # Stripe apparently allows you to have nested object types (e.g.
+        # InvoiceList of Charges). We don't and this was breaking our code
+        # @values[k] = Util.convert_to_clever_object(v, api_key)
+        @values[k] = v
         @transient_values.delete(k)
         @unsaved_values.delete(k)
       end
