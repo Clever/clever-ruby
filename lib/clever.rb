@@ -13,6 +13,10 @@ require 'clever/clever_object'
 require 'clever/api_resource'
 require 'clever/student'
 
+# Errors
+require 'clever/errors/clever_error'
+require 'clever/errors/authentication_error'
+
 module Clever
   @@api_key = nil
   @@api_base = 'https://api.getclever.com/v1.1/'
@@ -113,5 +117,36 @@ module Clever
     end
     message += "\n\n(Network error: #{e.message})"
     raise APIConnectionError.new(message)
+  end
+
+  def self.handle_api_error(rcode, rbody)
+    begin
+      error_obj = Clever::JSON.load(rbody)
+      error_obj = Util.symbolize_names(error_obj)
+      error = error_obj[:error] or raise StripeError.new # escape from parsing
+    rescue MultiJson::DecodeError, StripeError
+      raise APIError.new("Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode})", rcode, rbody)
+    end
+
+    case rcode
+    when 400, 404 then
+      raise invalid_request_error(error, rcode, rbody, error_obj)
+    when 401
+      raise authentication_error(error, rcode, rbody, error_obj)
+    else
+      raise api_error(error, rcode, rbody, error_obj)
+    end
+  end
+
+  def self.invalid_request_error(error, rcode, rbody, error_obj)
+    InvalidRequestError.new(error[:message], error[:param], rcode, rbody, error_obj)
+  end
+
+  def self.authentication_error(error, rcode, rbody, error_obj)
+    AuthenticationError.new(error[:message], rcode, rbody, error_obj)
+  end
+
+  def self.api_error(error, rcode, rbody, error_obj)
+    APIError.new(error[:message], rcode, rbody, error_obj)
   end
 end
