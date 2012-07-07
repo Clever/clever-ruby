@@ -16,6 +16,7 @@ require 'clever/student'
 # Errors
 require 'clever/errors/clever_error'
 require 'clever/errors/authentication_error'
+require 'clever/errors/api_error'
 
 module Clever
   @@api_key = nil
@@ -51,11 +52,9 @@ module Clever
       payload = params
     end
 
-    headers = {
-      :authorization => "Basic #{api_key}"
-    }.merge(headers)
-
     opts = {
+      :user => api_key,
+      :password => "",
       :method => method,
       :url => url,
       :headers => headers,
