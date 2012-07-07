@@ -2,7 +2,7 @@ require 'clever/util'
 
 module Clever
   @@api_key = nil
-  @@api_base = 'https://api.getclever.com/v1.1'
+  @@api_base = 'https://api.getclever.com/v1.1/'
 
   def self.api_url(url='')
     @@api_base + url
