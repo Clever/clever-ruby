@@ -4,7 +4,7 @@ module Clever
       module ClassMethods
         def all(filters={}, api_key=nil)
           response, api_key = Clever.request(:get, url, api_key, filters)
-          Util.convert_to_clever_object(response, api_key)
+          Util.convert_to_clever_object(response[:data], api_key)
         end
       end
 
