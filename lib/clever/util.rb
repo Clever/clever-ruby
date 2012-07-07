@@ -17,6 +17,11 @@ module Clever
 
     def self.convert_to_clever_object(resp, api_key)
       types = {
+          'students' => Student,
+          'sections' => Section,
+          'teachers' => Teacher,
+          'districts' => District,
+          'schools' => School
       }
       case resp
       when Array
