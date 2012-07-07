@@ -1,4 +1,5 @@
 require 'rest_client'
+require 'multi_json'
 
 require 'clever/util'
 require 'clever/json'
