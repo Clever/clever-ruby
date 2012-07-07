@@ -28,7 +28,6 @@ module Clever
         resp.map { |i| convert_to_clever_object(i, api_key) }
       when Hash
         # Try converting to a known object class.  If none available, fall back to generic APIResource
-        puts resp
         # match = /\/v1.1\/([a-z]+)\/\S+$/.match(resp[:uri])
         # puts match[1].inspect
         if klass_name = /\/v1.1\/([a-z]+)\/\S+$/.match(resp[:uri])[1]

@@ -15,25 +15,25 @@ class TestClever < Test::Unit::TestCase
     assert_equal("https://api.getclever.com/v1.1/teachers", Clever.api_url("teachers"))
   end
 
-  # should "retrieves districts" do
-  #   Clever.api_key = "DEMO_KEY"
-  #   Clever::District.all()
-  # end
+  should "retrieves districts" do
+    Clever.api_key = "DEMO_KEY"
+    Clever::District.all()
+  end
 
-  # should "retrieves schools" do
-  #   Clever.api_key = "DEMO_KEY"
-  #   Clever::School.all()
-  # end
+  should "retrieves schools" do
+    Clever.api_key = "DEMO_KEY"
+    Clever::School.all()
+  end
 
-  # should "retrieves students" do
-  #   Clever.api_key = "DEMO_KEY"
-  #   Clever::Student.all()
-  # end
+  should "retrieves students" do
+    Clever.api_key = "DEMO_KEY"
+    Clever::Student.all()
+  end
 
-  # should "retrieves sections" do
-  #   Clever.api_key = "DEMO_KEY"
-  #   Clever::Section.all()
-  # end
+  should "retrieves sections" do
+    Clever.api_key = "DEMO_KEY"
+    Clever::Section.all()
+  end
 
   should "retrieves teachers" do
     Clever.api_key = "DEMO_KEY"
