@@ -8,6 +8,7 @@ class TestClever < Test::Unit::TestCase
   end
 
   should "return an api url" do
-  	assert_equal("https://api.getclever.com/v1.1/students", Clever.api_url("students"))
+    assert_equal("https://api.getclever.com/v1.1/students", Clever.api_url("students"))
   end
+
 end
