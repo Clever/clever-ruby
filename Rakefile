@@ -12,11 +12,10 @@ end
 task :default => :test
 
 require 'rdoc/task'
+require 'clever-ruby/version'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "clever-ruby #{version}"
+  rdoc.title = "clever-ruby #{Clever::VERSION}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
