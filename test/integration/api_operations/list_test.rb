@@ -7,14 +7,18 @@ class ListTest < Test::Unit::TestCase
 
   should "retrieve districts" do
     VCR.use_cassette("districts") do
-      Clever::District.all
+      @districts = Clever::District.all
     end
+
+    @districts.count.must_equal 1
   end
 
   should "retrieve schools" do
     VCR.use_cassette("schools") do
-      Clever::School.all
+      @schools = Clever::School.all
     end
+
+    @schools.count.must_equal 4
   end
 
   should "retrieve students" do
@@ -22,13 +26,15 @@ class ListTest < Test::Unit::TestCase
       @students = Clever::Student.all
     end
 
-    student = @students[0]
+    @students.count.must_equal 100
   end
 
   should "retrieve sections" do
     VCR.use_cassette("sections") do
-      Clever::Section.all
+      @sections = Clever::Section.all
     end
+
+    @sections.count.must_equal 44
   end
 
   should "retrieve teachers" do
