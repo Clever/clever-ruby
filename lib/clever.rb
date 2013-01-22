@@ -1,6 +1,8 @@
 require 'rest_client'
 require 'multi_json'
 
+require 'clever/version'
+
 # API operations
 require 'clever/api_operations/list'
 
