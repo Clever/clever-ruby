@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'clever-ruby'
 
 class CleverTest < Test::Unit::TestCase
   should "set the api key" do
