@@ -10,6 +10,3 @@ end
 require 'test/unit'
 require 'shoulda'
 require 'clever-ruby'
-
-class Test::Unit::TestCase
-end
