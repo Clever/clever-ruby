@@ -1,3 +1,3 @@
-require 'test/unit'
+require 'minitest/autorun'
 require 'shoulda'
 require 'clever-ruby'
