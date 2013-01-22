@@ -40,12 +40,12 @@ module Clever
     @@api_key
   end
 
-  def self.request(method, url, api_key, params=nil, headers={})
-    api_key ||= @@api_key
-    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.api_key = <API-KEY>")') unless api_key
+  def self.request(method, url, params=nil, headers={})
+    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.api_key = <API-KEY>")') unless Clever.api_key
 
     params = Util.objects_to_ids(params)
     url = self.api_url(url)
+
     case method.to_s.downcase.to_sym
     when :get, :head, :delete
       # Make params into GET parameters
@@ -59,7 +59,7 @@ module Clever
     end
 
     opts = {
-      :user => api_key,
+      :user => Clever.api_key,
       :password => "",
       :method => method,
       :url => url,
@@ -102,7 +102,7 @@ module Clever
     end
 
     resp = Util.symbolize_names(resp)
-    [resp, api_key]
+    resp
   end
 
   private
