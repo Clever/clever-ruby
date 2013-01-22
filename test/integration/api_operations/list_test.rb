@@ -1,22 +1,23 @@
 require 'test_helper'
 
 class ListTest < Test::Unit::TestCase
-  should "retrieves districts" do
+  def setup
     Clever.api_key = "DEMO_KEY"
+  end
+
+  should "retrieves districts" do
     VCR.use_cassette("districts") do
       Clever::District.all()
     end
   end
 
   should "retrieves schools" do
-    Clever.api_key = "DEMO_KEY"
     VCR.use_cassette("schools") do
       Clever::School.all()
     end
   end
 
   should "retrieves students" do
-    Clever.api_key = "DEMO_KEY"
     VCR.use_cassette("students") do
       @students = Clever::Student.all()
     end
@@ -25,14 +26,12 @@ class ListTest < Test::Unit::TestCase
   end
 
   should "retrieves sections" do
-    Clever.api_key = "DEMO_KEY"
     VCR.use_cassette("sections") do
       Clever::Section.all()
     end
   end
 
   should "retrieves teachers" do
-    Clever.api_key = "DEMO_KEY"
     VCR.use_cassette("teachers") do
       @teachers = Clever::Teacher.all()
 
