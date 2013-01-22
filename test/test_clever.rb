@@ -1,5 +1,5 @@
 require 'helper'
-require 'clever'
+require 'clever-ruby'
 
 class TestClever < Test::Unit::TestCase
   should "set the api key" do

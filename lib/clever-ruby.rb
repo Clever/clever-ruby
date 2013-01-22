@@ -1,26 +1,28 @@
 require 'rest_client'
 require 'multi_json'
 
+require 'clever-ruby/version'
+
 # API operations
-require 'clever/api_operations/list'
+require 'clever-ruby/api_operations/list'
 
 # Helpers
-require 'clever/util'
-require 'clever/json'
+require 'clever-ruby/util'
+require 'clever-ruby/json'
 
 # Resources
-require 'clever/clever_object'
-require 'clever/api_resource'
-require 'clever/district'
-require 'clever/school'
-require 'clever/student'
-require 'clever/section'
-require 'clever/teacher'
+require 'clever-ruby/clever_object'
+require 'clever-ruby/api_resource'
+require 'clever-ruby/district'
+require 'clever-ruby/school'
+require 'clever-ruby/student'
+require 'clever-ruby/section'
+require 'clever-ruby/teacher'
 
 # Errors
-require 'clever/errors/clever_error'
-require 'clever/errors/authentication_error'
-require 'clever/errors/api_error'
+require 'clever-ruby/errors/clever_error'
+require 'clever-ruby/errors/authentication_error'
+require 'clever-ruby/errors/api_error'
 
 module Clever
   @@api_key = nil
