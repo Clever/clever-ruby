@@ -5,19 +5,19 @@ class ListTest < Test::Unit::TestCase
     Clever.api_key = "DEMO_KEY"
   end
 
-  should "retrieves districts" do
+  should "retrieve districts" do
     VCR.use_cassette("districts") do
       Clever::District.all()
     end
   end
 
-  should "retrieves schools" do
+  should "retrieve schools" do
     VCR.use_cassette("schools") do
       Clever::School.all()
     end
   end
 
-  should "retrieves students" do
+  should "retrieve students" do
     VCR.use_cassette("students") do
       @students = Clever::Student.all()
     end
@@ -25,13 +25,13 @@ class ListTest < Test::Unit::TestCase
     student = @students[0]
   end
 
-  should "retrieves sections" do
+  should "retrieve sections" do
     VCR.use_cassette("sections") do
       Clever::Section.all()
     end
   end
 
-  should "retrieves teachers" do
+  should "retrieve teachers" do
     VCR.use_cassette("teachers") do
       @teachers = Clever::Teacher.all()
 
