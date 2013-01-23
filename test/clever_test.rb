@@ -1,7 +1,6 @@
-require 'helper'
-require 'clever-ruby'
+require 'test_helper'
 
-class TestClever < Test::Unit::TestCase
+class CleverTest < Test::Unit::TestCase
   should "set the api key" do
     Clever.api_key = "DEMO_KEY"
     assert_equal("DEMO_KEY", Clever.api_key)
