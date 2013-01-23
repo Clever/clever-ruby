@@ -1,5 +1,7 @@
 # Clever::Ruby
 
+[![Build Status](https://travis-ci.org/Clever/clever-ruby.png)](https://travis-ci.org/Clever/clever-ruby)
+
 Ruby bindings to the Clever API.
 
 ## Installation
