@@ -38,13 +38,10 @@ module Clever
     def configuration
       @configuration ||= Clever::Configuration.new
     end
-  end
 
-
-  @@api_base = 'https://api.getclever.com/v1.1/'
-
-  def self.api_url(url='')
-    @@api_base + url
+    def api_url(url = '')
+      configuration.api_base + url
+    end
   end
 
   def self.request(method, url, params=nil, headers={})
