@@ -1,9 +1,10 @@
 require 'test_helper'
 
 class CleverTest < Test::Unit::TestCase
-  should "set the api key" do
-    Clever.api_key = "DEMO_KEY"
-    assert_equal("DEMO_KEY", Clever.api_key)
+  def setup
+    Clever.configure do |config|
+      config.api_key = "DEMO_KEY"
+    end
   end
 
   should "return api urls" do

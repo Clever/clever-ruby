@@ -9,6 +9,7 @@ require 'clever-ruby/api_operations/list'
 # Helpers
 require 'clever-ruby/util'
 require 'clever-ruby/json'
+require 'clever-ruby/configuration'
 
 # Resources
 require 'clever-ruby/clever_object'
@@ -25,23 +26,29 @@ require 'clever-ruby/errors/authentication_error'
 require 'clever-ruby/errors/api_error'
 
 module Clever
-  @@api_key = nil
+  class << self
+    def configure
+      yield configuration
+    end
+
+    def api_key
+      configuration.api_key
+    end
+
+    def configuration
+      @configuration ||= Clever::Configuration.new
+    end
+  end
+
+
   @@api_base = 'https://api.getclever.com/v1.1/'
 
   def self.api_url(url='')
     @@api_base + url
   end
 
-  def self.api_key=(api_key)
-    @@api_key = api_key
-  end
-
-  def self.api_key
-    @@api_key
-  end
-
   def self.request(method, url, params=nil, headers={})
-    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.api_key = <API-KEY>")') unless Clever.api_key
+    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.configure { |config| config.api_key = <API-KEY> }")') unless Clever.api_key
 
     params = Util.objects_to_ids(params)
     url = self.api_url(url)

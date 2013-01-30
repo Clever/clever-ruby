@@ -2,7 +2,9 @@ require 'test_helper'
 
 class ListTest < Test::Unit::TestCase
   def setup
-    Clever.api_key = "DEMO_KEY"
+    Clever.configure do |config|
+      config.api_key = "DEMO_KEY"
+    end
   end
 
   should "retrieve districts" do
