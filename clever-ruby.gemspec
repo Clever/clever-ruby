@@ -23,4 +23,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'minitest',    '~> 4.4.0'
   gem.add_development_dependency 'shoulda',     '~> 3.3.2'
   gem.add_development_dependency 'rdoc',        '~> 3.12'
+  gem.add_development_dependency 'vcr',         '~> 2.4.0'
+  gem.add_development_dependency 'webmock',     '~> 1.9.0'
 end

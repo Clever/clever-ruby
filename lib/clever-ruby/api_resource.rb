@@ -16,13 +16,13 @@ module Clever
     end
 
     def refresh
-      response, api_key = Clever.request(:get, url, @api_key)
-      refresh_from(response[:data], api_key)
+      response = Clever.request(:get, url)
+      refresh_from(response[:data])
       self
     end
 
-    def self.retrieve(id, api_key=nil)
-      instance = self.new(id, api_key)
+    def self.retrieve(id)
+      instance = self.new(id)
       instance.refresh
       instance
     end

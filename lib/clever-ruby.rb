@@ -9,6 +9,7 @@ require 'clever-ruby/api_operations/list'
 # Helpers
 require 'clever-ruby/util'
 require 'clever-ruby/json'
+require 'clever-ruby/configuration'
 
 # Resources
 require 'clever-ruby/clever_object'
@@ -25,27 +26,30 @@ require 'clever-ruby/errors/authentication_error'
 require 'clever-ruby/errors/api_error'
 
 module Clever
-  @@api_key = nil
-  @@api_base = 'https://api.getclever.com/v1.1/'
+  class << self
+    def configure
+      yield configuration
+    end
 
-  def self.api_url(url='')
-    @@api_base + url
+    def api_key
+      configuration.api_key
+    end
+
+    def configuration
+      @configuration ||= Clever::Configuration.new
+    end
+
+    def api_url(url = '')
+      configuration.api_base + url
+    end
   end
 
-  def self.api_key=(api_key)
-    @@api_key = api_key
-  end
-
-  def self.api_key
-    @@api_key
-  end
-
-  def self.request(method, url, api_key, params=nil, headers={})
-    api_key ||= @@api_key
-    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.api_key = <API-KEY>")') unless api_key
+  def self.request(method, url, params=nil, headers={})
+    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.configure { |config| config.api_key = <API-KEY> }")') unless Clever.api_key
 
     params = Util.objects_to_ids(params)
     url = self.api_url(url)
+
     case method.to_s.downcase.to_sym
     when :get, :head, :delete
       # Make params into GET parameters
@@ -59,7 +63,7 @@ module Clever
     end
 
     opts = {
-      :user => api_key,
+      :user => Clever.api_key,
       :password => "",
       :method => method,
       :url => url,
@@ -102,7 +106,7 @@ module Clever
     end
 
     resp = Util.symbolize_names(resp)
-    [resp, api_key]
+    resp
   end
 
   private

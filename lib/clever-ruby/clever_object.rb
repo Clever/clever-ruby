@@ -2,23 +2,21 @@ module Clever
   class CleverObject
     include Enumerable
 
-    attr_accessor :api_key
-    @@permanent_attributes = Set.new([:api_key])
+    @@permanent_attributes = Set.new([])
 
     # The default :id method is deprecated and isn't useful to us
     if method_defined?(:id)
       undef :id
     end
 
-    def initialize(id=nil, api_key=nil)
-      @api_key = api_key
+    def initialize(id=nil)
       @values = {}
       @values[:id] = id if id
     end
 
-    def self.construct_from(values, api_key=nil)
-      obj = self.new(values[:id], api_key)
-      obj.refresh_from(values, api_key)
+    def self.construct_from(values)
+      obj = self.new(values[:id])
+      obj.refresh_from(values)
       obj
     end
 
@@ -31,8 +29,7 @@ module Clever
       "#<#{self.class}:0x#{self.object_id.to_s(16)}#{id_string}> JSON: " + Clever::JSON.dump(@values, :pretty => true)
     end
 
-    def refresh_from(values, api_key, partial=false)
-      @api_key = api_key
+    def refresh_from(values, partial=false)
 
       removed = partial ? Set.new : Set.new(@values.keys - values.keys)
       added = Set.new(values.keys - @values.keys)
@@ -47,7 +44,7 @@ module Clever
       values.each do |k, v|
         # Stripe apparently allows you to have nested object types (e.g.
         # InvoiceList of Charges). We don't and this was breaking our code
-        # @values[k] = Util.convert_to_clever_object(v, api_key)
+        # @values[k] = Util.convert_to_clever_object(v)
         @values[k] = v
       end
     end

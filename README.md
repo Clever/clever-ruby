@@ -20,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Configure clever-ruby to use your Clever API key:
+
+    Clever.configure do |config|
+      config.api_key = 'YOUR-API-KEY'
+    end
 
 ## Contributing
 
