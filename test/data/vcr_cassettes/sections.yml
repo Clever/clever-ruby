@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1//sections?
+    uri: https://DEMO_KEY:@api.getclever.com/v1.1/sections?
     body:
       encoding: US-ASCII
       string: ''
@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 22 Jan 2013 20:08:58 GMT
+      - Mon, 11 Feb 2013 18:50:29 GMT
       Etag:
       - ! '"1014410056"'
       Server:
@@ -146,5 +146,5 @@ http_interactions:
         Arithmetic","course_number":"335","district":"4fd43cc56d11340000000005","grade":"7","name":"Earth
         Arithmetic 4(B)","school":"4fee004cca2e43cf27000004","sis_id":"393","subject":"math","teacher":"50be102be4b954fe2326357f","students":["50b627304dcdf0fb202ea350","50b778cbf8fb0dfb5047d999","50bb6d75271f97d61d2c130e","50be1079e4b954fe2326ab21","50bf617d02dfe7ca01543593","50bf617d02dfe7ca015435a1","50c0b3a9f1d530bb5451937e","50c0b3a9f1d530bb5451938e","50c0b3a9f1d530bb545193d6","50c2047f987eda0d3d02df1d","50c35c3307ad64816a44470a","50c35c3307ad64816a444764","50c4a7d199ad702e02293fb1","50c4a7d499ad702e02294006","50c5fba0ed21c30a6e1e2417","50c74a854cc604327e020032","50c74a854cc604327e020058","50c8a01c9ed67a1d3f1f779b","50c8a01c9ed67a1d3f1f779f","50c9f799b519c8996618444c","50c9f799b519c8996618446b","50c9f79eb519c8996618449d","50c9f7a1b519c89966184505"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.287Z","term":{},"id":"50c9f7ccb519c899661852e7"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e7"}],"links":[{"rel":"self","uri":"/v1.1/sections"}]}'
     http_version: 
-  recorded_at: Tue, 22 Jan 2013 20:09:17 GMT
+  recorded_at: Mon, 11 Feb 2013 18:50:41 GMT
 recorded_with: VCR 2.4.0

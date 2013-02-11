@@ -7,11 +7,11 @@ class CleverTest < Test::Unit::TestCase
     end
   end
 
-  should "return api urls" do
-    assert_equal("https://api.getclever.com/v1.1/districts", Clever.api_url("districts"))
-    assert_equal("https://api.getclever.com/v1.1/schools", Clever.api_url("schools"))
-    assert_equal("https://api.getclever.com/v1.1/students", Clever.api_url("students"))
-    assert_equal("https://api.getclever.com/v1.1/sections", Clever.api_url("sections"))
-    assert_equal("https://api.getclever.com/v1.1/teachers", Clever.api_url("teachers"))
+  should "return top-level resource urls" do
+    assert_equal("https://api.getclever.com/v1.1/districts", Clever.resource_url("districts"))
+    assert_equal("https://api.getclever.com/v1.1/schools", Clever.resource_url("schools"))
+    assert_equal("https://api.getclever.com/v1.1/students", Clever.resource_url("students"))
+    assert_equal("https://api.getclever.com/v1.1/sections", Clever.resource_url("sections"))
+    assert_equal("https://api.getclever.com/v1.1/teachers", Clever.resource_url("teachers"))
   end
 end

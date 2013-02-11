@@ -39,6 +39,10 @@ module Clever
       @configuration ||= Clever::Configuration.new
     end
 
+    def resource_url(resource_name = '')
+      configuration.api_base + 'v1.1/' + resource_name
+    end
+
     def api_url(url = '')
       configuration.api_base + url
     end
