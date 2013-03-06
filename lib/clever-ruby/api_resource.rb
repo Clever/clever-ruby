@@ -21,6 +21,11 @@ module Clever
       self
     end
 
+    def links
+      response = Clever.request(:get, url)
+      response[:links]
+    end
+
     def self.retrieve(id)
       instance = self.new(id)
       instance.refresh
