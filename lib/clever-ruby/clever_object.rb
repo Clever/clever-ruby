@@ -118,8 +118,13 @@ module Clever
       end
     end
 
+    def optional_attributes
+      raise NotImplementedError.new('Please define #optional_attributes as a list of the attributes on this resource that may not be present and thus should return nil instead of raising a NoMethodError.')
+    end
+
     def method_missing(name, *args)
       return @values[name] if @values.has_key?(name)
+      return nil if optional_attributes.include?(name)
       super
     end
   end
