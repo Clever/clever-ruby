@@ -16,7 +16,7 @@ class CleverConfigurationTest < Test::Unit::TestCase
   end
 
   should "set a default for the api base" do
-    Clever.configuration.api_base.must_equal('https://api.getclever.com/v1.1/')
+    Clever.configuration.api_base.must_equal('https://api.getclever.com/')
   end
 
 end
