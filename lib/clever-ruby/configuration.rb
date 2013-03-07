@@ -4,7 +4,7 @@ module Clever
 
     def initialize
       @api_key  = nil
-      @api_base = 'https://api.getclever.com/v1.1/'
+      @api_base = 'https://api.getclever.com/'
     end
   end
 end

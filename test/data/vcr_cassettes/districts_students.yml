@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/students?
+    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts?
     body:
       encoding: US-ASCII
       string: ''
@@ -29,9 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 11 Feb 2013 18:50:33 GMT
-      Etag:
-      - ! '"-1563378555"'
+      - Thu, 14 Feb 2013 15:49:13 GMT
       Server:
       - nginx/1.2.3
       Set-Cookie:
@@ -41,7 +39,150 @@ http_interactions:
       X-Powered-By:
       - Express
       Content-Length:
-      - '57531'
+      - '174'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
+    http_version: 
+  recorded_at: Thu, 14 Feb 2013 15:49:24 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - no-cache="set-cookie"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 14 Feb 2013 15:51:39 GMT
+      Server:
+      - nginx/1.2.3
+      Set-Cookie:
+      - AWSELB=57FFC5270C5107B6EA5E56398F77D924DD37E7E19953EE4589F0E25E8AB42DE5C42A50E50F0E4B84F1F903CD1F0A4E900C1FA7DA18973A6D0C757C75DBD7DB64ABDE808D68;PATH=/;MAX-AGE=300
+      Strict-Transport-Security:
+      - max-age=500
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '526'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"}]}'
+    http_version: 
+  recorded_at: Thu, 14 Feb 2013 15:49:25 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - no-cache="set-cookie"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 14 Feb 2013 15:49:14 GMT
+      Server:
+      - nginx/1.2.3
+      Set-Cookie:
+      - AWSELB=57FFC5270C5107B6EA5E56398F77D924DD37E7E19986084006C3CEE0D8D6CA24B0992751377CD74DF64ED581C9BCDB2B60D2030EE56D3BD197FBA2C5C0E11C4FAFED224F2D;PATH=/;MAX-AGE=300
+      Strict-Transport-Security:
+      - max-age=500
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '526'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"}]}'
+    http_version: 
+  recorded_at: Thu, 14 Feb 2013 15:49:25 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/students?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - no-cache="set-cookie"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 14 Feb 2013 15:49:15 GMT
+      Etag:
+      - ! '"-347517288"'
+      Server:
+      - nginx/1.2.3
+      Set-Cookie:
+      - AWSELB=57FFC5270C5107B6EA5E56398F77D924DD37E7E19986084006C3CEE0D8D6CA24B0992751377CD74DF64ED581C9BCDB2B60D2030EE56D3BD197FBA2C5C0E11C4FAFED224F2D;PATH=/;MAX-AGE=300
+      Strict-Transport-Security:
+      - max-age=500
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '57601'
       Connection:
       - keep-alive
     body:
@@ -1324,8 +1465,10 @@ http_interactions:
         MDEyLTExLTIyVDE0OjU5OjU2LjcwNloiLCJpZCI6IjUwYWUzZGVjNTlkODA5
         MzkzZTQ2N2VlYSJ9LCJ1cmkiOiIvdjEuMS9zdHVkZW50cy81MGFlM2RlYzU5
         ZDgwOTM5M2U0NjdlZWEifV0sImxpbmtzIjpbeyJyZWwiOiJzZWxmIiwidXJp
-        IjoiL3YxLjEvc3R1ZGVudHMifSx7InJlbCI6Im5leHQiLCJ1cmkiOiIvdjEu
-        MS9zdHVkZW50cz9wYWdlPTIifV19
+        IjoiL3YxLjEvZGlzdHJpY3RzLzRmZDQzY2M1NmQxMTM0MDAwMDAwMDAwNS9z
+        dHVkZW50cyJ9LHsicmVsIjoibmV4dCIsInVyaSI6Ii92MS4xL2Rpc3RyaWN0
+        cy80ZmQ0M2NjNTZkMTEzNDAwMDAwMDAwMDUvc3R1ZGVudHM/cGFnZT0yIn1d
+        fQ==
     http_version: 
-  recorded_at: Mon, 11 Feb 2013 18:50:46 GMT
+  recorded_at: Thu, 14 Feb 2013 15:49:26 GMT
 recorded_with: VCR 2.4.0

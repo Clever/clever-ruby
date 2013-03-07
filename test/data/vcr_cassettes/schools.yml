@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1//schools?
+    uri: https://DEMO_KEY:@api.getclever.com/v1.1/schools?
     body:
       encoding: US-ASCII
       string: ''
@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 22 Jan 2013 20:10:44 GMT
+      - Mon, 11 Feb 2013 18:52:47 GMT
       Etag:
       - ! '"960244484"'
       Server:
@@ -60,5 +60,5 @@ http_interactions:
         Kilback View","city":"North Sarina","state":"MP","zip":"58717-8256"},"principal":{"email":"otto_sanford@mailinator.com","name":"Maryse
         Tillman"},"last_modified":"2012-11-07T00:44:53.104Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000004"},"uri":"/v1.1/schools/4fee004cca2e43cf27000004"}],"links":[{"rel":"self","uri":"/v1.1/schools"}]}'
     http_version: 
-  recorded_at: Tue, 22 Jan 2013 20:09:15 GMT
+  recorded_at: Mon, 11 Feb 2013 18:50:38 GMT
 recorded_with: VCR 2.4.0
