@@ -23,6 +23,10 @@ module Clever
       get_linked_resources 'students', filters
     end
 
+    def events(filters={})
+      get_linked_resources 'events', filters
+    end
+
     private
 
     def get_linked_resources(resource_type, filters={})
