@@ -19,6 +19,7 @@ require 'clever-ruby/school'
 require 'clever-ruby/student'
 require 'clever-ruby/section'
 require 'clever-ruby/teacher'
+require 'clever-ruby/event'
 
 # Errors
 require 'clever-ruby/errors/clever_error'

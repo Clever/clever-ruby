@@ -15,14 +15,19 @@ module Clever
       end
     end
 
-    def self.convert_to_clever_object(resp)
+    def self.types_to_clever_class(type)
       types = {
-          'students' => Student,
-          'sections' => Section,
-          'teachers' => Teacher,
-          'districts' => District,
-          'schools' => School
+        'students'  => Student,
+        'sections'  => Section,
+        'teachers'  => Teacher,
+        'districts' => District,
+        'schools'   => School,
+        'push'      => Event
       }
+      types.fetch(type)
+    end
+
+    def self.convert_to_clever_object(resp)
       case resp
       when Array
         resp.map { |i| convert_to_clever_object(i) }
@@ -31,7 +36,7 @@ module Clever
         # match = /\/v1.1\/([a-z]+)\/\S+$/.match(resp[:uri])
         # puts match[1].inspect
         if klass_name = /\/v1.1\/([a-z]+)\/\S+$/.match(resp[:uri])[1]
-          klass = types[klass_name]
+          klass = types_to_clever_class(klass_name)
         end
         klass ||= CleverObject
         klass.construct_from(resp[:data])
