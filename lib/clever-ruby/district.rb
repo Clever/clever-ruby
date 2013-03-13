@@ -24,11 +24,7 @@ module Clever
     end
 
     def events(filters={})
-      # It would be nice if events was a linked resource from district
-      # so that we could similarly do:
-      # get_linked_resources 'events', filters
-      response = Clever.request(:get, "#{url}/events", filters)
-      Util.convert_to_clever_object(response[:data])
+      get_linked_resources 'events', filters
     end
 
     private
