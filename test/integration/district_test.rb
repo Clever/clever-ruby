@@ -43,7 +43,7 @@ class ListTest < Test::Unit::TestCase
   end
 
   should "retrieve a district's events" do
-    VCR.use_cassette("districts_events") do
+    VCR.use_cassette("districts_events", :allow_playback_repeats => true) do
       @district = Clever::District.all.first
       @district.events.size.must_equal 1
       event = @district.events.first
