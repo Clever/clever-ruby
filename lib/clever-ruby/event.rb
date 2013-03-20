@@ -3,13 +3,17 @@ module Clever
     include Clever::APIOperations::List
 
     def optional_attributes
-      [:previous_attributes]
+      []
     end
 
     def object
       klass = Util.types_to_clever_class(type_pieces[0])
       klass ||= CleverObject
       klass.construct_from(data[:object])
+    end
+
+    def previous_attributes
+      data[:previous_attributes]
     end
 
     def action
