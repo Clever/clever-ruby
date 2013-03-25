@@ -1,5 +1,6 @@
 require 'rest_client'
 require 'multi_json'
+require 'open-uri'
 
 require 'clever-ruby/version'
 
@@ -49,6 +50,16 @@ module Clever
     end
   end
 
+  def self.convert_to_query_string(params = nil)
+    if params && params.count
+      "?" + Util.flatten_params(params).collect { |p|
+        "#{URI::encode(p[0].to_s)}=#{URI::encode(p[1].to_s)}"
+      }.join('&')
+    else
+      ''
+    end
+  end
+
   def self.request(method, url, params=nil, headers={})
     raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.configure { |config| config.api_key = <API-KEY> }")') unless Clever.api_key
 
@@ -57,11 +68,7 @@ module Clever
 
     case method.to_s.downcase.to_sym
     when :get, :head, :delete
-      # Make params into GET parameters
-      if params && params.count
-        query_string = Util.flatten_params(params).collect{|p| "#{p[0]}=#{p[1]}"}.join('&')
-        url += "?#{query_string}"
-      end
+      url += convert_to_query_string(params)
       payload = nil
     else
       payload = params
