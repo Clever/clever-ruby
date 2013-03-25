@@ -123,7 +123,7 @@ module Clever
   def self.handle_restclient_error(e)
     case e
     when RestClient::ServerBrokeConnection, RestClient::RequestTimeout
-      message = "Could not connect to Clever (#{@@api_base}). Please check your internet connection and try again."
+      message = "Could not connect to Clever (#{configuration.api_base}). Please check your internet connection and try again."
     when SocketError
       message = "Unexpected error communicating when trying to connect to Clever. HINT: You may be seeing this message because your DNS is not working. To check, try running 'host getclever.com' from the command line."
     else
