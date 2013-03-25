@@ -23,8 +23,11 @@ require 'clever-ruby/event'
 
 # Errors
 require 'clever-ruby/errors/clever_error'
-require 'clever-ruby/errors/authentication_error'
+
+require 'clever-ruby/errors/api_connection_error'
 require 'clever-ruby/errors/api_error'
+require 'clever-ruby/errors/authentication_error'
+require 'clever-ruby/errors/invalid_request_error'
 
 module Clever
   class << self
