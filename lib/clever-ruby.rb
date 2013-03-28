@@ -163,7 +163,11 @@ module Clever
   end
 
   def self.invalid_request_error(error, rcode, rbody, error_obj)
-    InvalidRequestError.new(error[:message], error[:param], rcode, rbody, error_obj)
+    if error.is_a? Hash
+      InvalidRequestError.new(error[:message], error[:param], rcode, rbody, error_obj)
+    else
+      InvalidRequestError.new(error, '', rcode, rbody, error_obj)
+    end
   end
 
   def self.authentication_error(error, rcode, rbody, error_obj)
