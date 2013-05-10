@@ -19,6 +19,10 @@ module Clever
     def action
       type_pieces[1]
     end
+    
+    def self.url
+      "v1.1/push/events"
+    end
 
     private
 
