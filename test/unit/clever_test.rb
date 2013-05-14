@@ -7,12 +7,13 @@ class CleverTest < Test::Unit::TestCase
     end
   end
 
-  should "return top-level resource urls" do
-    assert_equal("https://api.getclever.com/v1.1/districts", Clever.resource_url("districts"))
-    assert_equal("https://api.getclever.com/v1.1/schools", Clever.resource_url("schools"))
-    assert_equal("https://api.getclever.com/v1.1/students", Clever.resource_url("students"))
-    assert_equal("https://api.getclever.com/v1.1/sections", Clever.resource_url("sections"))
-    assert_equal("https://api.getclever.com/v1.1/teachers", Clever.resource_url("teachers"))
+  should "returns correct urls for Resources" do
+    assert_equal("v1.1/districts", Clever::District.url)
+    assert_equal("v1.1/schools", Clever::School.url)
+    assert_equal("v1.1/students", Clever::Student.url)
+    assert_equal("v1.1/sections", Clever::Section.url)
+    assert_equal("v1.1/teachers", Clever::Teacher.url)
+    assert_equal("v1.1/push/events", Clever::Event.url)
   end
 
   should "uri-encode params" do
