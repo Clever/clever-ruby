@@ -25,4 +25,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rdoc',        '~> 3.12'
   gem.add_development_dependency 'vcr',         '~> 2.4.0'
   gem.add_development_dependency 'webmock',     '~> 1.9.0'
+  gem.add_development_dependency 'pry',         '~> 0.9.9.6'
 end

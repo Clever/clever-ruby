@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require 'shoulda'
 require 'vcr'
 require 'clever-ruby'
+require 'pry'
 
 
 VCR.configure do |c|
