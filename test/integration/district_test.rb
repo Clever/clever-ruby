@@ -50,4 +50,23 @@ class ListTest < Test::Unit::TestCase
       event.must_be_instance_of Clever::Event
     end
   end
+
+  should "page a district's students" do
+    VCR.use_cassette("districts_student_pages", :allow_playback_repeats => true) do
+      @district = Clever::District.all.first
+      students_from_list = @district.students({limit: 100000}).size
+      limit = 50
+
+      students_from_paging = 0
+      pages = 0
+      @district.student_pages({ limit: limit }).each do |student_page|
+        pages += 1
+        students = student_page.all
+        students_from_paging += students.size
+      end
+
+      students_from_paging.must_equal students_from_list
+      pages.must_equal 18
+    end
+  end
 end

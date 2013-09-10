@@ -23,6 +23,10 @@ module Clever
       get_linked_resources 'students', filters
     end
 
+    def student_pages(filters={})
+      Clever::APIOperations::PageList.new(get_uri('students'), filters)
+    end
+
     def events(filters={})
       get_linked_resources 'events', filters
     end
@@ -30,10 +34,13 @@ module Clever
     private
 
     def get_linked_resources(resource_type, filters={})
-      refresh
-      uri = links.detect {|link| link[:rel] == resource_type }[:uri]
-      response = Clever.request(:get, uri, filters)
+      response = Clever.request(:get, get_uri(resource_type), filters)
       Util.convert_to_clever_object(response[:data])
+    end
+
+    def get_uri(resource_type)
+      refresh
+      links.detect {|link| link[:rel] == resource_type }[:uri]
     end
   end
 end
