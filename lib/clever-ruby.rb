@@ -6,6 +6,8 @@ require 'clever-ruby/version'
 
 # API operations
 require 'clever-ruby/api_operations/list'
+require 'clever-ruby/api_operations/pagelist'
+require 'clever-ruby/api_operations/page'
 
 # Helpers
 require 'clever-ruby/util'

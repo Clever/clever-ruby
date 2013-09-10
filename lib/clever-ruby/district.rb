@@ -23,6 +23,13 @@ module Clever
       get_linked_resources 'students', filters
     end
 
+    def student_pages(filters={})
+      @student_pagelist ||= Clever::APIOperations::PageList.new(
+        links.detect {|link| link[:rel] == 'students' }[:uri],
+        filters
+      )
+    end
+
     def events(filters={})
       get_linked_resources 'events', filters
     end
