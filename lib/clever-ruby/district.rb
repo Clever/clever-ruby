@@ -11,12 +11,24 @@ module Clever
       get_linked_resources 'schools', filters
     end
 
+    def school_pages(filters={})
+      Clever::APIOperations::PageList.new(get_uri('schools'), filters)
+    end
+
     def teachers(filters={})
       get_linked_resources 'teachers', filters
     end
 
+    def teacher_pages(filters={})
+      Clever::APIOperations::PageList.new(get_uri('teachers'), filters)
+    end
+
     def sections(filters={})
       get_linked_resources 'sections', filters
+    end
+
+    def section_pages(filters={})
+      Clever::APIOperations::PageList.new(get_uri('sections'), filters)
     end
 
     def students(filters={})
@@ -29,6 +41,10 @@ module Clever
 
     def events(filters={})
       get_linked_resources 'events', filters
+    end
+
+    def event_pages(filters={})
+      Clever::APIOperations::PageList.new(get_uri('events'), filters)
     end
 
     private
