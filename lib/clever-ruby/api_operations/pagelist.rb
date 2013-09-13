@@ -8,8 +8,8 @@ module Clever
 
       def each
         current = 0
-        total = nil
-        while total.nil? || current < total
+        total = 1
+        while current < total
           page = Page.new(@uri, @filters.merge({ page: current + 1 }))
 
           yield page
