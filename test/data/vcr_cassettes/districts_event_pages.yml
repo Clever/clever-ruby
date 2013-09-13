@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:11 GMT
+      - Wed, 11 Sep 2013 19:15:28 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -41,7 +41,7 @@ http_interactions:
       string: ! '{"paging":{"current":1,"total":1,"count":1},"data":[{"data":{"name":"Demo
         District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:11 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:28 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -69,7 +69,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:12 GMT
+      - Wed, 11 Sep 2013 19:15:29 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -82,7 +82,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:12 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:29 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -110,7 +110,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:12 GMT
+      - Wed, 11 Sep 2013 19:15:29 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -123,10 +123,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:12 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:29 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/schools?
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/events?limit=100000
     body:
       encoding: US-ASCII
       string: ''
@@ -151,34 +151,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:13 GMT
-      Etag:
-      - ! '"-103802126"'
+      - Wed, 11 Sep 2013 19:15:30 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
       - Express
       Content-Length:
-      - '2314'
+      - '148'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"paging":{"current":1,"total":1,"count":4},"data":[{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        Academy","nces_id":"17065379","phone":"1-(755) 019-5442","school_number":"9255","sis_id":"9255","state_id":"4","location":{"address":"18828
-        Kutch Court","city":"Dessiemouth","state":"IA","zip":"37471-9969"},"principal":{"email":"eda_barrows@mailinator.com","name":"Colleen
-        Gottlieb"},"last_modified":"2012-11-07T00:44:53.065Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000001"},"uri":"/v1.1/schools/4fee004cca2e43cf27000001"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        Preparatory","nces_id":"94755881","phone":"(527) 825-2248","school_number":"2559","sis_id":"2559","state_id":"23","location":{"address":"42139
-        Fadel Mountains","city":"Thomasfort","state":"AP","zip":"61397-3760"},"principal":{"email":"nikolas@mailinator.com","name":"Rudolph
-        Howe"},"last_modified":"2012-11-07T00:44:53.079Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000002"},"uri":"/v1.1/schools/4fee004cca2e43cf27000002"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        High School","nces_id":"44270647","phone":"1-(895) 295-3507","school_number":"4083","sis_id":"4083","state_id":"12","location":{"address":"9538
-        Leffler Forks","city":"Gwendolynville","state":"NH","zip":"58530-7427"},"principal":{"email":"domingo_williamson@mailinator.com","name":"Krystal
-        Kiehn"},"last_modified":"2012-11-07T00:44:53.093Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000003"},"uri":"/v1.1/schools/4fee004cca2e43cf27000003"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        Memorial High","nces_id":"26309489","phone":"1-(124) 215-8079","school_number":"3935","sis_id":"3935","state_id":"23","location":{"address":"10960
-        Kilback View","city":"North Sarina","state":"MP","zip":"58717-8256"},"principal":{"email":"otto_sanford@mailinator.com","name":"Maryse
-        Tillman"},"last_modified":"2012-11-07T00:44:53.104Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000004"},"uri":"/v1.1/schools/4fee004cca2e43cf27000004"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"}]}'
+      string: ! '{"paging":{"current":0,"total":0,"count":0},"data":[],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?limit=100000"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:13 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:30 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -206,7 +192,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:13 GMT
+      - Wed, 11 Sep 2013 19:15:30 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -219,7 +205,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:13 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:30 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -247,7 +233,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:14 GMT
+      - Wed, 11 Sep 2013 19:15:31 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -260,10 +246,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:14 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:31 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/schools?
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/events?limit=1&page=1
     body:
       encoding: US-ASCII
       string: ''
@@ -288,32 +274,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:14 GMT
-      Etag:
-      - ! '"-103802126"'
+      - Wed, 11 Sep 2013 19:15:31 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
       - Express
       Content-Length:
-      - '2314'
+      - '150'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"paging":{"current":1,"total":1,"count":4},"data":[{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        Academy","nces_id":"17065379","phone":"1-(755) 019-5442","school_number":"9255","sis_id":"9255","state_id":"4","location":{"address":"18828
-        Kutch Court","city":"Dessiemouth","state":"IA","zip":"37471-9969"},"principal":{"email":"eda_barrows@mailinator.com","name":"Colleen
-        Gottlieb"},"last_modified":"2012-11-07T00:44:53.065Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000001"},"uri":"/v1.1/schools/4fee004cca2e43cf27000001"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        Preparatory","nces_id":"94755881","phone":"(527) 825-2248","school_number":"2559","sis_id":"2559","state_id":"23","location":{"address":"42139
-        Fadel Mountains","city":"Thomasfort","state":"AP","zip":"61397-3760"},"principal":{"email":"nikolas@mailinator.com","name":"Rudolph
-        Howe"},"last_modified":"2012-11-07T00:44:53.079Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000002"},"uri":"/v1.1/schools/4fee004cca2e43cf27000002"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        High School","nces_id":"44270647","phone":"1-(895) 295-3507","school_number":"4083","sis_id":"4083","state_id":"12","location":{"address":"9538
-        Leffler Forks","city":"Gwendolynville","state":"NH","zip":"58530-7427"},"principal":{"email":"domingo_williamson@mailinator.com","name":"Krystal
-        Kiehn"},"last_modified":"2012-11-07T00:44:53.093Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000003"},"uri":"/v1.1/schools/4fee004cca2e43cf27000003"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        Memorial High","nces_id":"26309489","phone":"1-(124) 215-8079","school_number":"3935","sis_id":"3935","state_id":"23","location":{"address":"10960
-        Kilback View","city":"North Sarina","state":"MP","zip":"58717-8256"},"principal":{"email":"otto_sanford@mailinator.com","name":"Maryse
-        Tillman"},"last_modified":"2012-11-07T00:44:53.104Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000004"},"uri":"/v1.1/schools/4fee004cca2e43cf27000004"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"}]}'
+      string: ! '{"paging":{"current":0,"total":0,"count":0},"data":[],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?limit=1&page=1"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:14 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:31 GMT
 recorded_with: VCR 2.4.0

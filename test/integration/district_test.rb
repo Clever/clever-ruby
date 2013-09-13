@@ -8,31 +8,35 @@ class ListTest < Test::Unit::TestCase
   end
 
   should "retrieve a district's schools" do
-    VCR.use_cassette("districts_schools") do
-      @district = Clever::District.all.first
-      @district.schools.size.must_equal 4
-    end
+    test_object_list 'schools', 4, Clever::School
+  end
+
+  should "page a district's schools" do
+    test_object_pages('school', 2, 2)
   end
 
   should "retrieve a district's teachers" do
-    VCR.use_cassette("districts_teachers") do
-      @district = Clever::District.all.first
-      @district.teachers.size.must_equal 48
-    end
+    test_object_list 'teachers', 48, Clever::Teacher
+  end
+
+  should "page a district's teachers" do
+    test_object_pages('teacher', 10, 5)
   end
 
   should "retrieve a district's sections" do
-    VCR.use_cassette("districts_sections") do
-      @district = Clever::District.all.first
-      @district.sections.size.must_equal 44
-    end
+    test_object_list 'sections', 44, Clever::Section
+  end
+
+  should "page a district's sections" do
+    test_object_pages('section', 10, 5)
   end
 
   should "retrieve a district's students" do
-    VCR.use_cassette("districts_students") do
-      @district = Clever::District.all.first
-      @district.students.size.must_equal 100
-    end
+    test_object_list 'students', 100, Clever::Student
+  end
+
+  should "page a district's students" do
+    test_object_pages('student', 50, 18)
   end
 
   should "retrieve a district's students with a small filter" do
@@ -43,30 +47,38 @@ class ListTest < Test::Unit::TestCase
   end
 
   should "retrieve a district's events" do
-    VCR.use_cassette("districts_events", :allow_playback_repeats => true) do
-      @district = Clever::District.all.first
-      @district.events.size.must_equal 1
-      event = @district.events.first
-      event.must_be_instance_of Clever::Event
+    test_object_list 'events', 1, Clever::Event
+  end
+
+  should "page a district's events" do
+    test_object_pages('event', 1, 1)
+  end
+
+  private
+
+  def test_object_list(plural_object_name, object_count, instance_name)
+    VCR.use_cassette("districts_#{plural_object_name}", :allow_playback_repeats => true) do
+      district = Clever::District.all.first
+      district.send(plural_object_name).size.must_equal object_count
+      district.send(plural_object_name).first.must_be_instance_of instance_name
     end
   end
 
-  should "page a district's students" do
-    VCR.use_cassette("districts_student_pages", :allow_playback_repeats => true) do
-      @district = Clever::District.all.first
-      students_from_list = @district.students({limit: 100000}).size
-      limit = 50
+  def test_object_pages(object_name, limit, page_count)
+    VCR.use_cassette("districts_#{object_name}_pages", :allow_playback_repeats => true) do
+      district = Clever::District.all.first
+      object_count_from_list = district.send("#{object_name}s", {limit: 100000}).size
 
-      students_from_paging = 0
+      object_count_from_paging = 0
       pages = 0
-      @district.student_pages({ limit: limit }).each do |student_page|
+      district.send("#{object_name}_pages", { limit: limit }).each do |object_page|
         pages += 1
-        students = student_page.all
-        students_from_paging += students.size
+        objects = object_page.all
+        object_count_from_paging += objects.size
       end
 
-      students_from_paging.must_equal students_from_list
-      pages.must_equal 18
+      object_count_from_paging.must_equal object_count_from_list
+      pages.must_equal page_count
     end
   end
 end

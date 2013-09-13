@@ -7,12 +7,16 @@ module Clever
       end
 
       def each
-        current_page = 1
-        begin
-          page = Page.new(@uri, @filters.merge({ page: current_page }))
+        current = 0
+        total = 1
+        while current < total
+          page = Page.new(@uri, @filters.merge({ page: current + 1 }))
+
           yield page
-          current_page = page.paging[:current] + 1
-        end until page.paging[:current] == page.paging[:total]
+
+          current = page.paging[:current]
+          total = page.paging[:total]
+        end
       end
     end
   end
