@@ -1,6 +1,7 @@
 require 'rest_client'
 require 'multi_json'
 require 'open-uri'
+require 'set'
 
 require 'clever-ruby/version'
 
@@ -44,10 +45,6 @@ module Clever
 
     def configuration
       @configuration ||= Clever::Configuration.new
-    end
-
-    def resource_url(resource_name = '')
-      configuration.api_base + 'v1.1/' + resource_name
     end
 
     def api_url(url = '')
