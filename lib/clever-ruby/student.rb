@@ -3,7 +3,7 @@ module Clever
     include Clever::APIOperations::List
 
     def optional_attributes
-      [:student_number, :state_id, :location, :gender, :dob, :grade, :frl_status, :race, :hispanic_ethnicity, :email]
+      [:student_number, :state_id, :location, :gender, :dob, :grade, :frl_status, :race, :hispanic_ethnicity, :email, :credentials]
     end
 
     def photo

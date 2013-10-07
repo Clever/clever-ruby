@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:15 GMT
+      - Wed, 11 Sep 2013 19:15:32 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -41,7 +41,7 @@ http_interactions:
       string: ! '{"paging":{"current":1,"total":1,"count":1},"data":[{"data":{"name":"Demo
         District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:15 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:32 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -69,7 +69,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:15 GMT
+      - Wed, 11 Sep 2013 19:15:32 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -82,7 +82,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:15 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:32 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -110,7 +110,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:16 GMT
+      - Wed, 11 Sep 2013 19:15:33 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -123,10 +123,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:16 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:33 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=100000
     body:
       encoding: US-ASCII
       string: ''
@@ -151,15 +151,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:16 GMT
+      - Wed, 11 Sep 2013 19:15:33 GMT
       Etag:
-      - ! '"140218375"'
+      - ! '"550177588"'
       Server:
       - nginx/1.4.1
       X-Powered-By:
       - Express
       Content-Length:
-      - '57108'
+      - '57121'
       Connection:
       - keep-alive
     body:
@@ -263,9 +263,9 @@ http_interactions:
         Literature","course_number":"407","district":"4fd43cc56d11340000000005","grade":"6","name":"Advanced
         Physics 6(A)","school":"4fee004cca2e43cf27000001","sis_id":"358","subject":"science","teacher":"50c9f780b519c8996618387f","students":["50a10f1efbb904c169b9dfef","50a8f80a0b388b1775332e71","50ae3dec59d809393e467efc","50af8fab794f75e11f340afa","50af8fac794f75e11f340b30","50b384058cdcb9c56330c69f","50b384058cdcb9c56330c6d9","50b384058cdcb9c56330c6df","50b4d6b8ad221ab95f1c7830","50b4d6b8ad221ab95f1c7836","50b627304dcdf0fb202ea376","50b778cbf8fb0dfb5047d98d","50ba1c504eda5d94372233dd","50ba1c504eda5d943722341d","50ba1c534eda5d9437223447","50bb6d74271f97d61d2c12cd","50bcbe65d6a827844305a916","50bcbe65d6a827844305a916","50bcbe65d6a827844305a98c","50bf617d02dfe7ca01543551","50bf617d02dfe7ca015435ed","50c2047f987eda0d3d02dedc","50c20480987eda0d3d02df61","50c20480987eda0d3d02df61","50c5fb9fed21c30a6e1e2407","50c5fba0ed21c30a6e1e2415","50c74a854cc604327e020042","50c74a854cc604327e02004e","50c74a854cc604327e02009c","50c74a854cc604327e0200b4","50c74a854cc604327e0200b6","50c8a01c9ed67a1d3f1f7773","50c8a01c9ed67a1d3f1f7793","50c8a01d9ed67a1d3f1f77d1","50c9f79eb519c8996618449f","50c9f79fb519c899661844c3"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.286Z","term":{},"id":"50c9f7ccb519c899661852e6"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e6"},{"data":{"course_name":"Advanced
         Arithmetic","course_number":"335","district":"4fd43cc56d11340000000005","grade":"7","name":"Earth
-        Arithmetic 4(B)","school":"4fee004cca2e43cf27000004","sis_id":"393","subject":"math","teacher":"50be102be4b954fe2326357f","students":["50b627304dcdf0fb202ea350","50b778cbf8fb0dfb5047d999","50bb6d75271f97d61d2c130e","50be1079e4b954fe2326ab21","50bf617d02dfe7ca01543593","50bf617d02dfe7ca015435a1","50c0b3a9f1d530bb5451937e","50c0b3a9f1d530bb5451938e","50c0b3a9f1d530bb545193d6","50c2047f987eda0d3d02df1d","50c35c3307ad64816a44470a","50c35c3307ad64816a444764","50c4a7d199ad702e02293fb1","50c4a7d499ad702e02294006","50c5fba0ed21c30a6e1e2417","50c74a854cc604327e020032","50c74a854cc604327e020058","50c8a01c9ed67a1d3f1f779b","50c8a01c9ed67a1d3f1f779f","50c9f799b519c8996618444c","50c9f799b519c8996618446b","50c9f79eb519c8996618449d","50c9f7a1b519c89966184505"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.287Z","term":{},"id":"50c9f7ccb519c899661852e7"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e7"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"}]}'
+        Arithmetic 4(B)","school":"4fee004cca2e43cf27000004","sis_id":"393","subject":"math","teacher":"50be102be4b954fe2326357f","students":["50b627304dcdf0fb202ea350","50b778cbf8fb0dfb5047d999","50bb6d75271f97d61d2c130e","50be1079e4b954fe2326ab21","50bf617d02dfe7ca01543593","50bf617d02dfe7ca015435a1","50c0b3a9f1d530bb5451937e","50c0b3a9f1d530bb5451938e","50c0b3a9f1d530bb545193d6","50c2047f987eda0d3d02df1d","50c35c3307ad64816a44470a","50c35c3307ad64816a444764","50c4a7d199ad702e02293fb1","50c4a7d499ad702e02294006","50c5fba0ed21c30a6e1e2417","50c74a854cc604327e020032","50c74a854cc604327e020058","50c8a01c9ed67a1d3f1f779b","50c8a01c9ed67a1d3f1f779f","50c9f799b519c8996618444c","50c9f799b519c8996618446b","50c9f79eb519c8996618449d","50c9f7a1b519c89966184505"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.287Z","term":{},"id":"50c9f7ccb519c899661852e7"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e7"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=100000"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:16 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:34 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -293,7 +293,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:17 GMT
+      - Wed, 11 Sep 2013 19:15:34 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -306,7 +306,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:17 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:34 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -334,7 +334,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:18 GMT
+      - Wed, 11 Sep 2013 19:15:35 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -347,10 +347,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:18 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:35 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=1
     body:
       encoding: US-ASCII
       string: ''
@@ -375,20 +375,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:18 GMT
+      - Wed, 11 Sep 2013 19:15:35 GMT
       Etag:
-      - ! '"140218375"'
+      - ! '"-831794275"'
       Server:
       - nginx/1.4.1
       X-Powered-By:
       - Express
       Content-Length:
-      - '57108'
+      - '13031'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"paging":{"current":1,"total":1,"count":44},"data":[{"data":{"course_name":"Advanced
+      string: ! '{"paging":{"current":1,"total":5,"count":44},"data":[{"data":{"course_name":"Advanced
         Literature","course_number":"60","district":"4fd43cc56d11340000000005","grade":"6","name":"Planetary
         Chemistry 7(A)","school":"4fee004cca2e43cf27000003","sis_id":"421","subject":"science","teacher":"50c5fb4ced21c30a6e1dece9","students":["4fee004cca2e43cf2700000b","50ab9b04c635f276782f1973","50ab9b04c635f276782f197b","50b232699fb027271f4e4eaa","50b384058cdcb9c56330c69b","50b627304dcdf0fb202ea33a","50b778caf8fb0dfb5047d93b","50b778caf8fb0dfb5047d96f","50be1079e4b954fe2326ab3a","50be107ae4b954fe2326abc8","50be107ae4b954fe2326abde","50bf617d02dfe7ca015435d9","50c20480987eda0d3d02df5b","50c35c3307ad64816a444704","50c4a7d199ad702e02293fb0","50c4a7d199ad702e02293fba","50c4a7d399ad702e02293fdc","50c4a7d599ad702e0229400c","50c4a7d599ad702e02294012","50c5fba0ed21c30a6e1e241b","50c74a854cc604327e02002e","50c74a854cc604327e020044","50c8a01c9ed67a1d3f1f773f","50c8a01c9ed67a1d3f1f7777","50c8a01c9ed67a1d3f1f777b","50c8a01c9ed67a1d3f1f77b7","50c9f7a1b519c899661844fb","50c9f7a2b519c89966184509"],"last_modified":"2012-12-13T15:44:10.597Z","created":"2012-12-11T15:00:34.339Z","term":{},"id":"509d1aae9d5984430b3e3f14"},"uri":"/v1.1/sections/509d1aae9d5984430b3e3f14"},{"data":{"course_name":"Earth
         Arithmetic","course_number":"346","district":"4fd43cc56d11340000000005","grade":"6","name":"Advanced
@@ -411,7 +411,50 @@ http_interactions:
         Arithmetic 2(B)","school":"4fee004cca2e43cf27000002","sis_id":"388","subject":"math","teacher":"50bf617202dfe7ca01542974","students":["509d1aa19d5984430b3e30e9","50a7a66eeb29723d5238330f","50a8f80a0b388b1775332e63","50acec843682efb03422d601","50b0e1311f9be17c5a30624c","50b384058cdcb9c56330c681","50b4d6b9ad221ab95f1c78a0","50ba1c504eda5d94372233c1","50bcbe65d6a827844305a9aa","50be1079e4b954fe2326ab5c","50be107ae4b954fe2326ab9a","50c0b3a9f1d530bb5451937f","50c0b3a9f1d530bb545193b2","50c20482987eda0d3d02df85","50c35c3207ad64816a4446e4","50c35c3307ad64816a44470e","50c5fb9fed21c30a6e1e23fb","50c5fba0ed21c30a6e1e242d","50c74a854cc604327e02002a","50c74a854cc604327e02005a","50c74a854cc604327e020070","50c74a854cc604327e0200a6","50c8a01c9ed67a1d3f1f7799","50c8a01c9ed67a1d3f1f779d","50c9f799b519c89966184447","50c9f799b519c89966184457","50c9f7a0b519c899661844cd","50c9f7a1b519c899661844f5","50c9f7a1b519c89966184501"],"last_modified":"2012-12-13T15:44:10.863Z","created":"2012-12-11T15:00:34.486Z","term":{},"id":"50b232779fb027271f4e5c95"},"uri":"/v1.1/sections/50b232779fb027271f4e5c95"},{"data":{"course_name":"Planetary
         Arithmetic","course_number":"290","district":"4fd43cc56d11340000000005","grade":"8","name":"Planetary
         Literature 4(A)","school":"4fee004cca2e43cf27000001","sis_id":"2","subject":"english/language
-        arts","teacher":"50c4a79299ad702e0228e956","students":["4fee004dca2e43cf27000655","50a10f1efbb904c169b9dfef","50a26084f3974ced10037910","50a26085f3974ced10037950","50acec843682efb03422d607","50b627304dcdf0fb202ea34c","50b8cae9a8b84d7c4e27f0bd","50b8cae9a8b84d7c4e27f0cd","50b8cae9a8b84d7c4e27f0cd","50b8cae9a8b84d7c4e27f0cd","50b8cae9a8b84d7c4e27f111","50b8cae9a8b84d7c4e27f11b","50ba1c504eda5d94372233c7","50ba1c504eda5d94372233dd","50bb6d74271f97d61d2c12ee","50bb6d74271f97d61d2c1304","50bcbe65d6a827844305a990","50be107ae4b954fe2326ab74","50bf617d02dfe7ca01543551","50c0b3a9f1d530bb54519390","50c0b3a9f1d530bb545193c0","50c2047f987eda0d3d02df0f","50c4a7d399ad702e02293fd4","50c4a7d399ad702e02293ff4","50c4a7d599ad702e0229403e","50c4a7d599ad702e02294042","50c5fb9fed21c30a6e1e2403","50c5fba0ed21c30a6e1e2441","50c5fba0ed21c30a6e1e2467","50c74a854cc604327e0200a4","50c8a01c9ed67a1d3f1f777d","50c8a01c9ed67a1d3f1f77b5","50c9f7a0b519c899661844d9"],"last_modified":"2012-12-13T15:44:10.878Z","created":"2012-12-11T15:00:34.497Z","term":{},"id":"50b384138cdcb9c56330d4ae"},"uri":"/v1.1/sections/50b384138cdcb9c56330d4ae"},{"data":{"course_name":"Advanced
+        arts","teacher":"50c4a79299ad702e0228e956","students":["4fee004dca2e43cf27000655","50a10f1efbb904c169b9dfef","50a26084f3974ced10037910","50a26085f3974ced10037950","50acec843682efb03422d607","50b627304dcdf0fb202ea34c","50b8cae9a8b84d7c4e27f0bd","50b8cae9a8b84d7c4e27f0cd","50b8cae9a8b84d7c4e27f0cd","50b8cae9a8b84d7c4e27f0cd","50b8cae9a8b84d7c4e27f111","50b8cae9a8b84d7c4e27f11b","50ba1c504eda5d94372233c7","50ba1c504eda5d94372233dd","50bb6d74271f97d61d2c12ee","50bb6d74271f97d61d2c1304","50bcbe65d6a827844305a990","50be107ae4b954fe2326ab74","50bf617d02dfe7ca01543551","50c0b3a9f1d530bb54519390","50c0b3a9f1d530bb545193c0","50c2047f987eda0d3d02df0f","50c4a7d399ad702e02293fd4","50c4a7d399ad702e02293ff4","50c4a7d599ad702e0229403e","50c4a7d599ad702e02294042","50c5fb9fed21c30a6e1e2403","50c5fba0ed21c30a6e1e2441","50c5fba0ed21c30a6e1e2467","50c74a854cc604327e0200a4","50c8a01c9ed67a1d3f1f777d","50c8a01c9ed67a1d3f1f77b5","50c9f7a0b519c899661844d9"],"last_modified":"2012-12-13T15:44:10.878Z","created":"2012-12-11T15:00:34.497Z","term":{},"id":"50b384138cdcb9c56330d4ae"},"uri":"/v1.1/sections/50b384138cdcb9c56330d4ae"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=1"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=2"}]}'
+    http_version: 
+  recorded_at: Wed, 11 Sep 2013 19:15:35 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 11 Sep 2013 19:15:36 GMT
+      Etag:
+      - ! '"-1148883640"'
+      Server:
+      - nginx/1.4.1
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '13897'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"paging":{"current":2,"total":5,"count":44},"data":[{"data":{"course_name":"Advanced
         Literature","course_number":"130","district":"4fd43cc56d11340000000005","grade":"6","name":"Planetary
         Biology 6(B)","school":"4fee004cca2e43cf27000001","sis_id":"6","subject":"science","teacher":"50c20477987eda0d3d02d310","students":["4fee004dca2e43cf270004f3","509bc8ee3f1a11cb060c805e","50acec843682efb03422d607","50acec853682efb03422d653","50b0e1311f9be17c5a30629c","50b4d6b8ad221ab95f1c7830","50b778caf8fb0dfb5047d919","50b778caf8fb0dfb5047d937","50b8cae8a8b84d7c4e27f04f","50b8cae9a8b84d7c4e27f0e7","50b8cae9a8b84d7c4e27f0fd","50b8cae9a8b84d7c4e27f111","50ba1c504eda5d94372233c7","50ba1c504eda5d943722341d","50bcbe65d6a827844305a980","50be1079e4b954fe2326ab54","50be107ae4b954fe2326abcc","50c0b3a9f1d530bb54519382","50c2047f987eda0d3d02dedc","50c20480987eda0d3d02df41","50c20480987eda0d3d02df61","50c35c3207ad64816a4446d8","50c4a7d599ad702e0229403e","50c5fb9fed21c30a6e1e23fa","50c5fb9fed21c30a6e1e2407","50c5fba0ed21c30a6e1e244f","50c74a844cc604327e020020","50c74a854cc604327e02008e","50c74a854cc604327e02009c","50c8a01c9ed67a1d3f1f7773","50c8a01c9ed67a1d3f1f777d","50c8a01c9ed67a1d3f1f7797","50c8a01d9ed67a1d3f1f77b9","50c8a01d9ed67a1d3f1f77d9","50c9f799b519c8996618444e","50c9f799b519c89966184451","50c9f799b519c8996618445f","50c9f79db519c89966184477","50c9f7a0b519c899661844d9","50c9f7a2b519c8996618450b"],"last_modified":"2012-12-13T15:44:10.907Z","created":"2012-12-11T15:00:34.518Z","term":{},"id":"50b384138cdcb9c56330d4af"},"uri":"/v1.1/sections/50b384138cdcb9c56330d4af"},{"data":{"course_name":"Planetary
         Physics","course_number":"360","district":"4fd43cc56d11340000000005","grade":"8","name":"Earth
@@ -434,7 +477,50 @@ http_interactions:
         Literature","course_number":"172","district":"4fd43cc56d11340000000005","grade":"6","name":"Advanced
         Physics 4(A)","school":"4fee004cca2e43cf27000001","sis_id":"46","subject":"science","teacher":"50c35c2807ad64816a443b0c","students":["50acec863682efb03422d68f","50acec863682efb03422d693","50b2326a9fb027271f4e4f17","50b2326a9fb027271f4e4f37","50b8cae9a8b84d7c4e27f0fd","50b8cae9a8b84d7c4e27f10d","50b8cae9a8b84d7c4e27f111","50bcbe65d6a827844305a990","50bf617d02dfe7ca01543583","50bf617d02dfe7ca015435ed","50bf617d02dfe7ca015435ed","50c20480987eda0d3d02df41","50c35c3307ad64816a444728","50c4a7d399ad702e02293fe8","50c74a854cc604327e020092","50c74a854cc604327e0200b4","50c8a01c9ed67a1d3f1f7791","50c9f79ab519c89966184475","50c9f79fb519c899661844bd","50c9f7a0b519c899661844d1"],"last_modified":"2012-12-13T15:44:11.146Z","created":"2012-12-11T15:00:34.692Z","term":{},"id":"50c0b3c3f1d530bb5451de0a"},"uri":"/v1.1/sections/50c0b3c3f1d530bb5451de0a"},{"data":{"course_name":"Earth
         Arithmetic","course_number":"429","district":"4fd43cc56d11340000000005","grade":"6","name":"Planetary
-        Physics 3(A)","school":"4fee004cca2e43cf27000001","sis_id":"242","subject":"science","teacher":"50acec793682efb03422ca25","students":["4fee004dca2e43cf2700046f","4fee004dca2e43cf27000655","50a3b2273cfe3fd0590948a8","50acec843682efb03422d607","50ae3dec59d809393e467efc","50b0e1311f9be17c5a30626e","50b0e1311f9be17c5a30629c","50b384058cdcb9c56330c6d9","50b6272f4dcdf0fb202ea2cd","50b6272f4dcdf0fb202ea2fe","50b627304dcdf0fb202ea356","50b8cae8a8b84d7c4e27f04f","50b8cae9a8b84d7c4e27f0bb","50b8cae9a8b84d7c4e27f0e7","50ba1c504eda5d94372233c7","50ba1c514eda5d943722342b","50bb6d74271f97d61d2c12cd","50be107ae4b954fe2326ab72","50be107ae4b954fe2326ab74","50be107ae4b954fe2326abcc","50c2047f987eda0d3d02dede","50c4a7d399ad702e02293ff4","50c4a7d599ad702e0229400a","50c4a7d599ad702e02294042","50c74a854cc604327e02008e","50c9f79ab519c89966184475","50c9f79db519c8996618447d","50c9f7a0b519c899661844d1","50c9f7a1b519c899661844f9"],"last_modified":"2012-12-13T15:44:11.174Z","created":"2012-12-11T15:00:34.703Z","term":{},"id":"50c0b3c3f1d530bb5451de0c"},"uri":"/v1.1/sections/50c0b3c3f1d530bb5451de0c"},{"data":{"course_name":"Earth
+        Physics 3(A)","school":"4fee004cca2e43cf27000001","sis_id":"242","subject":"science","teacher":"50acec793682efb03422ca25","students":["4fee004dca2e43cf2700046f","4fee004dca2e43cf27000655","50a3b2273cfe3fd0590948a8","50acec843682efb03422d607","50ae3dec59d809393e467efc","50b0e1311f9be17c5a30626e","50b0e1311f9be17c5a30629c","50b384058cdcb9c56330c6d9","50b6272f4dcdf0fb202ea2cd","50b6272f4dcdf0fb202ea2fe","50b627304dcdf0fb202ea356","50b8cae8a8b84d7c4e27f04f","50b8cae9a8b84d7c4e27f0bb","50b8cae9a8b84d7c4e27f0e7","50ba1c504eda5d94372233c7","50ba1c514eda5d943722342b","50bb6d74271f97d61d2c12cd","50be107ae4b954fe2326ab72","50be107ae4b954fe2326ab74","50be107ae4b954fe2326abcc","50c2047f987eda0d3d02dede","50c4a7d399ad702e02293ff4","50c4a7d599ad702e0229400a","50c4a7d599ad702e02294042","50c74a854cc604327e02008e","50c9f79ab519c89966184475","50c9f79db519c8996618447d","50c9f7a0b519c899661844d1","50c9f7a1b519c899661844f9"],"last_modified":"2012-12-13T15:44:11.174Z","created":"2012-12-11T15:00:34.703Z","term":{},"id":"50c0b3c3f1d530bb5451de0c"},"uri":"/v1.1/sections/50c0b3c3f1d530bb5451de0c"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=2"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=3"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=1"}]}'
+    http_version: 
+  recorded_at: Wed, 11 Sep 2013 19:15:36 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 11 Sep 2013 19:15:36 GMT
+      Etag:
+      - ! '"1618467794"'
+      Server:
+      - nginx/1.4.1
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '13239'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"paging":{"current":3,"total":5,"count":44},"data":[{"data":{"course_name":"Earth
         Arithmetic","course_number":"42","district":"4fd43cc56d11340000000005","grade":"7","name":"Planetary
         Biology 4(B)","school":"4fee004cca2e43cf27000004","sis_id":"71","subject":"science","teacher":"50c20477987eda0d3d02d312","students":["50a7a66feb29723d52383345","50a8f80b0b388b1775332ea3","50b2326a9fb027271f4e4f05","50b8cae9a8b84d7c4e27f119","50ba1c524eda5d943722342f","50bb6d74271f97d61d2c12f6","50bcbe65d6a827844305a99c","50bf617d02dfe7ca01543585","50bf617d02dfe7ca015435a1","50c0b3a9f1d530bb5451937e","50c0b3a9f1d530bb54519396","50c2047f987eda0d3d02df0b","50c2047f987eda0d3d02df13","50c20480987eda0d3d02df63","50c35c3307ad64816a444758","50c35c3307ad64816a44476c","50c35c3307ad64816a44477c","50c4a7d399ad702e02293fee","50c4a7d599ad702e0229401e","50c4a7d599ad702e02294034","50c5fba0ed21c30a6e1e2435","50c5fba0ed21c30a6e1e243f","50c74a844cc604327e020022","50c8a01c9ed67a1d3f1f7775","50c9f799b519c8996618445d","50c9f799b519c89966184467","50c9f79db519c8996618447b","50c9f79eb519c8996618449d","50c9f7a1b519c899661844e9","50c9f7a1b519c899661844ff"],"last_modified":"2012-12-13T15:44:11.213Z","created":"2012-12-11T15:00:34.717Z","term":{},"id":"50c2049e987eda0d3d02ed1f"},"uri":"/v1.1/sections/50c2049e987eda0d3d02ed1f"},{"data":{"course_name":"Planetary
         Literature","course_number":"214","district":"4fd43cc56d11340000000005","grade":"6","name":"Earth
@@ -456,7 +542,50 @@ http_interactions:
         arts","teacher":"50ba1c0c4eda5d94372227ef","students":["50a50388c37c6bdc50132a85","50a50388c37c6bdc50132a85","50af8fab794f75e11f340b02","50b778cbf8fb0dfb5047d995","50ba1c514eda5d943722342b","50ba1c524eda5d943722343b","50bb6d74271f97d61d2c12e8","50bb6d75271f97d61d2c132e","50be107ae4b954fe2326abaa","50be107ae4b954fe2326abaa","50bf617d02dfe7ca01543593","50c0b3a9f1d530bb54519384","50c0b3a9f1d530bb545193f6","50c0b3a9f1d530bb545193f6","50c2047f987eda0d3d02df13","50c20480987eda0d3d02df63","50c35c3307ad64816a44477c","50c35c3307ad64816a44477c","50c4a7d199ad702e02293fb1","50c4a7d199ad702e02293fb6","50c4a7d599ad702e02294034","50c5fba0ed21c30a6e1e2417","50c5fba0ed21c30a6e1e2433","50c5fba0ed21c30a6e1e2463","50c74a844cc604327e020020","50c74a854cc604327e020058","50c74a854cc604327e020064","50c74a854cc604327e020074","50c74a854cc604327e020074","50c74a854cc604327e020096","50c8a01c9ed67a1d3f1f7741","50c8a01c9ed67a1d3f1f77af","50c9f799b519c89966184467","50c9f7a0b519c899661844cf"],"last_modified":"2012-12-13T15:44:11.689Z","created":"2012-12-11T15:00:34.854Z","term":{},"id":"50c35c4007ad64816a44552e"},"uri":"/v1.1/sections/50c35c4007ad64816a44552e"},{"data":{"course_name":"Earth
         Literature","course_number":"320","district":"4fd43cc56d11340000000005","grade":"7","name":"Earth
         Literature 5(A)","school":"4fee004cca2e43cf27000003","sis_id":"42","subject":"english/language
-        arts","teacher":"50c89ff19ed67a1d3f1f50c9","students":["50a3b2273cfe3fd05909486a","50b0e1311f9be17c5a306246","50b627304dcdf0fb202ea322","50b778caf8fb0dfb5047d93b","50b778cbf8fb0dfb5047d989","50bcbe65d6a827844305a94c","50be1079e4b954fe2326ab3a","50bf617d02dfe7ca01543542","50bf617d02dfe7ca0154357d","50c20480987eda0d3d02df6d","50c35c3207ad64816a4446d3","50c35c3207ad64816a4446d6","50c35c3307ad64816a4446f0","50c35c3307ad64816a444756","50c4a7d299ad702e02293fc2","50c4a7d399ad702e02293fe0","50c4a7d399ad702e02293fec","50c4a7d599ad702e0229402a","50c5fb9fed21c30a6e1e23fd","50c5fba0ed21c30a6e1e2425","50c5fba0ed21c30a6e1e2425","50c5fba0ed21c30a6e1e2443","50c5fba0ed21c30a6e1e2443","50c5fba1ed21c30a6e1e2475","50c5fba1ed21c30a6e1e2483","50c74a844cc604327e02001f","50c74a854cc604327e020050","50c74a854cc604327e020078","50c74a854cc604327e0200aa","50c8a01c9ed67a1d3f1f774d","50c8a01c9ed67a1d3f1f7759","50c8a01d9ed67a1d3f1f77d7","50c9f799b519c8996618444f","50c9f799b519c89966184459","50c9f79eb519c899661844a3","50c9f79fb519c899661844ad","50c9f7a0b519c899661844df"],"last_modified":"2012-12-13T15:44:11.735Z","created":"2012-12-11T15:00:34.879Z","term":{},"id":"50c4a7f499ad702e02295e5f"},"uri":"/v1.1/sections/50c4a7f499ad702e02295e5f"},{"data":{"course_name":"Planetary
+        arts","teacher":"50c89ff19ed67a1d3f1f50c9","students":["50a3b2273cfe3fd05909486a","50b0e1311f9be17c5a306246","50b627304dcdf0fb202ea322","50b778caf8fb0dfb5047d93b","50b778cbf8fb0dfb5047d989","50bcbe65d6a827844305a94c","50be1079e4b954fe2326ab3a","50bf617d02dfe7ca01543542","50bf617d02dfe7ca0154357d","50c20480987eda0d3d02df6d","50c35c3207ad64816a4446d3","50c35c3207ad64816a4446d6","50c35c3307ad64816a4446f0","50c35c3307ad64816a444756","50c4a7d299ad702e02293fc2","50c4a7d399ad702e02293fe0","50c4a7d399ad702e02293fec","50c4a7d599ad702e0229402a","50c5fb9fed21c30a6e1e23fd","50c5fba0ed21c30a6e1e2425","50c5fba0ed21c30a6e1e2425","50c5fba0ed21c30a6e1e2443","50c5fba0ed21c30a6e1e2443","50c5fba1ed21c30a6e1e2475","50c5fba1ed21c30a6e1e2483","50c74a844cc604327e02001f","50c74a854cc604327e020050","50c74a854cc604327e020078","50c74a854cc604327e0200aa","50c8a01c9ed67a1d3f1f774d","50c8a01c9ed67a1d3f1f7759","50c8a01d9ed67a1d3f1f77d7","50c9f799b519c8996618444f","50c9f799b519c89966184459","50c9f79eb519c899661844a3","50c9f79fb519c899661844ad","50c9f7a0b519c899661844df"],"last_modified":"2012-12-13T15:44:11.735Z","created":"2012-12-11T15:00:34.879Z","term":{},"id":"50c4a7f499ad702e02295e5f"},"uri":"/v1.1/sections/50c4a7f499ad702e02295e5f"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=3"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=4"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=2"}]}'
+    http_version: 
+  recorded_at: Wed, 11 Sep 2013 19:15:36 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 11 Sep 2013 19:15:37 GMT
+      Etag:
+      - ! '"-84537227"'
+      Server:
+      - nginx/1.4.1
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '13129'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"paging":{"current":4,"total":5,"count":44},"data":[{"data":{"course_name":"Planetary
         Literature","course_number":"223","district":"4fd43cc56d11340000000005","grade":"6","name":"Earth
         Physics 8(B)","school":"4fee004cca2e43cf27000002","sis_id":"354","subject":"science","teacher":"50c4a79299ad702e0228e959","students":["50af8fab794f75e11f340ab6","50b0e1311f9be17c5a306236","50b0e1311f9be17c5a306237","50b384058cdcb9c56330c681","50b4d6b9ad221ab95f1c786c","50b4d6b9ad221ab95f1c78a0","50b627304dcdf0fb202ea364","50b8cae9a8b84d7c4e27f0cd","50bb6d74271f97d61d2c12da","50bf617d02dfe7ca0154354d","50c0b3a9f1d530bb545193b2","50c0b3a9f1d530bb545193bc","50c35c3207ad64816a4446e4","50c35c3307ad64816a4446f4","50c35c3307ad64816a444712","50c35c3307ad64816a444756","50c5fb9fed21c30a6e1e23f5","50c5fb9fed21c30a6e1e2413","50c5fb9fed21c30a6e1e2413","50c74a844cc604327e020023","50c74a854cc604327e020052","50c74a854cc604327e020072","50c74a854cc604327e0200a6","50c74a854cc604327e0200a8","50c8a01c9ed67a1d3f1f774f","50c8a01c9ed67a1d3f1f7781","50c8a01c9ed67a1d3f1f7799","50c9f799b519c89966184449","50c9f79db519c89966184485","50c9f79eb519c899661844a5","50c9f79fb519c899661844b7"],"last_modified":"2012-12-13T15:44:11.795Z","created":"2012-12-11T15:00:34.887Z","term":{},"id":"50c4a7f499ad702e02295e60"},"uri":"/v1.1/sections/50c4a7f499ad702e02295e60"},{"data":{"course_name":"Advanced
         Physics","course_number":"258","district":"4fd43cc56d11340000000005","grade":"6","name":"Earth
@@ -479,7 +608,50 @@ http_interactions:
         Physics 2(B)","school":"4fee004cca2e43cf27000003","sis_id":"91","subject":"science","teacher":"50c89ff19ed67a1d3f1f50c9","students":["50a7a66eeb29723d523832c5","50af8fab794f75e11f340ab2","50b0e1311f9be17c5a30624e","50b0e1311f9be17c5a30624e","50b627304dcdf0fb202ea33a","50b627304dcdf0fb202ea342","50b627304dcdf0fb202ea368","50b778cbf8fb0dfb5047d975","50b8cae8a8b84d7c4e27f048","50b8cae9a8b84d7c4e27f0ed","50bcbe65d6a827844305a962","50be107ae4b954fe2326abd2","50c20480987eda0d3d02df4b","50c35c3207ad64816a4446d3","50c4a7d299ad702e02293fc2","50c4a7d599ad702e02294038","50c5fba1ed21c30a6e1e2483","50c74a854cc604327e020078","50c8a01c9ed67a1d3f1f774b","50c8a01c9ed67a1d3f1f7779","50c8a01c9ed67a1d3f1f77ad","50c9f799b519c89966184459","50c9f79fb519c899661844b3","50c9f7a1b519c899661844f3"],"last_modified":"2012-12-13T15:44:12.186Z","created":"2012-12-12T15:18:18.535Z","term":{},"id":"50c8a03a9ed67a1d3f1f8569"},"uri":"/v1.1/sections/50c8a03a9ed67a1d3f1f8569"},{"data":{"course_name":"Advanced
         Biology","course_number":"448","district":"4fd43cc56d11340000000005","grade":"8","name":"Planetary
         Literature 1(B)","school":"4fee004cca2e43cf27000002","sis_id":"78","subject":"english/language
-        arts","teacher":"50bcbe5ad6a8278443059d4b","students":["4fee004cca2e43cf270002c7","4fee004dca2e43cf27000471","4fee004dca2e43cf27000533","5099af10ff9fe8140f001106","509a77c6636bff7111345b76","509d1aa19d5984430b3e30e9","50a65524c5fe4dc37822759f","50a65525c5fe4dc3782275f4","50a7a66eeb29723d5238331d","50a8f80a0b388b1775332e63","50ab9b04c635f276782f196d","50ae3dec59d809393e467ead","50b4d6b9ad221ab95f1c7890","50b8cae9a8b84d7c4e27f0cd","50b8cae9a8b84d7c4e27f0e9","50ba1c504eda5d94372233c1","50ba1c524eda5d9437223431","50bb6d74271f97d61d2c12c9","50bb6d75271f97d61d2c134c","50bb6d75271f97d61d2c134c","50bcbe65d6a827844305a91c","50bcbe65d6a827844305a97a","50be1079e4b954fe2326ab5a","50bf617d02dfe7ca015435a9","50c0b3a9f1d530bb5451937f","50c0b3a9f1d530bb545193ba","50c0b3a9f1d530bb545193bc","50c0b3a9f1d530bb545193ec","50c2047f987eda0d3d02defb","50c2047f987eda0d3d02defb","50c20482987eda0d3d02df83","50c20482987eda0d3d02df85","50c35c3307ad64816a4446f4","50c35c3307ad64816a444736","50c35c3307ad64816a444736","50c35c3307ad64816a444756","50c4a7d199ad702e02293fab","50c4a7d299ad702e02293fbc","50c4a7d399ad702e02293ff0","50c4a7d699ad702e02294048","50c5fb9fed21c30a6e1e2413","50c5fba0ed21c30a6e1e242d","50c5fba0ed21c30a6e1e2459","50c5fba1ed21c30a6e1e247d","50c74a854cc604327e020052","50c74a854cc604327e02007c","50c74a854cc604327e02007e","50c74a854cc604327e0200a6","50c74a854cc604327e0200ae","50c74a864cc604327e0200bc","50c74a864cc604327e0200c4","50c8a01c9ed67a1d3f1f7745","50c8a01c9ed67a1d3f1f7761","50c8a01c9ed67a1d3f1f7761","50c8a01c9ed67a1d3f1f77a5","50c8a01c9ed67a1d3f1f77af","50c9f79db519c89966184479","50c9f79db519c89966184479","50c9f79eb519c8996618448d","50c9f79eb519c8996618448f","50c9f79eb519c899661844a5","50c9f79fb519c899661844b5"],"last_modified":"2012-12-13T15:44:12.288Z","created":"2012-12-13T15:44:12.249Z","term":{},"id":"50c9f7ccb519c899661852e3"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e3"},{"data":{"course_name":"Earth
+        arts","teacher":"50bcbe5ad6a8278443059d4b","students":["4fee004cca2e43cf270002c7","4fee004dca2e43cf27000471","4fee004dca2e43cf27000533","5099af10ff9fe8140f001106","509a77c6636bff7111345b76","509d1aa19d5984430b3e30e9","50a65524c5fe4dc37822759f","50a65525c5fe4dc3782275f4","50a7a66eeb29723d5238331d","50a8f80a0b388b1775332e63","50ab9b04c635f276782f196d","50ae3dec59d809393e467ead","50b4d6b9ad221ab95f1c7890","50b8cae9a8b84d7c4e27f0cd","50b8cae9a8b84d7c4e27f0e9","50ba1c504eda5d94372233c1","50ba1c524eda5d9437223431","50bb6d74271f97d61d2c12c9","50bb6d75271f97d61d2c134c","50bb6d75271f97d61d2c134c","50bcbe65d6a827844305a91c","50bcbe65d6a827844305a97a","50be1079e4b954fe2326ab5a","50bf617d02dfe7ca015435a9","50c0b3a9f1d530bb5451937f","50c0b3a9f1d530bb545193ba","50c0b3a9f1d530bb545193bc","50c0b3a9f1d530bb545193ec","50c2047f987eda0d3d02defb","50c2047f987eda0d3d02defb","50c20482987eda0d3d02df83","50c20482987eda0d3d02df85","50c35c3307ad64816a4446f4","50c35c3307ad64816a444736","50c35c3307ad64816a444736","50c35c3307ad64816a444756","50c4a7d199ad702e02293fab","50c4a7d299ad702e02293fbc","50c4a7d399ad702e02293ff0","50c4a7d699ad702e02294048","50c5fb9fed21c30a6e1e2413","50c5fba0ed21c30a6e1e242d","50c5fba0ed21c30a6e1e2459","50c5fba1ed21c30a6e1e247d","50c74a854cc604327e020052","50c74a854cc604327e02007c","50c74a854cc604327e02007e","50c74a854cc604327e0200a6","50c74a854cc604327e0200ae","50c74a864cc604327e0200bc","50c74a864cc604327e0200c4","50c8a01c9ed67a1d3f1f7745","50c8a01c9ed67a1d3f1f7761","50c8a01c9ed67a1d3f1f7761","50c8a01c9ed67a1d3f1f77a5","50c8a01c9ed67a1d3f1f77af","50c9f79db519c89966184479","50c9f79db519c89966184479","50c9f79eb519c8996618448d","50c9f79eb519c8996618448f","50c9f79eb519c899661844a5","50c9f79fb519c899661844b5"],"last_modified":"2012-12-13T15:44:12.288Z","created":"2012-12-13T15:44:12.249Z","term":{},"id":"50c9f7ccb519c899661852e3"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e3"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=4"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=5"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=3"}]}'
+    http_version: 
+  recorded_at: Wed, 11 Sep 2013 19:15:37 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 11 Sep 2013 19:15:37 GMT
+      Etag:
+      - ! '"-992665503"'
+      Server:
+      - nginx/1.4.1
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '5152'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"paging":{"current":5,"total":5,"count":44},"data":[{"data":{"course_name":"Earth
         Arithmetic","course_number":"278","district":"4fd43cc56d11340000000005","grade":"7","name":"Advanced
         Physics 8(B)","school":"4fee004cca2e43cf27000002","sis_id":"201","subject":"science","teacher":"50c20477987eda0d3d02d30e","students":["4fee004dca2e43cf27000447","50ab9b03c635f276782f1939","50af8fab794f75e11f340acc","50b4d6b9ad221ab95f1c78a0","50b6272f4dcdf0fb202ea30e","50b8cae8a8b84d7c4e27f07d","50bb6d75271f97d61d2c1368","50be1079e4b954fe2326ab5c","50be107ae4b954fe2326ab78","50be107ae4b954fe2326ab7e","50be107ae4b954fe2326ab9a","50be107ae4b954fe2326ab9e","50bf617d02dfe7ca01543565","50c0b3a9f1d530bb545193d2","50c2047f987eda0d3d02deed","50c20482987eda0d3d02df7f","50c35c3207ad64816a4446da","50c35c3307ad64816a44477a","50c4a7d299ad702e02293fbc","50c4a7d499ad702e02294004","50c4a7d599ad702e0229401c","50c4a7d599ad702e0229402e","50c74a854cc604327e020052","50c74a854cc604327e0200a6","50c8a01c9ed67a1d3f1f7745","50c8a01c9ed67a1d3f1f7781","50c8a01d9ed67a1d3f1f77d5","50c9f79db519c89966184485","50c9f79eb519c899661844a5","50c9f79fb519c899661844b1","50c9f79fb519c899661844bb","50c9f7a0b519c899661844d7"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.279Z","term":{},"id":"50c9f7ccb519c899661852e4"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e4"},{"data":{"course_name":"Earth
         Chemistry","course_number":"382","district":"4fd43cc56d11340000000005","grade":"8","name":"Earth
@@ -487,7 +659,7 @@ http_interactions:
         Literature","course_number":"407","district":"4fd43cc56d11340000000005","grade":"6","name":"Advanced
         Physics 6(A)","school":"4fee004cca2e43cf27000001","sis_id":"358","subject":"science","teacher":"50c9f780b519c8996618387f","students":["50a10f1efbb904c169b9dfef","50a8f80a0b388b1775332e71","50ae3dec59d809393e467efc","50af8fab794f75e11f340afa","50af8fac794f75e11f340b30","50b384058cdcb9c56330c69f","50b384058cdcb9c56330c6d9","50b384058cdcb9c56330c6df","50b4d6b8ad221ab95f1c7830","50b4d6b8ad221ab95f1c7836","50b627304dcdf0fb202ea376","50b778cbf8fb0dfb5047d98d","50ba1c504eda5d94372233dd","50ba1c504eda5d943722341d","50ba1c534eda5d9437223447","50bb6d74271f97d61d2c12cd","50bcbe65d6a827844305a916","50bcbe65d6a827844305a916","50bcbe65d6a827844305a98c","50bf617d02dfe7ca01543551","50bf617d02dfe7ca015435ed","50c2047f987eda0d3d02dedc","50c20480987eda0d3d02df61","50c20480987eda0d3d02df61","50c5fb9fed21c30a6e1e2407","50c5fba0ed21c30a6e1e2415","50c74a854cc604327e020042","50c74a854cc604327e02004e","50c74a854cc604327e02009c","50c74a854cc604327e0200b4","50c74a854cc604327e0200b6","50c8a01c9ed67a1d3f1f7773","50c8a01c9ed67a1d3f1f7793","50c8a01d9ed67a1d3f1f77d1","50c9f79eb519c8996618449f","50c9f79fb519c899661844c3"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.286Z","term":{},"id":"50c9f7ccb519c899661852e6"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e6"},{"data":{"course_name":"Advanced
         Arithmetic","course_number":"335","district":"4fd43cc56d11340000000005","grade":"7","name":"Earth
-        Arithmetic 4(B)","school":"4fee004cca2e43cf27000004","sis_id":"393","subject":"math","teacher":"50be102be4b954fe2326357f","students":["50b627304dcdf0fb202ea350","50b778cbf8fb0dfb5047d999","50bb6d75271f97d61d2c130e","50be1079e4b954fe2326ab21","50bf617d02dfe7ca01543593","50bf617d02dfe7ca015435a1","50c0b3a9f1d530bb5451937e","50c0b3a9f1d530bb5451938e","50c0b3a9f1d530bb545193d6","50c2047f987eda0d3d02df1d","50c35c3307ad64816a44470a","50c35c3307ad64816a444764","50c4a7d199ad702e02293fb1","50c4a7d499ad702e02294006","50c5fba0ed21c30a6e1e2417","50c74a854cc604327e020032","50c74a854cc604327e020058","50c8a01c9ed67a1d3f1f779b","50c8a01c9ed67a1d3f1f779f","50c9f799b519c8996618444c","50c9f799b519c8996618446b","50c9f79eb519c8996618449d","50c9f7a1b519c89966184505"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.287Z","term":{},"id":"50c9f7ccb519c899661852e7"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e7"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"}]}'
+        Arithmetic 4(B)","school":"4fee004cca2e43cf27000004","sis_id":"393","subject":"math","teacher":"50be102be4b954fe2326357f","students":["50b627304dcdf0fb202ea350","50b778cbf8fb0dfb5047d999","50bb6d75271f97d61d2c130e","50be1079e4b954fe2326ab21","50bf617d02dfe7ca01543593","50bf617d02dfe7ca015435a1","50c0b3a9f1d530bb5451937e","50c0b3a9f1d530bb5451938e","50c0b3a9f1d530bb545193d6","50c2047f987eda0d3d02df1d","50c35c3307ad64816a44470a","50c35c3307ad64816a444764","50c4a7d199ad702e02293fb1","50c4a7d499ad702e02294006","50c5fba0ed21c30a6e1e2417","50c74a854cc604327e020032","50c74a854cc604327e020058","50c8a01c9ed67a1d3f1f779b","50c8a01c9ed67a1d3f1f779f","50c9f799b519c8996618444c","50c9f799b519c8996618446b","50c9f79eb519c8996618449d","50c9f7a1b519c89966184505"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.287Z","term":{},"id":"50c9f7ccb519c899661852e7"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e7"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=5"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=4"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:18 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:38 GMT
 recorded_with: VCR 2.4.0
