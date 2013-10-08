@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:26 GMT
+      - Wed, 11 Sep 2013 19:15:39 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -41,7 +41,7 @@ http_interactions:
       string: ! '{"paging":{"current":1,"total":1,"count":1},"data":[{"data":{"name":"Demo
         District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:27 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:39 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -69,7 +69,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:27 GMT
+      - Wed, 11 Sep 2013 19:15:39 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -82,7 +82,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:27 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:39 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -110,7 +110,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:27 GMT
+      - Wed, 11 Sep 2013 19:15:40 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -123,10 +123,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:27 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:40 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=100000
     body:
       encoding: US-ASCII
       string: ''
@@ -151,15 +151,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:28 GMT
+      - Wed, 11 Sep 2013 19:15:40 GMT
       Etag:
-      - ! '"1318964345"'
+      - ! '"-2096038567"'
       Server:
       - nginx/1.4.1
       X-Powered-By:
       - Express
       Content-Length:
-      - '21449'
+      - '21462'
       Connection:
       - keep-alive
     body:
@@ -212,9 +212,9 @@ http_interactions:
         Visionary Architectures Manager","name":{"last":"Lubowitz","middle":"G","first":"Alec"},"last_modified":"2012-12-14T01:07:06.495Z","created":"2012-12-13T15:42:56.970Z","credentials":{},"id":"50c9f780b519c8996618387f"},"uri":"/v1.1/teachers/50c9f780b519c8996618387f"},{"data":{"district":"4fd43cc56d11340000000005","email":"jessika.cronin@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"304","teacher_number":"313","title":"Streamline
         Magnetic Methodologies Manager","name":{"last":"Cronin","middle":"W","first":"Jessika"},"last_modified":"2012-12-14T01:07:06.499Z","created":"2012-12-13T15:42:56.971Z","credentials":{},"id":"50c9f780b519c89966183880"},"uri":"/v1.1/teachers/50c9f780b519c89966183880"},{"data":{"district":"4fd43cc56d11340000000005","email":"frances.koelpin@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"341","teacher_number":"227","title":"Target
         Killer E-business Manager","name":{"last":"Koelpin","middle":"M","first":"Frances"},"last_modified":"2012-12-14T01:07:06.505Z","created":"2012-12-13T15:42:56.972Z","credentials":{},"id":"50c9f780b519c89966183881"},"uri":"/v1.1/teachers/50c9f780b519c89966183881"},{"data":{"district":"4fd43cc56d11340000000005","email":"samanta.hagenes@mailinator.com","school":"4fee004cca2e43cf27000001","sis_id":"427","teacher_number":"135","title":"Grow
-        Next-generation Networks Manager","name":{"last":"Hagenes","middle":"B","first":"Samanta"},"last_modified":"2012-12-14T01:07:06.510Z","created":"2012-12-13T15:42:56.976Z","credentials":{},"id":"50c9f780b519c89966183882"},"uri":"/v1.1/teachers/50c9f780b519c89966183882"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"}]}'
+        Next-generation Networks Manager","name":{"last":"Hagenes","middle":"B","first":"Samanta"},"last_modified":"2012-12-14T01:07:06.510Z","created":"2012-12-13T15:42:56.976Z","credentials":{},"id":"50c9f780b519c89966183882"},"uri":"/v1.1/teachers/50c9f780b519c89966183882"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=100000"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:28 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:41 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -242,7 +242,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:29 GMT
+      - Wed, 11 Sep 2013 19:15:43 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -255,7 +255,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:29 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:43 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -283,7 +283,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:29 GMT
+      - Wed, 11 Sep 2013 19:15:43 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -296,10 +296,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:29 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:43 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=1
     body:
       encoding: US-ASCII
       string: ''
@@ -324,20 +324,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:30 GMT
+      - Wed, 11 Sep 2013 19:15:44 GMT
       Etag:
-      - ! '"1318964345"'
+      - ! '"562726382"'
       Server:
       - nginx/1.4.1
       X-Powered-By:
       - Express
       Content-Length:
-      - '21449'
+      - '4677'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"paging":{"current":1,"total":1,"count":48},"data":[{"data":{"district":"4fd43cc56d11340000000005","email":"ward.dietrich@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"443","teacher_number":"172","title":"Evolve
+      string: ! '{"paging":{"current":1,"total":5,"count":48},"data":[{"data":{"district":"4fd43cc56d11340000000005","email":"ward.dietrich@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"443","teacher_number":"172","title":"Evolve
         Holistic Deliverables Manager","name":{"last":"Dietrich","middle":"F","first":"Ward"},"last_modified":"2012-12-14T01:07:05.745Z","created":"2012-11-07T00:44:53.892Z","credentials":{},"id":"5099af05ff9fe8140f00006c"},"uri":"/v1.1/teachers/5099af05ff9fe8140f00006c"},{"data":{"district":"4fd43cc56d11340000000005","email":"germaine.lueilwitz@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"11","teacher_number":"421","title":"Recontextualize
         Cutting-edge Experiences Manager","name":{"last":"Lueilwitz","middle":"J","first":"Germaine"},"last_modified":"2012-12-14T01:07:05.752Z","created":"2012-11-11T15:00:14.036Z","credentials":{},"id":"509fbd7ec474fab64a8e9d53"},"uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53"},{"data":{"district":"4fd43cc56d11340000000005","email":"estevan.braun@mailinator.com","school":"4fee004cca2e43cf27000004","sis_id":"410","teacher_number":"431","title":"Strategize
         Next-generation Solutions Manager","name":{"last":"Braun","middle":"N","first":"Estevan"},"last_modified":"2012-12-14T01:07:05.757Z","created":"2012-11-11T15:00:14.038Z","credentials":{},"id":"509fbd7ec474fab64a8e9d55"},"uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d55"},{"data":{"district":"4fd43cc56d11340000000005","email":"bell.stanton@mailinator.com","school":"4fee004cca2e43cf27000004","sis_id":"386","teacher_number":"445","title":"Enhance
@@ -347,7 +347,50 @@ http_interactions:
         Virtual Portals Manager","name":{"last":"Shields","middle":"J","first":"Baron"},"last_modified":"2012-12-14T01:07:05.778Z","created":"2012-11-21T15:00:09.086Z","credentials":{},"id":"50acec793682efb03422ca25"},"uri":"/v1.1/teachers/50acec793682efb03422ca25"},{"data":{"district":"4fd43cc56d11340000000005","email":"frank.gulgowski@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"33","teacher_number":"496","title":"Empower
         Clicks-and-mortar Action-items Manager","name":{"last":"Gulgowski","middle":"I","first":"Frank"},"last_modified":"2012-12-14T01:07:05.788Z","created":"2012-11-27T15:04:48.474Z","credentials":{},"id":"50b4d690ad221ab95f1c6c39"},"uri":"/v1.1/teachers/50b4d690ad221ab95f1c6c39"},{"data":{"district":"4fd43cc56d11340000000005","email":"noah.schimmel@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"192","teacher_number":"255","title":"Iterate
         Wireless Users Manager","name":{"last":"Schimmel","middle":"I","first":"Noah"},"last_modified":"2012-12-14T01:07:05.792Z","created":"2012-11-27T15:04:48.476Z","credentials":{},"id":"50b4d690ad221ab95f1c6c3d"},"uri":"/v1.1/teachers/50b4d690ad221ab95f1c6c3d"},{"data":{"district":"4fd43cc56d11340000000005","email":"earnest.harris@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"311","teacher_number":"261","title":"Transition
-        Scalable Partnerships Manager","name":{"last":"Harris","middle":"P","first":"Earnest"},"last_modified":"2012-12-14T01:07:05.797Z","created":"2012-11-30T15:03:48.870Z","credentials":{},"id":"50b8cad4a8b84d7c4e27e474"},"uri":"/v1.1/teachers/50b8cad4a8b84d7c4e27e474"},{"data":{"district":"4fd43cc56d11340000000005","email":"curt.dietrich@mailinator.com","school":"4fee004cca2e43cf27000001","sis_id":"81","teacher_number":"398","title":"Redefine
+        Scalable Partnerships Manager","name":{"last":"Harris","middle":"P","first":"Earnest"},"last_modified":"2012-12-14T01:07:05.797Z","created":"2012-11-30T15:03:48.870Z","credentials":{},"id":"50b8cad4a8b84d7c4e27e474"},"uri":"/v1.1/teachers/50b8cad4a8b84d7c4e27e474"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=1"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2"}]}'
+    http_version: 
+  recorded_at: Wed, 11 Sep 2013 19:15:44 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 11 Sep 2013 19:15:44 GMT
+      Etag:
+      - ! '"1518209782"'
+      Server:
+      - nginx/1.4.1
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '4731'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"paging":{"current":2,"total":5,"count":48},"data":[{"data":{"district":"4fd43cc56d11340000000005","email":"curt.dietrich@mailinator.com","school":"4fee004cca2e43cf27000001","sis_id":"81","teacher_number":"398","title":"Redefine
         Virtual Solutions Manager","name":{"last":"Dietrich","middle":"H","first":"Curt"},"last_modified":"2012-12-14T01:07:05.802Z","created":"2012-12-01T15:02:36.961Z","credentials":{},"id":"50ba1c0c4eda5d94372227eb"},"uri":"/v1.1/teachers/50ba1c0c4eda5d94372227eb"},{"data":{"district":"4fd43cc56d11340000000005","email":"emelie.wunsch@mailinator.com","school":"4fee004cca2e43cf27000004","sis_id":"464","teacher_number":"233","title":"Utilize
         Customized Channels Manager","name":{"last":"Wunsch","middle":"J","first":"Emelie"},"last_modified":"2012-12-14T01:07:05.807Z","created":"2012-12-01T15:02:36.969Z","credentials":{},"id":"50ba1c0c4eda5d94372227ef"},"uri":"/v1.1/teachers/50ba1c0c4eda5d94372227ef"},{"data":{"district":"4fd43cc56d11340000000005","email":"braeden.farrell@mailinator.com","school":"4fee004cca2e43cf27000004","sis_id":"478","teacher_number":"184","title":"Syndicate
         Real-time Niches Manager","name":{"last":"Farrell","middle":"M","first":"Braeden"},"last_modified":"2012-12-14T01:07:05.813Z","created":"2012-12-02T15:01:20.168Z","credentials":{},"id":"50bb6d40271f97d61d2c06ff"},"uri":"/v1.1/teachers/50bb6d40271f97d61d2c06ff"},{"data":{"district":"4fd43cc56d11340000000005","email":"margot.tremblay@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"181","teacher_number":"79","title":"Enhance
@@ -357,7 +400,50 @@ http_interactions:
         Sexy Web-readiness Manager","name":{"last":"Fay","middle":"D","first":"Brendan"},"last_modified":"2012-12-14T01:07:05.902Z","created":"2012-12-05T15:00:02.670Z","credentials":{},"id":"50bf617202dfe7ca0154296f"},"uri":"/v1.1/teachers/50bf617202dfe7ca0154296f"},{"data":{"district":"4fd43cc56d11340000000005","email":"nikko.stehr@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"320","teacher_number":"320","title":"Engineer
         B2b Content Manager","name":{"last":"Stehr","middle":"Y","first":"Nikko"},"last_modified":"2012-12-14T01:07:05.919Z","created":"2012-12-05T15:00:02.671Z","credentials":{},"id":"50bf617202dfe7ca01542973"},"uri":"/v1.1/teachers/50bf617202dfe7ca01542973"},{"data":{"district":"4fd43cc56d11340000000005","email":"henri.schumm@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"392","teacher_number":"225","title":"Extend
         Next-generation Portals Manager","name":{"last":"Schumm","middle":"M","first":"Henri"},"last_modified":"2012-12-14T01:07:05.949Z","created":"2012-12-05T15:00:02.671Z","credentials":{},"id":"50bf617202dfe7ca01542974"},"uri":"/v1.1/teachers/50bf617202dfe7ca01542974"},{"data":{"district":"4fd43cc56d11340000000005","email":"kaley.mckenzie@mailinator.com","school":"4fee004cca2e43cf27000001","sis_id":"39","teacher_number":"219","title":"Revolutionize
-        Robust Interfaces Manager","name":{"last":"McKenzie","middle":"S","first":"Kaley"},"last_modified":"2012-12-14T01:07:05.987Z","created":"2012-12-07T15:00:07.732Z","credentials":{},"id":"50c20477987eda0d3d02d30e"},"uri":"/v1.1/teachers/50c20477987eda0d3d02d30e"},{"data":{"district":"4fd43cc56d11340000000005","email":"reta.west@mailinator.com","school":"4fee004cca2e43cf27000001","sis_id":"70","teacher_number":"420","title":"Synergize
+        Robust Interfaces Manager","name":{"last":"McKenzie","middle":"S","first":"Kaley"},"last_modified":"2012-12-14T01:07:05.987Z","created":"2012-12-07T15:00:07.732Z","credentials":{},"id":"50c20477987eda0d3d02d30e"},"uri":"/v1.1/teachers/50c20477987eda0d3d02d30e"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=1"}]}'
+    http_version: 
+  recorded_at: Wed, 11 Sep 2013 19:15:44 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 11 Sep 2013 19:15:45 GMT
+      Etag:
+      - ! '"-1275712713"'
+      Server:
+      - nginx/1.4.1
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '4755'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"paging":{"current":3,"total":5,"count":48},"data":[{"data":{"district":"4fd43cc56d11340000000005","email":"reta.west@mailinator.com","school":"4fee004cca2e43cf27000001","sis_id":"70","teacher_number":"420","title":"Synergize
         E-business Technologies Manager","name":{"last":"West","middle":"O","first":"Reta"},"last_modified":"2012-12-14T01:07:06.038Z","created":"2012-12-07T15:00:07.733Z","credentials":{},"id":"50c20477987eda0d3d02d310"},"uri":"/v1.1/teachers/50c20477987eda0d3d02d310"},{"data":{"district":"4fd43cc56d11340000000005","email":"jayne.smith@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"112","teacher_number":"214","title":"Visualize
         Next-generation Functionalities Manager","name":{"last":"Smith","middle":"M","first":"Jayne"},"last_modified":"2012-12-14T01:07:06.054Z","created":"2012-12-07T15:00:07.736Z","credentials":{},"id":"50c20477987eda0d3d02d311"},"uri":"/v1.1/teachers/50c20477987eda0d3d02d311"},{"data":{"district":"4fd43cc56d11340000000005","email":"leta.willms@mailinator.com","school":"4fee004cca2e43cf27000004","sis_id":"198","teacher_number":"195","title":"Morph
         Strategic Action-items Manager","name":{"last":"Willms","middle":"C","first":"Leta"},"last_modified":"2012-12-14T01:07:06.066Z","created":"2012-12-07T15:00:07.737Z","credentials":{},"id":"50c20477987eda0d3d02d312"},"uri":"/v1.1/teachers/50c20477987eda0d3d02d312"},{"data":{"district":"4fd43cc56d11340000000005","email":"ike.smitham@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"96","teacher_number":"135","title":"Embrace
@@ -367,7 +453,50 @@ http_interactions:
         Value-added Communities Manager","name":{"last":"Padberg","middle":"S","first":"Letitia"},"last_modified":"2012-12-14T01:07:06.170Z","created":"2012-12-09T15:00:34.246Z","credentials":{},"id":"50c4a79299ad702e0228e956"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e956"},{"data":{"district":"4fd43cc56d11340000000005","email":"eugenia.schuppe@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"62","teacher_number":"132","title":"Matrix
         B2c Markets Manager","name":{"last":"Schuppe","middle":"L","first":"Eugenia"},"last_modified":"2012-12-14T01:07:06.183Z","created":"2012-12-09T15:00:34.248Z","credentials":{},"id":"50c4a79299ad702e0228e957"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e957"},{"data":{"district":"4fd43cc56d11340000000005","email":"muhammad.mitchell@mailinator.com","school":"4fee004cca2e43cf27000004","sis_id":"224","teacher_number":"27","title":"Repurpose
         Real-time Convergence Manager","name":{"last":"Mitchell","middle":"A","first":"Muhammad"},"last_modified":"2012-12-14T01:07:06.227Z","created":"2012-12-09T15:00:34.248Z","credentials":{},"id":"50c4a79299ad702e0228e958"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e958"},{"data":{"district":"4fd43cc56d11340000000005","email":"dan.witting@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"259","teacher_number":"406","title":"Monetize
-        Compelling Web Services Manager","name":{"last":"Witting","middle":"O","first":"Dan"},"last_modified":"2012-12-14T01:07:06.280Z","created":"2012-12-09T15:00:34.248Z","credentials":{},"id":"50c4a79299ad702e0228e959"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e959"},{"data":{"district":"4fd43cc56d11340000000005","email":"birdie.vonrueden@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"385","teacher_number":"55","title":"Streamline
+        Compelling Web Services Manager","name":{"last":"Witting","middle":"O","first":"Dan"},"last_modified":"2012-12-14T01:07:06.280Z","created":"2012-12-09T15:00:34.248Z","credentials":{},"id":"50c4a79299ad702e0228e959"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e959"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2"}]}'
+    http_version: 
+  recorded_at: Wed, 11 Sep 2013 19:15:45 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 11 Sep 2013 19:15:45 GMT
+      Etag:
+      - ! '"783539974"'
+      Server:
+      - nginx/1.4.1
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '4832'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"paging":{"current":4,"total":5,"count":48},"data":[{"data":{"district":"4fd43cc56d11340000000005","email":"birdie.vonrueden@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"385","teacher_number":"55","title":"Streamline
         One-to-one Infomediaries Manager","name":{"last":"VonRueden","middle":"I","first":"Birdie"},"last_modified":"2012-12-14T01:07:06.323Z","created":"2012-12-09T15:00:34.249Z","credentials":{},"id":"50c4a79299ad702e0228e95a"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e95a"},{"data":{"district":"4fd43cc56d11340000000005","email":"sabrina.kohler@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"21","teacher_number":"144","title":"Extend
         Turn-key Channels Manager","name":{"last":"Kohler","middle":"L","first":"Sabrina"},"last_modified":"2012-12-14T01:07:06.361Z","created":"2012-12-10T15:10:05.004Z","credentials":{},"id":"50c5fb4ced21c30a6e1dece4"},"uri":"/v1.1/teachers/50c5fb4ced21c30a6e1dece4"},{"data":{"district":"4fd43cc56d11340000000005","email":"sonny.romaguera@mailinator.com","school":"4fee004cca2e43cf27000004","sis_id":"144","teacher_number":"76","title":"Generate
         Intuitive E-tailers Manager","name":{"last":"Romaguera","middle":"W","first":"Sonny"},"last_modified":"2012-12-14T01:07:06.375Z","created":"2012-12-10T15:10:05.005Z","credentials":{},"id":"50c5fb4ced21c30a6e1dece5"},"uri":"/v1.1/teachers/50c5fb4ced21c30a6e1dece5"},{"data":{"district":"4fd43cc56d11340000000005","email":"elda.langosh@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"180","teacher_number":"90","title":"Incentivize
@@ -377,7 +506,50 @@ http_interactions:
         Front-end Bandwidth Manager","name":{"last":"Carroll","middle":"Z","first":"Loren"},"last_modified":"2012-12-14T01:07:06.414Z","created":"2012-12-10T15:10:05.007Z","credentials":{},"id":"50c5fb4ced21c30a6e1decea"},"uri":"/v1.1/teachers/50c5fb4ced21c30a6e1decea"},{"data":{"district":"4fd43cc56d11340000000005","email":"elenor.waters@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"353","teacher_number":"474","title":"Drive
         B2b Bandwidth Manager","name":{"last":"Waters","middle":"E","first":"Elenor"},"last_modified":"2012-12-14T01:07:06.417Z","created":"2012-12-11T15:00:13.024Z","credentials":{},"id":"50c74a7d4cc604327e01f45b"},"uri":"/v1.1/teachers/50c74a7d4cc604327e01f45b"},{"data":{"district":"4fd43cc56d11340000000005","email":"anibal.will@mailinator.com","school":"4fee004cca2e43cf27000004","sis_id":"372","teacher_number":"410","title":"Generate
         Cross-platform Models Manager","credentials":{"district_username":"Anibal.Will@mailinator.com","district_password":"0410"},"name":{"last":"Will","middle":"N","first":"Anibal"},"last_modified":"2012-12-14T01:07:06.444Z","created":"2012-12-11T15:00:13.024Z","id":"50c74a7d4cc604327e01f45c"},"uri":"/v1.1/teachers/50c74a7d4cc604327e01f45c"},{"data":{"district":"4fd43cc56d11340000000005","email":"zoila.krajcik@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"446","teacher_number":"468","title":"Transition
-        24/7 Platforms Manager","name":{"last":"Krajcik","middle":"Y","first":"Zoila"},"last_modified":"2012-12-14T01:07:06.465Z","created":"2012-12-11T15:00:13.025Z","credentials":{},"id":"50c74a7d4cc604327e01f45d"},"uri":"/v1.1/teachers/50c74a7d4cc604327e01f45d"},{"data":{"district":"4fd43cc56d11340000000005","email":"sammy.crist@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"23","teacher_number":"78","title":"Engineer
+        24/7 Platforms Manager","name":{"last":"Krajcik","middle":"Y","first":"Zoila"},"last_modified":"2012-12-14T01:07:06.465Z","created":"2012-12-11T15:00:13.025Z","credentials":{},"id":"50c74a7d4cc604327e01f45d"},"uri":"/v1.1/teachers/50c74a7d4cc604327e01f45d"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3"}]}'
+    http_version: 
+  recorded_at: Wed, 11 Sep 2013 19:15:45 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PUT,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 11 Sep 2013 19:15:47 GMT
+      Etag:
+      - ! '"1113384487"'
+      Server:
+      - nginx/1.4.1
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '3794'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"paging":{"current":5,"total":5,"count":48},"data":[{"data":{"district":"4fd43cc56d11340000000005","email":"sammy.crist@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"23","teacher_number":"78","title":"Engineer
         Viral Metrics Manager","name":{"last":"Crist","middle":"Y","first":"Sammy"},"last_modified":"2012-12-14T01:07:06.474Z","created":"2012-12-12T15:17:05.364Z","credentials":{},"id":"50c89ff19ed67a1d3f1f50c9"},"uri":"/v1.1/teachers/50c89ff19ed67a1d3f1f50c9"},{"data":{"district":"4fd43cc56d11340000000005","email":"simone.brakus@mailinator.com","school":"4fee004cca2e43cf27000001","sis_id":"54","teacher_number":"418","title":"Reintermediate
         Dynamic Action-items Manager","name":{"last":"Brakus","middle":"U","first":"Simone"},"last_modified":"2012-12-14T01:07:06.481Z","created":"2012-12-12T15:17:05.366Z","credentials":{},"id":"50c89ff19ed67a1d3f1f50ca"},"uri":"/v1.1/teachers/50c89ff19ed67a1d3f1f50ca"},{"data":{"district":"4fd43cc56d11340000000005","email":"bridget.kulas@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"254","teacher_number":"258","title":"Harness
         Ubiquitous Convergence Manager","name":{"last":"Kulas","middle":"B","first":"Bridget"},"last_modified":"2012-12-14T01:07:06.485Z","created":"2012-12-12T15:17:05.367Z","credentials":{},"id":"50c89ff19ed67a1d3f1f50cb"},"uri":"/v1.1/teachers/50c89ff19ed67a1d3f1f50cb"},{"data":{"district":"4fd43cc56d11340000000005","email":"chadrick.braun@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"99","teacher_number":"220","title":"Envisioneer
@@ -385,7 +557,7 @@ http_interactions:
         Visionary Architectures Manager","name":{"last":"Lubowitz","middle":"G","first":"Alec"},"last_modified":"2012-12-14T01:07:06.495Z","created":"2012-12-13T15:42:56.970Z","credentials":{},"id":"50c9f780b519c8996618387f"},"uri":"/v1.1/teachers/50c9f780b519c8996618387f"},{"data":{"district":"4fd43cc56d11340000000005","email":"jessika.cronin@mailinator.com","school":"4fee004cca2e43cf27000003","sis_id":"304","teacher_number":"313","title":"Streamline
         Magnetic Methodologies Manager","name":{"last":"Cronin","middle":"W","first":"Jessika"},"last_modified":"2012-12-14T01:07:06.499Z","created":"2012-12-13T15:42:56.971Z","credentials":{},"id":"50c9f780b519c89966183880"},"uri":"/v1.1/teachers/50c9f780b519c89966183880"},{"data":{"district":"4fd43cc56d11340000000005","email":"frances.koelpin@mailinator.com","school":"4fee004cca2e43cf27000002","sis_id":"341","teacher_number":"227","title":"Target
         Killer E-business Manager","name":{"last":"Koelpin","middle":"M","first":"Frances"},"last_modified":"2012-12-14T01:07:06.505Z","created":"2012-12-13T15:42:56.972Z","credentials":{},"id":"50c9f780b519c89966183881"},"uri":"/v1.1/teachers/50c9f780b519c89966183881"},{"data":{"district":"4fd43cc56d11340000000005","email":"samanta.hagenes@mailinator.com","school":"4fee004cca2e43cf27000001","sis_id":"427","teacher_number":"135","title":"Grow
-        Next-generation Networks Manager","name":{"last":"Hagenes","middle":"B","first":"Samanta"},"last_modified":"2012-12-14T01:07:06.510Z","created":"2012-12-13T15:42:56.976Z","credentials":{},"id":"50c9f780b519c89966183882"},"uri":"/v1.1/teachers/50c9f780b519c89966183882"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"}]}'
+        Next-generation Networks Manager","name":{"last":"Hagenes","middle":"B","first":"Samanta"},"last_modified":"2012-12-14T01:07:06.510Z","created":"2012-12-13T15:42:56.976Z","credentials":{},"id":"50c9f780b519c89966183882"},"uri":"/v1.1/teachers/50c9f780b519c89966183882"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:30 GMT
+  recorded_at: Wed, 11 Sep 2013 19:15:47 GMT
 recorded_with: VCR 2.4.0
