@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts?
+    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts?page=1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -23,25 +23,25 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:21 GMT
+      - Wed, 09 Oct 2013 21:53:43 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
       - Express
       Content-Length:
-      - '217'
+      - '224'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"paging":{"current":1,"total":1,"count":1},"data":[{"data":{"name":"Demo
-        District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
+      encoding: UTF-8
+      string: '{"paging":{"current":1,"total":1,"count":1},"data":[{"data":{"name":"Demo
+        District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"links":[{"rel":"self","uri":"/v1.1/districts?page=1"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:21 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:41 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -50,7 +50,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -65,11 +65,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:21 GMT
+      - Wed, 09 Oct 2013 21:53:43 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -79,10 +79,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:21 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:41 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -91,7 +91,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -106,11 +106,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:22 GMT
+      - Wed, 09 Oct 2013 21:53:43 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -120,10 +120,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:22 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:42 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/students?
@@ -132,7 +132,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -147,13 +147,13 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:24 GMT
+      - Wed, 09 Oct 2013 21:53:44 GMT
       Etag:
-      - ! '"1960727884"'
+      - '"1960727884"'
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -1612,7 +1612,7 @@ http_interactions:
         dCIsInVyaSI6Ii92MS4xL2Rpc3RyaWN0cy80ZmQ0M2NjNTZkMTEzNDAwMDAw
         MDAwMDUvc3R1ZGVudHM/cGFnZT0yIn1dfQ==
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:24 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:43 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -1621,7 +1621,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -1636,11 +1636,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:25 GMT
+      - Wed, 09 Oct 2013 21:53:45 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -1650,10 +1650,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:25 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:43 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -1662,7 +1662,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -1677,11 +1677,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:25 GMT
+      - Wed, 09 Oct 2013 21:53:45 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -1691,10 +1691,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:25 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:43 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/students?
@@ -1703,7 +1703,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -1718,13 +1718,13 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:26 GMT
+      - Wed, 09 Oct 2013 21:53:46 GMT
       Etag:
-      - ! '"1960727884"'
+      - '"1960727884"'
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -3183,5 +3183,5 @@ http_interactions:
         dCIsInVyaSI6Ii92MS4xL2Rpc3RyaWN0cy80ZmQ0M2NjNTZkMTEzNDAwMDAw
         MDAwMDUvc3R1ZGVudHM/cGFnZT0yIn1dfQ==
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:26 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:44 GMT
 recorded_with: VCR 2.4.0

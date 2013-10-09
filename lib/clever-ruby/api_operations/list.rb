@@ -3,8 +3,7 @@ module Clever
     module List
       module ClassMethods
         def all(filters={})
-          response = Clever.request(:get, url, filters)
-          Util.convert_to_clever_object(response[:data])
+          Clever::APIOperations::PageList.new(url, filters).collect{|page| page.all }
         end
       end
 
