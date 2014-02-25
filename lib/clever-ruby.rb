@@ -43,6 +43,10 @@ module Clever
       configuration.api_key
     end
 
+    def token
+      configuration.token
+    end
+
     def configuration
       @configuration ||= Clever::Configuration.new
     end
@@ -63,7 +67,7 @@ module Clever
   end
 
   def self.request(method, url, params=nil, headers={})
-    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.configure { |config| config.api_key = <API-KEY> }")') unless Clever.api_key
+    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.configure { |config| config.api_key = <API-KEY> }" or your token using "Clever.configure { |config| config.token = <TOKEN> }")') unless Clever.api_key or Clever.token
 
     params = Util.objects_to_ids(params)
     url = self.api_url(url)
@@ -76,9 +80,11 @@ module Clever
       payload = params
     end
 
+    if Clever.token
+      headers[:Authorization] = "Bearer " + Clever.token
+    end
+
     opts = {
-      :user => Clever.api_key,
-      :password => "",
       :method => method,
       :url => url,
       :headers => headers,
@@ -86,6 +92,10 @@ module Clever
       :payload => payload,
       :timeout => 80
     }
+    if Clever.api_key
+      opts[:user] = Clever.api_key
+      opts[:password] = ""
+    end
 
     begin
       response = execute_request(opts)
