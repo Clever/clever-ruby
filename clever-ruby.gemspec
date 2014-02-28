@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.name          = "clever-ruby"
   gem.version       = Clever::VERSION
   gem.authors       = ["Rafael Garcia", "Alex Zylman"]
-  gem.email         = ["ruby@getclever.com"]
+  gem.email         = ["tech-support@clever.com"]
   gem.description   = %q{Ruby bindings to the Clever API.}
   gem.summary       = %q{Ruby bindings to the Clever API.}
   gem.homepage      = "http://github.com/Clever/clever-ruby"
