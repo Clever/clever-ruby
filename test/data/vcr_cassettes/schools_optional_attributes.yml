@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/schools?
+    uri: https://DEMO_KEY:@api.getclever.com/v1.1/schools?page=1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -23,30 +23,24 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
-      Cache-Control:
-      - no-cache="set-cookie"
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 11 Feb 2013 18:52:47 GMT
+      - Wed, 09 Oct 2013 21:54:17 GMT
       Etag:
-      - ! '"960244484"'
+      - '"-915784228"'
       Server:
-      - nginx/1.2.3
-      Set-Cookie:
-      - AWSELB=57FFC5270C5107B6EA5E56398F77D924DD37E7E19953EE4589F0E25E8AB42DE5C42A50E50F0E4B84F1F903CD1F0A4E900C1FA7DA18973A6D0C757C75DBD7DB64ABDE808D68;PATH=/;MAX-AGE=300
-      Strict-Transport-Security:
-      - max-age=500
+      - nginx/1.4.1
       X-Powered-By:
       - Express
       Content-Length:
-      - '2236'
+      - '2286'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
+      encoding: UTF-8
+      string: '{"paging":{"current":1,"total":1,"count":4},"data":[{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
         Academy","nces_id":"17065379","phone":"1-(755) 019-5442","school_number":"9255","sis_id":"9255","location":{"address":"18828
         Kutch Court","city":"Dessiemouth","state":"IA","zip":"37471-9969"},"principal":{"email":"eda_barrows@mailinator.com","name":"Colleen
         Gottlieb"},"last_modified":"2012-11-07T00:44:53.065Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000001"},"uri":"/v1.1/schools/4fee004cca2e43cf27000001"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
@@ -58,7 +52,7 @@ http_interactions:
         Kiehn"},"last_modified":"2012-11-07T00:44:53.093Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000003"},"uri":"/v1.1/schools/4fee004cca2e43cf27000003"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
         Memorial High","nces_id":"26309489","phone":"1-(124) 215-8079","school_number":"3935","sis_id":"3935","state_id":"23","location":{"address":"10960
         Kilback View","city":"North Sarina","state":"MP","zip":"58717-8256"},"principal":{"email":"otto_sanford@mailinator.com","name":"Maryse
-        Tillman"},"last_modified":"2012-11-07T00:44:53.104Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000004"},"uri":"/v1.1/schools/4fee004cca2e43cf27000004"}],"links":[{"rel":"self","uri":"/v1.1/schools"}]}'
-    http_version:
-  recorded_at: Mon, 11 Feb 2013 18:50:38 GMT
+        Tillman"},"last_modified":"2012-11-07T00:44:53.104Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000004"},"uri":"/v1.1/schools/4fee004cca2e43cf27000004"}],"links":[{"rel":"self","uri":"/v1.1/schools?page=1"}]}'
+    http_version: 
+  recorded_at: Wed, 09 Oct 2013 21:54:16 GMT
 recorded_with: VCR 2.4.0

@@ -28,7 +28,7 @@ class ListTest < Test::Unit::TestCase
       @students = Clever::Student.all
     end
 
-    @students.count.must_equal 100
+    @students.count.must_equal 895
   end
 
   should "retrieve sections" do

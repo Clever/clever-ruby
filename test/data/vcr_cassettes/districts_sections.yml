@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts?
+    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts?page=1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -23,25 +23,25 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:15 GMT
+      - Wed, 09 Oct 2013 21:53:38 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
       - Express
       Content-Length:
-      - '217'
+      - '224'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"paging":{"current":1,"total":1,"count":1},"data":[{"data":{"name":"Demo
-        District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
+      encoding: UTF-8
+      string: '{"paging":{"current":1,"total":1,"count":1},"data":[{"data":{"name":"Demo
+        District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"links":[{"rel":"self","uri":"/v1.1/districts?page=1"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:15 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:36 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -50,7 +50,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -65,11 +65,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:15 GMT
+      - Wed, 09 Oct 2013 21:53:38 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -79,10 +79,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:15 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:36 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -91,7 +91,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -106,11 +106,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:16 GMT
+      - Wed, 09 Oct 2013 21:53:39 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -120,10 +120,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:16 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:37 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?
@@ -132,7 +132,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -147,13 +147,13 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:16 GMT
+      - Wed, 09 Oct 2013 21:53:39 GMT
       Etag:
-      - ! '"140218375"'
+      - '"140218375"'
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -163,8 +163,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"paging":{"current":1,"total":1,"count":44},"data":[{"data":{"course_name":"Advanced
+      encoding: UTF-8
+      string: '{"paging":{"current":1,"total":1,"count":44},"data":[{"data":{"course_name":"Advanced
         Literature","course_number":"60","district":"4fd43cc56d11340000000005","grade":"6","name":"Planetary
         Chemistry 7(A)","school":"4fee004cca2e43cf27000003","sis_id":"421","subject":"science","teacher":"50c5fb4ced21c30a6e1dece9","students":["4fee004cca2e43cf2700000b","50ab9b04c635f276782f1973","50ab9b04c635f276782f197b","50b232699fb027271f4e4eaa","50b384058cdcb9c56330c69b","50b627304dcdf0fb202ea33a","50b778caf8fb0dfb5047d93b","50b778caf8fb0dfb5047d96f","50be1079e4b954fe2326ab3a","50be107ae4b954fe2326abc8","50be107ae4b954fe2326abde","50bf617d02dfe7ca015435d9","50c20480987eda0d3d02df5b","50c35c3307ad64816a444704","50c4a7d199ad702e02293fb0","50c4a7d199ad702e02293fba","50c4a7d399ad702e02293fdc","50c4a7d599ad702e0229400c","50c4a7d599ad702e02294012","50c5fba0ed21c30a6e1e241b","50c74a854cc604327e02002e","50c74a854cc604327e020044","50c8a01c9ed67a1d3f1f773f","50c8a01c9ed67a1d3f1f7777","50c8a01c9ed67a1d3f1f777b","50c8a01c9ed67a1d3f1f77b7","50c9f7a1b519c899661844fb","50c9f7a2b519c89966184509"],"last_modified":"2012-12-13T15:44:10.597Z","created":"2012-12-11T15:00:34.339Z","term":{},"id":"509d1aae9d5984430b3e3f14"},"uri":"/v1.1/sections/509d1aae9d5984430b3e3f14"},{"data":{"course_name":"Earth
         Arithmetic","course_number":"346","district":"4fd43cc56d11340000000005","grade":"6","name":"Advanced
@@ -265,7 +265,7 @@ http_interactions:
         Arithmetic","course_number":"335","district":"4fd43cc56d11340000000005","grade":"7","name":"Earth
         Arithmetic 4(B)","school":"4fee004cca2e43cf27000004","sis_id":"393","subject":"math","teacher":"50be102be4b954fe2326357f","students":["50b627304dcdf0fb202ea350","50b778cbf8fb0dfb5047d999","50bb6d75271f97d61d2c130e","50be1079e4b954fe2326ab21","50bf617d02dfe7ca01543593","50bf617d02dfe7ca015435a1","50c0b3a9f1d530bb5451937e","50c0b3a9f1d530bb5451938e","50c0b3a9f1d530bb545193d6","50c2047f987eda0d3d02df1d","50c35c3307ad64816a44470a","50c35c3307ad64816a444764","50c4a7d199ad702e02293fb1","50c4a7d499ad702e02294006","50c5fba0ed21c30a6e1e2417","50c74a854cc604327e020032","50c74a854cc604327e020058","50c8a01c9ed67a1d3f1f779b","50c8a01c9ed67a1d3f1f779f","50c9f799b519c8996618444c","50c9f799b519c8996618446b","50c9f79eb519c8996618449d","50c9f7a1b519c89966184505"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.287Z","term":{},"id":"50c9f7ccb519c899661852e7"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e7"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:16 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:38 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -274,7 +274,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -289,11 +289,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:17 GMT
+      - Wed, 09 Oct 2013 21:53:40 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -303,10 +303,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:17 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:38 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -315,7 +315,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -330,11 +330,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:18 GMT
+      - Wed, 09 Oct 2013 21:53:40 GMT
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -344,10 +344,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:18 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:38 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?
@@ -356,7 +356,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -371,13 +371,13 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PUT,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 11 Sep 2013 19:58:18 GMT
+      - Wed, 09 Oct 2013 21:53:40 GMT
       Etag:
-      - ! '"140218375"'
+      - '"140218375"'
       Server:
       - nginx/1.4.1
       X-Powered-By:
@@ -387,8 +387,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"paging":{"current":1,"total":1,"count":44},"data":[{"data":{"course_name":"Advanced
+      encoding: UTF-8
+      string: '{"paging":{"current":1,"total":1,"count":44},"data":[{"data":{"course_name":"Advanced
         Literature","course_number":"60","district":"4fd43cc56d11340000000005","grade":"6","name":"Planetary
         Chemistry 7(A)","school":"4fee004cca2e43cf27000003","sis_id":"421","subject":"science","teacher":"50c5fb4ced21c30a6e1dece9","students":["4fee004cca2e43cf2700000b","50ab9b04c635f276782f1973","50ab9b04c635f276782f197b","50b232699fb027271f4e4eaa","50b384058cdcb9c56330c69b","50b627304dcdf0fb202ea33a","50b778caf8fb0dfb5047d93b","50b778caf8fb0dfb5047d96f","50be1079e4b954fe2326ab3a","50be107ae4b954fe2326abc8","50be107ae4b954fe2326abde","50bf617d02dfe7ca015435d9","50c20480987eda0d3d02df5b","50c35c3307ad64816a444704","50c4a7d199ad702e02293fb0","50c4a7d199ad702e02293fba","50c4a7d399ad702e02293fdc","50c4a7d599ad702e0229400c","50c4a7d599ad702e02294012","50c5fba0ed21c30a6e1e241b","50c74a854cc604327e02002e","50c74a854cc604327e020044","50c8a01c9ed67a1d3f1f773f","50c8a01c9ed67a1d3f1f7777","50c8a01c9ed67a1d3f1f777b","50c8a01c9ed67a1d3f1f77b7","50c9f7a1b519c899661844fb","50c9f7a2b519c89966184509"],"last_modified":"2012-12-13T15:44:10.597Z","created":"2012-12-11T15:00:34.339Z","term":{},"id":"509d1aae9d5984430b3e3f14"},"uri":"/v1.1/sections/509d1aae9d5984430b3e3f14"},{"data":{"course_name":"Earth
         Arithmetic","course_number":"346","district":"4fd43cc56d11340000000005","grade":"6","name":"Advanced
@@ -489,5 +489,5 @@ http_interactions:
         Arithmetic","course_number":"335","district":"4fd43cc56d11340000000005","grade":"7","name":"Earth
         Arithmetic 4(B)","school":"4fee004cca2e43cf27000004","sis_id":"393","subject":"math","teacher":"50be102be4b954fe2326357f","students":["50b627304dcdf0fb202ea350","50b778cbf8fb0dfb5047d999","50bb6d75271f97d61d2c130e","50be1079e4b954fe2326ab21","50bf617d02dfe7ca01543593","50bf617d02dfe7ca015435a1","50c0b3a9f1d530bb5451937e","50c0b3a9f1d530bb5451938e","50c0b3a9f1d530bb545193d6","50c2047f987eda0d3d02df1d","50c35c3307ad64816a44470a","50c35c3307ad64816a444764","50c4a7d199ad702e02293fb1","50c4a7d499ad702e02294006","50c5fba0ed21c30a6e1e2417","50c74a854cc604327e020032","50c74a854cc604327e020058","50c8a01c9ed67a1d3f1f779b","50c8a01c9ed67a1d3f1f779f","50c9f799b519c8996618444c","50c9f799b519c8996618446b","50c9f79eb519c8996618449d","50c9f7a1b519c89966184505"],"last_modified":"2012-12-13T15:44:12.289Z","created":"2012-12-13T15:44:12.287Z","term":{},"id":"50c9f7ccb519c899661852e7"},"uri":"/v1.1/sections/50c9f7ccb519c899661852e7"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"}]}'
     http_version: 
-  recorded_at: Wed, 11 Sep 2013 19:58:18 GMT
+  recorded_at: Wed, 09 Oct 2013 21:53:39 GMT
 recorded_with: VCR 2.4.0

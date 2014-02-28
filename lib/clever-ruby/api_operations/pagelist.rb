@@ -5,6 +5,12 @@ module Clever
         @uri = uri
         @filters = filters
       end
+      
+      def collect(&block)
+        accum = []
+        each {|page| accum += block.call(page) }
+        accum
+      end
 
       def each
         current = 0
