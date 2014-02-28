@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts?
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?
     body:
       encoding: US-ASCII
       string: ''
@@ -47,7 +47,7 @@ http_interactions:
   recorded_at: Tue, 26 Mar 2013 17:09:35 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -92,7 +92,7 @@ http_interactions:
   recorded_at: Tue, 26 Mar 2013 17:09:36 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -137,7 +137,7 @@ http_interactions:
   recorded_at: Tue, 26 Mar 2013 17:09:36 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/events?created_since=2013-02-15T%202:30:42%200000
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events?created_since=2013-02-15T%202:30:42%200000
     body:
       encoding: US-ASCII
       string: ''

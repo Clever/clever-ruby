@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts?
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?
     body:
       encoding: US-ASCII
       string: ''
@@ -44,7 +44,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:32 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -85,7 +85,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:32 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -126,7 +126,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:33 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=100000
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=100000
     body:
       encoding: US-ASCII
       string: ''
@@ -268,7 +268,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:34 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -309,7 +309,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:34 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -350,7 +350,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:35 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=1
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=1
     body:
       encoding: US-ASCII
       string: ''
@@ -416,7 +416,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:35 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=2
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=2
     body:
       encoding: US-ASCII
       string: ''
@@ -482,7 +482,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:36 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=3
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=3
     body:
       encoding: US-ASCII
       string: ''
@@ -547,7 +547,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:36 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=4
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=4
     body:
       encoding: US-ASCII
       string: ''
@@ -613,7 +613,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:15:37 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.getclever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=5
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?limit=10&page=5
     body:
       encoding: US-ASCII
       string: ''
