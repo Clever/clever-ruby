@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts
     body:
       encoding: US-ASCII
       string: ''
@@ -126,7 +126,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:58:27 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers
     body:
       encoding: US-ASCII
       string: ''
@@ -299,7 +299,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:58:29 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers
     body:
       encoding: US-ASCII
       string: ''
