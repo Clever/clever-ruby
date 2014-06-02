@@ -21,7 +21,7 @@ module Clever
     end
     
     def self.url
-      "v1.1/push/events"
+      "v1.1/events"
     end
 
     private

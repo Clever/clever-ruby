@@ -22,7 +22,7 @@ module Clever
         'teachers'  => Teacher,
         'districts' => District,
         'schools'   => School,
-        'push'      => Event
+        'events'    => Event
       }
       types.fetch(type)
     end
