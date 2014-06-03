@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts
     body:
       encoding: US-ASCII
       string: ''
@@ -126,7 +126,7 @@ http_interactions:
   recorded_at: Wed, 11 Sep 2013 19:58:16 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections
     body:
       encoding: US-ASCII
       string: ''

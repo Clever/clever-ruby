@@ -13,7 +13,7 @@ class CleverTest < Test::Unit::TestCase
     assert_equal("v1.1/students", Clever::Student.url)
     assert_equal("v1.1/sections", Clever::Section.url)
     assert_equal("v1.1/teachers", Clever::Teacher.url)
-    assert_equal("v1.1/push/events", Clever::Event.url)
+    assert_equal("v1.1/events", Clever::Event.url)
   end
 
   should "uri-encode params" do
