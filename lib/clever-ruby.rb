@@ -180,10 +180,10 @@ module Clever
   end
 
   def self.authentication_error(error, rcode, rbody, error_obj)
-    AuthenticationError.new(error[:message], rcode, rbody, error_obj)
+    AuthenticationError.new(error, rcode, rbody, error_obj)
   end
 
   def self.api_error(error, rcode, rbody, error_obj)
-    APIError.new(error[:message], rcode, rbody, error_obj)
+    APIError.new(error.is_a?(Hash) ? error[:message] : error, rcode, rbody, error_obj)
   end
 end
