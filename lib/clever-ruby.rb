@@ -156,8 +156,8 @@ module Clever
     begin
       error_obj = Clever::JSON.load(rbody)
       error_obj = Util.symbolize_names(error_obj)
-      error = error_obj[:error] or raise StripeError.new # escape from parsing
-    rescue MultiJson::DecodeError, StripeError
+      error = error_obj[:error] or raise CleverError.new # escape from parsing
+    rescue MultiJson::DecodeError, CleverError
       raise APIError.new("Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode})", rcode, rbody)
     end
 
