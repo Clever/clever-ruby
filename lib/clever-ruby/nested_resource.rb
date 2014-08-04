@@ -7,10 +7,11 @@ module Clever
     # Create a nested resource
     # @api private
     # @return [Clever::APIOperations::NestedList]
-    def initialize(uri, filters = {})
+    def initialize(uri, filters = {}, headers = {})
       @uri = uri
       @filters = filters
-      @results_list = Clever::APIOperations::PageList.new(uri, filters).to_results_list
+      @headers = headers
+      @results_list = Clever::APIOperations::PageList.new(uri, filters, headers).to_results_list
     end
 
     # Query and iterate over results for the params provided during initialization

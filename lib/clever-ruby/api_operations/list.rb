@@ -13,9 +13,9 @@ module Clever
         # @return [Array] array of all elements matching the request
         # @example
         #   Clever::District.all
-        def all(filters = {})
+        def all(filters = {}, headers = {})
           accum = []
-          Clever::APIOperations::PageList.new(url, filters).each do |page|
+          Clever::APIOperations::PageList.new(url, filters, headers).each do |page|
             accum += page.all
           end
           accum
@@ -40,7 +40,7 @@ module Clever
         #   # Get districts with given ids
         #   ids = ['...', '...']
         #   districts = Clever::District.find ids
-        def find(id = nil, filters = {})
+        def find(id = nil, filters = {}, headers = {})
           if id.is_a? Array
             unless id.select { |e| !Clever::Util.valid_id? e }.empty?
               fail ArgumentError, 'Array of IDs must only contain valid ObjectIDs'
@@ -50,7 +50,7 @@ module Clever
           end
 
           if id.nil? || id.is_a?(Array)
-            Clever::APIOperations::PageList.new(url, filters).to_results_list
+            Clever::APIOperations::PageList.new(url, filters, headers).to_results_list
           elsif Clever::Util.valid_id? id
             retrieve id
           else
@@ -70,14 +70,14 @@ module Clever
         #   first_elems.each do |e|
         #     puts e.name
         #   end
-        def first(num = nil, filters = {})
+        def first(num = nil, filters = {}, headers = {})
           if num.nil?
             filters[:limit] = 1
-            response = Clever.request :get, url, filters
+            response = Clever.request :get, url, filters, headers
             Util.convert_to_clever_object response[:data].last
           else
             filters[:limit] = num
-            Clever::APIOperations::PageList.new(url, filters).first
+            Clever::APIOperations::PageList.new(url, filters, headers).first
           end
         end
 
@@ -93,15 +93,15 @@ module Clever
         #   last_elems.each do |e|
         #     puts e.name
         #   end
-        def last(num = nil, filters = {})
+        def last(num = nil, filters = {}, headers = {})
           filters[:ending_before] = 'last'
           if num.nil?
             filters[:limit] = 1
-            response = Clever.request :get, url, filters
+            response = Clever.request :get, url, filters, headers
             Util.convert_to_clever_object response[:data].last
           else
             filters[:limit] = num
-            Clever::APIOperations::PageList.new(url, filters).to_results_list
+            Clever::APIOperations::PageList.new(url, filters, headers).to_results_list
           end
         end
 
@@ -117,15 +117,15 @@ module Clever
         #   last_elems.each do |e|
         #     puts e.name
         #   end
-        def last(num = nil, filters = {})
+        def last(num = nil, filters = {}, headers = {})
           filters[:ending_before] = 'last'
           if num.nil?
             filters[:limit] = 1
-            response = Clever.request :get, url, filters
+            response = Clever.request :get, url, filters, headers
             Util.convert_to_clever_object response[:data].last
           else
             filters[:limit] = num
-            Clever::APIOperations::PageList.new(url, filters).to_results_list
+            Clever::APIOperations::PageList.new(url, filters, headers).to_results_list
           end
         end
 
@@ -135,9 +135,9 @@ module Clever
         # @return [Integer] Number of elements matching
         # @example
         #   num_districts = Clever::District.count
-        def count(filters = {})
+        def count(filters = {}, headers = {})
           filters[:count] = true
-          response = Clever.request :get, url, filters
+          response = Clever.request :get, url, filters, headers
           response[:count]
         end
       end

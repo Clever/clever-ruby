@@ -15,9 +15,10 @@ module Clever
     # @api private
     # @param id [String, Hash] id, or values to instantiate from
     # @return [CleverObject] resource instance
-    def initialize(id = nil)
+    def initialize(id = nil, auth_token=nil)
       @values = {}
       @values[:id] = id if id
+      @values[:auth_token] = auth_token if auth_token
     end
 
     # Construct a CleverObject from the values it should contain. Requires :id
@@ -55,7 +56,7 @@ module Clever
     # @param partial [Boolean] whether to replace existing keys or start fresh
     # @return [CleverObject]
     def refresh_from(values, partial = false)
-      removed = partial ? Set.new : Set.new(@values.keys - values.keys)
+      removed = partial ? Set.new : Set.new(@values.keys - [:auth_token] - values.keys)
       added = Set.new(values.keys - @values.keys)
 
       instance_eval do
@@ -70,6 +71,14 @@ module Clever
         # InvoiceList of Charges). We don't and this was breaking our code
         # @values[k] = Util.convert_to_clever_object(v)
         @values[k] = v
+      end
+    end
+
+    def headers
+      if @values.has_key? :auth_token
+        {Authorization: "Bearer " + @values[:auth_token]}
+      else
+        {}
       end
     end
 
