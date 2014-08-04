@@ -67,7 +67,7 @@ module Clever
   end
 
   def self.request(method, url, params=nil, headers={})
-    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.configure { |config| config.api_key = <API-KEY> }" or your token using "Clever.configure { |config| config.token = <TOKEN> }")') unless Clever.api_key or Clever.token
+    raise AuthenticationError.new('No credentials provided. (HINT: set your API key using "Clever.configure { |config| config.api_key = <API-KEY> } or your token using "Clever.configure { |config| config.token = <TOKEN> }" or pass the district token as a second argument to retrieve)') unless Clever.api_key or Clever.token or headers.has_key? :Authorization
 
     params = Util.objects_to_ids(params)
     url = self.api_url(url)

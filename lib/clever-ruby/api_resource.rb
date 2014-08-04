@@ -16,18 +16,18 @@ module Clever
     end
 
     def refresh
-      response = Clever.request(:get, url)
+      response = Clever.request(:get, url, nil, headers)
       refresh_from(response[:data])
       self
     end
 
     def links
-      response = Clever.request(:get, url)
+      response = Clever.request(:get, url, nil, headers)
       response[:links]
     end
 
-    def self.retrieve(id)
-      instance = self.new(id)
+    def self.retrieve(id, auth_token=nil)
+      instance = self.new(id, auth_token)
       instance.refresh
       instance
     end

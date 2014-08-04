@@ -1,0 +1,178 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 04 Aug 2014 20:25:12 GMT
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '518'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+    http_version: 
+  recorded_at: Mon, 04 Aug 2014 20:25:12 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 04 Aug 2014 20:25:12 GMT
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '518'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+    http_version: 
+  recorded_at: Mon, 04 Aug 2014 20:25:12 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 04 Aug 2014 20:25:13 GMT
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '518'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+    http_version: 
+  recorded_at: Mon, 04 Aug 2014 20:25:13 GMT
+- request:
+    method: get
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/students?limit=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 04 Aug 2014 20:25:13 GMT
+      Etag:
+      - ! '"-967992835"'
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '1740'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:12.346Z","credentials":{"district_username":"stevez33","district_password":"auyik3tiTieL"},"district":"4fd43cc56d11340000000005","dob":"2/11/2007","ell_status":"N","email":"z.steve@example.net","frl_status":"Paid","gender":"M","grade":"Kindergarten","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.656Z","location":{"zip":"10459"},"name":{"first":"Steve","middle":"G","last":"Ziemann"},"race":"Black
+        or African American","school":"530e595026403103360ff9fe","sis_id":"100095233","state_id":"231786324","student_number":"100095233","id":"530e5960049e75a9262cff1d"},"uri":"/v1.1/students/530e5960049e75a9262cff1d"},{"data":{"created":"2014-02-26T21:15:12.358Z","credentials":{"district_username":"douglasw58","district_password":"ahFii2nae"},"district":"4fd43cc56d11340000000005","dob":"6/18/1998","ell_status":"Y","email":"w_douglas@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.661Z","location":{"zip":"11004"},"name":{"first":"Douglas","middle":"S","last":"Wisoky"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"101565758","state_id":"498006597","student_number":"101565758","id":"530e5960049e75a9262cff1e"},"uri":"/v1.1/students/530e5960049e75a9262cff1e"}],"range_paging":{"entries_remaining":1004,"pages_remaining":502,"lowest":"530e5960049e75a9262cff1d","highest":"530e5960049e75a9262cff1e"},"paging":{"current":1,"total":502,"count":1004},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/students?limit=2"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/students?limit=2&starting_after=530e5960049e75a9262cff1e"}]}'
+    http_version: 
+  recorded_at: Mon, 04 Aug 2014 20:25:13 GMT
+recorded_with: VCR 2.4.0
