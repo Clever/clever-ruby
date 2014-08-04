@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class ListTest < Test::Unit::TestCase
+class DistrictTest < Test::Unit::TestCase
   def setup
     Clever.configure do |config|
-      config.api_key = "DEMO_KEY"
+      config.token = "DEMO_TOKEN"
     end
   end
 
   should "retrieve a district's schools" do
-    test_object_list 'schools', 4, Clever::School
+    test_object_list 'schools', 3, Clever::School
   end
 
   should "page a district's schools" do
@@ -16,19 +16,19 @@ class ListTest < Test::Unit::TestCase
   end
 
   should "retrieve a district's teachers" do
-    test_object_list 'teachers', 48, Clever::Teacher
+    test_object_list 'teachers', 89, Clever::Teacher
   end
 
   should "page a district's teachers" do
-    test_object_pages('teacher', 10, 5)
+    test_object_pages('teacher', 10, 9)
   end
 
   should "retrieve a district's sections" do
-    test_object_list 'sections', 44, Clever::Section
+    test_object_list 'sections', 100, Clever::Section
   end
 
   should "page a district's sections" do
-    test_object_pages('section', 10, 5)
+    test_object_pages('section', 10, 38)
   end
 
   should "retrieve a district's students" do
@@ -36,7 +36,7 @@ class ListTest < Test::Unit::TestCase
   end
 
   should "page a district's students" do
-    test_object_pages('student', 50, 18)
+    test_object_pages('student', 50, 21)
   end
 
   should "retrieve a district's students with a small filter" do
@@ -47,11 +47,11 @@ class ListTest < Test::Unit::TestCase
   end
 
   should "retrieve a district's events" do
-    test_object_list 'events', 1, Clever::Event
+    test_object_list 'events', 2, Clever::Event
   end
 
   should "page a district's events" do
-    test_object_pages('event', 1, 1)
+    test_object_pages('event', 1, 2)
   end
 
   private

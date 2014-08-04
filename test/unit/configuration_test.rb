@@ -2,11 +2,11 @@ require 'test_helper'
 
 class CleverConfigurationTest < Test::Unit::TestCase
 
-  should "set the api key" do
+  should "set the token" do
     Clever.configure do |config|
-      config.api_key = "DEMO_KEY"
+      config.token = "DEMO_TOKEN"
     end
-    assert_equal("DEMO_KEY", Clever.api_key)
+    assert_equal("DEMO_TOKEN", Clever.token)
   end
 
   should "raise an error if no api key is set" do
