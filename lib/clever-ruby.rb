@@ -90,7 +90,7 @@ module Clever
       :headers => headers,
       :open_timeout => 30,
       :payload => payload,
-      :timeout => 80
+      :timeout => 120
     }
     if Clever.api_key
       opts[:user] = Clever.api_key
