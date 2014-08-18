@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -29,20 +29,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:07 GMT
+      - Mon, 04 Aug 2014 20:25:16 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '428'
+      - '518'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"range_paging":{"entries_remaining":1,"pages_remaining":1,"lowest":"4fd43cc56d11340000000005","highest":"4fd43cc56d11340000000005"},"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"},{"rel":"next","uri":"/v1.1/districts?starting_after=4fd43cc56d11340000000005"}]}'
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:07 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:16 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:07 GMT
+      - Mon, 04 Aug 2014 20:25:16 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -85,7 +85,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:07 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:17 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -115,7 +115,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:08 GMT
+      - Mon, 04 Aug 2014 20:25:17 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -128,10 +128,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:08 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:17 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=100000
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers
     body:
       encoding: US-ASCII
       string: ''
@@ -158,15 +158,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:08 GMT
+      - Mon, 04 Aug 2014 20:25:17 GMT
       Etag:
-      - ! '"-1175958676"'
+      - ! '"-84381972"'
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '44924'
+      - '44898'
       Connection:
       - keep-alive
     body:
@@ -260,9 +260,9 @@ http_interactions:
         Principal","id":"530e5955d50c310f36112c16"},"uri":"/v1.1/teachers/530e5955d50c310f36112c16"},{"data":{"created":"2014-02-26T21:15:01.566Z","credentials":{"district_username":"morgan.nagle","district_password":"48urjnslvdjbn0"},"district":"4fd43cc56d11340000000005","email":"nagle_morgan@example.com","last_modified":"2014-02-26T21:15:01.567Z","name":{"first":"Morgan","middle":"E","last":"Nagle"},"school":"530e595026403103360ff9fd","sis_id":"91","teacher_number":"712084","title":"Assistant
         Principal","id":"530e5955d50c310f36112c17"},"uri":"/v1.1/teachers/530e5955d50c310f36112c17"},{"data":{"created":"2014-02-26T21:15:01.568Z","credentials":{"district_username":"pennyworth.daniela","district_password":"hfhglh345d"},"district":"4fd43cc56d11340000000005","email":"pennyworth.daniela@example.net","last_modified":"2014-02-26T21:15:01.570Z","name":{"first":"Daniela","middle":"B","last":"Pennyworth"},"school":"530e595026403103360ff9fd","sis_id":"92","teacher_number":"499660","title":"Literacy
         Coach","id":"530e5955d50c310f36112c18"},"uri":"/v1.1/teachers/530e5955d50c310f36112c18"},{"data":{"created":"2014-02-26T21:15:01.572Z","credentials":{"district_username":"m_paucek","district_password":"jhga8salgh"},"district":"4fd43cc56d11340000000005","email":"paucek_m@example.org","last_modified":"2014-02-26T21:15:01.574Z","name":{"first":"Meaghan","middle":"P","last":"Paucek"},"school":"530e595026403103360ff9fd","sis_id":"93","teacher_number":"843713","title":"High
-        School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"range_paging":{"entries_remaining":89,"pages_remaining":1,"lowest":"509fbd7ec474fab64a8e9d53","highest":"530e5955d50c310f36112c19"},"paging":{"current":1,"total":1,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=100000"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=100000&starting_after=530e5955d50c310f36112c19"}]}'
+        School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"range_paging":{"entries_remaining":89,"pages_remaining":1,"lowest":"509fbd7ec474fab64a8e9d53","highest":"530e5955d50c310f36112c19"},"paging":{"current":1,"total":1,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?starting_after=530e5955d50c310f36112c19"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:08 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:17 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -292,7 +292,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:09 GMT
+      - Mon, 04 Aug 2014 20:25:18 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -305,7 +305,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:09 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:18 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -335,7 +335,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:09 GMT
+      - Mon, 04 Aug 2014 20:25:18 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -348,10 +348,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:09 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:18 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=1
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers
     body:
       encoding: US-ASCII
       string: ''
@@ -378,15 +378,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:09 GMT
+      - Mon, 04 Aug 2014 20:25:18 GMT
       Etag:
-      - ! '"2081835811"'
+      - ! '"-84381972"'
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '5184'
+      - '44898'
       Connection:
       - keep-alive
     body:
@@ -401,52 +401,7 @@ http_interactions:
         12 English Teacher","id":"50c4a79299ad702e0228e956"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e956"},{"data":{"created":"2012-12-09T15:00:34.248Z","credentials":{"district_password":"Lohneth3osh","district_username":"wolff.cali"},"district":"4fd43cc56d11340000000005","email":"cali_wolff@example.net","last_modified":"2014-02-26T21:15:01.417Z","name":{"first":"Cali","last":"Wolff","middle":"L"},"school":"530e595026403103360ff9fd","sis_id":"62","teacher_number":"762405","title":"Grade
         11 Trigonometry Teacher","id":"50c4a79299ad702e0228e957"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e957"},{"data":{"created":"2012-12-12T15:17:05.364Z","credentials":{"district_password":"na9ahCei","district_username":"kutch_larry"},"district":"4fd43cc56d11340000000005","email":"larry_kutch@example.net","last_modified":"2014-02-26T21:15:01.152Z","name":{"first":"Larry","last":"Kutch","middle":"C"},"school":"530e595026403103360ff9fe","sis_id":"23","teacher_number":"233800","title":"Grade
         2 Special Education Teacher","id":"50c89ff19ed67a1d3f1f50c9"},"uri":"/v1.1/teachers/50c89ff19ed67a1d3f1f50c9"},{"data":{"created":"2012-12-12T15:17:05.366Z","credentials":{"district_password":"meile5Taicei","district_username":"colton.block"},"district":"4fd43cc56d11340000000005","email":"block_colton@example.net","last_modified":"2014-02-26T21:15:01.391Z","name":{"first":"Colton","last":"Block","middle":"L"},"school":"530e595026403103360ff9fd","sis_id":"54","teacher_number":"911173","title":"Grade
-        9 History Teacher","id":"50c89ff19ed67a1d3f1f50ca"},"uri":"/v1.1/teachers/50c89ff19ed67a1d3f1f50ca"}],"paging":{"current":1,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=1"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2"}]}'
-    http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:09 GMT
-- request:
-    method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer DEMO_TOKEN
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
-      Access-Control-Allow-Methods:
-      - GET,PATCH,POST,DELETE
-      Access-Control-Allow-Origin:
-      - ! '*'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 04 Aug 2014 19:09:10 GMT
-      Etag:
-      - ! '"-311288974"'
-      Server:
-      - nginx/1.4.7
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '5331'
-      Connection:
-      - keep-alive
-    body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.053Z","credentials":{"district_username":"haley.hahn","district_password":"xooBee4um"},"district":"4fd43cc56d11340000000005","email":"hahn_haley@example.com","last_modified":"2014-02-26T21:15:01.057Z","name":{"first":"Haley","middle":"D","last":"Hahn"},"school":"530e595026403103360ff9fe","sis_id":"1","teacher_number":"341754","title":"Grade
+        9 History Teacher","id":"50c89ff19ed67a1d3f1f50ca"},"uri":"/v1.1/teachers/50c89ff19ed67a1d3f1f50ca"},{"data":{"created":"2014-02-26T21:15:01.053Z","credentials":{"district_username":"haley.hahn","district_password":"xooBee4um"},"district":"4fd43cc56d11340000000005","email":"hahn_haley@example.com","last_modified":"2014-02-26T21:15:01.057Z","name":{"first":"Haley","middle":"D","last":"Hahn"},"school":"530e595026403103360ff9fe","sis_id":"1","teacher_number":"341754","title":"Grade
         1 Common Branch Teacher","id":"530e5955d50c310f36112bcb"},"uri":"/v1.1/teachers/530e5955d50c310f36112bcb"},{"data":{"created":"2014-02-26T21:15:01.060Z","credentials":{"district_username":"abernathy.leatha","district_password":"ohF6Gai1ai"},"district":"4fd43cc56d11340000000005","email":"leatha.abernathy@example.org","last_modified":"2014-02-26T21:15:01.065Z","name":{"first":"Leatha","middle":"D","last":"Abernathy"},"school":"530e595026403103360ff9fe","sis_id":"10","teacher_number":"670963","title":"Grade
         3 Common Branch Teacher","id":"530e5955d50c310f36112bcc"},"uri":"/v1.1/teachers/530e5955d50c310f36112bcc"},{"data":{"created":"2014-02-26T21:15:01.078Z","credentials":{"district_username":"davin_runte","district_password":"Ap3aQuoh"},"district":"4fd43cc56d11340000000005","email":"runte_davin@example.org","last_modified":"2014-02-26T21:15:01.082Z","name":{"first":"Davin","middle":"V","last":"Runte"},"school":"530e595026403103360ff9fe","sis_id":"12","teacher_number":"199518","title":"High
         School Mathematics Teacher","id":"530e5955d50c310f36112bcd"},"uri":"/v1.1/teachers/530e5955d50c310f36112bcd"},{"data":{"created":"2014-02-26T21:15:01.083Z","credentials":{"district_username":"mertz.jana","district_password":"Fairohb9"},"district":"4fd43cc56d11340000000005","email":"jana_mertz@example.org","last_modified":"2014-02-26T21:15:01.088Z","name":{"first":"Jana","middle":"P","last":"Mertz"},"school":"530e595026403103360ff9fe","sis_id":"13","teacher_number":"211618","title":"Grade
@@ -456,52 +411,7 @@ http_interactions:
         School Science Teacher","id":"530e5955d50c310f36112bd1"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd1"},{"data":{"created":"2014-02-26T21:15:01.115Z","credentials":{"district_username":"bartoletti.nya","district_password":"ra3Oogaanei"},"district":"4fd43cc56d11340000000005","email":"bartoletti_nya@example.org","last_modified":"2014-02-26T21:15:01.117Z","name":{"first":"Nya","middle":"M","last":"Bartoletti"},"school":"530e595026403103360ff9fe","sis_id":"17","teacher_number":"738433","title":"Grade
         5 Common Branch Teacher","id":"530e5955d50c310f36112bd2"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd2"},{"data":{"created":"2014-02-26T21:15:01.121Z","credentials":{"district_username":"marley_walsh","district_password":"aex5iSee"},"district":"4fd43cc56d11340000000005","email":"walsh_marley@example.org","last_modified":"2014-02-26T21:15:01.123Z","name":{"first":"Marley","middle":"K","last":"Walsh"},"school":"530e595026403103360ff9fe","sis_id":"18","teacher_number":"399452","title":"Grade
         5 Common Branch Teacher","id":"530e5955d50c310f36112bd3"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd3"},{"data":{"created":"2014-02-26T21:15:01.138Z","credentials":{"district_username":"daniela.raynor","district_password":"quahse5Ch"},"district":"4fd43cc56d11340000000005","email":"raynor_daniela@example.net","last_modified":"2014-02-26T21:15:01.144Z","name":{"first":"Daniela","middle":"F","last":"Raynor"},"school":"530e595026403103360ff9fe","sis_id":"19","teacher_number":"493218","title":"Grade
-        5 Common Branch Teacher","id":"530e5955d50c310f36112bd4"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd4"}],"paging":{"current":2,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=1"}]}'
-    http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:10 GMT
-- request:
-    method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer DEMO_TOKEN
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
-      Access-Control-Allow-Methods:
-      - GET,PATCH,POST,DELETE
-      Access-Control-Allow-Origin:
-      - ! '*'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 04 Aug 2014 19:09:10 GMT
-      Etag:
-      - ! '"74581704"'
-      Server:
-      - nginx/1.4.7
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '5375'
-      Connection:
-      - keep-alive
-    body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.155Z","credentials":{"district_username":"evangeline.harris","district_password":"ieThes1ke"},"district":"4fd43cc56d11340000000005","email":"evangeline_harris@example.net","last_modified":"2014-02-26T21:15:01.158Z","name":{"first":"Evangeline","middle":"R","last":"Harris"},"school":"530e595026403103360ff9fe","sis_id":"2","teacher_number":"796856","title":"Grade
+        5 Common Branch Teacher","id":"530e5955d50c310f36112bd4"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd4"},{"data":{"created":"2014-02-26T21:15:01.155Z","credentials":{"district_username":"evangeline.harris","district_password":"ieThes1ke"},"district":"4fd43cc56d11340000000005","email":"evangeline_harris@example.net","last_modified":"2014-02-26T21:15:01.158Z","name":{"first":"Evangeline","middle":"R","last":"Harris"},"school":"530e595026403103360ff9fe","sis_id":"2","teacher_number":"796856","title":"Grade
         1 Common Branch Teacher","id":"530e5955d50c310f36112bd5"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd5"},{"data":{"created":"2014-02-26T21:15:01.162Z","credentials":{"district_username":"kulas.mallie","district_password":"Naith2Roh8i"},"district":"4fd43cc56d11340000000005","email":"mallie_kulas@example.net","last_modified":"2014-02-26T21:15:01.164Z","name":{"first":"Mallie","middle":"S","last":"Kulas"},"school":"530e595026403103360ff9fe","sis_id":"20","teacher_number":"671315","title":"High
         School Science Teacher","id":"530e5955d50c310f36112bd6"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd6"},{"data":{"created":"2014-02-26T21:15:01.177Z","credentials":{"district_username":"samantha.conn","district_password":"Oke5doog"},"district":"4fd43cc56d11340000000005","email":"conn.samantha@example.com","last_modified":"2014-02-26T21:15:01.182Z","name":{"first":"Samantha","middle":"A","last":"Conn"},"school":"530e595026403103360ff9fe","sis_id":"22","teacher_number":"380369","title":"Grade
         1 Special Education Teacher","id":"530e5955d50c310f36112bd7"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd7"},{"data":{"created":"2014-02-26T21:15:01.190Z","credentials":{"district_username":"addie_dietrich","district_password":"tha7bo8ahR"},"district":"4fd43cc56d11340000000005","email":"addie_dietrich@example.com","last_modified":"2014-02-26T21:15:01.193Z","name":{"first":"Addie","middle":"S","last":"Dietrich"},"school":"530e595026403103360ff9fe","sis_id":"24","teacher_number":"176809","title":"Grade
@@ -511,52 +421,7 @@ http_interactions:
         6 Special Education Teacher","id":"530e5955d50c310f36112bdb"},"uri":"/v1.1/teachers/530e5955d50c310f36112bdb"},{"data":{"created":"2014-02-26T21:15:01.219Z","credentials":{"district_username":"wuckert.elnora","district_password":"pozeawe3Ph"},"district":"4fd43cc56d11340000000005","email":"elnora_wuckert@example.org","last_modified":"2014-02-26T21:15:01.224Z","name":{"first":"Elnora","middle":"E","last":"Wuckert"},"school":"530e595026403103360ff9ff","sis_id":"28","teacher_number":"349775","title":"Grade
         6 English Teacher","id":"530e5955d50c310f36112bdc"},"uri":"/v1.1/teachers/530e5955d50c310f36112bdc"},{"data":{"created":"2014-02-26T21:15:01.225Z","credentials":{"district_username":"hand_zella","district_password":"Ohx1hieWah"},"district":"4fd43cc56d11340000000005","email":"zella.hand@example.com","last_modified":"2014-02-26T21:15:01.226Z","name":{"first":"Zella","middle":"F","last":"Hand"},"school":"530e595026403103360ff9ff","sis_id":"29","teacher_number":"999016","title":"Grade
         7 English Teacher","id":"530e5955d50c310f36112bdd"},"uri":"/v1.1/teachers/530e5955d50c310f36112bdd"},{"data":{"created":"2014-02-26T21:15:01.237Z","credentials":{"district_username":"rhiannon_prosacco","district_password":"ievo9Eeg"},"district":"4fd43cc56d11340000000005","email":"rhiannon_prosacco@example.org","last_modified":"2014-02-26T21:15:01.240Z","name":{"first":"Rhiannon","middle":"K","last":"Prosacco"},"school":"530e595026403103360ff9fe","sis_id":"3","teacher_number":"435202","title":"Grade
-        1 Common Branch Teacher","id":"530e5955d50c310f36112bde"},"uri":"/v1.1/teachers/530e5955d50c310f36112bde"}],"paging":{"current":3,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2"}]}'
-    http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:10 GMT
-- request:
-    method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer DEMO_TOKEN
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
-      Access-Control-Allow-Methods:
-      - GET,PATCH,POST,DELETE
-      Access-Control-Allow-Origin:
-      - ! '*'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 04 Aug 2014 19:09:10 GMT
-      Etag:
-      - ! '"1993812017"'
-      Server:
-      - nginx/1.4.7
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '5378'
-      Connection:
-      - keep-alive
-    body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.242Z","credentials":{"district_username":"schneider_june","district_password":"UC3zahv1z"},"district":"4fd43cc56d11340000000005","email":"june.schneider@example.com","last_modified":"2014-02-26T21:15:01.245Z","name":{"first":"June","middle":"O","last":"Schneider"},"school":"530e595026403103360ff9ff","sis_id":"30","teacher_number":"423681","title":"Grade
+        1 Common Branch Teacher","id":"530e5955d50c310f36112bde"},"uri":"/v1.1/teachers/530e5955d50c310f36112bde"},{"data":{"created":"2014-02-26T21:15:01.242Z","credentials":{"district_username":"schneider_june","district_password":"UC3zahv1z"},"district":"4fd43cc56d11340000000005","email":"june.schneider@example.com","last_modified":"2014-02-26T21:15:01.245Z","name":{"first":"June","middle":"O","last":"Schneider"},"school":"530e595026403103360ff9ff","sis_id":"30","teacher_number":"423681","title":"Grade
         8 English Teacher","id":"530e5955d50c310f36112bdf"},"uri":"/v1.1/teachers/530e5955d50c310f36112bdf"},{"data":{"created":"2014-02-26T21:15:01.249Z","credentials":{"district_username":"goldner_brice","district_password":"ji5Koos5xeo"},"district":"4fd43cc56d11340000000005","email":"brice.goldner@example.com","last_modified":"2014-02-26T21:15:01.251Z","name":{"first":"Brice","middle":"M","last":"Goldner"},"school":"530e595026403103360ff9ff","sis_id":"31","teacher_number":"626129","title":"Grade
         6 Mathematics Teacher","id":"530e5955d50c310f36112be0"},"uri":"/v1.1/teachers/530e5955d50c310f36112be0"},{"data":{"created":"2014-02-26T21:15:01.267Z","credentials":{"district_username":"connelly.sierra","district_password":"cahGh1geeJ"},"district":"4fd43cc56d11340000000005","email":"connelly.sierra@example.net","last_modified":"2014-02-26T21:15:01.269Z","name":{"first":"Sierra","middle":"V","last":"Connelly"},"school":"530e595026403103360ff9ff","sis_id":"32","teacher_number":"395642","title":"Grade
         7 Mathematics Teacher","id":"530e5955d50c310f36112be1"},"uri":"/v1.1/teachers/530e5955d50c310f36112be1"},{"data":{"created":"2014-02-26T21:15:01.279Z","credentials":{"district_username":"mohr.philip","district_password":"Rohjeeque6ae"},"district":"4fd43cc56d11340000000005","email":"mohr.philip@example.net","last_modified":"2014-02-26T21:15:01.283Z","name":{"first":"Philip","middle":"K","last":"Mohr"},"school":"530e595026403103360ff9ff","sis_id":"34","teacher_number":"852070","title":"Grade
@@ -566,52 +431,7 @@ http_interactions:
         6 Mathematics Teacher","id":"530e5955d50c310f36112be5"},"uri":"/v1.1/teachers/530e5955d50c310f36112be5"},{"data":{"created":"2014-02-26T21:15:01.311Z","credentials":{"district_username":"assunta_lubowitz","district_password":"ui1OoQuad"},"district":"4fd43cc56d11340000000005","email":"assunta_lubowitz@example.net","last_modified":"2014-02-26T21:15:01.314Z","name":{"first":"Assunta","middle":"M","last":"Lubowitz"},"school":"530e595026403103360ff9ff","sis_id":"38","teacher_number":"455902","title":"Grade
         7 Mathematics Teacher","id":"530e5955d50c310f36112be6"},"uri":"/v1.1/teachers/530e5955d50c310f36112be6"},{"data":{"created":"2014-02-26T21:15:01.326Z","credentials":{"district_username":"bertha_daniel","district_password":"ohPhaeSa7"},"district":"4fd43cc56d11340000000005","email":"daniel.bertha@example.net","last_modified":"2014-02-26T21:15:01.330Z","name":{"first":"Bertha","middle":"E","last":"Daniel"},"school":"530e595026403103360ff9fe","sis_id":"4","teacher_number":"424824","title":"High
         School English Teacher","id":"530e5955d50c310f36112be7"},"uri":"/v1.1/teachers/530e5955d50c310f36112be7"},{"data":{"created":"2014-02-26T21:15:01.331Z","credentials":{"district_username":"ankunding.cydney","district_password":"moorei2Ie"},"district":"4fd43cc56d11340000000005","email":"ankunding_cydney@example.com","last_modified":"2014-02-26T21:15:01.334Z","name":{"first":"Cydney","middle":"H","last":"Ankunding"},"school":"530e595026403103360ff9ff","sis_id":"40","teacher_number":"873862","title":"Middle
-        School Science Teacher","id":"530e5955d50c310f36112be8"},"uri":"/v1.1/teachers/530e5955d50c310f36112be8"}],"paging":{"current":4,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3"}]}'
-    http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:10 GMT
-- request:
-    method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer DEMO_TOKEN
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
-      Access-Control-Allow-Methods:
-      - GET,PATCH,POST,DELETE
-      Access-Control-Allow-Origin:
-      - ! '*'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 04 Aug 2014 19:09:11 GMT
-      Etag:
-      - ! '"392469563"'
-      Server:
-      - nginx/1.4.7
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '5333'
-      Connection:
-      - keep-alive
-    body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.335Z","credentials":{"district_username":"gleichner_cora","district_password":"bah1Heuheeca"},"district":"4fd43cc56d11340000000005","email":"cora.gleichner@example.org","last_modified":"2014-02-26T21:15:01.337Z","name":{"first":"Cora","middle":"M","last":"Gleichner"},"school":"530e595026403103360ff9ff","sis_id":"41","teacher_number":"700424","title":"Middle
+        School Science Teacher","id":"530e5955d50c310f36112be8"},"uri":"/v1.1/teachers/530e5955d50c310f36112be8"},{"data":{"created":"2014-02-26T21:15:01.335Z","credentials":{"district_username":"gleichner_cora","district_password":"bah1Heuheeca"},"district":"4fd43cc56d11340000000005","email":"cora.gleichner@example.org","last_modified":"2014-02-26T21:15:01.337Z","name":{"first":"Cora","middle":"M","last":"Gleichner"},"school":"530e595026403103360ff9ff","sis_id":"41","teacher_number":"700424","title":"Middle
         School Science Teacher","id":"530e5955d50c310f36112be9"},"uri":"/v1.1/teachers/530e5955d50c310f36112be9"},{"data":{"created":"2014-02-26T21:15:01.343Z","credentials":{"district_username":"jonatan_doyle","district_password":"aeXaeBos8ie"},"district":"4fd43cc56d11340000000005","email":"jonatan_doyle@example.com","last_modified":"2014-02-26T21:15:01.345Z","name":{"first":"Jonatan","middle":"B","last":"Doyle"},"school":"530e595026403103360ff9ff","sis_id":"42","teacher_number":"973474","title":"Middle
         School Spanish Teacher","id":"530e5955d50c310f36112bea"},"uri":"/v1.1/teachers/530e5955d50c310f36112bea"},{"data":{"created":"2014-02-26T21:15:01.362Z","credentials":{"district_username":"murray.jewel","district_password":"eilia2Eiceem"},"district":"4fd43cc56d11340000000005","email":"jewel.murray@example.net","last_modified":"2014-02-26T21:15:01.367Z","name":{"first":"Jewel","middle":"J","last":"Murray"},"school":"530e595026403103360ff9ff","sis_id":"43","teacher_number":"296077","title":"Middle
         School Spanish Teacher","id":"530e5955d50c310f36112beb"},"uri":"/v1.1/teachers/530e5955d50c310f36112beb"},{"data":{"created":"2014-02-26T21:15:01.368Z","credentials":{"district_username":"ortiz_anya","district_password":"Vaeye8quo0z"},"district":"4fd43cc56d11340000000005","email":"ortiz_anya@example.com","last_modified":"2014-02-26T21:15:01.371Z","name":{"first":"Anya","middle":"L","last":"Ortiz"},"school":"530e595026403103360ff9ff","sis_id":"44","teacher_number":"121129","title":"Middle
@@ -621,52 +441,7 @@ http_interactions:
         9 English Teacher","id":"530e5955d50c310f36112bef"},"uri":"/v1.1/teachers/530e5955d50c310f36112bef"},{"data":{"created":"2014-02-26T21:15:01.392Z","credentials":{"district_username":"shanie.trantow","district_password":"Hung2poh"},"district":"4fd43cc56d11340000000005","email":"trantow.shanie@example.com","last_modified":"2014-02-26T21:15:01.395Z","name":{"first":"Shanie","middle":"C","last":"Trantow"},"school":"530e595026403103360ff9fd","sis_id":"49","teacher_number":"699596","title":"Grade
         11 English Teacher","id":"530e5955d50c310f36112bf0"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf0"},{"data":{"created":"2014-02-26T21:15:01.397Z","credentials":{"district_username":"hammes_columbus","district_password":"Ve5aCh0j"},"district":"4fd43cc56d11340000000005","email":"columbus_hammes@example.net","last_modified":"2014-02-26T21:15:01.399Z","name":{"first":"Columbus","middle":"L","last":"Hammes"},"school":"530e595026403103360ff9fe","sis_id":"5","teacher_number":"140530","title":"Grade
         2 Common Branch Teacher","id":"530e5955d50c310f36112bf1"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf1"},{"data":{"created":"2014-02-26T21:15:01.401Z","credentials":{"district_username":"preston.lemke","district_password":"caiteiL1ah"},"district":"4fd43cc56d11340000000005","email":"preston.lemke@example.net","last_modified":"2014-02-26T21:15:01.404Z","name":{"first":"Preston","middle":"J","last":"Lemke"},"school":"530e595026403103360ff9fd","sis_id":"51","teacher_number":"171060","title":"Grade
-        12 History Teacher","id":"530e5955d50c310f36112bf2"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf2"}],"paging":{"current":5,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=6"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4"}]}'
-    http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:11 GMT
-- request:
-    method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=6
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer DEMO_TOKEN
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
-      Access-Control-Allow-Methods:
-      - GET,PATCH,POST,DELETE
-      Access-Control-Allow-Origin:
-      - ! '*'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 04 Aug 2014 19:09:11 GMT
-      Etag:
-      - ! '"560411453"'
-      Server:
-      - nginx/1.4.7
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '5334'
-      Connection:
-      - keep-alive
-    body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.405Z","credentials":{"district_username":"witting.kelsie","district_password":"aeNee6aiW"},"district":"4fd43cc56d11340000000005","email":"witting_kelsie@example.net","last_modified":"2014-02-26T21:15:01.407Z","name":{"first":"Kelsie","middle":"O","last":"Witting"},"school":"530e595026403103360ff9fd","sis_id":"52","teacher_number":"822376","title":"Grade
+        12 History Teacher","id":"530e5955d50c310f36112bf2"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf2"},{"data":{"created":"2014-02-26T21:15:01.405Z","credentials":{"district_username":"witting.kelsie","district_password":"aeNee6aiW"},"district":"4fd43cc56d11340000000005","email":"witting_kelsie@example.net","last_modified":"2014-02-26T21:15:01.407Z","name":{"first":"Kelsie","middle":"O","last":"Witting"},"school":"530e595026403103360ff9fd","sis_id":"52","teacher_number":"822376","title":"Grade
         11 History Teacher","id":"530e5955d50c310f36112bf3"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf3"},{"data":{"created":"2014-02-26T21:15:01.410Z","credentials":{"district_username":"emard_rickie","district_password":"Tah6hiRaeph"},"district":"4fd43cc56d11340000000005","email":"emard_rickie@example.com","last_modified":"2014-02-26T21:15:01.412Z","name":{"first":"Rickie","middle":"C","last":"Emard"},"school":"530e595026403103360ff9fd","sis_id":"53","teacher_number":"625918","title":"Grade
         10 History Teacher","id":"530e5955d50c310f36112bf4"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf4"},{"data":{"created":"2014-02-26T21:15:01.416Z","credentials":{"district_username":"mertz.junius","district_password":"Oiph4Chias"},"district":"4fd43cc56d11340000000005","email":"mertz_junius@example.net","last_modified":"2014-02-26T21:15:01.418Z","name":{"first":"Junius","middle":"T","last":"Mertz"},"school":"530e595026403103360ff9fd","sis_id":"55","teacher_number":"969210","title":"Grade
         9 Physics Teacher","id":"530e5955d50c310f36112bf5"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf5"},{"data":{"created":"2014-02-26T21:15:01.420Z","credentials":{"district_username":"crooks.garland","district_password":"Quahph3ch"},"district":"4fd43cc56d11340000000005","email":"garland.crooks@example.org","last_modified":"2014-02-26T21:15:01.422Z","name":{"first":"Garland","middle":"E","last":"Crooks"},"school":"530e595026403103360ff9fd","sis_id":"56","teacher_number":"178155","title":"Grade
@@ -676,52 +451,7 @@ http_interactions:
         School French Teacher","id":"530e5955d50c310f36112bf9"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf9"},{"data":{"created":"2014-02-26T21:15:01.435Z","credentials":{"district_username":"jones_anjali","district_password":"wohr5vohH"},"district":"4fd43cc56d11340000000005","email":"jones.anjali@example.com","last_modified":"2014-02-26T21:15:01.436Z","name":{"first":"Anjali","middle":"G","last":"Jones"},"school":"530e595026403103360ff9fe","sis_id":"6","teacher_number":"492806","title":"Grade
         2 Common Branch Teacher","id":"530e5955d50c310f36112bfa"},"uri":"/v1.1/teachers/530e5955d50c310f36112bfa"},{"data":{"created":"2014-02-26T21:15:01.439Z","credentials":{"district_username":"christiansen_grover","district_password":"cui5Equae1"},"district":"4fd43cc56d11340000000005","email":"grover.christiansen@example.org","last_modified":"2014-02-26T21:15:01.441Z","name":{"first":"Grover","middle":"K","last":"Christiansen"},"school":"530e595026403103360ff9fd","sis_id":"60","teacher_number":"953189","title":"Grade
         9 Algebra Teacher","id":"530e5955d50c310f36112bfb"},"uri":"/v1.1/teachers/530e5955d50c310f36112bfb"},{"data":{"created":"2014-02-26T21:15:01.443Z","credentials":{"district_username":"cullen_bashirian","district_password":"cheikoh1Ies"},"district":"4fd43cc56d11340000000005","email":"bashirian.cullen@example.net","last_modified":"2014-02-26T21:15:01.445Z","name":{"first":"Cullen","middle":"J","last":"Bashirian"},"school":"530e595026403103360ff9fd","sis_id":"61","teacher_number":"311251","title":"Grade
-        10 Geometry Teacher","id":"530e5955d50c310f36112bfc"},"uri":"/v1.1/teachers/530e5955d50c310f36112bfc"}],"paging":{"current":6,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=6"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=7"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5"}]}'
-    http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:11 GMT
-- request:
-    method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=7
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer DEMO_TOKEN
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
-      Access-Control-Allow-Methods:
-      - GET,PATCH,POST,DELETE
-      Access-Control-Allow-Origin:
-      - ! '*'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 04 Aug 2014 19:09:11 GMT
-      Etag:
-      - ! '"1910903842"'
-      Server:
-      - nginx/1.4.7
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '5323'
-      Connection:
-      - keep-alive
-    body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.449Z","credentials":{"district_username":"will_roger","district_password":"ooT8aeke"},"district":"4fd43cc56d11340000000005","email":"will_roger@example.net","last_modified":"2014-02-26T21:15:01.454Z","name":{"first":"Roger","middle":"J","last":"Will"},"school":"530e595026403103360ff9fd","sis_id":"63","teacher_number":"138841","title":"Grade
+        10 Geometry Teacher","id":"530e5955d50c310f36112bfc"},"uri":"/v1.1/teachers/530e5955d50c310f36112bfc"},{"data":{"created":"2014-02-26T21:15:01.449Z","credentials":{"district_username":"will_roger","district_password":"ooT8aeke"},"district":"4fd43cc56d11340000000005","email":"will_roger@example.net","last_modified":"2014-02-26T21:15:01.454Z","name":{"first":"Roger","middle":"J","last":"Will"},"school":"530e595026403103360ff9fd","sis_id":"63","teacher_number":"138841","title":"Grade
         12 Calculus Teacher","id":"530e5955d50c310f36112bfd"},"uri":"/v1.1/teachers/530e5955d50c310f36112bfd"},{"data":{"created":"2014-02-26T21:15:01.455Z","credentials":{"district_username":"rice.dannie","district_password":"thuY4IeMooph"},"district":"4fd43cc56d11340000000005","email":"rice.dannie@example.com","last_modified":"2014-02-26T21:15:01.457Z","name":{"first":"Dannie","middle":"L","last":"Rice"},"school":"530e595026403103360ff9fd","sis_id":"64","teacher_number":"984216","title":"Grade
         9 Physical Education Teacher","id":"530e5955d50c310f36112bfe"},"uri":"/v1.1/teachers/530e5955d50c310f36112bfe"},{"data":{"created":"2014-02-26T21:15:01.459Z","credentials":{"district_username":"ritchie_kaci","district_password":"Eif6eephin3"},"district":"4fd43cc56d11340000000005","email":"ritchie_kaci@example.org","last_modified":"2014-02-26T21:15:01.460Z","name":{"first":"Kaci","middle":"B","last":"Ritchie"},"school":"530e595026403103360ff9ff","sis_id":"65","teacher_number":"110912","title":"Grade
         6 Physical Education Teacher","id":"530e5955d50c310f36112bff"},"uri":"/v1.1/teachers/530e5955d50c310f36112bff"},{"data":{"created":"2014-02-26T21:15:01.462Z","credentials":{"district_username":"raina_herman","district_password":"Eexae9fae"},"district":"4fd43cc56d11340000000005","email":"herman.raina@example.net","last_modified":"2014-02-26T21:15:01.464Z","name":{"first":"Raina","middle":"A","last":"Herman"},"school":"530e595026403103360ff9fe","sis_id":"66","teacher_number":"693443","title":"Elementary
@@ -731,52 +461,7 @@ http_interactions:
         Teacher","id":"530e5955d50c310f36112c03"},"uri":"/v1.1/teachers/530e5955d50c310f36112c03"},{"data":{"created":"2014-02-26T21:15:01.478Z","credentials":{"district_username":"marty.jakubowski","district_password":"eite0Phaep"},"district":"4fd43cc56d11340000000005","email":"jakubowski.marty@example.net","last_modified":"2014-02-26T21:15:01.480Z","name":{"first":"Marty","middle":"K","last":"Jakubowski"},"school":"530e595026403103360ff9fe","sis_id":"7","teacher_number":"842224","title":"Grade
         2 Common Branch Teacher","id":"530e5955d50c310f36112c04"},"uri":"/v1.1/teachers/530e5955d50c310f36112c04"},{"data":{"created":"2014-02-26T21:15:01.484Z","credentials":{"district_username":"jonathan.roderick","district_password":"hblfkajd83h"},"district":"4fd43cc56d11340000000005","email":"jonathan.roderick@example.com","last_modified":"2014-02-26T21:15:01.487Z","name":{"first":"Jonathan","middle":"M","last":"Roderick"},"school":"530e595026403103360ff9fd","sis_id":"71","teacher_number":"916825","title":"High
         School Media Arts Teacher","id":"530e5955d50c310f36112c05"},"uri":"/v1.1/teachers/530e5955d50c310f36112c05"},{"data":{"created":"2014-02-26T21:15:01.488Z","credentials":{"district_username":"coulton.john","district_password":"posi924adA"},"district":"4fd43cc56d11340000000005","email":"john.coulton@example.net","last_modified":"2014-02-26T21:15:01.491Z","name":{"first":"John","middle":"D","last":"Coulton"},"school":"530e595026403103360ff9fd","sis_id":"72","teacher_number":"900381","title":"High
-        School Music Teacher","id":"530e5955d50c310f36112c06"},"uri":"/v1.1/teachers/530e5955d50c310f36112c06"}],"paging":{"current":7,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=7"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=8"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=6"}]}'
-    http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:11 GMT
-- request:
-    method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=8
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer DEMO_TOKEN
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
-      Access-Control-Allow-Methods:
-      - GET,PATCH,POST,DELETE
-      Access-Control-Allow-Origin:
-      - ! '*'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 04 Aug 2014 19:09:12 GMT
-      Etag:
-      - ! '"619127655"'
-      Server:
-      - nginx/1.4.7
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '5342'
-      Connection:
-      - keep-alive
-    body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.493Z","credentials":{"district_username":"mccartney_paula","district_password":"jf098fjdk2a"},"district":"4fd43cc56d11340000000005","email":"paula_mccartney@example.org","last_modified":"2014-02-26T21:15:01.494Z","name":{"first":"Paula","middle":"H","last":"McCartney"},"school":"530e595026403103360ff9fd","sis_id":"75","teacher_number":"847826","title":"High
+        School Music Teacher","id":"530e5955d50c310f36112c06"},"uri":"/v1.1/teachers/530e5955d50c310f36112c06"},{"data":{"created":"2014-02-26T21:15:01.493Z","credentials":{"district_username":"mccartney_paula","district_password":"jf098fjdk2a"},"district":"4fd43cc56d11340000000005","email":"paula_mccartney@example.org","last_modified":"2014-02-26T21:15:01.494Z","name":{"first":"Paula","middle":"H","last":"McCartney"},"school":"530e595026403103360ff9fd","sis_id":"75","teacher_number":"847826","title":"High
         School Health and Physical Education Teacher","id":"530e5955d50c310f36112c07"},"uri":"/v1.1/teachers/530e5955d50c310f36112c07"},{"data":{"created":"2014-02-26T21:15:01.496Z","credentials":{"district_username":"roger_gadsby","district_password":"lkjgf8hasdofjh"},"district":"4fd43cc56d11340000000005","email":"gadsby.roger@example.com","last_modified":"2014-02-26T21:15:01.497Z","name":{"first":"Roger","middle":"X","last":"Gadsby"},"school":"530e595026403103360ff9fd","sis_id":"76","teacher_number":"219349","title":"High
         School Music Teacher","id":"530e5955d50c310f36112c08"},"uri":"/v1.1/teachers/530e5955d50c310f36112c08"},{"data":{"created":"2014-02-26T21:15:01.499Z","credentials":{"district_username":"plant_robin","district_password":"84dhhfsfgh"},"district":"4fd43cc56d11340000000005","email":"robin_plant@example.org","last_modified":"2014-02-26T21:15:01.501Z","name":{"first":"Robin","middle":"M","last":"Plant"},"school":"530e595026403103360ff9fd","sis_id":"77","teacher_number":"532771","title":"High
         School Arts Teacher","id":"530e5955d50c310f36112c09"},"uri":"/v1.1/teachers/530e5955d50c310f36112c09"},{"data":{"created":"2014-02-26T21:15:01.502Z","credentials":{"district_username":"page.james","district_password":"843r5hfsajfh"},"district":"4fd43cc56d11340000000005","email":"page.james@example.net","last_modified":"2014-02-26T21:15:01.504Z","name":{"first":"James","middle":"V","last":"Page"},"school":"530e595026403103360ff9fd","sis_id":"78","teacher_number":"884763","title":"High
@@ -786,52 +471,7 @@ http_interactions:
         School Science Teacher","id":"530e5955d50c310f36112c0d"},"uri":"/v1.1/teachers/530e5955d50c310f36112c0d"},{"data":{"created":"2014-02-26T21:15:01.519Z","credentials":{"district_username":"madison.samantha","district_password":"efjhw20"},"district":"4fd43cc56d11340000000005","email":"samantha_madison@example.net","last_modified":"2014-02-26T21:15:01.521Z","name":{"first":"Samantha","middle":"U","last":"Madison"},"school":"530e595026403103360ff9ff","sis_id":"83","teacher_number":"557191","title":"Middle
         School Guidance Counselor","id":"530e5955d50c310f36112c0e"},"uri":"/v1.1/teachers/530e5955d50c310f36112c0e"},{"data":{"created":"2014-02-26T21:15:01.522Z","credentials":{"district_username":"rachel.monroe","district_password":"fajshgnv83d"},"district":"4fd43cc56d11340000000005","email":"rachel.monroe@example.net","last_modified":"2014-02-26T21:15:01.536Z","name":{"first":"Rachel","middle":"A","last":"Monroe"},"school":"530e595026403103360ff9ff","sis_id":"84","teacher_number":"328889","title":"Middle
         School Guidance Counselor","id":"530e5955d50c310f36112c0f"},"uri":"/v1.1/teachers/530e5955d50c310f36112c0f"},{"data":{"created":"2014-02-26T21:15:01.537Z","credentials":{"district_username":"kari_hudson","district_password":"dfafsbe5tw3"},"district":"4fd43cc56d11340000000005","email":"kari.hudson@example.net","last_modified":"2014-02-26T21:15:01.538Z","name":{"first":"Kari","middle":"H","last":"Hudson"},"school":"530e595026403103360ff9ff","sis_id":"85","teacher_number":"989342","title":"Middle
-        School Guidance Counselor","id":"530e5955d50c310f36112c10"},"uri":"/v1.1/teachers/530e5955d50c310f36112c10"}],"paging":{"current":8,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=8"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=9"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=7"}]}'
-    http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:12 GMT
-- request:
-    method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=9
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*; q=0.5, application/xml'
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer DEMO_TOKEN
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
-      Access-Control-Allow-Methods:
-      - GET,PATCH,POST,DELETE
-      Access-Control-Allow-Origin:
-      - ! '*'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Mon, 04 Aug 2014 19:09:12 GMT
-      Etag:
-      - ! '"2104336292"'
-      Server:
-      - nginx/1.4.7
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '4716'
-      Connection:
-      - keep-alive
-    body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.541Z","credentials":{"district_username":"brianna.greene","district_password":"878fddh"},"district":"4fd43cc56d11340000000005","email":"brianna.greene@example.org","last_modified":"2014-02-26T21:15:01.542Z","name":{"first":"Brianna","middle":"P","last":"Greene"},"school":"530e595026403103360ff9fd","sis_id":"86","teacher_number":"595853","title":"High
+        School Guidance Counselor","id":"530e5955d50c310f36112c10"},"uri":"/v1.1/teachers/530e5955d50c310f36112c10"},{"data":{"created":"2014-02-26T21:15:01.541Z","credentials":{"district_username":"brianna.greene","district_password":"878fddh"},"district":"4fd43cc56d11340000000005","email":"brianna.greene@example.org","last_modified":"2014-02-26T21:15:01.542Z","name":{"first":"Brianna","middle":"P","last":"Greene"},"school":"530e595026403103360ff9fd","sis_id":"86","teacher_number":"595853","title":"High
         School Guidance Counselor","id":"530e5955d50c310f36112c11"},"uri":"/v1.1/teachers/530e5955d50c310f36112c11"},{"data":{"created":"2014-02-26T21:15:01.544Z","credentials":{"district_username":"vaux_tracy","district_password":"09876dfgh"},"district":"4fd43cc56d11340000000005","email":"vaux_tracy@example.com","last_modified":"2014-02-26T21:15:01.547Z","name":{"first":"Tracy","middle":"A","last":"Vaux"},"school":"530e595026403103360ff9fd","sis_id":"87","teacher_number":"148041","title":"High
         School Guidance Counselor","id":"530e5955d50c310f36112c12"},"uri":"/v1.1/teachers/530e5955d50c310f36112c12"},{"data":{"created":"2014-02-26T21:15:01.549Z","credentials":{"district_username":"britcher_elizabeth","district_password":"password1"},"district":"4fd43cc56d11340000000005","email":"elizabeth.britcher@example.net","last_modified":"2014-02-26T21:15:01.553Z","name":{"first":"Elizabeth","middle":"H","last":"Britcher"},"school":"530e595026403103360ff9fd","sis_id":"88","teacher_number":"969161","title":"High
         School Guidance Counselor","id":"530e5955d50c310f36112c13"},"uri":"/v1.1/teachers/530e5955d50c310f36112c13"},{"data":{"created":"2014-02-26T21:15:01.554Z","credentials":{"district_username":"josephine.isaacs","district_password":"rgrgj924"},"district":"4fd43cc56d11340000000005","email":"josephine_isaacs@example.com","last_modified":"2014-02-26T21:15:01.556Z","name":{"first":"Josephine","middle":"K","last":"Isaacs"},"school":"530e595026403103360ff9fd","sis_id":"89","teacher_number":"565897","title":"College
@@ -840,7 +480,7 @@ http_interactions:
         Principal","id":"530e5955d50c310f36112c16"},"uri":"/v1.1/teachers/530e5955d50c310f36112c16"},{"data":{"created":"2014-02-26T21:15:01.566Z","credentials":{"district_username":"morgan.nagle","district_password":"48urjnslvdjbn0"},"district":"4fd43cc56d11340000000005","email":"nagle_morgan@example.com","last_modified":"2014-02-26T21:15:01.567Z","name":{"first":"Morgan","middle":"E","last":"Nagle"},"school":"530e595026403103360ff9fd","sis_id":"91","teacher_number":"712084","title":"Assistant
         Principal","id":"530e5955d50c310f36112c17"},"uri":"/v1.1/teachers/530e5955d50c310f36112c17"},{"data":{"created":"2014-02-26T21:15:01.568Z","credentials":{"district_username":"pennyworth.daniela","district_password":"hfhglh345d"},"district":"4fd43cc56d11340000000005","email":"pennyworth.daniela@example.net","last_modified":"2014-02-26T21:15:01.570Z","name":{"first":"Daniela","middle":"B","last":"Pennyworth"},"school":"530e595026403103360ff9fd","sis_id":"92","teacher_number":"499660","title":"Literacy
         Coach","id":"530e5955d50c310f36112c18"},"uri":"/v1.1/teachers/530e5955d50c310f36112c18"},{"data":{"created":"2014-02-26T21:15:01.572Z","credentials":{"district_username":"m_paucek","district_password":"jhga8salgh"},"district":"4fd43cc56d11340000000005","email":"paucek_m@example.org","last_modified":"2014-02-26T21:15:01.574Z","name":{"first":"Meaghan","middle":"P","last":"Paucek"},"school":"530e595026403103360ff9fd","sis_id":"93","teacher_number":"843713","title":"High
-        School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"paging":{"current":9,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=9"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=8"}]}'
+        School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"range_paging":{"entries_remaining":89,"pages_remaining":1,"lowest":"509fbd7ec474fab64a8e9d53","highest":"530e5955d50c310f36112c19"},"paging":{"current":1,"total":1,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?starting_after=530e5955d50c310f36112c19"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:12 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:19 GMT
 recorded_with: VCR 2.4.0

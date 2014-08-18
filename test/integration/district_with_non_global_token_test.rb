@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class DistrictTest < Test::Unit::TestCase
+class DistrictWithNonGlobalTokenTest < Test::Unit::TestCase
   def setup
     Clever.configure do |config|
-      config.token = "DEMO_TOKEN"
+      config.token = nil
     end
   end
 
@@ -40,8 +40,8 @@ class DistrictTest < Test::Unit::TestCase
   end
 
   should "retrieve a district's students with a small filter" do
-    VCR.use_cassette("districts_students_filtered") do
-      @district = Clever::District.all.first
+    VCR.use_cassette("districts_with_non_global_token_students_filtered") do
+      @district = Clever::District.retrieve('4fd43cc56d11340000000005', 'DEMO_TOKEN')
       @district.students({limit: 2}).size.must_equal 2
     end
   end
@@ -57,16 +57,16 @@ class DistrictTest < Test::Unit::TestCase
   private
 
   def test_object_list(plural_object_name, object_count, instance_name)
-    VCR.use_cassette("districts_#{plural_object_name}", :allow_playback_repeats => true) do
-      district = Clever::District.all.first
+    VCR.use_cassette("districts_with_non_global_token_#{plural_object_name}", :allow_playback_repeats => true) do
+      district = Clever::District.retrieve('4fd43cc56d11340000000005', 'DEMO_TOKEN')
       district.send(plural_object_name).size.must_equal object_count
       district.send(plural_object_name).first.must_be_instance_of instance_name
     end
   end
 
   def test_object_pages(object_name, limit, page_count)
-    VCR.use_cassette("districts_#{object_name}_pages", :allow_playback_repeats => true) do
-      district = Clever::District.all.first
+    VCR.use_cassette("districts_with_non_global_token_#{object_name}_pages", :allow_playback_repeats => true) do
+      district = Clever::District.retrieve('4fd43cc56d11340000000005', 'DEMO_TOKEN')
       object_count_from_list = district.send("#{object_name}s", {limit: 100000}).size
 
       object_count_from_paging = 0

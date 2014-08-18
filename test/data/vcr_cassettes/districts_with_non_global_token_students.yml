@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -29,20 +29,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:23 GMT
+      - Mon, 04 Aug 2014 20:25:13 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '428'
+      - '518'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"range_paging":{"entries_remaining":1,"pages_remaining":1,"lowest":"4fd43cc56d11340000000005","highest":"4fd43cc56d11340000000005"},"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"},{"rel":"next","uri":"/v1.1/districts?starting_after=4fd43cc56d11340000000005"}]}'
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:23 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:13 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:23 GMT
+      - Mon, 04 Aug 2014 20:25:14 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -85,7 +85,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:23 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:14 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -115,7 +115,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:23 GMT
+      - Mon, 04 Aug 2014 20:25:14 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -128,7 +128,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:24 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:14 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/students
@@ -158,7 +158,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:24 GMT
+      - Mon, 04 Aug 2014 20:25:14 GMT
       Etag:
       - ! '"-529044001"'
       Server:
@@ -244,7 +244,7 @@ http_interactions:
         or More Races","school":"530e595026403103360ff9ff","sis_id":"189422359","state_id":"949395711","student_number":"189422359","id":"530e5961049e75a9262cffe3"},"uri":"/v1.1/students/530e5961049e75a9262cffe3"},{"data":{"created":"2014-02-26T21:15:13.206Z","credentials":{"district_username":"mial61","district_password":"uka5Hixae"},"district":"4fd43cc56d11340000000005","dob":"11/10/2002","ell_status":"N","email":"l_mia@example.org","frl_status":"Paid","gender":"F","grade":"5","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.072Z","location":{"zip":"10002"},"name":{"first":"Mia","middle":"J","last":"Lindgren"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"189492161","state_id":"661166974","student_number":"189492161","id":"530e5961049e75a9262cffe4"},"uri":"/v1.1/students/530e5961049e75a9262cffe4"}],"range_paging":{"entries_remaining":1004,"pages_remaining":11,"lowest":"530e5960049e75a9262cff1d","highest":"530e5961049e75a9262cffe4"},"paging":{"current":1,"total":11,"count":1004},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/students?starting_after=530e5961049e75a9262cffe4"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:25 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:15 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -274,7 +274,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:25 GMT
+      - Mon, 04 Aug 2014 20:25:15 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -287,7 +287,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:25 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:15 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -317,7 +317,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:25 GMT
+      - Mon, 04 Aug 2014 20:25:15 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -330,7 +330,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:26 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:15 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/students
@@ -360,7 +360,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:26 GMT
+      - Mon, 04 Aug 2014 20:25:16 GMT
       Etag:
       - ! '"-529044001"'
       Server:
@@ -446,5 +446,5 @@ http_interactions:
         or More Races","school":"530e595026403103360ff9ff","sis_id":"189422359","state_id":"949395711","student_number":"189422359","id":"530e5961049e75a9262cffe3"},"uri":"/v1.1/students/530e5961049e75a9262cffe3"},{"data":{"created":"2014-02-26T21:15:13.206Z","credentials":{"district_username":"mial61","district_password":"uka5Hixae"},"district":"4fd43cc56d11340000000005","dob":"11/10/2002","ell_status":"N","email":"l_mia@example.org","frl_status":"Paid","gender":"F","grade":"5","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.072Z","location":{"zip":"10002"},"name":{"first":"Mia","middle":"J","last":"Lindgren"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"189492161","state_id":"661166974","student_number":"189492161","id":"530e5961049e75a9262cffe4"},"uri":"/v1.1/students/530e5961049e75a9262cffe4"}],"range_paging":{"entries_remaining":1004,"pages_remaining":11,"lowest":"530e5960049e75a9262cff1d","highest":"530e5961049e75a9262cffe4"},"paging":{"current":1,"total":11,"count":1004},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/students?starting_after=530e5961049e75a9262cffe4"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:26 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:16 GMT
 recorded_with: VCR 2.4.0

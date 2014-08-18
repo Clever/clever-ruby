@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -29,20 +29,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:07 GMT
+      - Mon, 04 Aug 2014 20:24:59 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '428'
+      - '518'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"range_paging":{"entries_remaining":1,"pages_remaining":1,"lowest":"4fd43cc56d11340000000005","highest":"4fd43cc56d11340000000005"},"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"},{"rel":"next","uri":"/v1.1/districts?starting_after=4fd43cc56d11340000000005"}]}'
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:07 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:59 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:07 GMT
+      - Mon, 04 Aug 2014 20:24:59 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -85,7 +85,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:07 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:59 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -115,7 +115,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:08 GMT
+      - Mon, 04 Aug 2014 20:24:59 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -128,7 +128,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:08 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:59 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=100000
@@ -158,7 +158,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:08 GMT
+      - Mon, 04 Aug 2014 20:25:00 GMT
       Etag:
       - ! '"-1175958676"'
       Server:
@@ -262,7 +262,7 @@ http_interactions:
         Coach","id":"530e5955d50c310f36112c18"},"uri":"/v1.1/teachers/530e5955d50c310f36112c18"},{"data":{"created":"2014-02-26T21:15:01.572Z","credentials":{"district_username":"m_paucek","district_password":"jhga8salgh"},"district":"4fd43cc56d11340000000005","email":"paucek_m@example.org","last_modified":"2014-02-26T21:15:01.574Z","name":{"first":"Meaghan","middle":"P","last":"Paucek"},"school":"530e595026403103360ff9fd","sis_id":"93","teacher_number":"843713","title":"High
         School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"range_paging":{"entries_remaining":89,"pages_remaining":1,"lowest":"509fbd7ec474fab64a8e9d53","highest":"530e5955d50c310f36112c19"},"paging":{"current":1,"total":1,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=100000"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=100000&starting_after=530e5955d50c310f36112c19"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:08 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:00 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -292,7 +292,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:09 GMT
+      - Mon, 04 Aug 2014 20:25:00 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -305,7 +305,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:09 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:00 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -335,7 +335,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:09 GMT
+      - Mon, 04 Aug 2014 20:25:01 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -348,7 +348,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:09 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:01 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=1
@@ -378,7 +378,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:09 GMT
+      - Mon, 04 Aug 2014 20:25:01 GMT
       Etag:
       - ! '"2081835811"'
       Server:
@@ -403,7 +403,7 @@ http_interactions:
         2 Special Education Teacher","id":"50c89ff19ed67a1d3f1f50c9"},"uri":"/v1.1/teachers/50c89ff19ed67a1d3f1f50c9"},{"data":{"created":"2012-12-12T15:17:05.366Z","credentials":{"district_password":"meile5Taicei","district_username":"colton.block"},"district":"4fd43cc56d11340000000005","email":"block_colton@example.net","last_modified":"2014-02-26T21:15:01.391Z","name":{"first":"Colton","last":"Block","middle":"L"},"school":"530e595026403103360ff9fd","sis_id":"54","teacher_number":"911173","title":"Grade
         9 History Teacher","id":"50c89ff19ed67a1d3f1f50ca"},"uri":"/v1.1/teachers/50c89ff19ed67a1d3f1f50ca"}],"paging":{"current":1,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=1"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:09 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:01 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2
@@ -433,7 +433,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:10 GMT
+      - Mon, 04 Aug 2014 20:25:01 GMT
       Etag:
       - ! '"-311288974"'
       Server:
@@ -458,7 +458,7 @@ http_interactions:
         5 Common Branch Teacher","id":"530e5955d50c310f36112bd3"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd3"},{"data":{"created":"2014-02-26T21:15:01.138Z","credentials":{"district_username":"daniela.raynor","district_password":"quahse5Ch"},"district":"4fd43cc56d11340000000005","email":"raynor_daniela@example.net","last_modified":"2014-02-26T21:15:01.144Z","name":{"first":"Daniela","middle":"F","last":"Raynor"},"school":"530e595026403103360ff9fe","sis_id":"19","teacher_number":"493218","title":"Grade
         5 Common Branch Teacher","id":"530e5955d50c310f36112bd4"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd4"}],"paging":{"current":2,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=1"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:10 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:01 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3
@@ -488,7 +488,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:10 GMT
+      - Mon, 04 Aug 2014 20:25:02 GMT
       Etag:
       - ! '"74581704"'
       Server:
@@ -513,7 +513,7 @@ http_interactions:
         7 English Teacher","id":"530e5955d50c310f36112bdd"},"uri":"/v1.1/teachers/530e5955d50c310f36112bdd"},{"data":{"created":"2014-02-26T21:15:01.237Z","credentials":{"district_username":"rhiannon_prosacco","district_password":"ievo9Eeg"},"district":"4fd43cc56d11340000000005","email":"rhiannon_prosacco@example.org","last_modified":"2014-02-26T21:15:01.240Z","name":{"first":"Rhiannon","middle":"K","last":"Prosacco"},"school":"530e595026403103360ff9fe","sis_id":"3","teacher_number":"435202","title":"Grade
         1 Common Branch Teacher","id":"530e5955d50c310f36112bde"},"uri":"/v1.1/teachers/530e5955d50c310f36112bde"}],"paging":{"current":3,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=2"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:10 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:02 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4
@@ -543,7 +543,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:10 GMT
+      - Mon, 04 Aug 2014 20:25:02 GMT
       Etag:
       - ! '"1993812017"'
       Server:
@@ -568,7 +568,7 @@ http_interactions:
         School English Teacher","id":"530e5955d50c310f36112be7"},"uri":"/v1.1/teachers/530e5955d50c310f36112be7"},{"data":{"created":"2014-02-26T21:15:01.331Z","credentials":{"district_username":"ankunding.cydney","district_password":"moorei2Ie"},"district":"4fd43cc56d11340000000005","email":"ankunding_cydney@example.com","last_modified":"2014-02-26T21:15:01.334Z","name":{"first":"Cydney","middle":"H","last":"Ankunding"},"school":"530e595026403103360ff9ff","sis_id":"40","teacher_number":"873862","title":"Middle
         School Science Teacher","id":"530e5955d50c310f36112be8"},"uri":"/v1.1/teachers/530e5955d50c310f36112be8"}],"paging":{"current":4,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=3"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:10 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:02 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5
@@ -598,7 +598,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:11 GMT
+      - Mon, 04 Aug 2014 20:25:02 GMT
       Etag:
       - ! '"392469563"'
       Server:
@@ -623,7 +623,7 @@ http_interactions:
         2 Common Branch Teacher","id":"530e5955d50c310f36112bf1"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf1"},{"data":{"created":"2014-02-26T21:15:01.401Z","credentials":{"district_username":"preston.lemke","district_password":"caiteiL1ah"},"district":"4fd43cc56d11340000000005","email":"preston.lemke@example.net","last_modified":"2014-02-26T21:15:01.404Z","name":{"first":"Preston","middle":"J","last":"Lemke"},"school":"530e595026403103360ff9fd","sis_id":"51","teacher_number":"171060","title":"Grade
         12 History Teacher","id":"530e5955d50c310f36112bf2"},"uri":"/v1.1/teachers/530e5955d50c310f36112bf2"}],"paging":{"current":5,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=6"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=4"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:11 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:02 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=6
@@ -653,7 +653,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:11 GMT
+      - Mon, 04 Aug 2014 20:25:03 GMT
       Etag:
       - ! '"560411453"'
       Server:
@@ -678,7 +678,7 @@ http_interactions:
         9 Algebra Teacher","id":"530e5955d50c310f36112bfb"},"uri":"/v1.1/teachers/530e5955d50c310f36112bfb"},{"data":{"created":"2014-02-26T21:15:01.443Z","credentials":{"district_username":"cullen_bashirian","district_password":"cheikoh1Ies"},"district":"4fd43cc56d11340000000005","email":"bashirian.cullen@example.net","last_modified":"2014-02-26T21:15:01.445Z","name":{"first":"Cullen","middle":"J","last":"Bashirian"},"school":"530e595026403103360ff9fd","sis_id":"61","teacher_number":"311251","title":"Grade
         10 Geometry Teacher","id":"530e5955d50c310f36112bfc"},"uri":"/v1.1/teachers/530e5955d50c310f36112bfc"}],"paging":{"current":6,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=6"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=7"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=5"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:11 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:03 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=7
@@ -708,7 +708,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:11 GMT
+      - Mon, 04 Aug 2014 20:25:03 GMT
       Etag:
       - ! '"1910903842"'
       Server:
@@ -733,7 +733,7 @@ http_interactions:
         School Media Arts Teacher","id":"530e5955d50c310f36112c05"},"uri":"/v1.1/teachers/530e5955d50c310f36112c05"},{"data":{"created":"2014-02-26T21:15:01.488Z","credentials":{"district_username":"coulton.john","district_password":"posi924adA"},"district":"4fd43cc56d11340000000005","email":"john.coulton@example.net","last_modified":"2014-02-26T21:15:01.491Z","name":{"first":"John","middle":"D","last":"Coulton"},"school":"530e595026403103360ff9fd","sis_id":"72","teacher_number":"900381","title":"High
         School Music Teacher","id":"530e5955d50c310f36112c06"},"uri":"/v1.1/teachers/530e5955d50c310f36112c06"}],"paging":{"current":7,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=7"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=8"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=6"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:11 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:03 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=8
@@ -763,7 +763,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:12 GMT
+      - Mon, 04 Aug 2014 20:25:03 GMT
       Etag:
       - ! '"619127655"'
       Server:
@@ -788,7 +788,7 @@ http_interactions:
         School Guidance Counselor","id":"530e5955d50c310f36112c0f"},"uri":"/v1.1/teachers/530e5955d50c310f36112c0f"},{"data":{"created":"2014-02-26T21:15:01.537Z","credentials":{"district_username":"kari_hudson","district_password":"dfafsbe5tw3"},"district":"4fd43cc56d11340000000005","email":"kari.hudson@example.net","last_modified":"2014-02-26T21:15:01.538Z","name":{"first":"Kari","middle":"H","last":"Hudson"},"school":"530e595026403103360ff9ff","sis_id":"85","teacher_number":"989342","title":"Middle
         School Guidance Counselor","id":"530e5955d50c310f36112c10"},"uri":"/v1.1/teachers/530e5955d50c310f36112c10"}],"paging":{"current":8,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=8"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=9"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=7"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:12 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:03 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=9
@@ -818,7 +818,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:12 GMT
+      - Mon, 04 Aug 2014 20:25:04 GMT
       Etag:
       - ! '"2104336292"'
       Server:
@@ -842,5 +842,5 @@ http_interactions:
         Coach","id":"530e5955d50c310f36112c18"},"uri":"/v1.1/teachers/530e5955d50c310f36112c18"},{"data":{"created":"2014-02-26T21:15:01.572Z","credentials":{"district_username":"m_paucek","district_password":"jhga8salgh"},"district":"4fd43cc56d11340000000005","email":"paucek_m@example.org","last_modified":"2014-02-26T21:15:01.574Z","name":{"first":"Meaghan","middle":"P","last":"Paucek"},"school":"530e595026403103360ff9fd","sis_id":"93","teacher_number":"843713","title":"High
         School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"paging":{"current":9,"total":9,"count":89},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=9"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers?limit=10&page=8"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:12 GMT
+  recorded_at: Mon, 04 Aug 2014 20:25:04 GMT
 recorded_with: VCR 2.4.0

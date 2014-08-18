@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
@@ -29,20 +29,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:13 GMT
+      - Mon, 04 Aug 2014 20:24:20 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '428'
+      - '518'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"range_paging":{"entries_remaining":1,"pages_remaining":1,"lowest":"4fd43cc56d11340000000005","highest":"4fd43cc56d11340000000005"},"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"},{"rel":"next","uri":"/v1.1/districts?starting_after=4fd43cc56d11340000000005"}]}'
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:13 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:20 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:13 GMT
+      - Mon, 04 Aug 2014 20:24:20 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -85,7 +85,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:13 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:20 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -115,7 +115,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:13 GMT
+      - Mon, 04 Aug 2014 20:24:20 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -128,10 +128,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:13 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:21 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events?limit=100000
     body:
       encoding: US-ASCII
       string: ''
@@ -158,15 +158,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:14 GMT
+      - Mon, 04 Aug 2014 20:24:21 GMT
       Etag:
-      - ! '"1076993729"'
+      - ! '"-469150794"'
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '3877'
+      - '3903'
       Connection:
       - keep-alive
     body:
@@ -176,9 +176,9 @@ http_interactions:
         3 Math, Class 301 - 301 - S. Block","period":"5","school":"530e595026403103360ff9fe","sis_id":"771","subject":"math","teacher":"530e5955d50c310f36112c15","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5960049e75a9262cff56","530e5962049e75a9262d00fb","530e5962049e75a9262d015a","530e5963049e75a9262d0219","530e5964049e75a9262d0270","530e5964049e75a9262d02cf","530e5964049e75a9262d02fc","530e5965049e75a9262d0341","530e5965049e75a9262d0343","530e5965049e75a9262d038d","530e5965049e75a9262d03a7","530e5966049e75a9262d0415","530e5966049e75a9262d0439","530e5966049e75a9262d0458","530e5966049e75a9262d04d5","530e5967049e75a9262d04f4","530e5967049e75a9262d051f"],"last_modified":"2014-06-04T14:11:05.812Z","created":"2014-02-26T21:15:38.738Z","id":"530e597a049e75a9262d0baf"},"previous_attributes":{"students":["530e5960049e75a9262cff56","530e5962049e75a9262d00fb","530e5962049e75a9262d015a","530e5963049e75a9262d0219","530e5964049e75a9262d0270","530e5964049e75a9262d02cf","530e5964049e75a9262d02fc","530e5965049e75a9262d0341","530e5965049e75a9262d0343","530e5965049e75a9262d038d","530e5965049e75a9262d03a7","530e5966049e75a9262d0415","530e5966049e75a9262d0439","530e5966049e75a9262d0458","530e5966049e75a9262d0463","530e5966049e75a9262d04d5","530e5967049e75a9262d04f4","530e5967049e75a9262d051f"]}},"created":"2014-07-07T15:46:49.966Z","id":"53bac0eaea8100ce5003a6e5"},"uri":"/v1.1/events/53bac0eaea8100ce5003a6e5"},{"data":{"type":"sections.updated","data":{"object":{"course_name":"Grade
         3 Reading, Class 303","course_number":"303","district":"4fd43cc56d11340000000005","grade":"3","name":"Grade
         3 Reading, Class 303 - 303 - L. Spinka","period":"2","school":"530e595026403103360ff9fe","sis_id":"854","subject":"english/language
-        arts","teacher":"509fbd7ec474fab64a8e9d53","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5966049e75a9262d0463","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"],"last_modified":"2014-02-26T21:15:39.160Z","created":"2014-02-26T21:15:39.158Z","id":"530e597b049e75a9262d0c08"},"previous_attributes":{"students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"]}},"created":"2014-07-07T15:46:50.282Z","id":"53bac0eaea8100ce5003a6e6"},"uri":"/v1.1/events/53bac0eaea8100ce5003a6e6"}],"range_paging":{"entries_remaining":2,"pages_remaining":1,"lowest":"53bac0eaea8100ce5003a6e5","highest":"53bac0eaea8100ce5003a6e6"},"paging":{"current":1,"total":1,"count":2},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?starting_after=53bac0eaea8100ce5003a6e6"}]}'
+        arts","teacher":"509fbd7ec474fab64a8e9d53","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5966049e75a9262d0463","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"],"last_modified":"2014-02-26T21:15:39.160Z","created":"2014-02-26T21:15:39.158Z","id":"530e597b049e75a9262d0c08"},"previous_attributes":{"students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"]}},"created":"2014-07-07T15:46:50.282Z","id":"53bac0eaea8100ce5003a6e6"},"uri":"/v1.1/events/53bac0eaea8100ce5003a6e6"}],"range_paging":{"entries_remaining":2,"pages_remaining":1,"lowest":"53bac0eaea8100ce5003a6e5","highest":"53bac0eaea8100ce5003a6e6"},"paging":{"current":1,"total":1,"count":2},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?limit=100000"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?limit=100000&starting_after=53bac0eaea8100ce5003a6e6"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:14 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:21 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -208,7 +208,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:14 GMT
+      - Mon, 04 Aug 2014 20:24:21 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -221,7 +221,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:14 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:21 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -251,7 +251,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:14 GMT
+      - Mon, 04 Aug 2014 20:24:21 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -264,10 +264,10 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:15 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:22 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events?limit=1&page=1
     body:
       encoding: US-ASCII
       string: ''
@@ -294,25 +294,70 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 04 Aug 2014 19:09:15 GMT
+      - Mon, 04 Aug 2014 20:24:22 GMT
       Etag:
-      - ! '"1076993729"'
+      - ! '"2124188881"'
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '3877'
+      - '1865'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
       string: ! '{"data":[{"data":{"type":"sections.updated","data":{"object":{"course_name":"Grade
         3 Math, Class 301","course_number":"301","district":"4fd43cc56d11340000000005","grade":"3","name":"Grade
-        3 Math, Class 301 - 301 - S. Block","period":"5","school":"530e595026403103360ff9fe","sis_id":"771","subject":"math","teacher":"530e5955d50c310f36112c15","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5960049e75a9262cff56","530e5962049e75a9262d00fb","530e5962049e75a9262d015a","530e5963049e75a9262d0219","530e5964049e75a9262d0270","530e5964049e75a9262d02cf","530e5964049e75a9262d02fc","530e5965049e75a9262d0341","530e5965049e75a9262d0343","530e5965049e75a9262d038d","530e5965049e75a9262d03a7","530e5966049e75a9262d0415","530e5966049e75a9262d0439","530e5966049e75a9262d0458","530e5966049e75a9262d04d5","530e5967049e75a9262d04f4","530e5967049e75a9262d051f"],"last_modified":"2014-06-04T14:11:05.812Z","created":"2014-02-26T21:15:38.738Z","id":"530e597a049e75a9262d0baf"},"previous_attributes":{"students":["530e5960049e75a9262cff56","530e5962049e75a9262d00fb","530e5962049e75a9262d015a","530e5963049e75a9262d0219","530e5964049e75a9262d0270","530e5964049e75a9262d02cf","530e5964049e75a9262d02fc","530e5965049e75a9262d0341","530e5965049e75a9262d0343","530e5965049e75a9262d038d","530e5965049e75a9262d03a7","530e5966049e75a9262d0415","530e5966049e75a9262d0439","530e5966049e75a9262d0458","530e5966049e75a9262d0463","530e5966049e75a9262d04d5","530e5967049e75a9262d04f4","530e5967049e75a9262d051f"]}},"created":"2014-07-07T15:46:49.966Z","id":"53bac0eaea8100ce5003a6e5"},"uri":"/v1.1/events/53bac0eaea8100ce5003a6e5"},{"data":{"type":"sections.updated","data":{"object":{"course_name":"Grade
+        3 Math, Class 301 - 301 - S. Block","period":"5","school":"530e595026403103360ff9fe","sis_id":"771","subject":"math","teacher":"530e5955d50c310f36112c15","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5960049e75a9262cff56","530e5962049e75a9262d00fb","530e5962049e75a9262d015a","530e5963049e75a9262d0219","530e5964049e75a9262d0270","530e5964049e75a9262d02cf","530e5964049e75a9262d02fc","530e5965049e75a9262d0341","530e5965049e75a9262d0343","530e5965049e75a9262d038d","530e5965049e75a9262d03a7","530e5966049e75a9262d0415","530e5966049e75a9262d0439","530e5966049e75a9262d0458","530e5966049e75a9262d04d5","530e5967049e75a9262d04f4","530e5967049e75a9262d051f"],"last_modified":"2014-06-04T14:11:05.812Z","created":"2014-02-26T21:15:38.738Z","id":"530e597a049e75a9262d0baf"},"previous_attributes":{"students":["530e5960049e75a9262cff56","530e5962049e75a9262d00fb","530e5962049e75a9262d015a","530e5963049e75a9262d0219","530e5964049e75a9262d0270","530e5964049e75a9262d02cf","530e5964049e75a9262d02fc","530e5965049e75a9262d0341","530e5965049e75a9262d0343","530e5965049e75a9262d038d","530e5965049e75a9262d03a7","530e5966049e75a9262d0415","530e5966049e75a9262d0439","530e5966049e75a9262d0458","530e5966049e75a9262d0463","530e5966049e75a9262d04d5","530e5967049e75a9262d04f4","530e5967049e75a9262d051f"]}},"created":"2014-07-07T15:46:49.966Z","id":"53bac0eaea8100ce5003a6e5"},"uri":"/v1.1/events/53bac0eaea8100ce5003a6e5"}],"paging":{"current":1,"total":2,"count":2},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?limit=1&page=1"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?limit=1&page=2"}]}'
+    http_version: 
+  recorded_at: Mon, 04 Aug 2014 20:24:22 GMT
+- request:
+    method: get
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events?limit=1&page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 04 Aug 2014 20:24:22 GMT
+      Etag:
+      - ! '"-494718804"'
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '2105'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"data":{"type":"sections.updated","data":{"object":{"course_name":"Grade
         3 Reading, Class 303","course_number":"303","district":"4fd43cc56d11340000000005","grade":"3","name":"Grade
         3 Reading, Class 303 - 303 - L. Spinka","period":"2","school":"530e595026403103360ff9fe","sis_id":"854","subject":"english/language
-        arts","teacher":"509fbd7ec474fab64a8e9d53","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5966049e75a9262d0463","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"],"last_modified":"2014-02-26T21:15:39.160Z","created":"2014-02-26T21:15:39.158Z","id":"530e597b049e75a9262d0c08"},"previous_attributes":{"students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"]}},"created":"2014-07-07T15:46:50.282Z","id":"53bac0eaea8100ce5003a6e6"},"uri":"/v1.1/events/53bac0eaea8100ce5003a6e6"}],"range_paging":{"entries_remaining":2,"pages_remaining":1,"lowest":"53bac0eaea8100ce5003a6e5","highest":"53bac0eaea8100ce5003a6e6"},"paging":{"current":1,"total":1,"count":2},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?starting_after=53bac0eaea8100ce5003a6e6"}]}'
+        arts","teacher":"509fbd7ec474fab64a8e9d53","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5966049e75a9262d0463","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"],"last_modified":"2014-02-26T21:15:39.160Z","created":"2014-02-26T21:15:39.158Z","id":"530e597b049e75a9262d0c08"},"previous_attributes":{"students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"]}},"created":"2014-07-07T15:46:50.282Z","id":"53bac0eaea8100ce5003a6e6"},"uri":"/v1.1/events/53bac0eaea8100ce5003a6e6"}],"paging":{"current":2,"total":2,"count":2},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?limit=1&page=2"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/events?limit=1&page=1"}]}'
     http_version: 
-  recorded_at: Mon, 04 Aug 2014 19:09:15 GMT
+  recorded_at: Mon, 04 Aug 2014 20:24:22 GMT
 recorded_with: VCR 2.4.0

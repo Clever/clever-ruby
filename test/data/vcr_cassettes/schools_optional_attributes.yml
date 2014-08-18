@@ -21,44 +21,35 @@ http_interactions:
       Access-Control-Allow-Headers:
       - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
       Access-Control-Allow-Methods:
-      - GET,PUT,POST,DELETE
+      - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
       - ! '*'
-      Cache-Control:
-      - no-cache="set-cookie"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 11 Feb 2013 18:52:47 GMT
+      - Mon, 04 Aug 2014 19:10:06 GMT
       Etag:
-      - ! '"960244484"'
+      - ! '"-1891710966"'
       Server:
-      - nginx/1.2.3
-      Set-Cookie:
-      - AWSELB=57FFC5270C5107B6EA5E56398F77D924DD37E7E19953EE4589F0E25E8AB42DE5C42A50E50F0E4B84F1F903CD1F0A4E900C1FA7DA18973A6D0C757C75DBD7DB64ABDE808D68;PATH=/;MAX-AGE=300
-      Strict-Transport-Security:
-      - max-age=500
+      - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '2236'
+      - '1973'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"data":[{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        Academy","nces_id":"17065379","phone":"1-(755) 019-5442","school_number":"9255","sis_id":"9255","location":{"address":"18828
-        Kutch Court","city":"Dessiemouth","state":"IA","zip":"37471-9969"},"principal":{"email":"eda_barrows@mailinator.com","name":"Colleen
-        Gottlieb"},"last_modified":"2012-11-07T00:44:53.065Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000001"},"uri":"/v1.1/schools/4fee004cca2e43cf27000001"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        Preparatory","nces_id":"94755881","phone":"(527) 825-2248","school_number":"2559","sis_id":"2559","state_id":"23","location":{"address":"42139
-        Fadel Mountains","city":"Thomasfort","state":"AP","zip":"61397-3760"},"principal":{"email":"nikolas@mailinator.com","name":"Rudolph
-        Howe"},"last_modified":"2012-11-07T00:44:53.079Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000002"},"uri":"/v1.1/schools/4fee004cca2e43cf27000002"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        High School","nces_id":"44270647","phone":"1-(895) 295-3507","school_number":"4083","sis_id":"4083","state_id":"12","location":{"address":"9538
-        Leffler Forks","city":"Gwendolynville","state":"NH","zip":"58530-7427"},"principal":{"email":"domingo_williamson@mailinator.com","name":"Krystal
-        Kiehn"},"last_modified":"2012-11-07T00:44:53.093Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000003"},"uri":"/v1.1/schools/4fee004cca2e43cf27000003"},{"data":{"district":"4fd43cc56d11340000000005","high_grade":"8","low_grade":"6","name":"Clever
-        Memorial High","nces_id":"26309489","phone":"1-(124) 215-8079","school_number":"3935","sis_id":"3935","state_id":"23","location":{"address":"10960
-        Kilback View","city":"North Sarina","state":"MP","zip":"58717-8256"},"principal":{"email":"otto_sanford@mailinator.com","name":"Maryse
-        Tillman"},"last_modified":"2012-11-07T00:44:53.104Z","created":"2012-11-06T00:00:00.000Z","id":"4fee004cca2e43cf27000004"},"uri":"/v1.1/schools/4fee004cca2e43cf27000004"}],"links":[{"rel":"self","uri":"/v1.1/schools"}]}'
-    http_version:
-  recorded_at: Mon, 11 Feb 2013 18:50:38 GMT
+      string: ! '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+        5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
+        High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
+        Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"uri":"/v1.1/schools/530e595026403103360ff9fd"},{"data":{"created":"2014-02-26T21:14:56.668Z","district":"4fd43cc56d11340000000005","high_grade":"5","last_modified":"2014-02-26T21:14:56.670Z","location":{"address":"110
+        Pineapple Street","city":"Brooklyn","state":"NY","zip":"11201"},"low_grade":"Kindergarten","name":"Clever
+        Elementary School","nces_id":"360007000000","phone":"(718) 555-4567","principal":{"name":"Cecilia
+        Roderick","email":"ceciliar@mailinator.com"},"school_number":"13K123","sis_id":"13K123","state_id":"30890","id":"530e595026403103360ff9fe"},"uri":"/v1.1/schools/530e595026403103360ff9fe"},{"data":{"created":"2014-02-26T21:14:56.671Z","district":"4fd43cc56d11340000000005","high_grade":"8","last_modified":"2014-02-26T21:14:56.673Z","location":{"address":"322
+        Old Beach 88th Street","city":"Rockaway Beach","state":"NY","zip":"11693"},"low_grade":"6","name":"Clever
+        Middle School","nces_id":"360001000000","phone":"(718) 555-8989","principal":{"name":"Leonard
+        Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"27Q321","sis_id":"27Q321","state_id":"412","id":"530e595026403103360ff9ff"},"uri":"/v1.1/schools/530e595026403103360ff9ff"}],"range_paging":{"entries_remaining":3,"pages_remaining":1,"lowest":"530e595026403103360ff9fd","highest":"530e595026403103360ff9ff"},"paging":{"current":1,"total":1,"count":3},"links":[{"rel":"self","uri":"/v1.1/schools"},{"rel":"next","uri":"/v1.1/schools?starting_after=530e595026403103360ff9ff"}]}'
+    http_version: 
+  recorded_at: Mon, 04 Aug 2014 19:10:06 GMT
 recorded_with: VCR 2.4.0

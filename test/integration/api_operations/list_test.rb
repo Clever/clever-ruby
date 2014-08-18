@@ -3,7 +3,7 @@ require 'test_helper'
 class ListTest < Test::Unit::TestCase
   def setup
     Clever.configure do |config|
-      config.api_key = "DEMO_KEY"
+      config.token = "DEMO_TOKEN"
     end
   end
 
@@ -20,7 +20,7 @@ class ListTest < Test::Unit::TestCase
       @schools = Clever::School.all
     end
 
-    @schools.count.must_equal 4
+    @schools.count.must_equal 3
   end
 
   should "retrieve students" do
@@ -36,7 +36,7 @@ class ListTest < Test::Unit::TestCase
       @sections = Clever::Section.all
     end
 
-    @sections.count.must_equal 44
+    @sections.count.must_equal 100 
   end
 
   should "retrieve teachers" do
