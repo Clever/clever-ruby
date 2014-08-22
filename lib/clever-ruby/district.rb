@@ -19,5 +19,15 @@ module Clever
       end
     end
 
+    private
+
+    def get_linked_resources(resource_type, filters={})
+      Util.convert_to_clever_object(Clever.request(:get, get_uri(resource_type), filters)[:data])
+    end
+
+    def get_uri(resource_type)
+      refresh
+      links.detect {|link| link[:rel] == resource_type }[:uri]
+    end
   end
 end
