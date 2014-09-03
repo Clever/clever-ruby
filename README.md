@@ -1,6 +1,6 @@
 # Clever::Ruby
 
-[![Build Status](https://travis-ci.org/Clever/clever-ruby.png)](https://travis-ci.org/Clever/clever-ruby)
+[![Build Status](https://drone.ops.clever.com/github.com/Clever/clever-ruby/status.svg?branch=master)](https://drone.ops.clever.com/github.com/Clever/clever-ruby)
 
 Ruby bindings to the Clever API.
 
@@ -8,23 +8,41 @@ Ruby bindings to the Clever API.
 
 Add this line to your application's Gemfile:
 
-    gem 'clever-ruby'
+```bash
+gem 'clever-ruby'
+```
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install clever-ruby
+```bash
+$ gem install clever-ruby
+```
+
+## Run tests
+
+To run all tests:
+
+```bash
+rake test
+```
+
+Running specific tests is not currently supported.
 
 ## Usage
 
 Configure clever-ruby to use your Clever API key:
 
-    Clever.configure do |config|
-      config.api_key = 'YOUR-API-KEY'
-    end
+```ruby
+Clever.configure do |config|
+  config.api_key = 'YOUR-API-KEY'
+end
+```
 
 ## Contributing
 
