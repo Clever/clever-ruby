@@ -3,31 +3,37 @@ require 'test_helper'
 class OptionalAttributesTest < Test::Unit::TestCase
   def setup
     Clever.configure do |config|
-      config.api_key = "DEMO_KEY"
+      config.api_key = 'DEMO_KEY'
     end
 
-    VCR.use_cassette("schools_optional_attributes") do
+    VCR.use_cassette('schools_optional_attributes') do
       @schools = Clever::School.all
     end
   end
 
-  should "return nil for an optional attribute that isnt present" do
-    clever_academy = @schools.detect{ |s| s.id == "4fee004cca2e43cf27000001"}
+  should 'return nil for an optional attribute that isnt present' do
+    school = @schools.find { |s| s.id == '530e595026403103360ff9fd' }
+
+    # add an attribute that will not be exist in the test data
+    ops = school.optional_attributes
+    ops << :legit_attribute
+    Clever::School.class_eval "
+      def optional_attributes
+        #{ops}
+      end"
 
     # Must not raise a NoMethodError.
-    clever_academy.state_id.must_equal nil
+    school.legit_attribute.must_equal nil
   end
 
-  should "have the expected value for an optional attribute that is present" do
-    clever_prep = @schools.detect{ |s| s.id == "4fee004cca2e43cf27000002"}
-    clever_prep.state_id.must_equal "23"
+  should 'have the expected value for an optional attribute that is present' do
+    school = @schools.find { |s| s.id == '530e595026403103360ff9fd' }
+    school.state_id.must_equal '712345'
   end
 
-  should "raise a NoMethodError for an invalid attribute" do
-    clever_academy = @schools.detect{ |s| s.id == "4fee004cca2e43cf27000001"}
+  should 'raise a NoMethodError for an invalid attribute' do
+    school = @schools.find { |s| s.id == '530e595026403103360ff9fd' }
 
-    lambda {
-      clever_academy.some_attribute_that_doesnt_exist
-    }.must_raise NoMethodError
+    -> { school.some_attribute_that_doesnt_exist }.must_raise NoMethodError
   end
 end
