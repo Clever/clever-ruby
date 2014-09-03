@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?page=1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -21,32 +21,26 @@ http_interactions:
       Access-Control-Allow-Headers:
       - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
       Access-Control-Allow-Methods:
-      - GET,PUT,POST,DELETE
+      - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
-      Cache-Control:
-      - no-cache="set-cookie"
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 14 Feb 2013 15:49:11 GMT
+      - Wed, 03 Sep 2014 19:08:04 GMT
       Server:
-      - nginx/1.2.3
-      Set-Cookie:
-      - AWSELB=57FFC5270C5107B6EA5E56398F77D924DD37E7E19986084006C3CEE0D8D6CA24B0992751377CD74DF64ED581C9BCDB2B60D2030EE56D3BD197FBA2C5C0E11C4FAFED224F2D;PATH=/;MAX-AGE=300
-      Strict-Transport-Security:
-      - max-age=500
+      - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '174'
+      - '224'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
+      encoding: UTF-8
+      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts?page=1"}]}'
     http_version: 
-  recorded_at: Thu, 14 Feb 2013 15:49:22 GMT
+  recorded_at: Wed, 03 Sep 2014 19:08:04 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -55,7 +49,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -68,32 +62,26 @@ http_interactions:
       Access-Control-Allow-Headers:
       - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
       Access-Control-Allow-Methods:
-      - GET,PUT,POST,DELETE
+      - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
-      Cache-Control:
-      - no-cache="set-cookie"
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 14 Feb 2013 15:49:12 GMT
+      - Wed, 03 Sep 2014 19:08:04 GMT
       Server:
-      - nginx/1.2.3
-      Set-Cookie:
-      - AWSELB=57FFC5270C5107B6EA5E56398F77D924DD37E7E19986084006C3CEE0D8D6CA24B0992751377CD74DF64ED581C9BCDB2B60D2030EE56D3BD197FBA2C5C0E11C4FAFED224F2D;PATH=/;MAX-AGE=300
-      Strict-Transport-Security:
-      - max-age=500
+      - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '526'
+      - '518'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Thu, 14 Feb 2013 15:49:23 GMT
+  recorded_at: Wed, 03 Sep 2014 19:08:04 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -102,7 +90,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -115,32 +103,26 @@ http_interactions:
       Access-Control-Allow-Headers:
       - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
       Access-Control-Allow-Methods:
-      - GET,PUT,POST,DELETE
+      - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
-      Cache-Control:
-      - no-cache="set-cookie"
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 14 Feb 2013 15:49:12 GMT
+      - Wed, 03 Sep 2014 19:08:04 GMT
       Server:
-      - nginx/1.2.3
-      Set-Cookie:
-      - AWSELB=57FFC5270C5107B6EA5E56398F77D924DD37E7E19986084006C3CEE0D8D6CA24B0992751377CD74DF64ED581C9BCDB2B60D2030EE56D3BD197FBA2C5C0E11C4FAFED224F2D;PATH=/;MAX-AGE=300
-      Strict-Transport-Security:
-      - max-age=500
+      - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '526'
+      - '518'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"properties","uri":"/v1.1/districts/4fd43cc56d11340000000005/properties"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Thu, 14 Feb 2013 15:49:23 GMT
+  recorded_at: Wed, 03 Sep 2014 19:08:04 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/students?limit=2
@@ -149,7 +131,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -162,34 +144,27 @@ http_interactions:
       Access-Control-Allow-Headers:
       - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
       Access-Control-Allow-Methods:
-      - GET,PUT,POST,DELETE
+      - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
-      Cache-Control:
-      - no-cache="set-cookie"
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 14 Feb 2013 15:49:13 GMT
+      - Wed, 03 Sep 2014 19:08:04 GMT
       Etag:
-      - ! '"450475493"'
+      - '"390894019"'
       Server:
-      - nginx/1.2.3
-      Set-Cookie:
-      - AWSELB=57FFC5270C5107B6EA5E56398F77D924DD37E7E19986084006C3CEE0D8D6CA24B0992751377CD74DF64ED581C9BCDB2B60D2030EE56D3BD197FBA2C5C0E11C4FAFED224F2D;PATH=/;MAX-AGE=300
-      Strict-Transport-Security:
-      - max-age=500
+      - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '1542'
+      - '1603'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"paging":{"current":1,"total":448,"count":895},"data":[{"data":{"district":"4fd43cc56d11340000000005","dob":"4/5/1998","email":"anita.morar@mailinator.com","frl_status":"Free","gender":"F","grade":"7","hispanic_ethnicity":"N","race":"Caucasian","school":"4fee004cca2e43cf27000003","sis_id":"4875","state_id":"3905945","student_number":"15593","location":{"address":"13961
-        Lueilwitz Cliff","city":"Deondreburgh","state":"MN","zip":"89575-9808","lat":"14.23999706748873","lon":"128.96796497516334"},"name":{"first":"Korey","middle":"R","last":"Orn"},"last_modified":"2012-12-11T17:00:21.470Z","created":"2012-11-07T00:44:58.917Z","id":"4fee004cca2e43cf2700000b"},"uri":"/v1.1/students/4fee004cca2e43cf2700000b"},{"data":{"district":"4fd43cc56d11340000000005","dob":"3/14/2000","email":"ken@mailinator.com","frl_status":"Paid","gender":"F","grade":"7","hispanic_ethnicity":"Y","race":"Caucasian","school":"4fee004cca2e43cf27000002","sis_id":"8395","state_id":"1157165","student_number":"40818","location":{"address":"23101
-        Rolfson Manor","city":"Port Jakob","state":"LA","zip":"82787-5057","lat":"-85.01329001504928","lon":"-54.14428571239114"},"name":{"first":"Kathryne","middle":"U","last":"Rippin"},"last_modified":"2012-12-11T17:00:21.472Z","created":"2012-11-07T00:44:59.497Z","id":"4fee004cca2e43cf2700002b"},"uri":"/v1.1/students/4fee004cca2e43cf2700002b"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/students?limit=2"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/students?limit=2&page=2"}]}'
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:12.346Z","credentials":{"district_username":"stevez33","district_password":"auyik3tiTieL"},"district":"4fd43cc56d11340000000005","dob":"2/11/2007","ell_status":"N","email":"z.steve@example.net","frl_status":"Paid","gender":"M","grade":"Kindergarten","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.656Z","location":{"zip":"10459"},"name":{"first":"Steve","middle":"G","last":"Ziemann"},"race":"Black
+        or African American","school":"530e595026403103360ff9fe","sis_id":"100095233","state_id":"231786324","student_number":"100095233","id":"530e5960049e75a9262cff1d"},"uri":"/v1.1/students/530e5960049e75a9262cff1d"},{"data":{"created":"2014-02-26T21:15:12.358Z","credentials":{"district_username":"douglasw58","district_password":"ahFii2nae"},"district":"4fd43cc56d11340000000005","dob":"6/18/1998","ell_status":"Y","email":"w_douglas@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.661Z","location":{"zip":"11004"},"name":{"first":"Douglas","middle":"S","last":"Wisoky"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"101565758","state_id":"498006597","student_number":"101565758","id":"530e5960049e75a9262cff1e"},"uri":"/v1.1/students/530e5960049e75a9262cff1e"}],"paging":{"current":1,"total":502,"count":1004},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/students?limit=2"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/students?limit=2&starting_after=530e5960049e75a9262cff1e"}]}'
     http_version: 
-  recorded_at: Thu, 14 Feb 2013 15:49:24 GMT
+  recorded_at: Wed, 03 Sep 2014 19:08:04 GMT
 recorded_with: VCR 2.4.0
