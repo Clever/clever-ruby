@@ -2,9 +2,12 @@ module Clever
   module APIOperations
     module List
       module ClassMethods
-        def all(filters={})
-          response = Clever.request(:get, url, filters)
-          Util.convert_to_clever_object(response[:data])
+        def all(filters = {})
+          accum = []
+          Clever::APIOperations::PageList.new(url, filters).each do |page|
+            accum += page.all
+          end
+          accum
         end
       end
 

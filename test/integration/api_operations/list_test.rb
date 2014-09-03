@@ -20,7 +20,7 @@ class ListTest < Test::Unit::TestCase
       @schools = Clever::School.all
     end
 
-    @schools.count.must_equal 4
+    @schools.count.must_equal 3
   end
 
   should "retrieve students" do
@@ -28,7 +28,7 @@ class ListTest < Test::Unit::TestCase
       @students = Clever::Student.all
     end
 
-    @students.count.must_equal 100
+    @students.count.must_equal 1004
   end
 
   should "retrieve sections" do
@@ -36,7 +36,7 @@ class ListTest < Test::Unit::TestCase
       @sections = Clever::Section.all
     end
 
-    @sections.count.must_equal 44
+    @sections.count.must_equal 379
   end
 
   should "retrieve teachers" do
