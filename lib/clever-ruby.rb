@@ -1,3 +1,4 @@
+# rubocop:disable FileName
 require 'rest_client'
 require 'multi_json'
 require 'open-uri'
@@ -33,6 +34,7 @@ require 'clever-ruby/errors/api_error'
 require 'clever-ruby/errors/authentication_error'
 require 'clever-ruby/errors/invalid_request_error'
 
+# Clever Ruby library
 module Clever
   class << self
     def configure
@@ -58,31 +60,32 @@ module Clever
 
   def self.convert_to_query_string(params = nil)
     if params && params.count
-      "?" + Util.flatten_params(params).collect { |p|
-        "#{URI::encode(p[0].to_s)}=#{URI::encode(p[1].to_s)}"
-      }.join('&')
+      params_arr = Util.flatten_params(params).map do |p|
+        "#{URI.encode(p[0].to_s)}=#{URI.encode(p[1].to_s)}"
+      end
+      '?' + params_arr.join('&')
     else
       ''
     end
   end
 
-  def self.request(method, url, params=nil, headers={})
-    raise AuthenticationError.new('No API key provided. (HINT: set your API key using "Clever.configure { |config| config.api_key = <API-KEY> }" or your token using "Clever.configure { |config| config.token = <TOKEN> }")') unless Clever.api_key or Clever.token
-
-    params = Util.objects_to_ids(params)
-    url = self.api_url(url)
-
+  def self.create_payload(method, url, params)
     case method.to_s.downcase.to_sym
     when :get, :head, :delete
-      url += convert_to_query_string(params)
+      url += convert_to_query_string params
       payload = nil
     else
       payload = params
     end
+    [url, payload]
+  end
 
-    if Clever.token
-      headers[:Authorization] = "Bearer " + Clever.token
-    end
+  def self.create_request_opts(method, url, params, headers)
+    params = Util.objects_to_ids params
+    url = api_url url
+    url, payload = create_payload method, url, params
+
+    headers[:Authorization] = 'Bearer ' + Clever.token if Clever.token
 
     opts = {
       method: method,
@@ -94,30 +97,23 @@ module Clever
     }
     if Clever.api_key
       opts[:user] = Clever.api_key
-      opts[:password] = ""
+      opts[:password] = ''
     end
+    opts
+  end
 
-    begin
-      response = execute_request(opts)
-    rescue SocketError => e
-      self.handle_restclient_error(e)
-    rescue NoMethodError => e
-      # Work around RestClient bug
-      if e.message =~ /\WRequestFailed\W/
-        e = APIConnectionError.new('Unexpected HTTP response code')
-        self.handle_restclient_error(e)
-      else
-        raise
-      end
-    rescue RestClient::ExceptionWithResponse => e
-      if rcode = e.http_code and rbody = e.http_body
-        self.handle_api_error(rcode, rbody)
-      else
-        self.handle_restclient_error(e)
-      end
-    rescue RestClient::Exception, Errno::ECONNREFUSED => e
-      self.handle_restclient_error(e)
+  def self.check_authorization
+    unless Clever.api_key || Clever.token
+      fail AuthenticationError, 'No API key provided. (HINT: set your API key using '\
+        '"Clever.configure { |config| config.api_key = <API-KEY> }" or your token using '\
+        '"Clever.configure { |config| config.token = <TOKEN> }")'
     end
+  end
+
+  def self.request(method, url, params = nil, headers = {})
+    check_authorization
+    opts = create_request_opts method, url, params, headers
+    response = execute_request opts
 
     rbody = response.body
     rcode = response.code
@@ -126,7 +122,9 @@ module Clever
       # some library out there that makes symbolize_names not work.
       resp = Clever::JSON.load(rbody)
     rescue MultiJson::DecodeError
-      raise APIError.new("Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode})", rcode, rbody)
+      raise APIError.new(
+        "Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode})",
+        rcode, rbody)
     end
 
     resp = Util.symbolize_names(resp)
@@ -136,38 +134,66 @@ module Clever
   private
 
   def self.execute_request(opts)
-    RestClient::Request.execute(opts)
+    begin
+      request = RestClient::Request.execute(opts)
+    rescue SocketError => e
+      handle_restclient_error(e)
+    rescue NoMethodError => e
+      # TODO: investigate
+      # Work around RestClient bug
+      if e.message =~ /\WRequestFailed\W/
+        handle_restclient_error APIConnectionError.new 'Unexpected HTTP response code'
+      else raise
+      end
+    rescue RestClient::ExceptionWithResponse => e
+      rcode = e.http_code
+      rbody = e.http_body
+      if rcode && rbody
+        handle_api_error rcode, rbody
+      else handle_restclient_error e
+      end
+    rescue RestClient::Exception, Errno::ECONNREFUSED => e
+      handle_restclient_error e
+    end
+
+    request
   end
 
   def self.handle_restclient_error(e)
     case e
     when RestClient::ServerBrokeConnection, RestClient::RequestTimeout
-      message = "Could not connect to Clever (#{configuration.api_base}). Please check your internet connection and try again."
+      message = "Could not connect to Clever (#{configuration.api_base}). " \
+      'Please check your internet connection and try again.'
     when SocketError
-      message = "Unexpected error communicating when trying to connect to Clever. HINT: You may be seeing this message because your DNS is not working. To check, try running 'host api.clever.com' from the command line."
+      message = 'Unexpected error communicating when trying to connect to Clever. HINT: ' \
+        'You may be seeing this message because your DNS is not working. To check, try running ' \
+        '\'host api.clever.com\' from the command line.'
     else
-      message = "Unexpected error communicating with Clever."
+      message = 'Unexpected error communicating with Clever.'
     end
     message += "\n\n(Network error: #{e.message})"
-    raise APIConnectionError.new(message)
+    fail APIConnectionError, message
   end
 
   def self.handle_api_error(rcode, rbody)
     begin
       error_obj = Clever::JSON.load(rbody)
       error_obj = Util.symbolize_names(error_obj)
-      error = error_obj[:error] or raise CleverError.new # escape from parsing
+      error = error_obj[:error]
+      fail CleverError unless error # escape from parsing
     rescue MultiJson::DecodeError, CleverError
-      raise APIError.new("Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode})", rcode, rbody)
+      raise APIError.new(
+        "Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode})",
+        rcode, rbody)
     end
 
     case rcode
     when 400, 404 then
-      raise invalid_request_error(error, rcode, rbody, error_obj)
+      fail invalid_request_error(error, rcode, rbody, error_obj)
     when 401
-      raise authentication_error(error, rcode, rbody, error_obj)
+      fail authentication_error(error, rcode, rbody, error_obj)
     else
-      raise api_error(error, rcode, rbody, error_obj)
+      fail api_error(error, rcode, rbody, error_obj)
     end
   end
 
