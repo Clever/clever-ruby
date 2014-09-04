@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Ruby bindings to the Clever API.'
   gem.homepage      = 'http://github.com/Clever/clever-ruby'
 
-  gem.required_ruby_version = '>= 2.0.0'
+  gem.required_ruby_version = '>= 1.9.3'
   gem.files         = `git ls-files`.split($RS)
   gem.executables   = gem.files.grep(/^bin\//).map { |f| File.basename f }
   gem.test_files    = gem.files.grep(/^(test|spec|features)\//)
