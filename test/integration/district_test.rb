@@ -57,7 +57,7 @@ class ListTest < Test::Unit::TestCase
   private
 
   def test_object_list(plural_object_name, object_count, instance_name)
-    VCR.use_cassette("districts_#{plural_object_name}", :allow_playback_repeats => true) do
+    VCR.use_cassette("districts_#{plural_object_name}", allow_playback_repeats: true) do
       district = Clever::District.all.first
       district.send(plural_object_name).size.must_equal object_count
       district.send(plural_object_name).first.must_be_instance_of instance_name
@@ -65,7 +65,7 @@ class ListTest < Test::Unit::TestCase
   end
 
   def test_object_pages(object_name, limit, page_count)
-    VCR.use_cassette("districts_#{object_name}_pages", :allow_playback_repeats => true) do
+    VCR.use_cassette("districts_#{object_name}_pages", allow_playback_repeats: true) do
       district = Clever::District.all.first
       object_count_from_list = district.send("#{object_name}s", {limit: 100000}).size
 

@@ -21,12 +21,12 @@ module Clever
     end
 
     def to_s(*args)
-      Clever::JSON.dump(@values, :pretty => true)
+      Clever::JSON.dump(@values, pretty: true)
     end
 
     def inspect()
       id_string = (self.respond_to?(:id) && !self.id.nil?) ? " id=#{self.id}" : ""
-      "#<#{self.class}:0x#{self.object_id.to_s(16)}#{id_string}> JSON: " + Clever::JSON.dump(@values, :pretty => true)
+      "#<#{self.class}:0x#{self.object_id.to_s(16)}#{id_string}> JSON: " + Clever::JSON.dump(@values, pretty: true)
     end
 
     def refresh_from(values, partial=false)
