@@ -32,13 +32,13 @@ To run all tests:
 $ rake test
 ```
 
-To run all tests and the linter (rubocop):
+To run all tests and the linter ([rubocop](https://github.com/bbatsov/rubocop)):
 
 ```bash
 $ rake
 ```
 
-To just run the linter:
+The linter follows the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) with a few exceptions. To just run the linter:
 
 ```bash
 $ rake lint
