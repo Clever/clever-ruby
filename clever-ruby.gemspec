@@ -27,4 +27,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'webmock',       '~> 1.9.0'
   gem.add_development_dependency 'pry',           '~> 0.10.1'
   gem.add_development_dependency 'activesupport', '~> 3.2.11'
+  gem.add_development_dependency 'rubocop', '~> 0.26.0'
 end
