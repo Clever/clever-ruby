@@ -85,12 +85,12 @@ module Clever
     end
 
     opts = {
-      :method => method,
-      :url => url,
-      :headers => headers,
-      :open_timeout => 30,
-      :payload => payload,
-      :timeout => 120
+      method: method,
+      url: url,
+      headers: headers,
+      open_timeout: 30,
+      payload: payload,
+      timeout: 120
     }
     if Clever.api_key
       opts[:user] = Clever.api_key
@@ -122,7 +122,7 @@ module Clever
     rbody = response.body
     rcode = response.code
     begin
-      # Would use :symbolize_names => true, but apparently there is
+      # Would use symbolize_names: true, but apparently there is
       # some library out there that makes symbolize_names not work.
       resp = Clever::JSON.load(rbody)
     rescue MultiJson::DecodeError
