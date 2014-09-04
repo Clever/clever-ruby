@@ -9,8 +9,6 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-task :default => :test
-
 require 'rdoc/task'
 require 'clever-ruby/version'
 Rake::RDocTask.new do |rdoc|
@@ -18,4 +16,16 @@ Rake::RDocTask.new do |rdoc|
   rdoc.title = "clever-ruby #{Clever::VERSION}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
+require 'rubocop/rake_task'
+
+desc 'Run RuboCop on the lib directory'
+RuboCop::RakeTask.new(:lint) do |task|
+  task.patterns = ['lib/**/*.rb', 'test/**/*.rb']
+end
+
+task default: [] do
+  Rake::Task[:test].execute
+  Rake::Task[:lint].execute
 end
