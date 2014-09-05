@@ -120,14 +120,14 @@ module Clever
     begin
       # Would use symbolize_names: true, but apparently there is
       # some library out there that makes symbolize_names not work.
-      resp = Clever::JSON.load(rbody)
+      resp = Clever::JSON.load rbody
     rescue MultiJson::DecodeError
       raise APIError.new(
         "Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode})",
         rcode, rbody)
     end
 
-    resp = Util.symbolize_names(resp)
+    resp = Util.symbolize_names resp
     resp
   end
 
@@ -135,9 +135,9 @@ module Clever
 
   def self.execute_request(opts)
     begin
-      request = RestClient::Request.execute(opts)
+      request = RestClient::Request.execute opts
     rescue SocketError => e
-      handle_restclient_error(e)
+      handle_restclient_error e
     rescue NoMethodError => e
       # TODO: investigate
       # Work around RestClient bug
@@ -177,8 +177,8 @@ module Clever
 
   def self.handle_api_error(rcode, rbody)
     begin
-      error_obj = Clever::JSON.load(rbody)
-      error_obj = Util.symbolize_names(error_obj)
+      error_obj = Clever::JSON.load rbody
+      error_obj = Util.symbolize_names error_obj
       error = error_obj[:error]
       fail CleverError unless error # escape from parsing
     rescue MultiJson::DecodeError, CleverError
@@ -189,27 +189,27 @@ module Clever
 
     case rcode
     when 400, 404 then
-      fail invalid_request_error(error, rcode, rbody, error_obj)
+      fail invalid_request_error error, rcode, rbody, error_obj
     when 401
-      fail authentication_error(error, rcode, rbody, error_obj)
+      fail authentication_error error, rcode, rbody, error_obj
     else
-      fail api_error(error, rcode, rbody, error_obj)
+      fail api_error error, rcode, rbody, error_obj
     end
   end
 
   def self.invalid_request_error(error, rcode, rbody, error_obj)
     if error.is_a? Hash
-      InvalidRequestError.new(error[:message], error[:param], rcode, rbody, error_obj)
+      InvalidRequestError.new error[:message], error[:param], rcode, rbody, error_obj
     else
-      InvalidRequestError.new(error, '', rcode, rbody, error_obj)
+      InvalidRequestError.new error, '', rcode, rbody, error_obj
     end
   end
 
   def self.authentication_error(error, rcode, rbody, error_obj)
-    AuthenticationError.new(error[:message], rcode, rbody, error_obj)
+    AuthenticationError.new error[:message], rcode, rbody, error_obj
   end
 
   def self.api_error(error, rcode, rbody, error_obj)
-    APIError.new(error[:message], rcode, rbody, error_obj)
+    APIError.new error[:message], rcode, rbody, error_obj
   end
 end

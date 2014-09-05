@@ -12,7 +12,7 @@ class ErrorHandlingTest < Test::Unit::TestCase
     VCR.use_cassette('error_handling') do
       @district = Clever::District.all.first
       lambda do
-        @district.events(created_since: '2013-02-15T 2:30:42 0000')
+        @district.events created_since: '2013-02-15T 2:30:42 0000'
       end.must_raise Clever::InvalidRequestError
     end
   end

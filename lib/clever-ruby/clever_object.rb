@@ -5,10 +5,10 @@ module Clever
 
     # TODO: fix this
     # rubocop:disable ClassVars
-    @@permanent_attributes = Set.new([])
+    @@permanent_attributes = Set.new []
 
     # The default :id method is deprecated and isn't useful to us
-    undef :id if method_defined?(:id)
+    undef :id if method_defined? :id
 
     def initialize(id = nil)
       @values = {}
@@ -17,12 +17,12 @@ module Clever
 
     def self.construct_from(values)
       obj = new values[:id]
-      obj.refresh_from(values)
+      obj.refresh_from values
       obj
     end
 
     def to_s
-      Clever::JSON.dump(@values, pretty: true)
+      Clever::JSON.dump @values, pretty: true
     end
 
     def inspect
@@ -36,11 +36,11 @@ module Clever
       added = Set.new(values.keys - @values.keys)
 
       instance_eval do
-        remove_accessors(removed)
-        add_accessors(added)
+        remove_accessors removed
+        add_accessors added
       end
       removed.each do |k|
-        @values.delete(k)
+        @values.delete k
       end
       values.each do |k, v|
         # Stripe apparently allows you to have nested object types (e.g.
@@ -56,7 +56,7 @@ module Clever
     end
 
     def []=(k, v)
-      send(:"#{k}=", v)
+      send :"#{k}=", v
     end
 
     def keys
@@ -68,7 +68,7 @@ module Clever
     end
 
     def to_json
-      Clever::JSON.dump(@values)
+      Clever::JSON.dump @values
     end
 
     def as_json(*a)
@@ -96,10 +96,10 @@ module Clever
     def remove_accessors(keys)
       metaclass.instance_eval do
         keys.each do |k|
-          next if @@permanent_attributes.include?(k)
+          next if @@permanent_attributes.include? k
           k_eq = :"#{k}="
-          remove_method(k) if method_defined?(k)
-          remove_method(k_eq) if method_defined?(k_eq)
+          remove_method k if method_defined? k
+          remove_method k_eq if method_defined? k_eq
         end
       end
     end
@@ -107,12 +107,10 @@ module Clever
     def add_accessors(keys)
       metaclass.instance_eval do
         keys.each do |k|
-          next if @@permanent_attributes.include?(k)
+          next if @@permanent_attributes.include? k
           k_eq = :"#{k}="
           define_method(k) { @values[k] }
-          define_method(k_eq) do |v|
-            @values[k] = v
-          end
+          define_method(k_eq) { |v| @values[k] = v }
         end
       end
     end
