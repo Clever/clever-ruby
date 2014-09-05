@@ -3,6 +3,8 @@ require 'rest_client'
 require 'multi_json'
 require 'open-uri'
 require 'set'
+require 'uri'
+require 'cgi'
 
 require 'clever-ruby/version'
 
@@ -72,7 +74,9 @@ module Clever
   def self.create_payload(method, url, params)
     case method.to_s.downcase.to_sym
     when :get, :head, :delete
-      url += convert_to_query_string params
+      url_parsed = URI.parse url
+      params = CGI.parse(url_parsed.query).merge params unless url_parsed.query.nil?
+      url = url.split('?')[0] + convert_to_query_string(params)
       payload = nil
     else
       payload = params
