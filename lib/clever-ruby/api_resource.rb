@@ -36,5 +36,21 @@ module Clever
       instance.refresh
       instance
     end
+
+    def get_linked_resources(resource_type, filters = {})
+      Util.convert_to_clever_object Clever.request(:get, get_uri(resource_type), filters)[:data]
+    end
+
+    class << self; attr_reader :linked_resources; end
+    def initialize(id)
+      super id
+
+      resources = self.class.linked_resources || []
+      resources.each do |resource|
+        self.class.send :define_method, resource do |filters = {}|
+          get_linked_resources resource.to_s, filters
+        end
+      end
+    end
   end
 end
