@@ -1,5 +1,6 @@
 require 'test_helper'
 
+# Test optional attributes functionality
 class OptionalAttributesTest < Test::Unit::TestCase
   def setup
     Clever.configure do |config|
