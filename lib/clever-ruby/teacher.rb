@@ -1,4 +1,5 @@
 module Clever
+  # Teacher resource
   class Teacher < APIResource
     include Clever::APIOperations::List
 

@@ -1,16 +1,21 @@
 module Clever
+  # Superclass of API resources in the Clever API
   class APIResource < CleverObject
     def self.url
       if self == APIResource
-        raise NotImplementedError.new('APIResource is an abstract class.  You should perform actions on its subclasses (School, Student, etc.)')
+        fail NotImplementedError, 'APIResource is an abstract class. You should perform actions '\
+          'on its subclasses (School, Student, etc.)'
       end
-      shortname = self.name.split('::')[-1]
+      shortname = name.split('::')[-1]
       "v1.1/#{CGI.escape(shortname.downcase)}s"
     end
 
     def url
-      unless id = self['id']
-        raise InvalidRequestError.new("Could not determine which URL to request: #{self.class} instance has invalid ID: #{id.inspect}", 'id')
+      id = self['id']
+      unless id
+        fail InvalidRequestError.new(
+          "Could not determine which URL to request: #{self.class} instance has " \
+          "invalid ID: #{id.inspect}", 'id')
       end
       "#{self.class.url}/#{CGI.escape(id)}"
     end
@@ -27,7 +32,7 @@ module Clever
     end
 
     def self.retrieve(id)
-      instance = self.new(id)
+      instance = new(id)
       instance.refresh
       instance
     end

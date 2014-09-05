@@ -1,4 +1,5 @@
 module Clever
+  # Configuration for accessing the Clever API over HTTP
   class Configuration
     attr_accessor :api_key, :token, :api_base
 

@@ -1,7 +1,10 @@
 module Clever
   module APIOperations
+    # Handles paginated requests.
+    # TODO: use rel links
+    # TODO: build functionality elsewhere
     class PageList
-      def initialize(uri, filters={})
+      def initialize(uri, filters = {})
         @uri = uri
         @filters = filters
       end
@@ -10,7 +13,7 @@ module Clever
         current = 0
         total = 1
         while current < total
-          page = Page.new(@uri, @filters.merge({ page: current + 1 }))
+          page = Page.new @uri, @filters.merge(page: current + 1)
 
           yield page
 

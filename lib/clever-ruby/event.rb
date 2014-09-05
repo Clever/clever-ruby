@@ -1,4 +1,5 @@
 module Clever
+  # Event resource
   class Event < APIResource
     include Clever::APIOperations::List
 
@@ -19,15 +20,15 @@ module Clever
     def action
       type_pieces[1]
     end
-    
+
     def self.url
-      "v1.1/events"
+      'v1.1/events'
     end
 
     private
 
     def type_pieces
-      type.split(".")
+      type.split('.')
     end
   end
 end
