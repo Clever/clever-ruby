@@ -6,7 +6,7 @@ class CleverConfigurationTest < Test::Unit::TestCase
     Clever.configure do |config|
       config.api_key = 'DEMO_KEY'
     end
-    assert_equal('DEMO_KEY', Clever.api_key)
+    assert_equal 'DEMO_KEY', Clever.api_key
   end
 
   should 'raise an error if no api key is set' do
@@ -14,6 +14,6 @@ class CleverConfigurationTest < Test::Unit::TestCase
   end
 
   should 'set a default for the api base' do
-    Clever.configuration.api_base.must_equal('https://api.clever.com/')
+    Clever.configuration.api_base.must_equal 'https://api.clever.com/'
   end
 end

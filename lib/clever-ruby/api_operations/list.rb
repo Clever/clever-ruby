@@ -14,7 +14,7 @@ module Clever
       end
 
       def self.included(base)
-        base.extend(ClassMethods)
+        base.extend ClassMethods
       end
     end
   end

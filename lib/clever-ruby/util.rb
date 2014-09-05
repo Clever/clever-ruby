@@ -7,10 +7,10 @@ module Clever
         h.id
       when Hash
         res = {}
-        h.each { |k, v| res[k] = objects_to_ids(v) unless v.nil? }
+        h.each { |k, v| res[k] = objects_to_ids v unless v.nil? }
         res
       when Array
-        h.map { |v| objects_to_ids(v) }
+        h.map { |v| objects_to_ids v }
       else
         h
       end
@@ -25,20 +25,20 @@ module Clever
         'schools'   => School,
         'events'    => Event
       }
-      types.fetch(type)
+      types.fetch type
     end
 
     def self.convert_to_clever_object(resp)
       case resp
       when Array
-        resp.map { |i| convert_to_clever_object(i) }
+        resp.map { |i| convert_to_clever_object i }
       when Hash
         # Try converting to a known object class. If none available, fall back to generic
         # APIResource.
         klass_name = %r{/v1.1/([a-z]+)/\S+$}.match(resp[:uri])[1]
-        klass = types_to_clever_class(klass_name) if klass_name
+        klass = types_to_clever_class klass_name if klass_name
         klass ||= CleverObject
-        klass.construct_from(resp[:data])
+        klass.construct_from resp[:data]
       else
         resp
       end
@@ -60,11 +60,11 @@ module Clever
           begin
             key = key.to_sym
           end
-          new[key] = symbolize_names(value)
+          new[key] = symbolize_names value
         end
         new
       when Array
-        object.map { |value| symbolize_names(value) }
+        object.map { |value| symbolize_names value }
       else
         object
       end
@@ -77,11 +77,11 @@ module Clever
     def self.flatten_params(params, parent_key = nil)
       result = []
       params.each do |key, value|
-        calculated_key = parent_key ? "#{parent_key}[#{encode_key(key)}]" : encode_key(key)
-        if value.is_a?(Hash)
-          result += flatten_params(value, calculated_key)
-        elsif value.is_a?(Array)
-          result += flatten_params_array(value, calculated_key)
+        calculated_key = parent_key ? "#{parent_key}[#{encode_key key}]" : encode_key(key)
+        if value.is_a? Hash
+          result += flatten_params value, calculated_key
+        elsif value.is_a? Array
+          result += flatten_params_array value, calculated_key
         else
           result << [calculated_key, value]
         end
@@ -92,10 +92,10 @@ module Clever
     def self.flatten_params_array(value, calculated_key)
       result = []
       value.each do |elem|
-        if elem.is_a?(Hash)
-          result += flatten_params(elem, calculated_key)
-        elsif elem.is_a?(Array)
-          result += flatten_params_array(elem, calculated_key)
+        if elem.is_a? Hash
+          result += flatten_params elem, calculated_key
+        elsif elem.is_a? Array
+          result += flatten_params_array elem, calculated_key
         else
           result << ["#{calculated_key}[]", elem]
         end

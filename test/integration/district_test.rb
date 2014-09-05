@@ -13,7 +13,7 @@ class DistrictTest < Test::Unit::TestCase
   end
 
   should 'page a district\'s schools' do
-    test_object_pages('school', 2, 2)
+    test_object_pages 'school', 2, 2
   end
 
   should 'retrieve a district\'s teachers' do
@@ -21,7 +21,7 @@ class DistrictTest < Test::Unit::TestCase
   end
 
   should 'page a district\'s teachers' do
-    test_object_pages('teacher', 10, 9)
+    test_object_pages 'teacher', 10, 9
   end
 
   should 'retrieve a district\'s sections' do
@@ -29,7 +29,7 @@ class DistrictTest < Test::Unit::TestCase
   end
 
   should 'page a district\'s sections' do
-    test_object_pages('section', 10, 38)
+    test_object_pages 'section', 10, 38
   end
 
   should 'retrieve a district\'s students' do
@@ -37,7 +37,7 @@ class DistrictTest < Test::Unit::TestCase
   end
 
   should 'page a district\'s students' do
-    test_object_pages('student', 50, 21)
+    test_object_pages 'student', 50, 21
   end
 
   should 'retrieve a district\'s students with a small filter' do
@@ -52,7 +52,7 @@ class DistrictTest < Test::Unit::TestCase
   end
 
   should 'page a district\'s events' do
-    test_object_pages('event', 1, 13)
+    test_object_pages 'event', 1, 13
   end
 
   private
