@@ -29,7 +29,19 @@ $ gem install clever-ruby
 To run all tests:
 
 ```bash
-rake test
+$ rake test
+```
+
+To run all tests and the linter ([rubocop](https://github.com/bbatsov/rubocop)):
+
+```bash
+$ rake
+```
+
+The linter follows the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) with a few exceptions. To just run the linter:
+
+```bash
+$ rake lint
 ```
 
 Running specific tests is not currently supported.

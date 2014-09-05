@@ -1,6 +1,7 @@
 module Clever
+  # Helpers for handling JSON responses
   module JSON
-    if MultiJson.respond_to?(:dump)
+    if MultiJson.respond_to? :dump
       def self.dump(*args)
         MultiJson.dump(*args)
       end

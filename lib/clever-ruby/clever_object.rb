@@ -1,45 +1,46 @@
 module Clever
+  # An instance of an APIResource's contents
   class CleverObject
     include Enumerable
 
-    @@permanent_attributes = Set.new([])
+    # TODO: fix this
+    # rubocop:disable ClassVars
+    @@permanent_attributes = Set.new []
 
     # The default :id method is deprecated and isn't useful to us
-    if method_defined?(:id)
-      undef :id
-    end
+    undef :id if method_defined? :id
 
-    def initialize(id=nil)
+    def initialize(id = nil)
       @values = {}
       @values[:id] = id if id
     end
 
     def self.construct_from(values)
-      obj = self.new(values[:id])
-      obj.refresh_from(values)
+      obj = new values[:id]
+      obj.refresh_from values
       obj
     end
 
-    def to_s(*args)
-      Clever::JSON.dump(@values, :pretty => true)
+    def to_s
+      Clever::JSON.dump @values, pretty: true
     end
 
-    def inspect()
-      id_string = (self.respond_to?(:id) && !self.id.nil?) ? " id=#{self.id}" : ""
-      "#<#{self.class}:0x#{self.object_id.to_s(16)}#{id_string}> JSON: " + Clever::JSON.dump(@values, :pretty => true)
+    def inspect
+      id_string = (respond_to?(:id) && !id.nil?) ? " id=#{id}" : ''
+      "#<#{self.class}:0x#{object_id.to_s(16)}#{id_string}> JSON: " +
+        Clever::JSON.dump(@values, pretty: true)
     end
 
-    def refresh_from(values, partial=false)
-
+    def refresh_from(values, partial = false)
       removed = partial ? Set.new : Set.new(@values.keys - values.keys)
       added = Set.new(values.keys - @values.keys)
 
       instance_eval do
-        remove_accessors(removed)
-        add_accessors(added)
+        remove_accessors removed
+        add_accessors added
       end
       removed.each do |k|
-        @values.delete(k)
+        @values.delete k
       end
       values.each do |k, v|
         # Stripe apparently allows you to have nested object types (e.g.
@@ -50,12 +51,12 @@ module Clever
     end
 
     def [](k)
-      k = k.to_sym if k.kind_of?(String)
+      k = k.to_sym if k.is_a? String
       @values[k]
     end
 
     def []=(k, v)
-      send(:"#{k}=", v)
+      send :"#{k}=", v
     end
 
     def keys
@@ -66,8 +67,8 @@ module Clever
       @values.values
     end
 
-    def to_json(*a)
-      Clever::JSON.dump(@values)
+    def to_json
+      Clever::JSON.dump @values
     end
 
     def as_json(*a)
@@ -82,10 +83,8 @@ module Clever
       @values.each(&blk)
     end
 
-    def ==( other )
-      if other.respond_to?( :values )
-        self.values == other.values
-      end
+    def ==(other)
+      values == other.values if other.respond_to? :values
     end
 
     protected
@@ -97,10 +96,10 @@ module Clever
     def remove_accessors(keys)
       metaclass.instance_eval do
         keys.each do |k|
-          next if @@permanent_attributes.include?(k)
+          next if @@permanent_attributes.include? k
           k_eq = :"#{k}="
-          remove_method(k) if method_defined?(k)
-          remove_method(k_eq) if method_defined?(k_eq)
+          remove_method k if method_defined? k
+          remove_method k_eq if method_defined? k_eq
         end
       end
     end
@@ -108,23 +107,23 @@ module Clever
     def add_accessors(keys)
       metaclass.instance_eval do
         keys.each do |k|
-          next if @@permanent_attributes.include?(k)
+          next if @@permanent_attributes.include? k
           k_eq = :"#{k}="
           define_method(k) { @values[k] }
-          define_method(k_eq) do |v|
-            @values[k] = v
-          end
+          define_method(k_eq) { |v| @values[k] = v }
         end
       end
     end
 
     def optional_attributes
-      raise NotImplementedError.new('Please define #optional_attributes as a list of the attributes on this resource that may not be present and thus should return nil instead of raising a NoMethodError.')
+      fail NotImplementedError 'Please define #optional_attributes as a list of the '\
+        'attributes on this resource that may not be present and thus should return nil' \
+        'instead of raising a NoMethodError.'
     end
 
     def method_missing(name, *args)
-      return @values[name] if @values.has_key?(name)
-      return nil if optional_attributes.include?(name)
+      return @values[name] if @values.key? name
+      return nil if optional_attributes.include? name
       super
     end
   end

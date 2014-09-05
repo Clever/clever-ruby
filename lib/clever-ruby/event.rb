@@ -1,4 +1,5 @@
 module Clever
+  # Event resource
   class Event < APIResource
     include Clever::APIOperations::List
 
@@ -7,9 +8,9 @@ module Clever
     end
 
     def object
-      klass = Util.types_to_clever_class(type_pieces[0])
+      klass = Util.types_to_clever_class type_pieces[0]
       klass ||= CleverObject
-      klass.construct_from(data[:object])
+      klass.construct_from data[:object]
     end
 
     def previous_attributes
@@ -19,15 +20,15 @@ module Clever
     def action
       type_pieces[1]
     end
-    
+
     def self.url
-      "v1.1/events"
+      'v1.1/events'
     end
 
     private
 
     def type_pieces
-      type.split(".")
+      type.split '.'
     end
   end
 end

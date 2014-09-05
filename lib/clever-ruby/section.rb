@@ -1,4 +1,5 @@
 module Clever
+  # Section resource
   class Section < APIResource
     include Clever::APIOperations::List
 

@@ -1,6 +1,8 @@
 module Clever
   module APIOperations
+    # A list of API resource instances
     module List
+      # Class methods for those that include List
       module ClassMethods
         def all(filters = {})
           accum = []
@@ -12,7 +14,7 @@ module Clever
       end
 
       def self.included(base)
-        base.extend(ClassMethods)
+        base.extend ClassMethods
       end
     end
   end
