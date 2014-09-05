@@ -1,9 +1,8 @@
 module Clever
   # District resource
   class District < APIResource
-    @linked_resources = [:schools, :teachers, :sections, :students, :events]
-
     include Clever::APIOperations::List
+    @linked_resources = [:schools, :teachers, :sections, :students, :events]
 
     def optional_attributes
       # All of a district's attributes are required.
