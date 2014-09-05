@@ -1,4 +1,5 @@
 module Clever
+  # LibraryhHelper methods
   module Util
     def self.objects_to_ids(h)
       case h
@@ -32,12 +33,10 @@ module Clever
       when Array
         resp.map { |i| convert_to_clever_object(i) }
       when Hash
-        # Try converting to a known object class.  If none available, fall back to generic APIResource
-        # match = /\/v1.1\/([a-z]+)\/\S+$/.match(resp[:uri])
-        # puts match[1].inspect
-        if klass_name = /\/v1.1\/([a-z]+)\/\S+$/.match(resp[:uri])[1]
-          klass = types_to_clever_class(klass_name)
-        end
+        # Try converting to a known object class. If none available, fall back to generic
+        # APIResource.
+        klass_name = %r{/v1.1/([a-z]+)/\S+$}.match(resp[:uri])[1]
+        klass = types_to_clever_class(klass_name) if klass_name
         klass ||= CleverObject
         klass.construct_from(resp[:data])
       else
@@ -46,13 +45,11 @@ module Clever
     end
 
     def self.file_readable(file)
-      begin
-        File.open(file) { |f| }
-      rescue
-        false
-      else
-        true
-      end
+      File.open(file) {}
+    rescue
+      false
+    else
+      true
     end
 
     def self.symbolize_names(object)
@@ -60,7 +57,9 @@ module Clever
       when Hash
         new = {}
         object.each do |key, value|
-          key = (key.to_sym rescue key) || key
+          begin
+            key = key.to_sym
+          end
           new[key] = symbolize_names(value)
         end
         new
@@ -72,10 +71,10 @@ module Clever
     end
 
     def self.encode_key(key)
-      URI.escape(key.to_s, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+      URI.escape key.to_s, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]")
     end
 
-    def self.flatten_params(params, parent_key=nil)
+    def self.flatten_params(params, parent_key = nil)
       result = []
       params.each do |key, value|
         calculated_key = parent_key ? "#{parent_key}[#{encode_key(key)}]" : encode_key(key)
