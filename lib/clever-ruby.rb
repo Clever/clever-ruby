@@ -167,7 +167,7 @@ module Clever
     when SocketError
       message = 'Unexpected error communicating when trying to connect to Clever. HINT: ' \
         'You may be seeing this message because your DNS is not working. To check, try running ' \
-        '\'host api.clever.com\' from the command line.'
+        "'host api.clever.com' from the command line."
     else
       message = 'Unexpected error communicating with Clever.'
     end

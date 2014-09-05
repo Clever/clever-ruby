@@ -32,11 +32,11 @@ class EventTest < Test::Unit::TestCase
     @event.action.must_equal 'created'
   end
 
-  should 'have an empty hash if there aren\'t previous attributes' do
+  should "have an empty hash if there aren't previous attributes" do
     @event.previous_attributes.must_equal {}
   end
 
-  should 'have an event\'s previous attributes' do
+  should "have an event's previous attributes" do
     @updated_event.previous_attributes[:teacher].must_equal '510980a6923bcbba1f0cb500'
   end
 end
