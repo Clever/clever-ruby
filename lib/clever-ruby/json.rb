@@ -7,7 +7,7 @@ module Clever
       end
 
       def self.load(*args)
-        MultiJson.load(*args)
+        MultiJson.load(*args, symbolize_keys: true)
       end
     else
       def self.dump(*args)
@@ -15,7 +15,7 @@ module Clever
       end
 
       def self.load(*args)
-        MultiJson.decode(*args)
+        MultiJson.decode(*args, symbolize_keys: true)
       end
     end
   end
