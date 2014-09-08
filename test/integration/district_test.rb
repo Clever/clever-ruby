@@ -52,7 +52,7 @@ class DistrictTest < Test::Unit::TestCase
   end
 
   should "page a district's events" do
-    test_object_pages 'event', 1, 13
+    test_object_pages 'event', 1, 14
   end
 
   private

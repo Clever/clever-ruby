@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?page=1
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
-      - "*/*; q=0.5, application/xml"
+      - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -23,24 +23,24 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - "*"
+      - ! '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 03 Sep 2014 21:08:31 GMT
+      - Mon, 08 Sep 2014 21:31:30 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '224'
+      - '217'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts?page=1"}]}'
+      encoding: US-ASCII
+      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
     http_version: 
-  recorded_at: Wed, 03 Sep 2014 21:08:30 GMT
+  recorded_at: Mon, 08 Sep 2014 21:31:30 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -49,7 +49,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - "*/*; q=0.5, application/xml"
+      - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -64,11 +64,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - "*"
+      - ! '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 03 Sep 2014 21:08:31 GMT
+      - Mon, 08 Sep 2014 21:31:30 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -78,10 +78,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: US-ASCII
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 03 Sep 2014 21:08:30 GMT
+  recorded_at: Mon, 08 Sep 2014 21:31:30 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -90,7 +90,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - "*/*; q=0.5, application/xml"
+      - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -105,11 +105,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - "*"
+      - ! '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 03 Sep 2014 21:08:31 GMT
+      - Mon, 08 Sep 2014 21:31:30 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -119,10 +119,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: US-ASCII
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Wed, 03 Sep 2014 21:08:31 GMT
+  recorded_at: Mon, 08 Sep 2014 21:31:30 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events?created_since=2013-02-15T%202:30:42%200000
@@ -131,7 +131,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - "*/*; q=0.5, application/xml"
+      - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -146,11 +146,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - "*"
+      - ! '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 03 Sep 2014 21:08:31 GMT
+      - Mon, 08 Sep 2014 21:31:30 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -160,9 +160,9 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"error":"Could not parse created_since ''2013-02-15T 2:30:42 0000''.
+      encoding: US-ASCII
+      string: ! '{"error":"Could not parse created_since ''2013-02-15T 2:30:42 0000''.
         Please ensure it is either a valid ObjectID or a valid W3C datetime: http://www.w3.org/TR/NOTE-datetime."}'
     http_version: 
-  recorded_at: Wed, 03 Sep 2014 21:08:31 GMT
+  recorded_at: Mon, 08 Sep 2014 21:31:30 GMT
 recorded_with: VCR 2.4.0
