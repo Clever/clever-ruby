@@ -4,16 +4,12 @@ module Clever
     class Page
       include Enumerable
 
-      attr_accessor :paging
-      attr_accessor :links
-
       def initialize(uri, filters = {})
         @uri = uri
         @filters = filters
 
         response = Clever.request :get, uri, filters
         @list = Util.convert_to_clever_object response[:data]
-        @paging = response[:paging]
         @links = {}
         response[:links].each do |link|
           @links[link[:rel].to_sym] = link[:uri]
