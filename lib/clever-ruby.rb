@@ -118,8 +118,6 @@ module Clever
     rbody = response.body
     rcode = response.code
     begin
-      # Would use symbolize_names: true, but apparently there is
-      # some library out there that makes symbolize_names not work.
       resp = Clever::JSON.load rbody
     rescue MultiJson::DecodeError
       raise APIError.new(
@@ -127,7 +125,6 @@ module Clever
         rcode, rbody)
     end
 
-    resp = Util.symbolize_names resp
     resp
   end
 
@@ -178,7 +175,6 @@ module Clever
   def self.handle_api_error(rcode, rbody)
     begin
       error_obj = Clever::JSON.load rbody
-      error_obj = Util.symbolize_names error_obj
       error = error_obj[:error]
       fail CleverError unless error # escape from parsing
     rescue MultiJson::DecodeError, CleverError

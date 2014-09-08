@@ -52,24 +52,6 @@ module Clever
       true
     end
 
-    def self.symbolize_names(object)
-      case object
-      when Hash
-        new = {}
-        object.each do |key, value|
-          begin
-            key = key.to_sym
-          end
-          new[key] = symbolize_names value
-        end
-        new
-      when Array
-        object.map { |value| symbolize_names value }
-      else
-        object
-      end
-    end
-
     def self.encode_key(key)
       URI.escape key.to_s, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]")
     end
