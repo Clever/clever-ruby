@@ -65,7 +65,7 @@ module Clever
       params_arr = Util.flatten_params(params).map do |p|
         "#{URI.encode(p[0].to_s)}=#{URI.encode(p[1].to_s)}"
       end
-      '?' + params_arr.join('&')
+      params_arr.join('&')
     else
       ''
     end
@@ -74,9 +74,12 @@ module Clever
   def self.create_payload(method, url, params)
     case method.to_s.downcase.to_sym
     when :get, :head, :delete
-      url_parsed = URI.parse url
-      params = CGI.parse(url_parsed.query).merge params unless url_parsed.query.nil?
-      url = url.split('?')[0] + convert_to_query_string(params)
+      url_obj = URI.parse(url)
+      if url_obj.query
+        params = CGI.parse(url_obj.query).map { |k, v| { k => v[0] } }.reduce(:merge).merge params
+      end
+      url_obj.query = convert_to_query_string params
+      url = url_obj.to_s
       payload = nil
     else
       payload = params
