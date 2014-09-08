@@ -13,11 +13,16 @@ module Clever
 
         response = Clever.request :get, uri, filters
         @list = Util.convert_to_clever_object response[:data]
-        self.paging = response[:paging]
-        self.links = {}
+        @paging = response[:paging]
+        @links = {}
         response[:links].each do |link|
-          links[link[:rel].to_sym] = link[:uri]
+          @links[link[:rel].to_sym] = link[:uri]
         end
+      end
+
+      # Gets next page if one is present, nil otherwise.
+      def next
+        @links.key?(:next) ? Page.new(@links[:next]) : nil
       end
 
       def each(&blk)

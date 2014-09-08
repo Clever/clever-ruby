@@ -10,15 +10,10 @@ module Clever
       end
 
       def each
-        page = Page.new @uri
-        until page.first.nil?
+        page = Page.new @uri, @filters
+        until page.nil?
           yield page
-
-          if page.links.key? :next
-            page = Page.new page.links[:next]
-          else
-            break
-          end
+          page = page.next
         end
       end
     end
