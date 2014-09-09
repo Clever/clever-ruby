@@ -16,6 +16,10 @@ module Clever
           page = page.next
         end
       end
+
+      def to_results_list
+        Clever::APIOperations::ResultsList.new self
+      end
     end
   end
 end
