@@ -39,7 +39,7 @@ class ListTest < Test::Unit::TestCase
     should "reject invalid id for #{resource}.find one" do
       id = 'invalid_id'
       assert_raises ArgumentError do
-        resource.find(id)
+        resource.find id
       end
     end
 
@@ -47,7 +47,7 @@ class ListTest < Test::Unit::TestCase
       # one valid, one invalid
       ids = %w(123412341234123412341234 invalid_id)
       assert_raises ArgumentError do
-        resource.find(ids)
+        resource.find ids
       end
     end
 
