@@ -10,15 +10,10 @@ module Clever
       end
 
       def each
-        current = 0
-        total = 1
-        while current < total
-          page = Page.new @uri, @filters.merge(page: current + 1)
-
+        page = Page.new @uri, @filters
+        until page.nil?
           yield page
-
-          current = page.paging[:current]
-          total = page.paging[:total]
+          page = page.next
         end
       end
     end
