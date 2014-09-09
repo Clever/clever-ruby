@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?limit=20
     body:
       encoding: US-ASCII
       string: ''
@@ -27,23 +27,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 09 Sep 2014 21:49:00 GMT
+      - Tue, 09 Sep 2014 21:48:53 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '217'
+      - '226'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
+      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts?limit=20"}]}'
     http_version: 
-  recorded_at: Tue, 09 Sep 2014 21:49:00 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:53 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?count=true
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?where=%7B%22_id%22:%7B%22$in%22:%5B%224fd43cc56d11340000000005%22%5D%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -68,18 +68,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 09 Sep 2014 21:49:00 GMT
+      - Tue, 09 Sep 2014 21:48:53 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '71'
+      - '288'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"count":1,"links":[{"rel":"self","uri":"/v1.1/districts?count=true"}]}'
+      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts?where=%7B%22_id%22:%7B%22$in%22:[%224fd43cc56d11340000000005%22]%7D%7D"}]}'
     http_version: 
-  recorded_at: Tue, 09 Sep 2014 21:49:00 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:53 GMT
 recorded_with: VCR 2.4.0
