@@ -1,6 +1,10 @@
 module Clever
   # LibraryhHelper methods
   module Util
+    def self.valid_id?(id)
+      id.is_a?(String) && !(/^[0-9a-fA-F]{24}$/.match(id).nil?)
+    end
+
     def self.objects_to_ids(h)
       case h
       when APIResource
