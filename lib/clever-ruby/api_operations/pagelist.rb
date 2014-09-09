@@ -1,9 +1,9 @@
 module Clever
   module APIOperations
     # Handles paginated requests.
-    # TODO: use rel links
-    # TODO: build functionality elsewhere
     class PageList
+      include Enumerable
+
       def initialize(uri, filters = {})
         @uri = uri
         @filters = filters
