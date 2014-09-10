@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -23,11 +23,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 08 Sep 2014 21:31:26 GMT
+      - Tue, 09 Sep 2014 21:48:40 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -37,10 +37,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
+      encoding: UTF-8
+      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
     http_version: 
-  recorded_at: Mon, 08 Sep 2014 21:31:26 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:39 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -49,7 +49,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -64,11 +64,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 08 Sep 2014 21:31:26 GMT
+      - Tue, 09 Sep 2014 21:48:40 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -78,10 +78,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 08 Sep 2014 21:31:26 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:40 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -90,7 +90,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -105,11 +105,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 08 Sep 2014 21:31:26 GMT
+      - Tue, 09 Sep 2014 21:48:40 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -119,10 +119,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 08 Sep 2014 21:31:26 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:40 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections
@@ -131,7 +131,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -146,13 +146,13 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 08 Sep 2014 21:31:26 GMT
+      - Tue, 09 Sep 2014 21:48:40 GMT
       Etag:
-      - ! '"967737503"'
+      - '"967737503"'
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -162,8 +162,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
+      encoding: UTF-8
+      string: '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
         Guidance - 101 - B. Greene (Section 1)","period":"0","school":"530e595026403103360ff9fd","sis_id":"581","students":["530e5961049e75a9262cffd9","530e5961049e75a9262d0010","530e5961049e75a9262d004e","530e5961049e75a9262d0080","530e5962049e75a9262d0156","530e5963049e75a9262d01b7","530e5963049e75a9262d0253","530e5966049e75a9262d0418","530e5966049e75a9262d0475","530e5966049e75a9262d04b4","530e5967049e75a9262d0503","530e5968049e75a9262d05e9","530e5968049e75a9262d061f","530e5968049e75a9262d0632","530e5968049e75a9262d0647"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c11","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e5979049e75a9262d0af2"},"uri":"/v1.1/sections/530e5979049e75a9262d0af2"},{"data":{"course_name":"Group
         Guidance","course_number":"102","created":"2014-02-26T21:15:37.934Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-02-26T21:15:37.936Z","name":"Group
         Guidance - 102 - T. Vaux (Section 2)","period":"0","school":"530e595026403103360ff9fd","sis_id":"582","students":["530e5960049e75a9262cff4f","530e5960049e75a9262cff95","530e5961049e75a9262cffe0","530e5961049e75a9262d0027","530e5961049e75a9262d008d","530e5963049e75a9262d0180","530e5964049e75a9262d0300","530e5964049e75a9262d0302","530e5964049e75a9262d0304","530e5965049e75a9262d039e","530e5965049e75a9262d03b6","530e5965049e75a9262d03e8","530e5966049e75a9262d040c","530e5966049e75a9262d04cc","530e5967049e75a9262d05c0","530e5968049e75a9262d062f"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c12","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e5979049e75a9262d0af3"},"uri":"/v1.1/sections/530e5979049e75a9262d0af3"},{"data":{"course_name":"Group
@@ -427,7 +427,7 @@ http_interactions:
         I","course_number":"101","created":"2014-02-26T21:15:38.354Z","district":"4fd43cc56d11340000000005","grade":"9","last_modified":"2014-02-26T21:15:38.356Z","name":"French
         I - 101 - G. Gorczany (Section 1)","period":"9","school":"530e595026403103360ff9fd","sis_id":"681","students":["530e5960049e75a9262cff1e","530e5960049e75a9262cff4b","530e5960049e75a9262cff5b","530e5960049e75a9262cff7a","530e5961049e75a9262cfffb","530e5961049e75a9262d005d","530e5961049e75a9262d0070","530e5962049e75a9262d00e8","530e5962049e75a9262d00ff","530e5962049e75a9262d015f","530e5963049e75a9262d0211","530e5963049e75a9262d022f","530e5964049e75a9262d0284","530e5964049e75a9262d02a9","530e5964049e75a9262d02c3","530e5965049e75a9262d0325","530e5965049e75a9262d033f","530e5965049e75a9262d036c","530e5965049e75a9262d038f","530e5966049e75a9262d03f8","530e5966049e75a9262d0468","530e5966049e75a9262d046c","530e5966049e75a9262d0471","530e5966049e75a9262d0496","530e5967049e75a9262d057e","530e5967049e75a9262d0590","530e5967049e75a9262d05b5","530e5968049e75a9262d05cb","530e5968049e75a9262d05d1","530e5968049e75a9262d05e3","530e5968049e75a9262d0605","530e5968049e75a9262d061c","530e5968049e75a9262d063c"],"subject":"language","teacher":"530e5955d50c310f36112bf9","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0b55"},"uri":"/v1.1/sections/530e597a049e75a9262d0b55"}],"paging":{"current":1,"total":4,"count":379},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0b55"}]}'
     http_version: 
-  recorded_at: Mon, 08 Sep 2014 21:31:26 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:40 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -436,7 +436,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -451,11 +451,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 08 Sep 2014 21:31:27 GMT
+      - Tue, 09 Sep 2014 21:48:40 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -465,10 +465,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 08 Sep 2014 21:31:27 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:40 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -477,7 +477,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -492,11 +492,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 08 Sep 2014 21:31:27 GMT
+      - Tue, 09 Sep 2014 21:48:40 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -506,10 +506,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Mon, 08 Sep 2014 21:31:27 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:40 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections
@@ -518,7 +518,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -533,13 +533,13 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 08 Sep 2014 21:31:27 GMT
+      - Tue, 09 Sep 2014 21:48:40 GMT
       Etag:
-      - ! '"967737503"'
+      - '"967737503"'
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -549,8 +549,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
+      encoding: UTF-8
+      string: '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
         Guidance - 101 - B. Greene (Section 1)","period":"0","school":"530e595026403103360ff9fd","sis_id":"581","students":["530e5961049e75a9262cffd9","530e5961049e75a9262d0010","530e5961049e75a9262d004e","530e5961049e75a9262d0080","530e5962049e75a9262d0156","530e5963049e75a9262d01b7","530e5963049e75a9262d0253","530e5966049e75a9262d0418","530e5966049e75a9262d0475","530e5966049e75a9262d04b4","530e5967049e75a9262d0503","530e5968049e75a9262d05e9","530e5968049e75a9262d061f","530e5968049e75a9262d0632","530e5968049e75a9262d0647"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c11","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e5979049e75a9262d0af2"},"uri":"/v1.1/sections/530e5979049e75a9262d0af2"},{"data":{"course_name":"Group
         Guidance","course_number":"102","created":"2014-02-26T21:15:37.934Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-02-26T21:15:37.936Z","name":"Group
         Guidance - 102 - T. Vaux (Section 2)","period":"0","school":"530e595026403103360ff9fd","sis_id":"582","students":["530e5960049e75a9262cff4f","530e5960049e75a9262cff95","530e5961049e75a9262cffe0","530e5961049e75a9262d0027","530e5961049e75a9262d008d","530e5963049e75a9262d0180","530e5964049e75a9262d0300","530e5964049e75a9262d0302","530e5964049e75a9262d0304","530e5965049e75a9262d039e","530e5965049e75a9262d03b6","530e5965049e75a9262d03e8","530e5966049e75a9262d040c","530e5966049e75a9262d04cc","530e5967049e75a9262d05c0","530e5968049e75a9262d062f"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c12","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e5979049e75a9262d0af3"},"uri":"/v1.1/sections/530e5979049e75a9262d0af3"},{"data":{"course_name":"Group
@@ -814,5 +814,5 @@ http_interactions:
         I","course_number":"101","created":"2014-02-26T21:15:38.354Z","district":"4fd43cc56d11340000000005","grade":"9","last_modified":"2014-02-26T21:15:38.356Z","name":"French
         I - 101 - G. Gorczany (Section 1)","period":"9","school":"530e595026403103360ff9fd","sis_id":"681","students":["530e5960049e75a9262cff1e","530e5960049e75a9262cff4b","530e5960049e75a9262cff5b","530e5960049e75a9262cff7a","530e5961049e75a9262cfffb","530e5961049e75a9262d005d","530e5961049e75a9262d0070","530e5962049e75a9262d00e8","530e5962049e75a9262d00ff","530e5962049e75a9262d015f","530e5963049e75a9262d0211","530e5963049e75a9262d022f","530e5964049e75a9262d0284","530e5964049e75a9262d02a9","530e5964049e75a9262d02c3","530e5965049e75a9262d0325","530e5965049e75a9262d033f","530e5965049e75a9262d036c","530e5965049e75a9262d038f","530e5966049e75a9262d03f8","530e5966049e75a9262d0468","530e5966049e75a9262d046c","530e5966049e75a9262d0471","530e5966049e75a9262d0496","530e5967049e75a9262d057e","530e5967049e75a9262d0590","530e5967049e75a9262d05b5","530e5968049e75a9262d05cb","530e5968049e75a9262d05d1","530e5968049e75a9262d05e3","530e5968049e75a9262d0605","530e5968049e75a9262d061c","530e5968049e75a9262d063c"],"subject":"language","teacher":"530e5955d50c310f36112bf9","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0b55"},"uri":"/v1.1/sections/530e597a049e75a9262d0b55"}],"paging":{"current":1,"total":4,"count":379},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0b55"}]}'
     http_version: 
-  recorded_at: Mon, 08 Sep 2014 21:31:27 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:40 GMT
 recorded_with: VCR 2.4.0

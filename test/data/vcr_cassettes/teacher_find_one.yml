@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 09 Sep 2014 21:49:06 GMT
+      - Tue, 09 Sep 2014 21:48:52 GMT
       Etag:
       - '"-409931571"'
       Server:
@@ -131,10 +131,10 @@ http_interactions:
         Coach","id":"530e5955d50c310f36112c18"},"uri":"/v1.1/teachers/530e5955d50c310f36112c18"},{"data":{"created":"2014-02-26T21:15:01.572Z","credentials":{"district_username":"m_paucek","district_password":"jhga8salgh"},"district":"4fd43cc56d11340000000005","email":"paucek_m@example.org","last_modified":"2014-02-26T21:15:01.574Z","name":{"first":"Meaghan","middle":"P","last":"Paucek"},"school":"530e595026403103360ff9fd","sis_id":"93","teacher_number":"843713","title":"High
         School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"paging":{"current":1,"total":1,"count":89},"links":[{"rel":"self","uri":"/v1.1/teachers"}]}'
     http_version: 
-  recorded_at: Tue, 09 Sep 2014 21:49:06 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:52 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/teachers?count=true
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/teachers/530e5955d50c310f36112bd4
     body:
       encoding: US-ASCII
       string: ''
@@ -159,18 +159,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 09 Sep 2014 21:49:06 GMT
+      - Tue, 09 Sep 2014 21:48:52 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '71'
+      - '983'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"count":89,"links":[{"rel":"self","uri":"/v1.1/teachers?count=true"}]}'
+      string: '{"data":{"created":"2014-02-26T21:15:01.138Z","credentials":{"district_username":"daniela.raynor","district_password":"quahse5Ch"},"district":"4fd43cc56d11340000000005","email":"raynor_daniela@example.net","last_modified":"2014-02-26T21:15:01.144Z","name":{"first":"Daniela","middle":"F","last":"Raynor"},"school":"530e595026403103360ff9fe","sis_id":"19","teacher_number":"493218","title":"Grade
+        5 Common Branch Teacher","id":"530e5955d50c310f36112bd4"},"links":[{"rel":"self","uri":"/v1.1/teachers/530e5955d50c310f36112bd4"},{"rel":"district","uri":"/v1.1/teachers/530e5955d50c310f36112bd4/district"},{"rel":"school","uri":"/v1.1/teachers/530e5955d50c310f36112bd4/school"},{"rel":"students","uri":"/v1.1/teachers/530e5955d50c310f36112bd4/students"},{"rel":"sections","uri":"/v1.1/teachers/530e5955d50c310f36112bd4/sections"},{"rel":"grade_levels","uri":"/v1.1/teachers/530e5955d50c310f36112bd4/grade_levels"},{"rel":"events","uri":"/v1.1/teachers/530e5955d50c310f36112bd4/events"}]}'
     http_version: 
-  recorded_at: Tue, 09 Sep 2014 21:49:06 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:52 GMT
 recorded_with: VCR 2.4.0

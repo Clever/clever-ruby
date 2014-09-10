@@ -1,3 +1,7 @@
+## 0.6.0 (2014-09-09)
+
+* Add ActiveRecord-style find and count methods to all APIResources (#37)
+
 ## 0.5.0 (2014-09-09)
 
 * Handle pagination through rel links, not manual numeric pagination (#36)
