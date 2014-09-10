@@ -3,6 +3,7 @@
 .bundle
 .config
 .yardoc
+yard_coverage.txt
 .rvmrc
 .ruby-version
 .ruby-gemset
