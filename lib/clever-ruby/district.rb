@@ -4,6 +4,9 @@ module Clever
     include Clever::APIOperations::List
     @linked_resources = [:schools, :teachers, :sections, :students, :events]
 
+    # @see Clever::CleverObject.optional_attributes
+    # @api private
+    # @return [Array]
     def optional_attributes
       # All of a district's attributes are required.
       []
@@ -17,6 +20,9 @@ module Clever
 
     private
 
+    # Get the URI for a hypermedia link
+    # @api private
+    # @return [String]
     def get_uri(resource_type)
       refresh
       links.find { |link| link[:rel] == resource_type }[:uri]
