@@ -11,20 +11,15 @@ end
 
 require 'yard'
 require 'clever-ruby/version'
-YARD::Rake::YardocTask.new do |t|
-  t.files   = ['lib/**/*.rb']
-  t.options = ['--title', "clever-ruby #{Clever::VERSION}",
-               '--markup-provider', 'redcarpet',
-               '--output-dir', 'doc']
-end
+YARD::Rake::YardocTask.new :doc
 
 require 'yardstick/rake/measurement'
-Yardstick::Rake::Measurement.new(:'yard-coverage') do |measurement|
-  measurement.output = 'yard_coverage.txt'
+Yardstick::Rake::Measurement.new(:'doc-coverage') do |measurement|
+  measurement.output = 'doc_coverage.txt'
 end
 
 require 'yardstick/rake/verify'
-Yardstick::Rake::Verify.new(:'yard-coverage-verify') do |verify|
+Yardstick::Rake::Verify.new(:'doc-coverage-verify') do |verify|
   verify.threshold = 100
 end
 
@@ -38,6 +33,6 @@ end
 task default: [] do
   Rake::Task[:test].execute
   Rake::Task[:lint].execute
-  Rake::Task[:'yard-coverage'].execute
-  Rake::Task[:'yard-coverage-verify'].execute
+  Rake::Task[:'doc-coverage'].execute
+  Rake::Task[:'doc-coverage-verify'].execute
 end

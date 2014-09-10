@@ -61,16 +61,16 @@ Running specific tests is not currently supported.
 To generate it to `./doc`:
 
 ```bash
-$ rake yard
+$ rake doc
 ```
 
 To see documentation coverage:
 
 ```bash
-$ rake yard-coverage
+$ rake doc-coverage
 ```
 
-and then view `yard_coverage.txt`.
+and then view `doc_coverage.txt`.
 
 ## Contributing
 
