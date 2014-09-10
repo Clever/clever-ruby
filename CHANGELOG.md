@@ -1,4 +1,9 @@
-## 0.6.0 (2014-09-09)
+## 0.6.1 (2014-09-10)
+
+* Add YARD documentation
+* Remove unused Clever::Student.photo method
+
+## 0.6.0 (2014-09-10)
 
 * Add ActiveRecord-style find and count methods to all APIResources (#37)
 
