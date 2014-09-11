@@ -9,13 +9,18 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rdoc/task'
+require 'yard'
 require 'clever-ruby/version'
-Rake::RDocTask.new do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "clever-ruby #{Clever::VERSION}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+YARD::Rake::YardocTask.new :doc
+
+require 'yardstick/rake/measurement'
+Yardstick::Rake::Measurement.new(:'doc-coverage') do |measurement|
+  measurement.output = 'doc_coverage.txt'
+end
+
+require 'yardstick/rake/verify'
+Yardstick::Rake::Verify.new(:'doc-coverage-verify') do |verify|
+  verify.threshold = 100
 end
 
 require 'rubocop/rake_task'
@@ -28,4 +33,6 @@ end
 task default: [] do
   Rake::Task[:test].execute
   Rake::Task[:lint].execute
+  Rake::Task[:'doc-coverage'].execute
+  Rake::Task[:'doc-coverage-verify'].execute
 end

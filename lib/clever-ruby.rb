@@ -40,27 +40,50 @@ require 'clever-ruby/errors/invalid_request_error'
 # Clever Ruby library
 module Clever
   class << self
+    # Global configuration for using Clever
+    # @api public
+    # @example Configure your API key
+    #   Clever.configure do |config|
+    #     config.api_key = 'YOUR-API-KEY'
+    #   end
+    # @return [Object]
     def configure
       yield configuration
     end
 
+    # Retrieve your stored API key
+    # @api private
+    # @return [String] API key
     def api_key
       configuration.api_key
     end
 
+    # Retrieve your stored API token
+    # @api private
+    # @return [String] API token
     def token
       configuration.token
     end
 
+    # Retrieve the global Clever configuration object
+    # @api private
+    # @return [Hash] API configuration object
     def configuration
       @configuration ||= Clever::Configuration.new
     end
 
+    # Retrieve the URL of the Clever API being used
+    # @api private
+    # @return [String] API url
     def api_url(url = '')
       configuration.api_base + url
     end
   end
 
+  # Convert a hash of params to a query string. Does not prepend the leading '?'
+  # @api private
+  # @param params [Hash] Parameters to stringify
+  # @return [String] Query string
   def self.convert_to_query_string(params = nil)
     if params && params.count
       params_arr = Util.flatten_params(params).map do |p|
@@ -72,6 +95,12 @@ module Clever
     end
   end
 
+  # Generate the URL and payload for a request based on data about the request
+  # @api private
+  # @param method [Symbol] HTTP method used
+  # @param url [String] URL to send to
+  # @param params [Hash] Parameters to send
+  # @return [String, String] URL and payload to send via HTTP
   def self.create_payload(method, url, params)
     case method.to_s.downcase.to_sym
     when :get, :head, :delete
@@ -88,6 +117,9 @@ module Clever
     [url, payload]
   end
 
+  # Create options hash that specifies an HTTP request from request data
+  # @api private
+  # @return [Hash] parameters for executing a request
   def self.create_request_opts(method, url, params, headers)
     params = Util.objects_to_ids params
     url = api_url url
@@ -110,6 +142,10 @@ module Clever
     opts
   end
 
+  # Confirm API key or token are globally configured
+  # @api private
+  # @return [nil]
+  # @raise [AuthenticationError] Error if no authentication present
   def self.check_authorization
     unless Clever.api_key || Clever.token
       fail AuthenticationError, 'No API key provided. (HINT: set your API key using '\
@@ -118,6 +154,14 @@ module Clever
     end
   end
 
+  # Send an HTTP request to the Clever API
+  # @api private
+  # @param method [Symbol] HTTP method used
+  # @param url [String] URL to send to
+  # @param params [Hash] parameters to send with the request
+  # @param headers [Hash] headers to send with the request
+  # @return [Hash] parsed JSON response
+  # @raise [APIError] Error if API fails to return valid JSON
   def self.request(method, url, params = nil, headers = {})
     check_authorization
     opts = create_request_opts method, url, params, headers
@@ -138,6 +182,11 @@ module Clever
 
   private
 
+  # Execute an HTTP request safely
+  # @api private
+  # @param opts [Hash] Definition of the request to make
+  # @return [String] Request results
+  # @raise [APIConnectionError] Request failure
   def self.execute_request(opts)
     begin
       request = RestClient::Request.execute opts
@@ -164,6 +213,11 @@ module Clever
     request
   end
 
+  # Translate errors thrown by RestClient into standardized APIConnectionErrors
+  # @api private
+  # @param e [Error] Error to handle
+  # @return [nil]
+  # @raise [APIConnectionError] Standardized error for request failures
   def self.handle_restclient_error(e)
     case e
     when RestClient::ServerBrokeConnection, RestClient::RequestTimeout
@@ -180,6 +234,12 @@ module Clever
     fail APIConnectionError, message
   end
 
+  # Translate errors returned as JSON by the Clever API into CleverErrors
+  # @api private
+  # @param rcode [Integer] response code
+  # @param rbody [String] response body
+  # @return [nil]
+  # @raise [CleverError] Clever error corresponding to the failure observed
   def self.handle_api_error(rcode, rbody)
     begin
       error_obj = Clever::JSON.load rbody
@@ -201,6 +261,9 @@ module Clever
     end
   end
 
+  # Generate an InvalidRequestError
+  # @api private
+  # @return [InvalidRequestError]
   def self.invalid_request_error(error, rcode, rbody, error_obj)
     if error.is_a? Hash
       InvalidRequestError.new error[:message], error[:param], rcode, rbody, error_obj
@@ -209,10 +272,16 @@ module Clever
     end
   end
 
+  # Generate an AuthenticationError
+  # @api private
+  # @return [AuthenticationError]
   def self.authentication_error(error, rcode, rbody, error_obj)
     AuthenticationError.new error[:message], rcode, rbody, error_obj
   end
 
+  # Generate an APIError
+  # @api private
+  # @return [APIError]
   def self.api_error(error, rcode, rbody, error_obj)
     APIError.new error[:message], rcode, rbody, error_obj
   end

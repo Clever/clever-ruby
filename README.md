@@ -2,7 +2,7 @@
 
 [![Build Status](https://drone.ops.clever.com/github.com/Clever/clever-ruby/status.svg?branch=master)](https://drone.ops.clever.com/github.com/Clever/clever-ruby)
 
-Ruby bindings to the Clever API.
+Ruby bindings to the Clever API. [Documentation](http://rubydoc.info/gems/clever-ruby/frames)
 
 ## Installation
 
@@ -23,6 +23,19 @@ Or install it yourself as:
 ```bash
 $ gem install clever-ruby
 ```
+
+## Usage
+
+Configure clever-ruby to use your Clever token:
+
+```ruby
+Clever.configure do |config|
+  config.token = 'YOUR-API-TOKEN'
+end
+```
+
+See the [documentation](http://rubydoc.info/gems/clever-ruby/frames) for
+further details.
 
 ## Run tests
 
@@ -46,15 +59,21 @@ $ rake lint
 
 Running specific tests is not currently supported.
 
-## Usage
+## Documentation
 
-Configure clever-ruby to use your Clever API key:
+To generate it to `./doc`:
 
-```ruby
-Clever.configure do |config|
-  config.api_key = 'YOUR-API-KEY'
-end
+```bash
+$ rake doc
 ```
+
+To see documentation coverage:
+
+```bash
+$ rake doc-coverage
+```
+
+and then view `doc_coverage.txt`.
 
 ## Contributing
 
