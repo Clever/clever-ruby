@@ -12,6 +12,7 @@ module Clever
       []
     end
 
+    # TODO: remove
     [:school_pages, :teacher_pages, :section_pages, :student_pages, :event_pages].each do |name|
       define_method(name) do |filters = {}|
         Clever::APIOperations::PageList.new get_uri(name.to_s.gsub('_page', '')), filters

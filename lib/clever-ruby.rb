@@ -46,10 +46,9 @@ module Clever
     #   Clever.configure do |config|
     #     config.api_key = 'YOUR-API-KEY'
     #   end
-    # @return [Hash] API configuration object
+    # @return [Object]
     def configure
       yield configuration
-      configuration
     end
 
     # Retrieve your stored API key
@@ -68,7 +67,7 @@ module Clever
 
     # Retrieve the global Clever configuration object
     # @api private
-    # @return [String] API configuration object
+    # @return [Hash] API configuration object
     def configuration
       @configuration ||= Clever::Configuration.new
     end

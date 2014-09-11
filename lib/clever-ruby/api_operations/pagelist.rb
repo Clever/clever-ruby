@@ -13,7 +13,7 @@ module Clever
       end
 
       # Iterate through each page, making requests as you iterate
-      # @api semipublic
+      # @api private
       # @return [nil]
       # @example
       #   pagelist.each do |page|
@@ -30,7 +30,7 @@ module Clever
       end
 
       # Convert PageList into a ResultsList for easier iteration
-      # @api semipublic
+      # @api private
       # @return [Clever::APIOperations::ResultsList]
       # @example
       #   pagelist.to_results_list.each { |elem| puts elem }

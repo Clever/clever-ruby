@@ -8,7 +8,7 @@ module Clever
         # Get all elements of a resource
         # @api public
         # @deprecated This can be costly since it places all matching elements
-        #   in memory.
+        #   in memory. Instead just iterate over the collection using each.
         # @param filters [Hash] parameters to apply, as per the Clever API spec
         # @return [Array] array of all elements matching the request
         # @example
@@ -60,7 +60,6 @@ module Clever
 
         # Requests number of elements matching the query
         # @api public
-        # @param filters
         # @param filters [Hash, nil] Query parameters to pass, as per Clever API spec
         # @return [Integer] Number of elements matching
         # @example

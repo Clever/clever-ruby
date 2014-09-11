@@ -5,7 +5,7 @@ module Clever
       include Enumerable
 
       # Request a page of data and store the results in this instance
-      # @api semipublic
+      # @api private
       # @return [Clever::APIOperations::Page]
       # @example
       #   page = Page.new '/v1.1/districts'
@@ -22,7 +22,7 @@ module Clever
       end
 
       # Gets next page if one is present, nil otherwise
-      # @api semipublic
+      # @api private
       # @return [Clever::APIOperations::Page, nil] Next page, or nil if last
       # @example
       #   next_page = page.next
@@ -33,7 +33,7 @@ module Clever
       end
 
       # Iterate over all elements in the page
-      # @api semipublic
+      # @api private
       # @return [Array] List of all elements
       # @example
       #   page.each { |elem| puts elem }
@@ -42,7 +42,7 @@ module Clever
       end
 
       # Get all elements in page
-      # @api semipublic
+      # @api private
       # @return [Array] List of all elements
       # @example
       #   all_elems = page.all

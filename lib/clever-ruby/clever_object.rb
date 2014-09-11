@@ -126,6 +126,7 @@ module Clever
     end
 
     # Unsure
+    # @todo Figure out what this is intended for and how it should behave
     # @api private
     # @return [Object]
     def as_json(*a)
