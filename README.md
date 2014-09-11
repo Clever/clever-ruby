@@ -26,13 +26,16 @@ $ gem install clever-ruby
 
 ## Usage
 
-Configure clever-ruby to use your Clever API key:
+Configure clever-ruby to use your Clever token:
 
 ```ruby
 Clever.configure do |config|
-  config.api_key = 'YOUR-API-KEY'
+  config.token = 'YOUR-API-TOKEN'
 end
 ```
+
+See the [documentation](http://rubydoc.info/gems/clever-ruby/frames) for
+further details.
 
 ## Run tests
 
