@@ -1,10 +1,17 @@
 module Clever
-  # LibraryhHelper methods
+  # Library helper methods
   module Util
+    # Check if a given ID is a valid format (MongoDB BSON ObjectID)
+    # @api private
+    # @param id [String] ID to check
+    # @return [Boolean] Whether or not it was valid
     def self.valid_id?(id)
       id.is_a?(String) && !(/^[0-9a-fA-F]{24}$/.match(id).nil?)
     end
 
+    # Replace APIResource objects with their ids in data structures
+    # @api private
+    # @return [Object] Original data structure with objects replaced by ids
     def self.objects_to_ids(h)
       case h
       when APIResource
@@ -20,6 +27,9 @@ module Clever
       end
     end
 
+    # Convert the name of a resource to its APIResource class
+    # @api private
+    # @return [APIResource]
     def self.types_to_clever_class(type)
       types = {
         'students'  => Student,
@@ -32,6 +42,9 @@ module Clever
       types.fetch type
     end
 
+    # Convert an object containing data from Clever into a CleverObject
+    # @api private
+    # @return [CleverObject]
     def self.convert_to_clever_object(resp)
       case resp
       when Array
@@ -48,6 +61,9 @@ module Clever
       end
     end
 
+    # Check if a file is readable
+    # @api private
+    # @return [Boolean]
     def self.file_readable(file)
       File.open(file) {}
     rescue
@@ -56,10 +72,16 @@ module Clever
       true
     end
 
+    # URL encode a key
+    # @api private
+    # @return [String]
     def self.encode_key(key)
       URI.escape key.to_s, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]")
     end
 
+    # Flatten a params hash into an array
+    # @api private
+    # @return [Array]
     def self.flatten_params(params, parent_key = nil)
       result = []
       params.each do |key, value|
@@ -75,6 +97,9 @@ module Clever
       result
     end
 
+    # Flatten a nested params array into a flat array
+    # @api private
+    # @return [Array]
     def self.flatten_params_array(value, calculated_key)
       result = []
       value.each do |elem|
