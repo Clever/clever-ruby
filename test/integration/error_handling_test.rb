@@ -4,7 +4,7 @@ require 'test_helper'
 describe 'Error handling' do
   before do
     Clever.configure do |config|
-      config.api_key = 'DEMO_KEY'
+      config.token = 'DEMO_TOKEN'
     end
   end
 

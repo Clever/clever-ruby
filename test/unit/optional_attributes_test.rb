@@ -4,7 +4,7 @@ require 'test_helper'
 describe 'Optional attributes' do
   before do
     Clever.configure do |config|
-      config.api_key = 'DEMO_KEY'
+      config.token = 'DEMO_TOKEN'
     end
 
     VCR.use_cassette('schools_optional_attributes') do

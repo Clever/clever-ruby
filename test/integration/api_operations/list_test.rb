@@ -23,7 +23,7 @@ end
 describe Clever::APIOperations::List do
   before do
     Clever.configure do |config|
-      config.api_key = 'DEMO_KEY'
+      config.token = 'DEMO_TOKEN'
     end
   end
 
