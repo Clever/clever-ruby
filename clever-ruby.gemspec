@@ -30,6 +30,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'redcarpet',     '~> 3.1.2'
   gem.add_development_dependency 'vcr',           '~> 2.4.0'
   gem.add_development_dependency 'webmock',       '~> 1.9.0'
-  gem.add_development_dependency 'pry',           '~> 0.10.1'
   gem.add_development_dependency 'rubocop',       '~> 0.26.0'
 end
