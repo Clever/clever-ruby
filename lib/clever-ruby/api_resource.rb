@@ -1,6 +1,45 @@
 module Clever
   # Superclass of API resources in the Clever API
   class APIResource < CleverObject
+    @resources = []
+
+    class << self
+      # Get valid API resources
+      # @api private
+      # @return [Array] List of valid API resource classes
+      attr_reader :resources
+
+      # Get a list of nested resources in the Clever API for this resource
+      # @api private
+      # @return [Array] List of resources nested under this resource
+      attr_reader :linked_resources
+    end
+
+    # Registers valid API resources
+    # @api private
+    # @return [Object]
+    def self.inherited(child_class)
+      @resources << child_class
+      super
+    end
+
+    # Get a canonical name for a resource
+    # @api private
+    # @return [String]
+    def self.shortname
+      name.split('::')[-1].downcase.singularize
+    end
+
+    # Convert the name of a resource to its APIResource subclass
+    # @api private
+    # @return [APIResource]
+    def self.named(name)
+      name = name.to_s.downcase.singularize
+      matching = resources.select { |res| res.shortname == name }
+      return nil if matching.empty?
+      matching.first
+    end
+
     # Get URL for a resource
     # @api private
     # @return [String] url to query for a resource
@@ -9,8 +48,7 @@ module Clever
         fail NotImplementedError, 'APIResource is an abstract class. You should perform actions '\
           'on its subclasses (School, Student, etc.)'
       end
-      shortname = name.split('::')[-1]
-      "v1.1/#{CGI.escape shortname.downcase}s"
+      "v1.1/#{CGI.escape shortname.pluralize}"
     end
 
     # Get URL for an instance of a resource
