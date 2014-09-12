@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?count=true
+    uri: https://api.clever.com/v1.1/districts?count=true
     body:
       encoding: US-ASCII
       string: ''
@@ -11,6 +11,8 @@ http_interactions:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
       User-Agent:
       - Ruby
   response:
@@ -27,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:32 GMT
+      - Fri, 12 Sep 2014 21:09:34 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -40,5 +42,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"count":1,"links":[{"rel":"self","uri":"/v1.1/districts?count=true"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:32 GMT
+  recorded_at: Fri, 12 Sep 2014 21:09:33 GMT
 recorded_with: VCR 2.4.0

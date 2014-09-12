@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/schools?limit=20
+    uri: https://api.clever.com/v1.1/schools?limit=20
     body:
       encoding: US-ASCII
       string: ''
@@ -11,6 +11,8 @@ http_interactions:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
       User-Agent:
       - Ruby
   response:
@@ -27,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:33 GMT
+      - Fri, 12 Sep 2014 21:09:34 GMT
       Etag:
       - ! '"275883657"'
       Server:
@@ -51,10 +53,10 @@ http_interactions:
         Middle School","nces_id":"360001000000","phone":"(718) 555-8989","principal":{"name":"Leonard
         Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"27Q321","sis_id":"27Q321","state_id":"412","id":"530e595026403103360ff9ff"},"uri":"/v1.1/schools/530e595026403103360ff9ff"}],"paging":{"current":1,"total":1,"count":3},"links":[{"rel":"self","uri":"/v1.1/schools?limit=20"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:33 GMT
+  recorded_at: Fri, 12 Sep 2014 21:09:34 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/schools?where=%7B%22_id%22:%7B%22$in%22:%5B%22530e595026403103360ff9fd%22,%22530e595026403103360ff9ff%22%5D%7D%7D
+    uri: https://api.clever.com/v1.1/schools?where=%7B%22_id%22:%7B%22$in%22:%5B%22530e595026403103360ff9fd%22,%22530e595026403103360ff9ff%22%5D%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -63,6 +65,8 @@ http_interactions:
       - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
       User-Agent:
       - Ruby
   response:
@@ -79,7 +83,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:33 GMT
+      - Fri, 12 Sep 2014 21:09:34 GMT
       Etag:
       - ! '"-1879088916"'
       Server:
@@ -100,5 +104,5 @@ http_interactions:
         Middle School","nces_id":"360001000000","phone":"(718) 555-8989","principal":{"name":"Leonard
         Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"27Q321","sis_id":"27Q321","state_id":"412","id":"530e595026403103360ff9ff"},"uri":"/v1.1/schools/530e595026403103360ff9ff"}],"paging":{"current":1,"total":1,"count":2},"links":[{"rel":"self","uri":"/v1.1/schools?where=%7B%22_id%22:%7B%22$in%22:[%22530e595026403103360ff9fd%22,%22530e595026403103360ff9ff%22]%7D%7D"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:33 GMT
+  recorded_at: Fri, 12 Sep 2014 21:09:34 GMT
 recorded_with: VCR 2.4.0
