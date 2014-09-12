@@ -21,16 +21,15 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'multi_json',    '~> 1.10.0'
   gem.add_runtime_dependency 'rest-client',   '~> 1.6.7'
+  gem.add_runtime_dependency 'activesupport', '~> 4.1.5'
 
   gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'minitest',      '~> 4.4.0'
-  gem.add_development_dependency 'shoulda',       '~> 3.3.2'
+  gem.add_development_dependency 'minitest',      '~> 5.4.1'
   gem.add_development_dependency 'yard',          '~> 0.8.7'
   gem.add_development_dependency 'yardstick',     '~> 0.9.9'
   gem.add_development_dependency 'redcarpet',     '~> 3.1.2'
   gem.add_development_dependency 'vcr',           '~> 2.4.0'
   gem.add_development_dependency 'webmock',       '~> 1.9.0'
   gem.add_development_dependency 'pry',           '~> 0.10.1'
-  gem.add_development_dependency 'activesupport', '~> 3.2.11'
   gem.add_development_dependency 'rubocop',       '~> 0.26.0'
 end
