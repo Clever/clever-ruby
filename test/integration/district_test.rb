@@ -3,10 +3,10 @@ require 'test_helper'
 module Minitest
   # Add assertions to Minitest
   module Assertions
-    def assert_valid_object_list(plural_object_name, object_count, instance_name)
+    def assert_valid_object_list(plural_object_name, instance_name)
       VCR.use_cassette("districts_#{plural_object_name}", allow_playback_repeats: true) do
         district = Clever::District.all.first
-        district.send(plural_object_name).size.must_equal object_count
+        district.send(plural_object_name).size.must_equal district.send(plural_object_name).count
         district.send(plural_object_name).first.must_be_instance_of instance_name
       end
     end
@@ -39,30 +39,23 @@ describe Clever::District do
   end
 
   it "retrieves a district's schools" do
-    assert_valid_object_list 'schools', 3, Clever::School
+    assert_valid_object_list 'schools', Clever::School
   end
 
   it "retrieves a district's teachers" do
-    assert_valid_object_list 'teachers', 89, Clever::Teacher
+    assert_valid_object_list 'teachers', Clever::Teacher
   end
 
   it "retrieves a district's sections" do
-    assert_valid_object_list 'sections', 100, Clever::Section
+    assert_valid_object_list 'sections', Clever::Section
   end
 
   it "retrieves a district's students" do
-    assert_valid_object_list 'students', 100, Clever::Student
+    assert_valid_object_list 'students', Clever::Student
   end
 
   it "retrieves a district's events" do
-    assert_valid_object_list 'events', 13, Clever::Event
-  end
-
-  it "retrieves a district's students with a small filter" do
-    VCR.use_cassette('districts_students_filtered') do
-      @district = Clever::District.all.first
-      @district.students(limit: 2).size.must_equal 2
-    end
+    assert_valid_object_list 'events', Clever::Event
   end
 
   it "pages a district's schools" do
@@ -82,6 +75,6 @@ describe Clever::District do
   end
 
   it "pages a district's events" do
-    assert_valid_object_pages 'event', 1, 14
+    assert_valid_object_pages 'event', 1, 8
   end
 end
