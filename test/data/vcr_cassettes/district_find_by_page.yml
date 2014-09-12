@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:41 GMT
+      - Fri, 12 Sep 2014 04:53:41 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -40,7 +40,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:40 GMT
+  recorded_at: Fri, 12 Sep 2014 04:53:41 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?count=true
@@ -68,7 +68,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:41 GMT
+      - Fri, 12 Sep 2014 04:53:42 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -81,5 +81,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"count":1,"links":[{"rel":"self","uri":"/v1.1/districts?count=true"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:41 GMT
+  recorded_at: Fri, 12 Sep 2014 04:53:41 GMT
 recorded_with: VCR 2.4.0

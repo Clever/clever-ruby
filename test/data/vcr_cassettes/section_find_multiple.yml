@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:31 GMT
+      - Fri, 12 Sep 2014 04:53:51 GMT
       Etag:
       - ! '"-1690172883"'
       Server:
@@ -81,7 +81,7 @@ http_interactions:
         Guidance","course_number":"905","created":"2014-02-26T21:15:38.011Z","district":"4fd43cc56d11340000000005","grade":"9","last_modified":"2014-02-26T21:15:38.013Z","name":"Group
         Guidance - 905 - J. Cummings (Section 5)","period":"0","school":"530e595026403103360ff9fd","sis_id":"600","students":["530e5960049e75a9262cff1e","530e5960049e75a9262cff27","530e5960049e75a9262cff5b","530e5961049e75a9262cfffb","530e5961049e75a9262d0038","530e5961049e75a9262d0089","530e5962049e75a9262d00ba","530e5962049e75a9262d00e6","530e5963049e75a9262d0181","530e5963049e75a9262d020f","530e5963049e75a9262d021b","530e5964049e75a9262d02d3","530e5965049e75a9262d033c","530e5966049e75a9262d045e","530e5966049e75a9262d0496","530e5966049e75a9262d04a5","530e5968049e75a9262d063c"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c16","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e597a049e75a9262d0b05"},"uri":"/v1.1/sections/530e597a049e75a9262d0b05"}],"paging":{"current":1,"total":19,"count":379},"links":[{"rel":"self","uri":"/v1.1/sections?limit=20"},{"rel":"next","uri":"/v1.1/sections?limit=20&starting_after=530e597a049e75a9262d0b05"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:31 GMT
+  recorded_at: Fri, 12 Sep 2014 04:53:50 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/sections?where=%7B%22_id%22:%7B%22$in%22:%5B%22530e5979049e75a9262d0af2%22,%22530e5979049e75a9262d0af4%22,%22530e5979049e75a9262d0af6%22,%22530e5979049e75a9262d0af8%22,%22530e5979049e75a9262d0afa%22,%22530e5979049e75a9262d0afc%22,%22530e5979049e75a9262d0afe%22,%22530e5979049e75a9262d0b00%22,%22530e5979049e75a9262d0b02%22,%22530e597a049e75a9262d0b04%22%5D%7D%7D
@@ -109,7 +109,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:31 GMT
+      - Fri, 12 Sep 2014 04:53:51 GMT
       Etag:
       - ! '"-1277459956"'
       Server:
@@ -143,5 +143,5 @@ http_interactions:
         Guidance","course_number":"904","created":"2014-02-26T21:15:38.006Z","district":"4fd43cc56d11340000000005","grade":"9","last_modified":"2014-02-26T21:15:38.008Z","name":"Group
         Guidance - 904 - J. Isaacs (Section 4)","period":"0","school":"530e595026403103360ff9fd","sis_id":"599","students":["530e5960049e75a9262cff23","530e5960049e75a9262cff3c","530e5961049e75a9262d007d","530e5962049e75a9262d0127","530e5962049e75a9262d0174","530e5963049e75a9262d019f","530e5963049e75a9262d01fb","530e5963049e75a9262d0231","530e5964049e75a9262d02a9","530e5965049e75a9262d0325","530e5965049e75a9262d03a5","530e5966049e75a9262d042b","530e5966049e75a9262d048d","530e5967049e75a9262d05b5","530e5967049e75a9262d05be","530e5968049e75a9262d0605","530e5968049e75a9262d0646"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c14","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e597a049e75a9262d0b04"},"uri":"/v1.1/sections/530e597a049e75a9262d0b04"}],"paging":{"current":1,"total":1,"count":10},"links":[{"rel":"self","uri":"/v1.1/sections?where=%7B%22_id%22:%7B%22$in%22:[%22530e5979049e75a9262d0af2%22,%22530e5979049e75a9262d0af4%22,%22530e5979049e75a9262d0af6%22,%22530e5979049e75a9262d0af8%22,%22530e5979049e75a9262d0afa%22,%22530e5979049e75a9262d0afc%22,%22530e5979049e75a9262d0afe%22,%22530e5979049e75a9262d0b00%22,%22530e5979049e75a9262d0b02%22,%22530e597a049e75a9262d0b04%22]%7D%7D"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:31 GMT
+  recorded_at: Fri, 12 Sep 2014 04:53:51 GMT
 recorded_with: VCR 2.4.0

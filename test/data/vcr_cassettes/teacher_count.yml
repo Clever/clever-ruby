@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:31 GMT
+      - Fri, 12 Sep 2014 04:53:53 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -40,5 +40,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"count":89,"links":[{"rel":"self","uri":"/v1.1/teachers?count=true"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:31 GMT
+  recorded_at: Fri, 12 Sep 2014 04:53:53 GMT
 recorded_with: VCR 2.4.0

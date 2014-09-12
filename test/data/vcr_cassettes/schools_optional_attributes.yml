@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:47:19 GMT
+      - Fri, 12 Sep 2014 04:55:24 GMT
       Etag:
       - ! '"1408105812"'
       Server:
@@ -51,5 +51,5 @@ http_interactions:
         Middle School","nces_id":"360001000000","phone":"(718) 555-8989","principal":{"name":"Leonard
         Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"27Q321","sis_id":"27Q321","state_id":"412","id":"530e595026403103360ff9ff"},"uri":"/v1.1/schools/530e595026403103360ff9ff"}],"paging":{"current":1,"total":1,"count":3},"links":[{"rel":"self","uri":"/v1.1/schools"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:47:19 GMT
+  recorded_at: Fri, 12 Sep 2014 04:55:24 GMT
 recorded_with: VCR 2.4.0
