@@ -1,6 +1,6 @@
 require 'test_helper'
 
-describe Clever::NestedResource do
+describe Clever::NestedResource, :vcr do
   before do
     Clever.configure do |config|
       config.token = 'DEMO_TOKEN'
@@ -12,14 +12,12 @@ describe Clever::NestedResource do
     next if resource.linked_resources.nil?
     resource.linked_resources.each do |link|
       it "retrieves a #{resource.shortname}'s #{link}" do
-        VCR.use_cassette("#{resource.shortname}_#{link}") do
-          result = resource.find.first.send link
-          if Clever::Util.singular?(link.to_s)
-            result.must_be_instance_of Clever::APIResource.named(link.to_s)
-          else
-            result.must_be_instance_of Clever::NestedResource
-            result.size.must_equal result.count # check count request measures actual data size
-          end
+        result = resource.find.first.send link
+        if Clever::Util.singular?(link.to_s)
+          result.must_be_instance_of Clever::APIResource.named(link.to_s)
+        else
+          result.must_be_instance_of Clever::NestedResource
+          result.size.must_equal result.count # check count request measures actual data size
         end
       end
     end
