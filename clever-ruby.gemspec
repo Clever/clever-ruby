@@ -28,7 +28,8 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'yard',          '~> 0.8.7'
   gem.add_development_dependency 'yardstick',     '~> 0.9.9'
   gem.add_development_dependency 'redcarpet',     '~> 3.1.2'
-  gem.add_development_dependency 'vcr',           '~> 2.4.0'
+  gem.add_development_dependency 'vcr',           '~> 2.9.3'
+  gem.add_development_dependency 'minitest-vcr',  '~> 0.1.1'
   gem.add_development_dependency 'webmock',       '~> 1.9.0'
   gem.add_development_dependency 'rubocop',       '~> 0.26.0'
 end
