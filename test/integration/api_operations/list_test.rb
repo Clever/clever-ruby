@@ -1,20 +1,30 @@
 require 'test_helper'
 
+def resource_name(resource)
+  resource.name.split('::')[-1].downcase
+end
+
+def resources
+  [Clever::District, Clever::School, Clever::Teacher,
+   Clever::Student, Clever::Section, Clever::Event]
+end
+
+module Minitest
+  # Extend default Minitest assertions
+  module Assertions
+    def assert_resource_type(resource, elem)
+      assert_instance_of resource, elem, "All elems of #{resource.url} should be of "\
+        "type #{resource.name}, instead got #{elem.class.name}. elem: #{elem.inspect}"
+    end
+  end
+end
+
 # Test api_operations/List
-class ListTest < Test::Unit::TestCase
-  def setup
+describe Clever::APIOperations::List do
+  before do
     Clever.configure do |config|
       config.api_key = 'DEMO_KEY'
     end
-  end
-
-  def assert_type(resource, elem)
-    assert_instance_of resource, elem, "All elems of #{resource.url} should be of "\
-      "type #{resource.name}, instead got #{elem.class.name}. elem: #{elem.inspect}"
-  end
-
-  def self.resource_name(resource)
-    resource.name.split('::')[-1].downcase
   end
 
   [[Clever::District, 1], [Clever::School, 3], [Clever::Teacher, 89],
@@ -22,7 +32,7 @@ class ListTest < Test::Unit::TestCase
     resource, expected = test_data
     name = resource_name resource
 
-    should "count #{name} properly" do
+    it "counts #{name} properly" do
       VCR.use_cassette "#{name}_count" do
         count = resource.count
         assert count.is_a?(Integer), "count should return an Integer. count: #{count}"
@@ -32,43 +42,30 @@ class ListTest < Test::Unit::TestCase
     end
   end
 
-  [Clever::District, Clever::School, Clever::Teacher,
-   Clever::Student, Clever::Section, Clever::Event].each do |resource|
+  resources.each do |resource|
     name = resource_name resource
 
-    should "reject invalid id for #{resource}.find one" do
+    it "rejects invalid id for #{resource}.find one" do
       id = 'invalid_id'
-      assert_raises ArgumentError do
-        resource.find id
+      assert_raises(ArgumentError) { resource.find id }
+    end
+
+    it "finds a single #{name}" do
+      VCR.use_cassette "#{name}_find_one" do
+        id = resource.find.take(20).last.id
+        elem = resource.find id
+        assert_resource_type resource, elem
+        assert_equal id, elem.id
       end
     end
 
-    should "reject invalid ids for #{resource}.find multiple" do
+    it 'rejects invalid ids for Clever::District.find multiple' do
       # one valid, one invalid
       ids = %w(123412341234123412341234 invalid_id)
-      assert_raises ArgumentError do
-        resource.find ids
-      end
+      assert_raises(ArgumentError) { Clever::District.find ids }
     end
 
-    should "find #{name}s by page" do
-      VCR.use_cassette "#{name}_find_by_page" do
-        result = resource.find
-        assert_instance_of Clever::APIOperations::ResultsList, result, 'Result should be '\
-          "a Clever::APIOperations::ResultsList, received #{result.inspect}"
-        count = 0
-        result.each do |elem|
-          count += 1
-          assert_type resource, elem
-        end
-
-        expected = resource.count
-        count.must_equal expected, "Expected #{expected} #{name}s to be "\
-          "retrieved but only #{count} were found. Perhaps the test data has changed?"
-      end
-    end
-
-    should "find #{name}s with multiple ids" do
+    it "finds #{name}s with multiple ids" do
       VCR.use_cassette "#{name}_find_multiple" do
         to_query = []
         count = 0
@@ -85,16 +82,24 @@ class ListTest < Test::Unit::TestCase
       end
     end
 
-    should "find a single #{name}" do
-      VCR.use_cassette "#{name}_find_one" do
-        id = resource.find.take(20).last.id
-        elem = resource.find id
-        assert_type resource, elem
-        assert_equal id, elem.id
+    it "finds #{name}s by page" do
+      VCR.use_cassette "#{name}_find_by_page" do
+        result = resource.find
+        assert_instance_of Clever::APIOperations::ResultsList, result, 'Result should be '\
+          "a Clever::APIOperations::ResultsList, received #{result.inspect}"
+        count = 0
+        result.each do |elem|
+          count += 1
+          assert_resource_type resource, elem
+        end
+
+        expected = resource.count
+        count.must_equal expected, "Expected #{expected} #{name}s to be "\
+          "retrieved but only #{count} were found. Perhaps the test data has changed?"
       end
     end
 
-    should "retrieve all #{name}" do
+    it "retrieves all #{name}" do
       VCR.use_cassette("#{name}s") do
         elems = resource.all
         elems.each do |elem|

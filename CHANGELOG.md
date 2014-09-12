@@ -1,3 +1,9 @@
+## 0.6.2 (2014-09-12)
+
+* Update dependencies
+* Add activesupport as dep
+* Refactor tests
+
 ## 0.6.1 (2014-09-10)
 
 * Add YARD documentation
