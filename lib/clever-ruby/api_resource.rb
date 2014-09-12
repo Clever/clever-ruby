@@ -103,6 +103,10 @@ module Clever
       links[resource_type.to_sym]
     end
 
+    # Construct an APIResource. Generates methods for nested resources
+    # @abstract
+    # @api private
+    # @return [APIResource]
     def initialize(id)
       super id
       return if self.class.linked_resources.nil?
