@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:57:48 GMT
+      - Fri, 12 Sep 2014 23:56:18 GMT
       Etag:
       - ! '"-1704869160"'
       Server:
@@ -115,10 +115,10 @@ http_interactions:
         or More Races","school":"530e595026403103360ff9ff","sis_id":"189422359","state_id":"949395711","student_number":"189422359","id":"530e5961049e75a9262cffe3"},"uri":"/v1.1/students/530e5961049e75a9262cffe3"},{"data":{"created":"2014-02-26T21:15:13.206Z","credentials":{"district_username":"mial61","district_password":"uka5Hixae"},"district":"4fd43cc56d11340000000005","dob":"11/10/2002","ell_status":"N","email":"l_mia@example.org","frl_status":"Paid","gender":"F","grade":"5","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.072Z","location":{"zip":"10002"},"name":{"first":"Mia","middle":"J","last":"Lindgren"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"189492161","state_id":"661166974","student_number":"189492161","id":"530e5961049e75a9262cffe4"},"uri":"/v1.1/students/530e5961049e75a9262cffe4"}],"paging":{"current":1,"total":11,"count":1004},"links":[{"rel":"self","uri":"/v1.1/students"},{"rel":"next","uri":"/v1.1/students?starting_after=530e5961049e75a9262cffe4"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:57:48 GMT
+  recorded_at: Fri, 12 Sep 2014 23:56:18 GMT
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/students/530e5960049e75a9262cff3c
+    uri: https://api.clever.com/v1.1/students/530e5960049e75a9262cff1d
     body:
       encoding: US-ASCII
       string: ''
@@ -145,20 +145,133 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:57:49 GMT
+      - Fri, 12 Sep 2014 23:56:19 GMT
       Etag:
-      - ! '"310285841"'
+      - ! '"1850740737"'
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '1118'
+      - '1151'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"data":{"created":"2014-02-26T21:15:12.498Z","credentials":{"district_username":"fredt34","district_password":"ieXahy1j"},"district":"4fd43cc56d11340000000005","dob":"10/30/1998","ell_status":"Y","email":"fred.t@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.748Z","location":{"zip":"10003"},"name":{"first":"Fred","middle":"W","last":"Trantow"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"119622134","state_id":"354252109","student_number":"119622134","id":"530e5960049e75a9262cff3c"},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff3c"},{"rel":"district","uri":"/v1.1/students/530e5960049e75a9262cff3c/district"},{"rel":"sections","uri":"/v1.1/students/530e5960049e75a9262cff3c/sections"},{"rel":"school","uri":"/v1.1/students/530e5960049e75a9262cff3c/school"},{"rel":"teachers","uri":"/v1.1/students/530e5960049e75a9262cff3c/teachers"},{"rel":"contacts","uri":"/v1.1/students/530e5960049e75a9262cff3c/contacts"},{"rel":"events","uri":"/v1.1/students/530e5960049e75a9262cff3c/events"}]}'
+      string: ! '{"data":{"created":"2014-02-26T21:15:12.346Z","credentials":{"district_username":"stevez33","district_password":"auyik3tiTieL"},"district":"4fd43cc56d11340000000005","dob":"2/11/2007","ell_status":"N","email":"z.steve@example.net","frl_status":"Paid","gender":"M","grade":"Kindergarten","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.656Z","location":{"zip":"10459"},"name":{"first":"Steve","middle":"G","last":"Ziemann"},"race":"Black
+        or African American","school":"530e595026403103360ff9fe","sis_id":"100095233","state_id":"231786324","student_number":"100095233","id":"530e5960049e75a9262cff1d"},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff1d"},{"rel":"district","uri":"/v1.1/students/530e5960049e75a9262cff1d/district"},{"rel":"sections","uri":"/v1.1/students/530e5960049e75a9262cff1d/sections"},{"rel":"school","uri":"/v1.1/students/530e5960049e75a9262cff1d/school"},{"rel":"teachers","uri":"/v1.1/students/530e5960049e75a9262cff1d/teachers"},{"rel":"contacts","uri":"/v1.1/students/530e5960049e75a9262cff1d/contacts"},{"rel":"events","uri":"/v1.1/students/530e5960049e75a9262cff1d/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:57:49 GMT
+  recorded_at: Fri, 12 Sep 2014 23:56:19 GMT
+- request:
+    method: get
+    uri: https://api.clever.com//v1.1/students/530e5960049e75a9262cff1d/sections
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 12 Sep 2014 23:56:19 GMT
+      Etag:
+      - ! '"-1121195810"'
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '5801'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"data":{"course_name":"Class 002, Homeroom","course_number":"2","created":"2014-02-26T21:15:38.469Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-02-26T21:15:38.472Z","name":"Class
+        002, Homeroom - 002 - S. Schoen (Section 2)","period":"0","school":"530e595026403103360ff9fe","sis_id":"709","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0b71"},"uri":"/v1.1/sections/530e597a049e75a9262d0b71"},{"data":{"course_name":"Kindergarten
+        Math, Class 002","course_number":"2","created":"2014-02-26T21:15:38.640Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-02-26T21:15:38.642Z","name":"Kindergarten
+        Math, Class 002 - 002 - S. Schoen","period":"1","school":"530e595026403103360ff9fe","sis_id":"748","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"math","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0b98"},"uri":"/v1.1/sections/530e597a049e75a9262d0b98"},{"data":{"course_name":"Kindergarten
+        Music, Class 002","course_number":"2","created":"2014-02-26T21:15:38.879Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-08-28T18:01:01.596Z","name":"Kindergarten
+        Music, Class 002 - 002 - S. Schoen","period":"5","school":"530e595026403103360ff9fe","sis_id":"805","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"arts
+        and music","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0bd1"},"uri":"/v1.1/sections/530e597a049e75a9262d0bd1"},{"data":{"course_name":"Kindergarten
+        Reading, Class 002","course_number":"2","created":"2014-02-26T21:15:39.049Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-02-26T21:15:39.052Z","name":"Kindergarten
+        Reading, Class 002 - 002 - S. Schoen","period":"1","school":"530e595026403103360ff9fe","sis_id":"844","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"english/language
+        arts","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0bf8"},"uri":"/v1.1/sections/530e597b049e75a9262d0bf8"},{"data":{"course_name":"Kindergarten
+        Science, Class 002","course_number":"2","created":"2014-02-26T21:15:39.181Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-08-28T18:01:01.917Z","name":"Kindergarten
+        Science, Class 002 - 002 - S. Schoen","period":"3","school":"530e595026403103360ff9fe","sis_id":"865","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"science","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0c0e"},"uri":"/v1.1/sections/530e597b049e75a9262d0c0e"}],"paging":{"current":1,"total":1,"count":5},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff1d/sections"}]}'
+    http_version: 
+  recorded_at: Fri, 12 Sep 2014 23:56:19 GMT
+- request:
+    method: get
+    uri: https://api.clever.com//v1.1/students/530e5960049e75a9262cff1d/sections
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 12 Sep 2014 23:56:19 GMT
+      Etag:
+      - ! '"-1121195810"'
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '5801'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"data":{"course_name":"Class 002, Homeroom","course_number":"2","created":"2014-02-26T21:15:38.469Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-02-26T21:15:38.472Z","name":"Class
+        002, Homeroom - 002 - S. Schoen (Section 2)","period":"0","school":"530e595026403103360ff9fe","sis_id":"709","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0b71"},"uri":"/v1.1/sections/530e597a049e75a9262d0b71"},{"data":{"course_name":"Kindergarten
+        Math, Class 002","course_number":"2","created":"2014-02-26T21:15:38.640Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-02-26T21:15:38.642Z","name":"Kindergarten
+        Math, Class 002 - 002 - S. Schoen","period":"1","school":"530e595026403103360ff9fe","sis_id":"748","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"math","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0b98"},"uri":"/v1.1/sections/530e597a049e75a9262d0b98"},{"data":{"course_name":"Kindergarten
+        Music, Class 002","course_number":"2","created":"2014-02-26T21:15:38.879Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-08-28T18:01:01.596Z","name":"Kindergarten
+        Music, Class 002 - 002 - S. Schoen","period":"5","school":"530e595026403103360ff9fe","sis_id":"805","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"arts
+        and music","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0bd1"},"uri":"/v1.1/sections/530e597a049e75a9262d0bd1"},{"data":{"course_name":"Kindergarten
+        Reading, Class 002","course_number":"2","created":"2014-02-26T21:15:39.049Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-02-26T21:15:39.052Z","name":"Kindergarten
+        Reading, Class 002 - 002 - S. Schoen","period":"1","school":"530e595026403103360ff9fe","sis_id":"844","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"english/language
+        arts","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0bf8"},"uri":"/v1.1/sections/530e597b049e75a9262d0bf8"},{"data":{"course_name":"Kindergarten
+        Science, Class 002","course_number":"2","created":"2014-02-26T21:15:39.181Z","district":"4fd43cc56d11340000000005","grade":"Kindergarten","last_modified":"2014-08-28T18:01:01.917Z","name":"Kindergarten
+        Science, Class 002 - 002 - S. Schoen","period":"3","school":"530e595026403103360ff9fe","sis_id":"865","students":["530e5960049e75a9262cff1d","530e5960049e75a9262cff55","530e5961049e75a9262cffc2","530e5961049e75a9262d0012","530e5962049e75a9262d00c0","530e5962049e75a9262d010d","530e5962049e75a9262d0136","530e5962049e75a9262d0151","530e5962049e75a9262d0162","530e5963049e75a9262d01bb","530e5963049e75a9262d01f0","530e5964049e75a9262d0295","530e5964049e75a9262d02a7","530e5964049e75a9262d02d8","530e5965049e75a9262d0320","530e5965049e75a9262d03b9","530e5966049e75a9262d0491","530e5966049e75a9262d04c4","530e5967049e75a9262d0520","530e5968049e75a9262d0615"],"subject":"science","teacher":"530e5955d50c310f36112c03","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0c0e"},"uri":"/v1.1/sections/530e597b049e75a9262d0c0e"}],"paging":{"current":1,"total":1,"count":5},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff1d/sections"}]}'
+    http_version: 
+  recorded_at: Fri, 12 Sep 2014 23:56:19 GMT
 recorded_with: VCR 2.4.0

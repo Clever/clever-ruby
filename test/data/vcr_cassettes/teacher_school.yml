@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:57:51 GMT
+      - Fri, 12 Sep 2014 23:56:15 GMT
       Etag:
       - ! '"-409931571"'
       Server:
@@ -133,10 +133,10 @@ http_interactions:
         Coach","id":"530e5955d50c310f36112c18"},"uri":"/v1.1/teachers/530e5955d50c310f36112c18"},{"data":{"created":"2014-02-26T21:15:01.572Z","credentials":{"district_username":"m_paucek","district_password":"jhga8salgh"},"district":"4fd43cc56d11340000000005","email":"paucek_m@example.org","last_modified":"2014-02-26T21:15:01.574Z","name":{"first":"Meaghan","middle":"P","last":"Paucek"},"school":"530e595026403103360ff9fd","sis_id":"93","teacher_number":"843713","title":"High
         School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"paging":{"current":1,"total":1,"count":89},"links":[{"rel":"self","uri":"/v1.1/teachers"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:57:52 GMT
+  recorded_at: Fri, 12 Sep 2014 23:56:15 GMT
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/teachers?count=true
+    uri: https://api.clever.com/v1.1/teachers/509fbd7ec474fab64a8e9d53
     body:
       encoding: US-ASCII
       string: ''
@@ -163,18 +163,65 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:57:52 GMT
+      - Fri, 12 Sep 2014 23:56:15 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '71'
+      - '972'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"count":89,"links":[{"rel":"self","uri":"/v1.1/teachers?count=true"}]}'
+      string: ! '{"data":{"created":"2012-11-11T15:00:14.036Z","credentials":{"district_password":"Acoev0oow4","district_username":"spinka_leo"},"district":"4fd43cc56d11340000000005","email":"spinka.leo@example.net","last_modified":"2014-02-26T21:15:01.038Z","name":{"first":"Leo","last":"Spinka","middle":"R"},"school":"530e595026403103360ff9fe","sis_id":"11","teacher_number":"539224","title":"Grade
+        3 Common Branch Teacher","id":"509fbd7ec474fab64a8e9d53"},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53"},{"rel":"district","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/district"},{"rel":"school","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/school"},{"rel":"students","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/students"},{"rel":"sections","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/sections"},{"rel":"grade_levels","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/grade_levels"},{"rel":"events","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:57:52 GMT
+  recorded_at: Fri, 12 Sep 2014 23:56:15 GMT
+- request:
+    method: get
+    uri: https://api.clever.com//v1.1/teachers/509fbd7ec474fab64a8e9d53/school
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 12 Sep 2014 23:56:15 GMT
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '587'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"created":"2014-02-26T21:14:56.668Z","district":"4fd43cc56d11340000000005","high_grade":"5","last_modified":"2014-02-26T21:14:56.670Z","location":{"address":"110
+        Pineapple Street","city":"Brooklyn","state":"NY","zip":"11201"},"low_grade":"Kindergarten","name":"Clever
+        Elementary School","nces_id":"360007000000","phone":"(718) 555-4567","principal":{"name":"Cecilia
+        Roderick","email":"ceciliar@mailinator.com"},"school_number":"13K123","sis_id":"13K123","state_id":"30890","id":"530e595026403103360ff9fe"},"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fe"}]}'
+    http_version: 
+  recorded_at: Fri, 12 Sep 2014 23:56:15 GMT
 recorded_with: VCR 2.4.0
