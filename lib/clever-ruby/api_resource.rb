@@ -103,19 +103,22 @@ module Clever
       links[resource_type.to_sym]
     end
 
-    # Create an instance of APIResource, defining links to nested resources
-    # @api public
-    # @param [String] id of object to instantiate
-    # @return [APIResoruce] resource instance
-    # @example
-    #   Clever::District.new '531fabe082d522cds8e22'
     def initialize(id)
       super id
+      return if self.class.linked_resources.nil?
 
-      resources = self.class.linked_resources || []
-      resources.each do |resource|
-        self.class.send :define_method, resource do |filters = {}|
-          get_linked_resources resource.to_s, filters
+      self.class.linked_resources.each do |resource|
+        if Clever::Util.singular? resource.to_s
+          # Get single resource
+          self.class.send :define_method, resource do
+            response = Clever.request :get, get_link_uri(resource)
+            return Util.convert_to_clever_object response
+          end
+        else
+          # Get list of nested resources
+          self.class.send :define_method, resource do |filters = {}|
+            Clever::NestedResource.new get_link_uri(resource), filters
+          end
         end
       end
     end

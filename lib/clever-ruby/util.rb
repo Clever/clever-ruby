@@ -60,8 +60,14 @@ module Clever
       when Hash
         # Try converting to a known object class. If none available, fall back to generic
         # APIResource.
-        klass_name = %r{/v1.1/([a-z]+)/\S+$}.match(resp[:uri])[1]
-        klass = types_to_clever_class klass_name if klass_name
+        if resp.key? :uri
+          uri = resp[:uri]
+        else
+          uri = resp[:links].select { |l| l[:rel] == 'self' }[0][:uri]
+        end
+
+        klass_name = %r{/v1.1/([a-z]+)/\S+$}.match(uri)[1]
+        klass = APIResource.named klass_name if klass_name
         klass ||= CleverObject
         klass.construct_from resp[:data]
       else

@@ -17,7 +17,7 @@ module Clever
     # @example
     #   district = event.object
     def object
-      klass = Util.types_to_clever_class type_pieces[0]
+      klass = APIResource.named type_pieces[0]
       klass ||= CleverObject
       klass.construct_from data[:object]
     end
