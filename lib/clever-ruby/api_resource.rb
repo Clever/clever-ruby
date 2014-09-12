@@ -94,18 +94,12 @@ module Clever
       instance
     end
 
-    # Request resource instances by following hypermedia links
+    # Get the URI for a hypermedia link
     # @api private
-    # @return [Array] List of resources found
-    def get_linked_resources(resource_type, filters = {})
-      Util.convert_to_clever_object Clever.request(:get, get_uri(resource_type), filters)[:data]
-    end
-
-    class << self
-      # Get a list of nested resources in the Clever API for this resource
-      # @api private
-      # @return [Array] List of resources nested under this resource
-      attr_reader :linked_resources
+    # @return [String]
+    def get_link_uri(resource_type)
+      refresh if links.nil?
+      links[resource_type.to_sym]
     end
 
     # Create an instance of APIResource, defining links to nested resources
