@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v1.1/schools/530e595026403103360ff9fd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 12 Sep 2014 23:59:36 GMT
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '932'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+        5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
+        High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
+        Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fd"},{"rel":"district","uri":"/v1.1/schools/530e595026403103360ff9fd/district"},{"rel":"teachers","uri":"/v1.1/schools/530e595026403103360ff9fd/teachers"},{"rel":"students","uri":"/v1.1/schools/530e595026403103360ff9fd/students"},{"rel":"sections","uri":"/v1.1/schools/530e595026403103360ff9fd/sections"},{"rel":"events","uri":"/v1.1/schools/530e595026403103360ff9fd/events"}]}'
+    http_version: 
+  recorded_at: Fri, 12 Sep 2014 23:59:36 GMT
+recorded_with: VCR 2.9.3
