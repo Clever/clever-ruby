@@ -2,7 +2,7 @@ module Clever
   # Student resource
   class Student < APIResource
     include Clever::APIOperations::List
-    @linked_resources = [:school, :district, :sections, :teacher, :events]
+    @linked_resources = [:school, :district, :sections, :teachers, :events]
 
     # Get contacts for the current student
     # @todo This is not implemented!

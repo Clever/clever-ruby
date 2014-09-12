@@ -2,7 +2,7 @@ module Clever
   # School resource
   class School < APIResource
     include Clever::APIOperations::List
-    @linked_resources = [:students, :district, :sections, :teacher, :events]
+    @linked_resources = [:students, :district, :sections, :teachers, :events]
 
     # Optional attributes
     # @see Clever::CleverObject.optional_attributes
