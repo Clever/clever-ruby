@@ -198,9 +198,13 @@ module Clever
     # @api private
     # @return [Object]
     def add_accessors(keys)
+      obj = self
       metaclass.instance_eval do
         keys.each do |k|
           next if @@permanent_attributes.include? k
+          unless obj.class.linked_resources.nil?
+            next if obj.class.linked_resources.include? k
+          end
           k_eq = :"#{k}="
           define_method(k) { @values[k] }
           define_method(k_eq) { |v| @values[k] = v }
