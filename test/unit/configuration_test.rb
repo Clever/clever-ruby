@@ -16,6 +16,9 @@ describe Clever::Configuration do
       config.api_key = 'DEMO_KEY'
     end
     assert_equal 'DEMO_KEY', Clever.api_key
+    Clever.configure do |config|
+      config.api_key = nil
+    end
   end
 
   it 'sets the api token' do
@@ -23,6 +26,9 @@ describe Clever::Configuration do
       config.token = 'DEMO_TOKEN'
     end
     assert_equal 'DEMO_TOKEN', Clever.token
+    Clever.configure do |config|
+      config.token = nil
+    end
   end
 
   it 'sets a default for the api base' do

@@ -1,3 +1,7 @@
+## 0.8.0 (2014-09-12)
+
+* Add last method to lists of results for all resources
+
 ## 0.7.0 (2014-09-12)
 
 * Make nested resources support full queries, including find and count

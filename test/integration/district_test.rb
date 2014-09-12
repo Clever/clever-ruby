@@ -4,26 +4,24 @@ module Minitest
   # Add assertions to Minitest
   module Assertions
     def assert_valid_object_pages(object_name, limit, page_count)
-      VCR.use_cassette("districts_#{object_name}_pages", allow_playback_repeats: true) do
-        district = Clever::District.all.first
-        object_count_from_list = district.send("#{object_name}s", limit: 100_000).size
+      district = Clever::District.all.first
+      object_count_from_list = district.send("#{object_name}s", limit: 100_000).size
 
-        object_count_from_paging = 0
-        pages = 0
-        district.send("#{object_name}_pages", limit: limit).each do |object_page|
-          pages += 1
-          objects = object_page.all
-          object_count_from_paging += objects.size
-        end
-
-        object_count_from_paging.must_equal object_count_from_list
-        pages.must_equal page_count
+      object_count_from_paging = 0
+      pages = 0
+      district.send("#{object_name}_pages", limit: limit).each do |object_page|
+        pages += 1
+        objects = object_page.all
+        object_count_from_paging += objects.size
       end
+
+      object_count_from_paging.must_equal object_count_from_list
+      pages.must_equal page_count
     end
   end
 end
 
-describe Clever::District do
+describe Clever::District, :vcr do
   before do
     Clever.configure do |config|
       config.token = 'DEMO_TOKEN'
