@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:02:25 GMT
+      - Sat, 13 Sep 2014 00:05:06 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -45,5 +45,5 @@ http_interactions:
         High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
         Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fd"},{"rel":"district","uri":"/v1.1/schools/530e595026403103360ff9fd/district"},{"rel":"teachers","uri":"/v1.1/schools/530e595026403103360ff9fd/teachers"},{"rel":"students","uri":"/v1.1/schools/530e595026403103360ff9fd/students"},{"rel":"sections","uri":"/v1.1/schools/530e595026403103360ff9fd/sections"},{"rel":"events","uri":"/v1.1/schools/530e595026403103360ff9fd/events"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:02:25 GMT
+  recorded_at: Sat, 13 Sep 2014 00:05:06 GMT
 recorded_with: VCR 2.9.3
