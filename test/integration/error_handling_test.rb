@@ -1,7 +1,7 @@
 require 'test_helper'
 
 # Test error handling
-class ErrorHandlingTest < Test::Unit::TestCase
+class ErrorHandlingTest < Minitest::Test
   def setup
     Clever.configure do |config|
       config.api_key = 'DEMO_KEY'

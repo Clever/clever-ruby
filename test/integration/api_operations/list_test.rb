@@ -1,7 +1,7 @@
 require 'test_helper'
 
 # Test api_operations/List
-class ListTest < Test::Unit::TestCase
+class ListTest < Minitest::Test
   def setup
     Clever.configure do |config|
       config.api_key = 'DEMO_KEY'

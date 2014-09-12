@@ -1,7 +1,7 @@
 require 'test_helper'
 
 # test events resource
-class EventTest < Test::Unit::TestCase
+class EventTest < Minitest::Test
   def setup
     @event = Clever::Event.construct_from(
       type: 'sections.created',

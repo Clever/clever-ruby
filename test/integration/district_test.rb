@@ -1,7 +1,7 @@
 require 'test_helper'
 
 # test district resource
-class DistrictTest < Test::Unit::TestCase
+class DistrictTest < Minitest::Test
   def setup
     Clever.configure do |config|
       config.api_key = 'DEMO_KEY'

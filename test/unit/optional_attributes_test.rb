@@ -1,7 +1,7 @@
 require 'test_helper'
 
 # Test optional attributes functionality
-class OptionalAttributesTest < Test::Unit::TestCase
+class OptionalAttributesTest < Minitest::Test
   def setup
     Clever.configure do |config|
       config.api_key = 'DEMO_KEY'

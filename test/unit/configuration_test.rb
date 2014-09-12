@@ -1,7 +1,7 @@
 require 'test_helper'
 
 # test api configuraton
-class CleverConfigurationTest < Test::Unit::TestCase
+class CleverConfigurationTest < Minitest::Test
   should 'set the api key' do
     Clever.configure do |config|
       config.api_key = 'DEMO_KEY'

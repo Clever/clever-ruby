@@ -2,7 +2,7 @@ require 'test_helper'
 
 # basic clever-ruby tests
 # TODO: organize better
-class CleverTest < Test::Unit::TestCase
+class CleverTest < Minitest::Test
   def setup
     Clever.configure do |config|
       config.api_key = 'DEMO_KEY'
