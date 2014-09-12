@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - "*/*; q=0.5, application/xml"
+      - ! '*/*; q=0.5, application/xml'
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -23,22 +23,22 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - "*"
+      - ! '*'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 09 Sep 2014 21:48:49 GMT
+      - Fri, 12 Sep 2014 04:53:43 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '69'
+      - '68'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
-      string: '{"count":13,"links":[{"rel":"self","uri":"/v1.1/events?count=true"}]}'
+      encoding: US-ASCII
+      string: ! '{"count":7,"links":[{"rel":"self","uri":"/v1.1/events?count=true"}]}'
     http_version: 
-  recorded_at: Tue, 09 Sep 2014 21:48:50 GMT
+  recorded_at: Fri, 12 Sep 2014 04:53:43 GMT
 recorded_with: VCR 2.4.0
