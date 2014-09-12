@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:35 GMT
+      - Fri, 12 Sep 2014 20:48:13 GMT
       Etag:
       - ! '"-1704869160"'
       Server:
@@ -113,10 +113,10 @@ http_interactions:
         or More Races","school":"530e595026403103360ff9ff","sis_id":"189422359","state_id":"949395711","student_number":"189422359","id":"530e5961049e75a9262cffe3"},"uri":"/v1.1/students/530e5961049e75a9262cffe3"},{"data":{"created":"2014-02-26T21:15:13.206Z","credentials":{"district_username":"mial61","district_password":"uka5Hixae"},"district":"4fd43cc56d11340000000005","dob":"11/10/2002","ell_status":"N","email":"l_mia@example.org","frl_status":"Paid","gender":"F","grade":"5","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.072Z","location":{"zip":"10002"},"name":{"first":"Mia","middle":"J","last":"Lindgren"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"189492161","state_id":"661166974","student_number":"189492161","id":"530e5961049e75a9262cffe4"},"uri":"/v1.1/students/530e5961049e75a9262cffe4"}],"paging":{"current":1,"total":11,"count":1004},"links":[{"rel":"self","uri":"/v1.1/students"},{"rel":"next","uri":"/v1.1/students?starting_after=530e5961049e75a9262cffe4"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:35 GMT
+  recorded_at: Fri, 12 Sep 2014 20:48:13 GMT
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/students/530e5960049e75a9262cff3c
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/students/530e5960049e75a9262cff1d
     body:
       encoding: US-ASCII
       string: ''
@@ -141,20 +141,65 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 20:48:35 GMT
+      - Fri, 12 Sep 2014 20:48:13 GMT
       Etag:
-      - ! '"310285841"'
+      - ! '"1850740737"'
       Server:
       - nginx/1.4.7
       X-Powered-By:
       - Express
       Content-Length:
-      - '1118'
+      - '1151'
       Connection:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"data":{"created":"2014-02-26T21:15:12.498Z","credentials":{"district_username":"fredt34","district_password":"ieXahy1j"},"district":"4fd43cc56d11340000000005","dob":"10/30/1998","ell_status":"Y","email":"fred.t@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.748Z","location":{"zip":"10003"},"name":{"first":"Fred","middle":"W","last":"Trantow"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"119622134","state_id":"354252109","student_number":"119622134","id":"530e5960049e75a9262cff3c"},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff3c"},{"rel":"district","uri":"/v1.1/students/530e5960049e75a9262cff3c/district"},{"rel":"sections","uri":"/v1.1/students/530e5960049e75a9262cff3c/sections"},{"rel":"school","uri":"/v1.1/students/530e5960049e75a9262cff3c/school"},{"rel":"teachers","uri":"/v1.1/students/530e5960049e75a9262cff3c/teachers"},{"rel":"contacts","uri":"/v1.1/students/530e5960049e75a9262cff3c/contacts"},{"rel":"events","uri":"/v1.1/students/530e5960049e75a9262cff3c/events"}]}'
+      string: ! '{"data":{"created":"2014-02-26T21:15:12.346Z","credentials":{"district_username":"stevez33","district_password":"auyik3tiTieL"},"district":"4fd43cc56d11340000000005","dob":"2/11/2007","ell_status":"N","email":"z.steve@example.net","frl_status":"Paid","gender":"M","grade":"Kindergarten","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.656Z","location":{"zip":"10459"},"name":{"first":"Steve","middle":"G","last":"Ziemann"},"race":"Black
+        or African American","school":"530e595026403103360ff9fe","sis_id":"100095233","state_id":"231786324","student_number":"100095233","id":"530e5960049e75a9262cff1d"},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff1d"},{"rel":"district","uri":"/v1.1/students/530e5960049e75a9262cff1d/district"},{"rel":"sections","uri":"/v1.1/students/530e5960049e75a9262cff1d/sections"},{"rel":"school","uri":"/v1.1/students/530e5960049e75a9262cff1d/school"},{"rel":"teachers","uri":"/v1.1/students/530e5960049e75a9262cff1d/teachers"},{"rel":"contacts","uri":"/v1.1/students/530e5960049e75a9262cff1d/contacts"},{"rel":"events","uri":"/v1.1/students/530e5960049e75a9262cff1d/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 20:48:35 GMT
+  recorded_at: Fri, 12 Sep 2014 20:48:13 GMT
+- request:
+    method: get
+    uri: https://DEMO_KEY:@api.clever.com//v1.1/students/530e5960049e75a9262cff1d/school
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 12 Sep 2014 20:48:14 GMT
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '587'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"created":"2014-02-26T21:14:56.668Z","district":"4fd43cc56d11340000000005","high_grade":"5","last_modified":"2014-02-26T21:14:56.670Z","location":{"address":"110
+        Pineapple Street","city":"Brooklyn","state":"NY","zip":"11201"},"low_grade":"Kindergarten","name":"Clever
+        Elementary School","nces_id":"360007000000","phone":"(718) 555-4567","principal":{"name":"Cecilia
+        Roderick","email":"ceciliar@mailinator.com"},"school_number":"13K123","sis_id":"13K123","state_id":"30890","id":"530e595026403103360ff9fe"},"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fe"}]}'
+    http_version: 
+  recorded_at: Fri, 12 Sep 2014 20:48:14 GMT
 recorded_with: VCR 2.4.0
