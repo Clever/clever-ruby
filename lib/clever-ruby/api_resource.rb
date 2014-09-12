@@ -70,16 +70,17 @@ module Clever
     def refresh
       response = Clever.request :get, url
       refresh_from response[:data]
+
+      @links = response[:links].map do
+        |link| { :"#{link[:rel]}" => link[:uri] }
+      end.reduce({}, :merge)
       self
     end
 
     # Get hypermedia links for this resource instance
     # @api private
     # @return [Array] list of links for this resource instance
-    def links
-      response = Clever.request :get, url
-      response[:links]
-    end
+    attr_reader :links
 
     # Get an instance of a resource
     # @api public
