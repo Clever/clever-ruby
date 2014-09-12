@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:14 GMT
+      - Sat, 13 Sep 2014 00:01:42 GMT
       Etag:
       - ! '"-409931571"'
       Server:
@@ -133,7 +133,7 @@ http_interactions:
         Coach","id":"530e5955d50c310f36112c18"},"uri":"/v1.1/teachers/530e5955d50c310f36112c18"},{"data":{"created":"2014-02-26T21:15:01.572Z","credentials":{"district_username":"m_paucek","district_password":"jhga8salgh"},"district":"4fd43cc56d11340000000005","email":"paucek_m@example.org","last_modified":"2014-02-26T21:15:01.574Z","name":{"first":"Meaghan","middle":"P","last":"Paucek"},"school":"530e595026403103360ff9fd","sis_id":"93","teacher_number":"843713","title":"High
         School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"paging":{"current":1,"total":1,"count":89},"links":[{"rel":"self","uri":"/v1.1/teachers"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:14 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:42 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/teachers/509fbd7ec474fab64a8e9d53
@@ -163,7 +163,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:15 GMT
+      - Sat, 13 Sep 2014 00:01:42 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -177,7 +177,7 @@ http_interactions:
       string: ! '{"data":{"created":"2012-11-11T15:00:14.036Z","credentials":{"district_password":"Acoev0oow4","district_username":"spinka_leo"},"district":"4fd43cc56d11340000000005","email":"spinka.leo@example.net","last_modified":"2014-02-26T21:15:01.038Z","name":{"first":"Leo","last":"Spinka","middle":"R"},"school":"530e595026403103360ff9fe","sis_id":"11","teacher_number":"539224","title":"Grade
         3 Common Branch Teacher","id":"509fbd7ec474fab64a8e9d53"},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53"},{"rel":"district","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/district"},{"rel":"school","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/school"},{"rel":"students","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/students"},{"rel":"sections","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/sections"},{"rel":"grade_levels","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/grade_levels"},{"rel":"events","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:15 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:42 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/teachers/509fbd7ec474fab64a8e9d53/sections
@@ -207,7 +207,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:15 GMT
+      - Sat, 13 Sep 2014 00:01:42 GMT
       Etag:
       - ! '"517917419"'
       Server:
@@ -236,7 +236,7 @@ http_interactions:
         3 Social Studies, Class 303","period":"2","school":"530e595026403103360ff9fe","sis_id":"925","students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"],"subject":"social
         studies","teacher":"509fbd7ec474fab64a8e9d53","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0c49"},"uri":"/v1.1/sections/530e597b049e75a9262d0c49"}],"paging":{"current":1,"total":1,"count":6},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/sections"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:15 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:42 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/teachers/509fbd7ec474fab64a8e9d53/sections
@@ -266,7 +266,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:15 GMT
+      - Sat, 13 Sep 2014 00:01:43 GMT
       Etag:
       - ! '"517917419"'
       Server:
@@ -295,5 +295,5 @@ http_interactions:
         3 Social Studies, Class 303","period":"2","school":"530e595026403103360ff9fe","sis_id":"925","students":["530e5960049e75a9262cff3e","530e5961049e75a9262d0067","530e5962049e75a9262d00a2","530e5962049e75a9262d00b0","530e5962049e75a9262d00f0","530e5962049e75a9262d0117","530e5962049e75a9262d0131","530e5963049e75a9262d0188","530e5963049e75a9262d01c3","530e5964049e75a9262d02b0","530e5964049e75a9262d02d7","530e5964049e75a9262d02f1","530e5965049e75a9262d03c1","530e5965049e75a9262d03c4","530e5966049e75a9262d0445","530e5967049e75a9262d0541","530e5967049e75a9262d05c2","530e5968049e75a9262d05fd","530e5968049e75a9262d0624","530e5968049e75a9262d063d","530e5968049e75a9262d063e"],"subject":"social
         studies","teacher":"509fbd7ec474fab64a8e9d53","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0c49"},"uri":"/v1.1/sections/530e597b049e75a9262d0c49"}],"paging":{"current":1,"total":1,"count":6},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/sections"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:15 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:42 GMT
 recorded_with: VCR 2.9.3

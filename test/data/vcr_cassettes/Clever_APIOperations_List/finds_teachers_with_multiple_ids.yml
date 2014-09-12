@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:42 GMT
+      - Sat, 13 Sep 2014 00:02:21 GMT
       Etag:
       - ! '"-327461194"'
       Server:
@@ -64,7 +64,7 @@ http_interactions:
         5 Common Branch Teacher","id":"530e5955d50c310f36112bd3"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd3"},{"data":{"created":"2014-02-26T21:15:01.138Z","credentials":{"district_username":"daniela.raynor","district_password":"quahse5Ch"},"district":"4fd43cc56d11340000000005","email":"raynor_daniela@example.net","last_modified":"2014-02-26T21:15:01.144Z","name":{"first":"Daniela","middle":"F","last":"Raynor"},"school":"530e595026403103360ff9fe","sis_id":"19","teacher_number":"493218","title":"Grade
         5 Common Branch Teacher","id":"530e5955d50c310f36112bd4"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd4"}],"paging":{"current":1,"total":5,"count":89},"links":[{"rel":"self","uri":"/v1.1/teachers?limit=20"},{"rel":"next","uri":"/v1.1/teachers?limit=20&starting_after=530e5955d50c310f36112bd4"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:42 GMT
+  recorded_at: Sat, 13 Sep 2014 00:02:21 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/teachers?where=%7B%22_id%22:%7B%22$in%22:%5B%22509fbd7ec474fab64a8e9d53%22,%2250ba1c0c4eda5d94372227eb%22,%2250c20477987eda0d3d02d30e%22,%2250c4a79299ad702e0228e956%22,%2250c89ff19ed67a1d3f1f50c9%22,%22530e5955d50c310f36112bcb%22,%22530e5955d50c310f36112bcd%22,%22530e5955d50c310f36112bcf%22,%22530e5955d50c310f36112bd1%22,%22530e5955d50c310f36112bd3%22%5D%7D%7D
@@ -94,7 +94,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:43 GMT
+      - Sat, 13 Sep 2014 00:02:21 GMT
       Etag:
       - ! '"-500104801"'
       Server:
@@ -119,5 +119,5 @@ http_interactions:
         School Science Teacher","id":"530e5955d50c310f36112bd1"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd1"},{"data":{"created":"2014-02-26T21:15:01.121Z","credentials":{"district_username":"marley_walsh","district_password":"aex5iSee"},"district":"4fd43cc56d11340000000005","email":"walsh_marley@example.org","last_modified":"2014-02-26T21:15:01.123Z","name":{"first":"Marley","middle":"K","last":"Walsh"},"school":"530e595026403103360ff9fe","sis_id":"18","teacher_number":"399452","title":"Grade
         5 Common Branch Teacher","id":"530e5955d50c310f36112bd3"},"uri":"/v1.1/teachers/530e5955d50c310f36112bd3"}],"paging":{"current":1,"total":1,"count":10},"links":[{"rel":"self","uri":"/v1.1/teachers?where=%7B%22_id%22:%7B%22$in%22:[%22509fbd7ec474fab64a8e9d53%22,%2250ba1c0c4eda5d94372227eb%22,%2250c20477987eda0d3d02d30e%22,%2250c4a79299ad702e0228e956%22,%2250c89ff19ed67a1d3f1f50c9%22,%22530e5955d50c310f36112bcb%22,%22530e5955d50c310f36112bcd%22,%22530e5955d50c310f36112bcf%22,%22530e5955d50c310f36112bd1%22,%22530e5955d50c310f36112bd3%22]%7D%7D"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:43 GMT
+  recorded_at: Sat, 13 Sep 2014 00:02:21 GMT
 recorded_with: VCR 2.9.3

@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:52 GMT
+      - Sat, 13 Sep 2014 00:02:05 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -42,5 +42,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"count":379,"links":[{"rel":"self","uri":"/v1.1/sections?count=true"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:52 GMT
+  recorded_at: Sat, 13 Sep 2014 00:02:05 GMT
 recorded_with: VCR 2.9.3

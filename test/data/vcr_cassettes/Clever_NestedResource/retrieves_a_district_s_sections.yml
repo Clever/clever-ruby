@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:16 GMT
+      - Sat, 13 Sep 2014 00:01:26 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -42,7 +42,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:16 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:26 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:16 GMT
+      - Sat, 13 Sep 2014 00:01:27 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -85,7 +85,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:16 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:27 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections
@@ -115,7 +115,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:16 GMT
+      - Sat, 13 Sep 2014 00:01:27 GMT
       Etag:
       - ! '"967737503"'
       Server:
@@ -392,7 +392,7 @@ http_interactions:
         I","course_number":"101","created":"2014-02-26T21:15:38.354Z","district":"4fd43cc56d11340000000005","grade":"9","last_modified":"2014-02-26T21:15:38.356Z","name":"French
         I - 101 - G. Gorczany (Section 1)","period":"9","school":"530e595026403103360ff9fd","sis_id":"681","students":["530e5960049e75a9262cff1e","530e5960049e75a9262cff4b","530e5960049e75a9262cff5b","530e5960049e75a9262cff7a","530e5961049e75a9262cfffb","530e5961049e75a9262d005d","530e5961049e75a9262d0070","530e5962049e75a9262d00e8","530e5962049e75a9262d00ff","530e5962049e75a9262d015f","530e5963049e75a9262d0211","530e5963049e75a9262d022f","530e5964049e75a9262d0284","530e5964049e75a9262d02a9","530e5964049e75a9262d02c3","530e5965049e75a9262d0325","530e5965049e75a9262d033f","530e5965049e75a9262d036c","530e5965049e75a9262d038f","530e5966049e75a9262d03f8","530e5966049e75a9262d0468","530e5966049e75a9262d046c","530e5966049e75a9262d0471","530e5966049e75a9262d0496","530e5967049e75a9262d057e","530e5967049e75a9262d0590","530e5967049e75a9262d05b5","530e5968049e75a9262d05cb","530e5968049e75a9262d05d1","530e5968049e75a9262d05e3","530e5968049e75a9262d0605","530e5968049e75a9262d061c","530e5968049e75a9262d063c"],"subject":"language","teacher":"530e5955d50c310f36112bf9","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0b55"},"uri":"/v1.1/sections/530e597a049e75a9262d0b55"}],"paging":{"current":1,"total":4,"count":379},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0b55"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:16 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:27 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0b55
@@ -422,7 +422,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:17 GMT
+      - Sat, 13 Sep 2014 00:01:27 GMT
       Etag:
       - ! '"2068991059"'
       Server:
@@ -653,7 +653,7 @@ http_interactions:
         Class 602","course_number":"602","created":"2014-02-26T21:15:38.782Z","district":"4fd43cc56d11340000000005","grade":"6","last_modified":"2014-02-26T21:15:38.785Z","name":"Mathematics,
         Class 602 - 602 - B. Goldner","period":"3","school":"530e595026403103360ff9ff","sis_id":"781","students":["530e5960049e75a9262cff4e","530e5961049e75a9262cffed","530e5961049e75a9262cfff5","530e5961049e75a9262d0009","530e5961049e75a9262d000f","530e5961049e75a9262d005e","530e5961049e75a9262d0083","530e5962049e75a9262d0098","530e5962049e75a9262d00a0","530e5962049e75a9262d00d4","530e5962049e75a9262d010b","530e5963049e75a9262d0220","530e5964049e75a9262d02b3","530e5964049e75a9262d02b8","530e5964049e75a9262d02f6","530e5965049e75a9262d034c","530e5965049e75a9262d0389","530e5965049e75a9262d03c5","530e5966049e75a9262d041e","530e5966049e75a9262d0494","530e5967049e75a9262d05ae","530e5967049e75a9262d05c4","530e5968049e75a9262d05d6","530e5968049e75a9262d05f3","530e5968049e75a9262d05ff","530e5968049e75a9262d060b"],"subject":"math","teacher":"530e5955d50c310f36112be0","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0bb9"},"uri":"/v1.1/sections/530e597a049e75a9262d0bb9"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0b55"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?ending_before=530e597a049e75a9262d0b56"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0bb9"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:17 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:27 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0bb9
@@ -683,7 +683,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:17 GMT
+      - Sat, 13 Sep 2014 00:01:27 GMT
       Etag:
       - ! '"1779983124"'
       Server:
@@ -956,7 +956,7 @@ http_interactions:
         Chemistry","course_number":"404","created":"2014-02-26T21:15:39.240Z","district":"4fd43cc56d11340000000005","grade":"12","last_modified":"2014-02-26T21:15:39.242Z","name":"AP
         Chemistry - 404 - M. Kulas (Section 3)","period":"3","school":"530e595026403103360ff9fd","sis_id":"881","students":["530e5960049e75a9262cff52","530e5960049e75a9262cff67","530e5960049e75a9262cff6a","530e5961049e75a9262cffb7","530e5961049e75a9262d005b","530e5962049e75a9262d012c","530e5962049e75a9262d015b","530e5963049e75a9262d018b","530e5963049e75a9262d0209","530e5963049e75a9262d024a","530e5964049e75a9262d02ee","530e5965049e75a9262d0326","530e5965049e75a9262d0332","530e5965049e75a9262d0349","530e5965049e75a9262d0372","530e5966049e75a9262d0447","530e5967049e75a9262d04fa","530e5967049e75a9262d058c","530e5968049e75a9262d05dc","530e5968049e75a9262d063b"],"subject":"science","teacher":"530e5955d50c310f36112bd6","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0c1d"},"uri":"/v1.1/sections/530e597b049e75a9262d0c1d"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0bb9"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?ending_before=530e597a049e75a9262d0bba"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597b049e75a9262d0c1d"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:17 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:27 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597b049e75a9262d0c1d
@@ -986,7 +986,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:18 GMT
+      - Sat, 13 Sep 2014 00:01:28 GMT
       Etag:
       - ! '"2104753808"'
       Server:
@@ -1195,7 +1195,7 @@ http_interactions:
         to Visual Arts - 100 - R. Plant","period":"1","school":"530e595026403103360ff9fd","sis_id":"960","students":["530e5960049e75a9262cff3c","530e5961049e75a9262cffcd","530e5961049e75a9262d001a","530e5961049e75a9262d0038","530e5961049e75a9262d0048","530e5961049e75a9262d0085","530e5962049e75a9262d00e8","530e5962049e75a9262d015f","530e5963049e75a9262d01a2","530e5963049e75a9262d022f","530e5964049e75a9262d02d3","530e5965049e75a9262d0325","530e5966049e75a9262d04d7","530e5967049e75a9262d0501","530e5967049e75a9262d052d","530e5967049e75a9262d05b5","530e5967049e75a9262d05be","530e5968049e75a9262d05cb","530e5968049e75a9262d061c","530e5968049e75a9262d063c"],"subject":"arts
         and music","teacher":"530e5955d50c310f36112c09","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0c6c"},"uri":"/v1.1/sections/530e597b049e75a9262d0c6c"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597b049e75a9262d0c1d"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?ending_before=530e597b049e75a9262d0c1e"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:18 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:28 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections
@@ -1225,7 +1225,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:18 GMT
+      - Sat, 13 Sep 2014 00:01:28 GMT
       Etag:
       - ! '"967737503"'
       Server:
@@ -1502,7 +1502,7 @@ http_interactions:
         I","course_number":"101","created":"2014-02-26T21:15:38.354Z","district":"4fd43cc56d11340000000005","grade":"9","last_modified":"2014-02-26T21:15:38.356Z","name":"French
         I - 101 - G. Gorczany (Section 1)","period":"9","school":"530e595026403103360ff9fd","sis_id":"681","students":["530e5960049e75a9262cff1e","530e5960049e75a9262cff4b","530e5960049e75a9262cff5b","530e5960049e75a9262cff7a","530e5961049e75a9262cfffb","530e5961049e75a9262d005d","530e5961049e75a9262d0070","530e5962049e75a9262d00e8","530e5962049e75a9262d00ff","530e5962049e75a9262d015f","530e5963049e75a9262d0211","530e5963049e75a9262d022f","530e5964049e75a9262d0284","530e5964049e75a9262d02a9","530e5964049e75a9262d02c3","530e5965049e75a9262d0325","530e5965049e75a9262d033f","530e5965049e75a9262d036c","530e5965049e75a9262d038f","530e5966049e75a9262d03f8","530e5966049e75a9262d0468","530e5966049e75a9262d046c","530e5966049e75a9262d0471","530e5966049e75a9262d0496","530e5967049e75a9262d057e","530e5967049e75a9262d0590","530e5967049e75a9262d05b5","530e5968049e75a9262d05cb","530e5968049e75a9262d05d1","530e5968049e75a9262d05e3","530e5968049e75a9262d0605","530e5968049e75a9262d061c","530e5968049e75a9262d063c"],"subject":"language","teacher":"530e5955d50c310f36112bf9","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0b55"},"uri":"/v1.1/sections/530e597a049e75a9262d0b55"}],"paging":{"current":1,"total":4,"count":379},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0b55"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:18 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:28 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0b55
@@ -1532,7 +1532,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:18 GMT
+      - Sat, 13 Sep 2014 00:01:28 GMT
       Etag:
       - ! '"2068991059"'
       Server:
@@ -1763,7 +1763,7 @@ http_interactions:
         Class 602","course_number":"602","created":"2014-02-26T21:15:38.782Z","district":"4fd43cc56d11340000000005","grade":"6","last_modified":"2014-02-26T21:15:38.785Z","name":"Mathematics,
         Class 602 - 602 - B. Goldner","period":"3","school":"530e595026403103360ff9ff","sis_id":"781","students":["530e5960049e75a9262cff4e","530e5961049e75a9262cffed","530e5961049e75a9262cfff5","530e5961049e75a9262d0009","530e5961049e75a9262d000f","530e5961049e75a9262d005e","530e5961049e75a9262d0083","530e5962049e75a9262d0098","530e5962049e75a9262d00a0","530e5962049e75a9262d00d4","530e5962049e75a9262d010b","530e5963049e75a9262d0220","530e5964049e75a9262d02b3","530e5964049e75a9262d02b8","530e5964049e75a9262d02f6","530e5965049e75a9262d034c","530e5965049e75a9262d0389","530e5965049e75a9262d03c5","530e5966049e75a9262d041e","530e5966049e75a9262d0494","530e5967049e75a9262d05ae","530e5967049e75a9262d05c4","530e5968049e75a9262d05d6","530e5968049e75a9262d05f3","530e5968049e75a9262d05ff","530e5968049e75a9262d060b"],"subject":"math","teacher":"530e5955d50c310f36112be0","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597a049e75a9262d0bb9"},"uri":"/v1.1/sections/530e597a049e75a9262d0bb9"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0b55"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?ending_before=530e597a049e75a9262d0b56"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0bb9"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:18 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:29 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0bb9
@@ -1793,7 +1793,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:19 GMT
+      - Sat, 13 Sep 2014 00:01:29 GMT
       Etag:
       - ! '"1779983124"'
       Server:
@@ -2066,7 +2066,7 @@ http_interactions:
         Chemistry","course_number":"404","created":"2014-02-26T21:15:39.240Z","district":"4fd43cc56d11340000000005","grade":"12","last_modified":"2014-02-26T21:15:39.242Z","name":"AP
         Chemistry - 404 - M. Kulas (Section 3)","period":"3","school":"530e595026403103360ff9fd","sis_id":"881","students":["530e5960049e75a9262cff52","530e5960049e75a9262cff67","530e5960049e75a9262cff6a","530e5961049e75a9262cffb7","530e5961049e75a9262d005b","530e5962049e75a9262d012c","530e5962049e75a9262d015b","530e5963049e75a9262d018b","530e5963049e75a9262d0209","530e5963049e75a9262d024a","530e5964049e75a9262d02ee","530e5965049e75a9262d0326","530e5965049e75a9262d0332","530e5965049e75a9262d0349","530e5965049e75a9262d0372","530e5966049e75a9262d0447","530e5967049e75a9262d04fa","530e5967049e75a9262d058c","530e5968049e75a9262d05dc","530e5968049e75a9262d063b"],"subject":"science","teacher":"530e5955d50c310f36112bd6","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0c1d"},"uri":"/v1.1/sections/530e597b049e75a9262d0c1d"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597a049e75a9262d0bb9"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?ending_before=530e597a049e75a9262d0bba"},{"rel":"next","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597b049e75a9262d0c1d"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:19 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:29 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597b049e75a9262d0c1d
@@ -2096,7 +2096,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:19 GMT
+      - Sat, 13 Sep 2014 00:01:29 GMT
       Etag:
       - ! '"2104753808"'
       Server:
@@ -2305,5 +2305,5 @@ http_interactions:
         to Visual Arts - 100 - R. Plant","period":"1","school":"530e595026403103360ff9fd","sis_id":"960","students":["530e5960049e75a9262cff3c","530e5961049e75a9262cffcd","530e5961049e75a9262d001a","530e5961049e75a9262d0038","530e5961049e75a9262d0048","530e5961049e75a9262d0085","530e5962049e75a9262d00e8","530e5962049e75a9262d015f","530e5963049e75a9262d01a2","530e5963049e75a9262d022f","530e5964049e75a9262d02d3","530e5965049e75a9262d0325","530e5966049e75a9262d04d7","530e5967049e75a9262d0501","530e5967049e75a9262d052d","530e5967049e75a9262d05b5","530e5967049e75a9262d05be","530e5968049e75a9262d05cb","530e5968049e75a9262d061c","530e5968049e75a9262d063c"],"subject":"arts
         and music","teacher":"530e5955d50c310f36112c09","term":{"name":"Y1","start_date":"2012-08-01T00:00:00.000Z","end_date":"2013-06-01T00:00:00.000Z"},"id":"530e597b049e75a9262d0c6c"},"uri":"/v1.1/sections/530e597b049e75a9262d0c6c"}],"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?starting_after=530e597b049e75a9262d0c1d"},{"rel":"prev","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections?ending_before=530e597b049e75a9262d0c1e"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:19 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:29 GMT
 recorded_with: VCR 2.9.3

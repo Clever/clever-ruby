@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:25 GMT
+      - Sat, 13 Sep 2014 00:01:24 GMT
       Etag:
       - ! '"-409931571"'
       Server:
@@ -133,7 +133,7 @@ http_interactions:
         Coach","id":"530e5955d50c310f36112c18"},"uri":"/v1.1/teachers/530e5955d50c310f36112c18"},{"data":{"created":"2014-02-26T21:15:01.572Z","credentials":{"district_username":"m_paucek","district_password":"jhga8salgh"},"district":"4fd43cc56d11340000000005","email":"paucek_m@example.org","last_modified":"2014-02-26T21:15:01.574Z","name":{"first":"Meaghan","middle":"P","last":"Paucek"},"school":"530e595026403103360ff9fd","sis_id":"93","teacher_number":"843713","title":"High
         School Drama Teacher","id":"530e5955d50c310f36112c19"},"uri":"/v1.1/teachers/530e5955d50c310f36112c19"}],"paging":{"current":1,"total":1,"count":89},"links":[{"rel":"self","uri":"/v1.1/teachers"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:25 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:24 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/teachers/509fbd7ec474fab64a8e9d53
@@ -163,7 +163,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:25 GMT
+      - Sat, 13 Sep 2014 00:01:25 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -177,7 +177,7 @@ http_interactions:
       string: ! '{"data":{"created":"2012-11-11T15:00:14.036Z","credentials":{"district_password":"Acoev0oow4","district_username":"spinka_leo"},"district":"4fd43cc56d11340000000005","email":"spinka.leo@example.net","last_modified":"2014-02-26T21:15:01.038Z","name":{"first":"Leo","last":"Spinka","middle":"R"},"school":"530e595026403103360ff9fe","sis_id":"11","teacher_number":"539224","title":"Grade
         3 Common Branch Teacher","id":"509fbd7ec474fab64a8e9d53"},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53"},{"rel":"district","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/district"},{"rel":"school","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/school"},{"rel":"students","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/students"},{"rel":"sections","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/sections"},{"rel":"grade_levels","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/grade_levels"},{"rel":"events","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:25 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:25 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/teachers/509fbd7ec474fab64a8e9d53/events
@@ -207,7 +207,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:25 GMT
+      - Sat, 13 Sep 2014 00:01:25 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -220,7 +220,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":[],"paging":{"current":0,"total":0,"count":0},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:25 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:25 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/teachers/509fbd7ec474fab64a8e9d53/events
@@ -250,7 +250,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:25 GMT
+      - Sat, 13 Sep 2014 00:01:25 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -263,5 +263,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":[],"paging":{"current":0,"total":0,"count":0},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:25 GMT
+  recorded_at: Sat, 13 Sep 2014 00:01:25 GMT
 recorded_with: VCR 2.9.3
