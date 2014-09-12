@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -23,11 +23,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 04:53:41 GMT
+      - Tue, 09 Sep 2014 21:48:53 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -37,10 +37,10 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts?limit=20"}]}'
+      encoding: UTF-8
+      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts?limit=20"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 04:53:41 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:53 GMT
 - request:
     method: get
     uri: https://DEMO_KEY:@api.clever.com/v1.1/districts?where=%7B%22_id%22:%7B%22$in%22:%5B%224fd43cc56d11340000000005%22%5D%7D%7D
@@ -49,7 +49,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
@@ -64,11 +64,11 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 04:53:41 GMT
+      - Tue, 09 Sep 2014 21:48:53 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -78,8 +78,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts?where=%7B%22_id%22:%7B%22$in%22:[%224fd43cc56d11340000000005%22]%7D%7D"}]}'
+      encoding: UTF-8
+      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts?where=%7B%22_id%22:%7B%22$in%22:[%224fd43cc56d11340000000005%22]%7D%7D"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 04:53:41 GMT
+  recorded_at: Tue, 09 Sep 2014 21:48:53 GMT
 recorded_with: VCR 2.4.0
