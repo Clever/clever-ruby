@@ -10,9 +10,13 @@ module Clever
     # The default :id method is deprecated and isn't useful to us
     undef :id if method_defined? :id
 
-    # Create a CleverObject. Only for inheritance purposes
-    # @api private
-    # @return [CleverObject]
+    # Create an instance of CleverObject by id
+    # @note Only descendents of APIResource can be instantiated
+    # @api public
+    # @param val [String, Hash] id, or values to instantiate from
+    # @return [CleverObject] resource instance
+    # @example
+    #   Clever::District.new '531fabe082d522cds8e22'
     def initialize(id = nil)
       @values = {}
       @values[:id] = id if id
