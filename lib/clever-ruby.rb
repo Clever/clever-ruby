@@ -1,6 +1,7 @@
 # rubocop:disable FileName
 require 'rest_client'
 require 'multi_json'
+require 'active_support/inflector'
 require 'open-uri'
 require 'set'
 require 'uri'
@@ -10,6 +11,7 @@ require 'clever-ruby/version'
 
 # API operations
 require 'clever-ruby/api_operations/list'
+require 'clever-ruby/api_operations/nested_list'
 require 'clever-ruby/api_operations/pagelist'
 require 'clever-ruby/api_operations/results_list'
 require 'clever-ruby/api_operations/page'
@@ -22,6 +24,7 @@ require 'clever-ruby/configuration'
 # Resources
 require 'clever-ruby/clever_object'
 require 'clever-ruby/api_resource'
+require 'clever-ruby/nested_resource'
 require 'clever-ruby/district'
 require 'clever-ruby/school'
 require 'clever-ruby/student'
