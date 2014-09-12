@@ -1,14 +1,10 @@
 require 'test_helper'
 
 # Test optional attributes functionality
-describe 'Optional attributes' do
+describe 'Optional attributes', :vcr do
   before do
     Clever.configure do |config|
       config.token = 'DEMO_TOKEN'
-    end
-
-    VCR.use_cassette('schools_optional_attributes') do
-      @schools = Clever::School.all
     end
   end
 
@@ -20,10 +16,8 @@ describe 'Optional attributes' do
   end
 
   it 'has the expected value for an optional attribute that is present' do
-    VCR.use_cassette('optional_present') do
-      school = @schools.find { |s| s.id == '530e595026403103360ff9fd' }
-      school.state_id.must_equal '712345'
-    end
+    school = Clever::School.find '530e595026403103360ff9fd'
+    school.state_id.must_equal '712345'
   end
 
   it 'raises a NoMethodError for an invalid attribute' do
