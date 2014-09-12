@@ -1,14 +1,14 @@
 require 'test_helper'
 
 # Test error handling
-class ErrorHandlingTest < Minitest::Test
-  def setup
+describe 'Error handling' do
+  before do
     Clever.configure do |config|
       config.api_key = 'DEMO_KEY'
     end
   end
 
-  should 'raise an InvalidRequestError when given a bad created_since' do
+  it 'raises an InvalidRequestError when given a bad created_since' do
     VCR.use_cassette('error_handling') do
       @district = Clever::District.all.first
       lambda do

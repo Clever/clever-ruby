@@ -1,8 +1,8 @@
 require 'test_helper'
 
 # test events resource
-class EventTest < Minitest::Test
-  def setup
+describe Clever::Event do
+  before do
     @event = Clever::Event.construct_from(
       type: 'sections.created',
       data: {
@@ -24,19 +24,19 @@ class EventTest < Minitest::Test
     )
   end
 
-  should 'create a clever object for the object the event is about' do
+  it 'creates a clever object for the object the event is about' do
     @event.object.must_be_instance_of Clever::Section
   end
 
-  should 'know what action the event is about (created/updated/deleted)' do
+  it 'knows what action the event is about (created/updated/deleted)' do
     @event.action.must_equal 'created'
   end
 
-  should "have an empty hash if there aren't previous attributes" do
+  it "returns an empty hash if there aren't previous attributes" do
     @event.previous_attributes.must_equal {}
   end
 
-  should "have an event's previous attributes" do
+  it "has an event's previous attributes" do
     @updated_event.previous_attributes[:teacher].must_equal '510980a6923bcbba1f0cb500'
   end
 end
