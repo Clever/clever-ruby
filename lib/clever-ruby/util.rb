@@ -35,21 +35,6 @@ module Clever
       end
     end
 
-    # Convert the name of a resource to its APIResource class
-    # @api private
-    # @return [APIResource]
-    def self.types_to_clever_class(type)
-      types = {
-        'students'  => Student,
-        'sections'  => Section,
-        'teachers'  => Teacher,
-        'districts' => District,
-        'schools'   => School,
-        'events'    => Event
-      }
-      types.fetch type
-    end
-
     # Convert an object containing data from Clever into a CleverObject
     # @api private
     # @return [CleverObject]
