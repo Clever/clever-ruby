@@ -1,6 +1,7 @@
 module Clever
   module APIOperations
     # Methods for interacting with the API on nested resources
+    # TODO: find a way to not duplicate list.rb code
     module NestedList
       # Query a nested list with Clever API params, overriding initialized keys
       # @api public
@@ -40,6 +41,54 @@ module Clever
         filters[:count] = true
         response = Clever.request :get, @uri, filters
         response[:count]
+      end
+
+      # Query for the first element or n elements in the resource
+      # @api public
+      # @param num [nil, Integer] If nil, last elem; else, num elems to fetch
+      # @param filters [Hash] Filters to request with, as per Clever API spec
+      # @return [CleverObject, Clever::APIOperations::Page] elem, or
+      #   elems found. If list, sorted in ascending order of ids.
+      # @example
+      #   first_elem = Clever::District.first
+      #   first_elems = Clever::District.first 20
+      #   first_elems.each do |e|
+      #     puts e.name
+      #   end
+      def first(num = nil, filters = {})
+        filters = @filters.merge filters
+        if num.nil?
+          filters[:limit] = 1
+          response = Clever.request :get, url, filters
+          Util.convert_to_clever_object response[:data].last
+        else
+          filters[:limit] = num
+          Clever::APIOperations::PageList.new(url, filters).first
+        end
+      end
+
+      # Query for the last element or n elements in the resource
+      # @api public
+      # @param num [nil, Integer] If nil, last elem; else, num elems to fetch
+      # @return [CleverObject, Clever::APIOperations::ResultsList] elem, or
+      #   elems found. If list, sorted in ascending order of ids.
+      # @example
+      #   last_elem = Clever::District.last
+      #   last_elems = Clever::District.last 20
+      #   last_elems.each do |e|
+      #     puts e.name
+      #   end
+      def last(num = nil, filters = {})
+        filters = @filters.merge filters
+        filters[:ending_before] = 'last'
+        if num.nil?
+          filters[:limit] = 1
+          response = Clever.request :get, @uri, filters
+          Util.convert_to_clever_object response[:data].last
+        else
+          filters[:limit] = num
+          Clever::APIOperations::PageList.new(@uri, filters).to_results_list
+        end
       end
     end
   end

@@ -14,7 +14,7 @@ module Clever
         @filters = filters
 
         response = Clever.request :get, uri, filters
-        @list = Util.convert_to_clever_object response[:data]
+        @all = Util.convert_to_clever_object response[:data]
         @links = {}
         response[:links].each do |link|
           @links[link[:rel].to_sym] = link[:uri]
@@ -38,7 +38,7 @@ module Clever
       # @example
       #   page.each { |elem| puts elem }
       def each(&blk)
-        @list.each(&blk)
+        @all.each(&blk)
       end
 
       # Get all elements in page
@@ -46,12 +46,20 @@ module Clever
       # @return [Array] List of all elements
       # @example
       #   all_elems = page.all
-      def all
-        accum = []
-        each do |elem|
-          accum << elem
-        end
-        accum
+      attr_reader :all
+
+      # Retrieve the last element or n elements in the resource
+      # @api public
+      # @param num [nil, Integer] If nil, last elem; else, num elems to fetch
+      # @return [CleverObject, Clever::APIOperations::Page] elem, or
+      #   elems found. If list, sorted in ascending order of ids.
+      # @example
+      #   elems = Clever::District.first(20)
+      #   last_elem = elems.last
+      #   last_elems = elems.last 5
+      def last(num = nil)
+        return @all.last num if num
+        @all.last
       end
     end
   end
