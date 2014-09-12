@@ -4,6 +4,30 @@ module Clever
     include Clever::APIOperations::List
     @linked_resources = [:schools, :teachers, :sections, :students, :events]
 
+    # Get admins for the current district
+    # @todo This is not implemented!
+    # @api public
+    # @raise [NotImplementedError]
+    # @return [Object]
+    # @example
+    #   district = district.retrieve id
+    #   admins = district.admins
+    def admins
+      fail NotImplementedError, 'admins nested resource not yet implemented.'
+    end
+
+    # Get status of the current district
+    # @todo This is not implemented!
+    # @api public
+    # @raise [NotImplementedError]
+    # @return [Object]
+    # @example
+    #   district = district.retrieve id
+    #   puts district.status
+    def status
+      fail NotImplementedError, 'status nested resource not yet implemented.'
+    end
+
     # @see Clever::CleverObject.optional_attributes
     # @api private
     # @return [Array]
