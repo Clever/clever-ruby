@@ -1,3 +1,8 @@
+## 0.7.0 (2014-09-12)
+
+* Make nested resources support full queries, including find and count
+* Make tests more robust to data changes
+
 ## 0.6.2 (2014-09-12)
 
 * Update dependencies
