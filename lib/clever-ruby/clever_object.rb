@@ -10,9 +10,11 @@ module Clever
     # The default :id method is deprecated and isn't useful to us
     undef :id if method_defined? :id
 
-    # Create a CleverObject. Only for inheritance purposes
+    # Create an instance of CleverObject by id
+    # @abstract
     # @api private
-    # @return [CleverObject]
+    # @param id [String, Hash] id, or values to instantiate from
+    # @return [CleverObject] resource instance
     def initialize(id = nil)
       @values = {}
       @values[:id] = id if id
@@ -194,9 +196,13 @@ module Clever
     # @api private
     # @return [Object]
     def add_accessors(keys)
+      obj = self
       metaclass.instance_eval do
         keys.each do |k|
           next if @@permanent_attributes.include? k
+          unless obj.class.linked_resources.nil?
+            next if obj.class.linked_resources.include? k
+          end
           k_eq = :"#{k}="
           define_method(k) { @values[k] }
           define_method(k_eq) { |v| @values[k] = v }

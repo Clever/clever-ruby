@@ -1,6 +1,45 @@
 module Clever
   # Superclass of API resources in the Clever API
   class APIResource < CleverObject
+    @resources = []
+
+    class << self
+      # Get valid API resources
+      # @api private
+      # @return [Array] List of valid API resource classes
+      attr_reader :resources
+
+      # Get a list of nested resources in the Clever API for this resource
+      # @api private
+      # @return [Array] List of resources nested under this resource
+      attr_reader :linked_resources
+    end
+
+    # Registers valid API resources
+    # @api private
+    # @return [Object]
+    def self.inherited(child_class)
+      @resources << child_class
+      super
+    end
+
+    # Get a canonical name for a resource
+    # @api private
+    # @return [String]
+    def self.shortname
+      name.split('::')[-1].downcase.singularize
+    end
+
+    # Convert the name of a resource to its APIResource subclass
+    # @api private
+    # @return [APIResource]
+    def self.named(name)
+      name = name.to_s.downcase.singularize
+      matching = resources.select { |res| res.shortname == name }
+      return nil if matching.empty?
+      matching.first
+    end
+
     # Get URL for a resource
     # @api private
     # @return [String] url to query for a resource
@@ -9,8 +48,7 @@ module Clever
         fail NotImplementedError, 'APIResource is an abstract class. You should perform actions '\
           'on its subclasses (School, Student, etc.)'
       end
-      shortname = name.split('::')[-1]
-      "v1.1/#{CGI.escape shortname.downcase}s"
+      "v1.1/#{CGI.escape shortname.pluralize}"
     end
 
     # Get URL for an instance of a resource
@@ -32,16 +70,17 @@ module Clever
     def refresh
       response = Clever.request :get, url
       refresh_from response[:data]
+
+      @links = response[:links].map do
+        |link| { :"#{link[:rel]}" => link[:uri] }
+      end.reduce({}, :merge)
       self
     end
 
     # Get hypermedia links for this resource instance
     # @api private
     # @return [Array] list of links for this resource instance
-    def links
-      response = Clever.request :get, url
-      response[:links]
-    end
+    attr_reader :links
 
     # Get an instance of a resource
     # @api public
@@ -56,33 +95,34 @@ module Clever
       instance
     end
 
-    # Request resource instances by following hypermedia links
+    # Get the URI for a hypermedia link
     # @api private
-    # @return [Array] List of resources found
-    def get_linked_resources(resource_type, filters = {})
-      Util.convert_to_clever_object Clever.request(:get, get_uri(resource_type), filters)[:data]
+    # @return [String]
+    def get_link_uri(resource_type)
+      refresh if links.nil?
+      links[resource_type.to_sym]
     end
 
-    class << self
-      # Get a list of nested resources in the Clever API for this resource
-      # @api private
-      # @return [Array] List of resources nested under this resource
-      attr_reader :linked_resources
-    end
-
-    # Create an instance of APIResource, defining links to nested resources
-    # @api public
-    # @param [String] id of object to instantiate
-    # @return [APIResoruce] resource instance
-    # @example
-    #   Clever::District.new '531fabe082d522cds8e22'
+    # Construct an APIResource. Generates methods for nested resources
+    # @abstract
+    # @api private
+    # @return [APIResource]
     def initialize(id)
       super id
+      return if self.class.linked_resources.nil?
 
-      resources = self.class.linked_resources || []
-      resources.each do |resource|
-        self.class.send :define_method, resource do |filters = {}|
-          get_linked_resources resource.to_s, filters
+      self.class.linked_resources.each do |resource|
+        if Clever::Util.singular? resource.to_s
+          # Get single resource
+          self.class.send :define_method, resource do
+            response = Clever.request :get, get_link_uri(resource)
+            return Util.convert_to_clever_object response
+          end
+        else
+          # Get list of nested resources
+          self.class.send :define_method, resource do |filters = {}|
+            Clever::NestedResource.new get_link_uri(resource), filters
+          end
         end
       end
     end

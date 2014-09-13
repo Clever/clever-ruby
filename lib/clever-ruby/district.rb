@@ -4,6 +4,30 @@ module Clever
     include Clever::APIOperations::List
     @linked_resources = [:schools, :teachers, :sections, :students, :events]
 
+    # Get admins for the current district
+    # @todo This is not implemented!
+    # @api public
+    # @raise [NotImplementedError]
+    # @return [Object]
+    # @example
+    #   district = district.retrieve id
+    #   admins = district.admins
+    def admins
+      fail NotImplementedError, 'admins nested resource not yet implemented.'
+    end
+
+    # Get status of the current district
+    # @todo This is not implemented!
+    # @api public
+    # @raise [NotImplementedError]
+    # @return [Object]
+    # @example
+    #   district = district.retrieve id
+    #   puts district.status
+    def status
+      fail NotImplementedError, 'status nested resource not yet implemented.'
+    end
+
     # @see Clever::CleverObject.optional_attributes
     # @api private
     # @return [Array]
@@ -15,18 +39,8 @@ module Clever
     # TODO: remove
     [:school_pages, :teacher_pages, :section_pages, :student_pages, :event_pages].each do |name|
       define_method(name) do |filters = {}|
-        Clever::APIOperations::PageList.new get_uri(name.to_s.gsub('_page', '')), filters
+        Clever::APIOperations::PageList.new get_link_uri(name.to_s.gsub('_page', '')), filters
       end
-    end
-
-    private
-
-    # Get the URI for a hypermedia link
-    # @api private
-    # @return [String]
-    def get_uri(resource_type)
-      refresh
-      links.find { |link| link[:rel] == resource_type }[:uri]
     end
   end
 end

@@ -1,6 +1,14 @@
 module Clever
   # Library helper methods
   module Util
+    # Check if a given word is singular
+    # @api private
+    # @param word [String] Word to check
+    # @return [Boolean] False if plural, true if singular
+    def self.singular?(word)
+      word.singularize == word
+    end
+
     # Check if a given ID is a valid format (MongoDB BSON ObjectID)
     # @api private
     # @param id [String] ID to check
@@ -27,21 +35,6 @@ module Clever
       end
     end
 
-    # Convert the name of a resource to its APIResource class
-    # @api private
-    # @return [APIResource]
-    def self.types_to_clever_class(type)
-      types = {
-        'students'  => Student,
-        'sections'  => Section,
-        'teachers'  => Teacher,
-        'districts' => District,
-        'schools'   => School,
-        'events'    => Event
-      }
-      types.fetch type
-    end
-
     # Convert an object containing data from Clever into a CleverObject
     # @api private
     # @return [CleverObject]
@@ -52,8 +45,14 @@ module Clever
       when Hash
         # Try converting to a known object class. If none available, fall back to generic
         # APIResource.
-        klass_name = %r{/v1.1/([a-z]+)/\S+$}.match(resp[:uri])[1]
-        klass = types_to_clever_class klass_name if klass_name
+        if resp.key? :uri
+          uri = resp[:uri]
+        else
+          uri = resp[:links].select { |l| l[:rel] == 'self' }[0][:uri]
+        end
+
+        klass_name = %r{/v1.1/([a-z]+)/\S+$}.match(uri)[1]
+        klass = APIResource.named klass_name if klass_name
         klass ||= CleverObject
         klass.construct_from resp[:data]
       else
