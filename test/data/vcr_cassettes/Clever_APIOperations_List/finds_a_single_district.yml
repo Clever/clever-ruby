@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:47 GMT
+      - Sat, 13 Sep 2014 00:04:54 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -42,7 +42,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:47 GMT
+  recorded_at: Sat, 13 Sep 2014 00:04:54 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -72,7 +72,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:47 GMT
+      - Sat, 13 Sep 2014 00:04:54 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -85,5 +85,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:47 GMT
+  recorded_at: Sat, 13 Sep 2014 00:04:54 GMT
 recorded_with: VCR 2.9.3

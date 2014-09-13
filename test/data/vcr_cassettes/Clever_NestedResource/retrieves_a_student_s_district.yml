@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:58:32 GMT
+      - Sat, 13 Sep 2014 00:07:39 GMT
       Etag:
       - ! '"-1704869160"'
       Server:
@@ -115,7 +115,7 @@ http_interactions:
         or More Races","school":"530e595026403103360ff9ff","sis_id":"189422359","state_id":"949395711","student_number":"189422359","id":"530e5961049e75a9262cffe3"},"uri":"/v1.1/students/530e5961049e75a9262cffe3"},{"data":{"created":"2014-02-26T21:15:13.206Z","credentials":{"district_username":"mial61","district_password":"uka5Hixae"},"district":"4fd43cc56d11340000000005","dob":"11/10/2002","ell_status":"N","email":"l_mia@example.org","frl_status":"Paid","gender":"F","grade":"5","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.072Z","location":{"zip":"10002"},"name":{"first":"Mia","middle":"J","last":"Lindgren"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"189492161","state_id":"661166974","student_number":"189492161","id":"530e5961049e75a9262cffe4"},"uri":"/v1.1/students/530e5961049e75a9262cffe4"}],"paging":{"current":1,"total":11,"count":1004},"links":[{"rel":"self","uri":"/v1.1/students"},{"rel":"next","uri":"/v1.1/students?starting_after=530e5961049e75a9262cffe4"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:58:32 GMT
+  recorded_at: Sat, 13 Sep 2014 00:07:39 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/students/530e5960049e75a9262cff1d
@@ -145,7 +145,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:58:32 GMT
+      - Sat, 13 Sep 2014 00:07:39 GMT
       Etag:
       - ! '"1850740737"'
       Server:
@@ -161,7 +161,7 @@ http_interactions:
       string: ! '{"data":{"created":"2014-02-26T21:15:12.346Z","credentials":{"district_username":"stevez33","district_password":"auyik3tiTieL"},"district":"4fd43cc56d11340000000005","dob":"2/11/2007","ell_status":"N","email":"z.steve@example.net","frl_status":"Paid","gender":"M","grade":"Kindergarten","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.656Z","location":{"zip":"10459"},"name":{"first":"Steve","middle":"G","last":"Ziemann"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"100095233","state_id":"231786324","student_number":"100095233","id":"530e5960049e75a9262cff1d"},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff1d"},{"rel":"district","uri":"/v1.1/students/530e5960049e75a9262cff1d/district"},{"rel":"sections","uri":"/v1.1/students/530e5960049e75a9262cff1d/sections"},{"rel":"school","uri":"/v1.1/students/530e5960049e75a9262cff1d/school"},{"rel":"teachers","uri":"/v1.1/students/530e5960049e75a9262cff1d/teachers"},{"rel":"contacts","uri":"/v1.1/students/530e5960049e75a9262cff1d/contacts"},{"rel":"events","uri":"/v1.1/students/530e5960049e75a9262cff1d/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:58:32 GMT
+  recorded_at: Sat, 13 Sep 2014 00:07:39 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/students/530e5960049e75a9262cff1d/district
@@ -191,7 +191,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:58:32 GMT
+      - Sat, 13 Sep 2014 00:07:39 GMT
       Server:
       - nginx/1.4.7
       X-Powered-By:
@@ -204,5 +204,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:58:32 GMT
+  recorded_at: Sat, 13 Sep 2014 00:07:39 GMT
 recorded_with: VCR 2.9.3

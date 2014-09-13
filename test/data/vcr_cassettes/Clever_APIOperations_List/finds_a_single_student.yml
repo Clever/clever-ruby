@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:37 GMT
+      - Sat, 13 Sep 2014 00:03:48 GMT
       Etag:
       - ! '"-1704869160"'
       Server:
@@ -115,7 +115,7 @@ http_interactions:
         or More Races","school":"530e595026403103360ff9ff","sis_id":"189422359","state_id":"949395711","student_number":"189422359","id":"530e5961049e75a9262cffe3"},"uri":"/v1.1/students/530e5961049e75a9262cffe3"},{"data":{"created":"2014-02-26T21:15:13.206Z","credentials":{"district_username":"mial61","district_password":"uka5Hixae"},"district":"4fd43cc56d11340000000005","dob":"11/10/2002","ell_status":"N","email":"l_mia@example.org","frl_status":"Paid","gender":"F","grade":"5","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.072Z","location":{"zip":"10002"},"name":{"first":"Mia","middle":"J","last":"Lindgren"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"189492161","state_id":"661166974","student_number":"189492161","id":"530e5961049e75a9262cffe4"},"uri":"/v1.1/students/530e5961049e75a9262cffe4"}],"paging":{"current":1,"total":11,"count":1004},"links":[{"rel":"self","uri":"/v1.1/students"},{"rel":"next","uri":"/v1.1/students?starting_after=530e5961049e75a9262cffe4"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:37 GMT
+  recorded_at: Sat, 13 Sep 2014 00:03:48 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/students/530e5960049e75a9262cff3c
@@ -145,7 +145,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:37 GMT
+      - Sat, 13 Sep 2014 00:03:48 GMT
       Etag:
       - ! '"310285841"'
       Server:
@@ -160,5 +160,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"data":{"created":"2014-02-26T21:15:12.498Z","credentials":{"district_username":"fredt34","district_password":"ieXahy1j"},"district":"4fd43cc56d11340000000005","dob":"10/30/1998","ell_status":"Y","email":"fred.t@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.748Z","location":{"zip":"10003"},"name":{"first":"Fred","middle":"W","last":"Trantow"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"119622134","state_id":"354252109","student_number":"119622134","id":"530e5960049e75a9262cff3c"},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff3c"},{"rel":"district","uri":"/v1.1/students/530e5960049e75a9262cff3c/district"},{"rel":"sections","uri":"/v1.1/students/530e5960049e75a9262cff3c/sections"},{"rel":"school","uri":"/v1.1/students/530e5960049e75a9262cff3c/school"},{"rel":"teachers","uri":"/v1.1/students/530e5960049e75a9262cff3c/teachers"},{"rel":"contacts","uri":"/v1.1/students/530e5960049e75a9262cff3c/contacts"},{"rel":"events","uri":"/v1.1/students/530e5960049e75a9262cff3c/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:37 GMT
+  recorded_at: Sat, 13 Sep 2014 00:03:48 GMT
 recorded_with: VCR 2.9.3

@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:58:33 GMT
+      - Sat, 13 Sep 2014 00:07:49 GMT
       Etag:
       - ! '"1525695678"'
       Server:
@@ -306,7 +306,7 @@ http_interactions:
         I","course_number":"101","created":"2014-02-26T21:15:38.354Z","district":"4fd43cc56d11340000000005","grade":"9","last_modified":"2014-02-26T21:15:38.356Z","name":"French
         I - 101 - G. Gorczany (Section 1)","period":"9","school":"530e595026403103360ff9fd","sis_id":"681","students":["530e5960049e75a9262cff1e","530e5960049e75a9262cff4b","530e5960049e75a9262cff5b","530e5960049e75a9262cff7a","530e5961049e75a9262cfffb","530e5961049e75a9262d005d","530e5961049e75a9262d0070","530e5962049e75a9262d00e8","530e5962049e75a9262d00ff","530e5962049e75a9262d015f","530e5963049e75a9262d0211","530e5963049e75a9262d022f","530e5964049e75a9262d0284","530e5964049e75a9262d02a9","530e5964049e75a9262d02c3","530e5965049e75a9262d0325","530e5965049e75a9262d033f","530e5965049e75a9262d036c","530e5965049e75a9262d038f","530e5966049e75a9262d03f8","530e5966049e75a9262d0468","530e5966049e75a9262d046c","530e5966049e75a9262d0471","530e5966049e75a9262d0496","530e5967049e75a9262d057e","530e5967049e75a9262d0590","530e5967049e75a9262d05b5","530e5968049e75a9262d05cb","530e5968049e75a9262d05d1","530e5968049e75a9262d05e3","530e5968049e75a9262d0605","530e5968049e75a9262d061c","530e5968049e75a9262d063c"],"subject":"language","teacher":"530e5955d50c310f36112bf9","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e597a049e75a9262d0b55"},"uri":"/v1.1/sections/530e597a049e75a9262d0b55"}],"paging":{"current":1,"total":4,"count":379},"links":[{"rel":"self","uri":"/v1.1/sections"},{"rel":"next","uri":"/v1.1/sections?starting_after=530e597a049e75a9262d0b55"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:58:33 GMT
+  recorded_at: Sat, 13 Sep 2014 00:07:49 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/sections/530e5979049e75a9262d0af2
@@ -336,7 +336,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:58:33 GMT
+      - Sat, 13 Sep 2014 00:07:49 GMT
       Etag:
       - ! '"-1019123713"'
       Server:
@@ -352,7 +352,7 @@ http_interactions:
       string: ! '{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
         Guidance - 101 - B. Greene (Section 1)","period":"0","school":"530e595026403103360ff9fd","sis_id":"581","students":["530e5961049e75a9262cffd9","530e5961049e75a9262d0010","530e5961049e75a9262d004e","530e5961049e75a9262d0080","530e5962049e75a9262d0156","530e5963049e75a9262d01b7","530e5963049e75a9262d0253","530e5966049e75a9262d0418","530e5966049e75a9262d0475","530e5966049e75a9262d04b4","530e5967049e75a9262d0503","530e5968049e75a9262d05e9","530e5968049e75a9262d061f","530e5968049e75a9262d0632","530e5968049e75a9262d0647"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c11","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e5979049e75a9262d0af2"},"links":[{"rel":"self","uri":"/v1.1/sections/530e5979049e75a9262d0af2"},{"rel":"district","uri":"/v1.1/sections/530e5979049e75a9262d0af2/district"},{"rel":"teacher","uri":"/v1.1/sections/530e5979049e75a9262d0af2/teacher"},{"rel":"students","uri":"/v1.1/sections/530e5979049e75a9262d0af2/students"},{"rel":"school","uri":"/v1.1/sections/530e5979049e75a9262d0af2/school"},{"rel":"events","uri":"/v1.1/sections/530e5979049e75a9262d0af2/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:58:33 GMT
+  recorded_at: Sat, 13 Sep 2014 00:07:49 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/sections/530e5979049e75a9262d0af2/students
@@ -382,7 +382,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:58:33 GMT
+      - Sat, 13 Sep 2014 00:07:50 GMT
       Etag:
       - ! '"1856985347"'
       Server:
@@ -406,7 +406,7 @@ http_interactions:
         or More Races","school":"530e595026403103360ff9fd","sis_id":"963516059","state_id":"486760319","student_number":"963516059","id":"530e5968049e75a9262d061f"},"uri":"/v1.1/students/530e5968049e75a9262d061f"},{"data":{"created":"2014-02-26T21:15:20.514Z","credentials":{"district_username":"robertb90","district_password":"ahNgae4oquah"},"district":"4fd43cc56d11340000000005","dob":"5/27/1997","ell_status":"N","email":"b.robert@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:44.656Z","location":{"zip":"11106"},"name":{"first":"Robert","middle":"A","last":"Berge"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"976092290","state_id":"849712711","student_number":"976092290","id":"530e5968049e75a9262d0632"},"uri":"/v1.1/students/530e5968049e75a9262d0632"},{"data":{"created":"2014-02-26T21:15:20.611Z","credentials":{"district_username":"marjoriel40","district_password":"iushoo1It"},"district":"4fd43cc56d11340000000005","dob":"11/4/1997","ell_status":"N","email":"marjorie_l@example.org","frl_status":"Paid","gender":"F","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:44.735Z","location":{"zip":"10016"},"name":{"first":"Marjorie","middle":"L","last":"Lesch"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"994397040","state_id":"828598322","student_number":"994397040","id":"530e5968049e75a9262d0647"},"uri":"/v1.1/students/530e5968049e75a9262d0647"}],"paging":{"current":1,"total":1,"count":15},"links":[{"rel":"self","uri":"/v1.1/sections/530e5979049e75a9262d0af2/students"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:58:33 GMT
+  recorded_at: Sat, 13 Sep 2014 00:07:50 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/sections/530e5979049e75a9262d0af2/students
@@ -436,7 +436,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:58:33 GMT
+      - Sat, 13 Sep 2014 00:07:50 GMT
       Etag:
       - ! '"1856985347"'
       Server:
@@ -460,5 +460,5 @@ http_interactions:
         or More Races","school":"530e595026403103360ff9fd","sis_id":"963516059","state_id":"486760319","student_number":"963516059","id":"530e5968049e75a9262d061f"},"uri":"/v1.1/students/530e5968049e75a9262d061f"},{"data":{"created":"2014-02-26T21:15:20.514Z","credentials":{"district_username":"robertb90","district_password":"ahNgae4oquah"},"district":"4fd43cc56d11340000000005","dob":"5/27/1997","ell_status":"N","email":"b.robert@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:44.656Z","location":{"zip":"11106"},"name":{"first":"Robert","middle":"A","last":"Berge"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"976092290","state_id":"849712711","student_number":"976092290","id":"530e5968049e75a9262d0632"},"uri":"/v1.1/students/530e5968049e75a9262d0632"},{"data":{"created":"2014-02-26T21:15:20.611Z","credentials":{"district_username":"marjoriel40","district_password":"iushoo1It"},"district":"4fd43cc56d11340000000005","dob":"11/4/1997","ell_status":"N","email":"marjorie_l@example.org","frl_status":"Paid","gender":"F","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:44.735Z","location":{"zip":"10016"},"name":{"first":"Marjorie","middle":"L","last":"Lesch"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"994397040","state_id":"828598322","student_number":"994397040","id":"530e5968049e75a9262d0647"},"uri":"/v1.1/students/530e5968049e75a9262d0647"}],"paging":{"current":1,"total":1,"count":15},"links":[{"rel":"self","uri":"/v1.1/sections/530e5979049e75a9262d0af2/students"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:58:33 GMT
+  recorded_at: Sat, 13 Sep 2014 00:07:50 GMT
 recorded_with: VCR 2.9.3

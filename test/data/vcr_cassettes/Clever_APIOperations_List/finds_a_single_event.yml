@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:47 GMT
+      - Sat, 13 Sep 2014 00:02:46 GMT
       Etag:
       - ! '"-214069741"'
       Server:
@@ -61,7 +61,7 @@ http_interactions:
         Science, Class 003","course_number":"3","district":"4fd43cc56d11340000000005","grade":"Kindergarten","name":"Kindergarten
         Science, Class 003 - 003 - J. Stark","period":"4","school":"530e595026403103360ff9fe","sis_id":"866","subject":"science","teacher":"50c20477987eda0d3d02d310","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5961049e75a9262cffbe","530e5961049e75a9262cffc3","530e5961049e75a9262d0000","530e5961049e75a9262d0036","530e5961049e75a9262d0074","530e5962049e75a9262d00c5","530e5963049e75a9262d01fa","530e5964049e75a9262d027e","530e5964049e75a9262d02a8","530e5964049e75a9262d02ab","530e5964049e75a9262d02f7","530e5965049e75a9262d03b2","530e5965049e75a9262d03bf","530e5966049e75a9262d040a","530e5966049e75a9262d0449","530e5967049e75a9262d051b","530e5967049e75a9262d0565","530e5968049e75a9262d05f0","530e5968049e75a9262d061e","530e5968049e75a9262d0623"],"last_modified":"2014-02-26T21:15:39.195Z","created":"2014-02-26T21:15:39.193Z","id":"530e597b049e75a9262d0c12"},"previous_attributes":{"subject":"homeroom/advisory"}},"created":"2014-08-28T18:01:14.088Z","id":"53ff6e6b322eced00200008e"},"uri":"/v1.1/events/53ff6e6b322eced00200008e"}],"paging":{"current":1,"total":1,"count":7},"links":[{"rel":"self","uri":"/v1.1/events"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:47 GMT
+  recorded_at: Sat, 13 Sep 2014 00:02:46 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/events/53ff6e6b322eced00200008e
@@ -91,7 +91,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 12 Sep 2014 23:59:47 GMT
+      - Sat, 13 Sep 2014 00:02:46 GMT
       Etag:
       - ! '"-1222430414"'
       Server:
@@ -108,5 +108,5 @@ http_interactions:
         Science, Class 003","course_number":"3","district":"4fd43cc56d11340000000005","grade":"Kindergarten","name":"Kindergarten
         Science, Class 003 - 003 - J. Stark","period":"4","school":"530e595026403103360ff9fe","sis_id":"866","subject":"science","teacher":"50c20477987eda0d3d02d310","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5961049e75a9262cffbe","530e5961049e75a9262cffc3","530e5961049e75a9262d0000","530e5961049e75a9262d0036","530e5961049e75a9262d0074","530e5962049e75a9262d00c5","530e5963049e75a9262d01fa","530e5964049e75a9262d027e","530e5964049e75a9262d02a8","530e5964049e75a9262d02ab","530e5964049e75a9262d02f7","530e5965049e75a9262d03b2","530e5965049e75a9262d03bf","530e5966049e75a9262d040a","530e5966049e75a9262d0449","530e5967049e75a9262d051b","530e5967049e75a9262d0565","530e5968049e75a9262d05f0","530e5968049e75a9262d061e","530e5968049e75a9262d0623"],"last_modified":"2014-02-26T21:15:39.195Z","created":"2014-02-26T21:15:39.193Z","id":"530e597b049e75a9262d0c12"},"previous_attributes":{"subject":"homeroom/advisory"}},"created":"2014-08-28T18:01:14.088Z","id":"53ff6e6b322eced00200008e"},"links":[{"rel":"self","uri":"/v1.1/events/53ff6e6b322eced00200008e"}]}'
     http_version: 
-  recorded_at: Fri, 12 Sep 2014 23:59:47 GMT
+  recorded_at: Sat, 13 Sep 2014 00:02:46 GMT
 recorded_with: VCR 2.9.3
