@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005?
     body:
       encoding: US-ASCII
       string: ''
@@ -45,7 +45,7 @@ http_interactions:
   recorded_at: Mon, 04 Aug 2014 20:25:16 GMT
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005?
     body:
       encoding: US-ASCII
       string: ''
@@ -88,7 +88,7 @@ http_interactions:
   recorded_at: Mon, 04 Aug 2014 20:25:17 GMT
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005?
     body:
       encoding: US-ASCII
       string: ''
@@ -131,7 +131,7 @@ http_interactions:
   recorded_at: Mon, 04 Aug 2014 20:25:17 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?
     body:
       encoding: US-ASCII
       string: ''
@@ -308,7 +308,7 @@ http_interactions:
   recorded_at: Mon, 04 Aug 2014 20:25:18 GMT
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005?
     body:
       encoding: US-ASCII
       string: ''
@@ -351,7 +351,7 @@ http_interactions:
   recorded_at: Mon, 04 Aug 2014 20:25:18 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/teachers?
     body:
       encoding: US-ASCII
       string: ''
