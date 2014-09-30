@@ -130,7 +130,7 @@ module Clever
       # some library out there that makes symbolize_names not work.
       resp = Clever::JSON.load(rbody)
     rescue MultiJson::DecodeError
-      raise APIError.new("Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode})", rcode, rbody, opts)
+      raise APIError.new("Invalid response object from API: #{rbody.inspect} (HTTP response code was #{rcode}, Opts used: #{opts.inspect})", rcode, rbody, opts)
     end
 
     resp = Util.symbolize_names(resp)
