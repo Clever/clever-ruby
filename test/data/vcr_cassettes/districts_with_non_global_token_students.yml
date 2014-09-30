@@ -131,7 +131,7 @@ http_interactions:
   recorded_at: Mon, 04 Aug 2014 20:25:14 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/students
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/students?
     body:
       encoding: US-ASCII
       string: ''
@@ -333,7 +333,7 @@ http_interactions:
   recorded_at: Mon, 04 Aug 2014 20:25:15 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/students
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/students?
     body:
       encoding: US-ASCII
       string: ''

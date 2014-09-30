@@ -131,7 +131,7 @@ http_interactions:
   recorded_at: Mon, 04 Aug 2014 20:25:05 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events?
     body:
       encoding: US-ASCII
       string: ''
@@ -267,7 +267,7 @@ http_interactions:
   recorded_at: Mon, 04 Aug 2014 20:25:06 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events?
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://DEMO_KEY:@api.clever.com/v1.1/teachers
+    uri: https://DEMO_KEY:@api.clever.com/v1.1/teachers?
     body:
       encoding: US-ASCII
       string: ''
