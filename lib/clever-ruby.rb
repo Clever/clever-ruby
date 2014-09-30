@@ -51,6 +51,10 @@ module Clever
       configuration.timeout
     end
 
+    def open_timeout
+      configuration.open_timeout
+    end
+
     def configuration
       @configuration ||= Clever::Configuration.new
     end
@@ -92,7 +96,7 @@ module Clever
       :method => method,
       :url => url,
       :headers => headers,
-      :open_timeout => 30,
+      :open_timeout => Clever.open_timeout,
       :payload => payload,
       :timeout => Clever.timeout
     }
