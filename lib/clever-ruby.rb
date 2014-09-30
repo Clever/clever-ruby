@@ -47,6 +47,10 @@ module Clever
       configuration.token
     end
 
+    def timeout
+      configuration.timeout
+    end
+
     def configuration
       @configuration ||= Clever::Configuration.new
     end
@@ -90,7 +94,7 @@ module Clever
       :headers => headers,
       :open_timeout => 30,
       :payload => payload,
-      :timeout => 80
+      :timeout => Clever.timeout
     }
     if Clever.api_key
       opts[:user] = Clever.api_key
