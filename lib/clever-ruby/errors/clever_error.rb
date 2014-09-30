@@ -5,16 +5,17 @@ module Clever
     attr_reader :http_body
     attr_reader :json_body
 
-    def initialize(message=nil, http_status=nil, http_body=nil, json_body=nil)
+    def initialize(message=nil, http_status=nil, http_body=nil, json_body=nil, opts={})
       @message = message
       @http_status = http_status
       @http_body = http_body
       @json_body = json_body
+      @opts = opts
     end
 
     def to_s
       status_string = @http_status.nil? ? "" : "(Status #{@http_status}) "
-      "#{status_string}#{@message}"
+      "#{status_string}#{@message} (Opts: #{@opts.inspect})"
     end
   end
 end
