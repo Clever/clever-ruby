@@ -74,6 +74,9 @@ module Clever
       end
     end
 
+    # Returns the headers needed to authorize subsequent requests
+    # @api  private
+    # @return [Object] Authorization header with this auth_token
     def headers
       if @values.key? :auth_token
         { Authorization: 'Bearer ' + @values[:auth_token] }

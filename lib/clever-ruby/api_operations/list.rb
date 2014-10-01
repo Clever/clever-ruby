@@ -1,4 +1,5 @@
 module Clever
+  # API Operations
   module APIOperations
     # A list of API resource instances
     module List
