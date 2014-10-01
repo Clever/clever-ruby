@@ -9,7 +9,7 @@ module Clever
       # @return [Clever::APIOperations::Page]
       # @example
       #   page = Page.new '/v1.1/districts'
-      def initialize(uri, filters = {}, headers={})
+      def initialize(uri, filters = {}, headers = {})
         @uri = uri
         @filters = filters
         @headers = headers

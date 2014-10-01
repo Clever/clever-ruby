@@ -150,7 +150,7 @@ module Clever
   # @return [nil]
   # @raise [AuthenticationError] Error if no authentication present
   def self.check_authorization(headers)
-    unless Clever.api_key || Clever.token || headers.has_key?(:Authorization)
+    unless Clever.api_key || Clever.token || headers.key?(:Authorization)
       fail AuthenticationError, 'No API key provided. (HINT: set your API key using '\
         '"Clever.configure { |config| config.api_key = <API-KEY> }" or your token using '\
         '"Clever.configure { |config| config.token = <TOKEN> }" '\

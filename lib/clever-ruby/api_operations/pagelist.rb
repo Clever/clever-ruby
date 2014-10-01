@@ -7,7 +7,7 @@ module Clever
       # Create a new PageList, without making any requests immediately
       # @api private
       # @return [PageList]
-      def initialize(uri, filters = {}, headers={})
+      def initialize(uri, filters = {}, headers = {})
         @uri = uri
         @filters = filters
         @headers = headers

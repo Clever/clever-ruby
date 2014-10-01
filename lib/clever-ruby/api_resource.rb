@@ -89,7 +89,7 @@ module Clever
     # @example
     #   id = '...'
     #   district = Clever::District.retrieve id
-    def self.retrieve(id, auth_token=nil)
+    def self.retrieve(id, auth_token = nil)
       instance = new id, auth_token
       instance.refresh
       instance
@@ -107,7 +107,7 @@ module Clever
     # @abstract
     # @api private
     # @return [APIResource]
-    def initialize(id, auth_token=nil)
+    def initialize(id, auth_token = nil)
       super id, auth_token
       return if self.class.linked_resources.nil?
 

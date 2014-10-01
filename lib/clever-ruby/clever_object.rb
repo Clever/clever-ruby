@@ -1,6 +1,6 @@
 module Clever
   # An instance of an APIResource's contents
-  class CleverObject
+  class CleverObject              # rubocop: disable ClassLength
     include Enumerable
 
     # TODO: fix this
@@ -15,7 +15,7 @@ module Clever
     # @api private
     # @param id [String, Hash] id, or values to instantiate from
     # @return [CleverObject] resource instance
-    def initialize(id = nil, auth_token=nil)
+    def initialize(id = nil, auth_token = nil)
       @values = {}
       @values[:id] = id if id
       @values[:auth_token] = auth_token if auth_token
@@ -75,8 +75,8 @@ module Clever
     end
 
     def headers
-      if @values.has_key? :auth_token
-        {Authorization: "Bearer " + @values[:auth_token]}
+      if @values.key? :auth_token
+        { Authorization: 'Bearer ' + @values[:auth_token] }
       else
         {}
       end
