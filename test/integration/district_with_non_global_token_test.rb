@@ -43,11 +43,15 @@ describe 'Clever::District without global token', :vcr do
   end
 
   it "retrieves a district's sections" do
-    assert_valid_object_list 'sections', 379, Clever::Section
+    VCR.use_cassette('Clever_District_without_global_token/retrieves_a_district_s_sections', allow_playback_repeats: true) do
+      assert_valid_object_list 'sections', 379, Clever::Section
+    end
   end
 
   it "retrieves a district's students" do
-    assert_valid_object_list 'students', 1004, Clever::Student
+    VCR.use_cassette('Clever_District_without_global_token/retrieves_a_district_s_students', allow_playback_repeats: true) do
+      assert_valid_object_list 'students', 1004, Clever::Student
+    end
   end
 
   # TODO: this is outdated and should be removed!
