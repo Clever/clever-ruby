@@ -149,11 +149,12 @@ module Clever
   # @api private
   # @return [nil]
   # @raise [AuthenticationError] Error if no authentication present
-  def self.check_authorization
-    unless Clever.api_key || Clever.token
+  def self.check_authorization(headers)
+    unless Clever.api_key || Clever.token || headers.key?(:Authorization)
       fail AuthenticationError, 'No API key provided. (HINT: set your API key using '\
         '"Clever.configure { |config| config.api_key = <API-KEY> }" or your token using '\
-        '"Clever.configure { |config| config.token = <TOKEN> }")'
+        '"Clever.configure { |config| config.token = <TOKEN> }" '\
+        'or pass the district token as a second argument to retrieve)'
     end
   end
 
@@ -166,7 +167,7 @@ module Clever
   # @return [Hash] parsed JSON response
   # @raise [APIError] Error if API fails to return valid JSON
   def self.request(method, url, params = nil, headers = {})
-    check_authorization
+    check_authorization(headers)
     opts = create_request_opts method, url, params, headers
     response = execute_request opts
 

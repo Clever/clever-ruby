@@ -9,11 +9,12 @@ module Clever
       # @return [Clever::APIOperations::Page]
       # @example
       #   page = Page.new '/v1.1/districts'
-      def initialize(uri, filters = {})
+      def initialize(uri, filters = {}, headers = {})
         @uri = uri
         @filters = filters
+        @headers = headers
 
-        response = Clever.request :get, uri, filters
+        response = Clever.request :get, uri, filters, @headers
         @all = Util.convert_to_clever_object response[:data]
         @links = {}
         response[:links].each do |link|
@@ -29,7 +30,7 @@ module Clever
       #   unless next_page.nil?
       #     next_page.each do |elem| puts elem; end
       def next
-        @links.key?(:next) ? Page.new(@links[:next]) : nil
+        @links.key?(:next) ? Page.new(@links[:next], {}, @headers) : nil
       end
 
       # Iterate over all elements in the page

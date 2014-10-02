@@ -68,7 +68,7 @@ module Clever
     # @api private
     # @return [APIResource] The updated resource instance
     def refresh
-      response = Clever.request :get, url
+      response = Clever.request :get, url, nil, headers
       refresh_from response[:data]
 
       @links = response[:links].map do
@@ -89,8 +89,8 @@ module Clever
     # @example
     #   id = '...'
     #   district = Clever::District.retrieve id
-    def self.retrieve(id)
-      instance = new id
+    def self.retrieve(id, auth_token = nil)
+      instance = new id, auth_token
       instance.refresh
       instance
     end
@@ -107,21 +107,21 @@ module Clever
     # @abstract
     # @api private
     # @return [APIResource]
-    def initialize(id)
-      super id
+    def initialize(id, auth_token = nil)
+      super id, auth_token
       return if self.class.linked_resources.nil?
 
       self.class.linked_resources.each do |resource|
         if Clever::Util.singular? resource.to_s
           # Get single resource
           self.class.send :define_method, resource do
-            response = Clever.request :get, get_link_uri(resource)
+            response = Clever.request :get, get_link_uri(resource), {}, headers
             return Util.convert_to_clever_object response
           end
         else
           # Get list of nested resources
           self.class.send :define_method, resource do |filters = {}|
-            Clever::NestedResource.new get_link_uri(resource), filters
+            Clever::NestedResource.new get_link_uri(resource), filters, headers
           end
         end
       end

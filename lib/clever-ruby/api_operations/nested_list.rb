@@ -25,7 +25,7 @@ module Clever
       #   end
       def find(filters = {})
         filters = @filters.merge filters
-        Clever::APIOperations::PageList.new(@uri, filters).to_results_list
+        Clever::APIOperations::PageList.new(@uri, filters, headers).to_results_list
       end
 
       # Request the number of elements in a nested list from the API
@@ -39,7 +39,7 @@ module Clever
       def count(filters = {})
         filters = @filters.merge filters
         filters[:count] = true
-        response = Clever.request :get, @uri, filters
+        response = Clever.request :get, @uri, filters, headers
         response[:count]
       end
 
@@ -59,11 +59,11 @@ module Clever
         filters = @filters.merge filters
         if num.nil?
           filters[:limit] = 1
-          response = Clever.request :get, url, filters
+          response = Clever.request :get, url, filters, headers
           Util.convert_to_clever_object response[:data].last
         else
           filters[:limit] = num
-          Clever::APIOperations::PageList.new(url, filters).first
+          Clever::APIOperations::PageList.new(url, filters, headers).first
         end
       end
 
@@ -83,11 +83,11 @@ module Clever
         filters[:ending_before] = 'last'
         if num.nil?
           filters[:limit] = 1
-          response = Clever.request :get, @uri, filters
+          response = Clever.request :get, @uri, filters, headers
           Util.convert_to_clever_object response[:data].last
         else
           filters[:limit] = num
-          Clever::APIOperations::PageList.new(@uri, filters).to_results_list
+          Clever::APIOperations::PageList.new(@uri, filters, headers).to_results_list
         end
       end
     end

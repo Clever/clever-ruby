@@ -7,9 +7,10 @@ module Clever
       # Create a new PageList, without making any requests immediately
       # @api private
       # @return [PageList]
-      def initialize(uri, filters = {})
+      def initialize(uri, filters = {}, headers = {})
         @uri = uri
         @filters = filters
+        @headers = headers
       end
 
       # Iterate through each page, making requests as you iterate
@@ -22,7 +23,7 @@ module Clever
       #     end
       #   end
       def each
-        page = Page.new @uri, @filters
+        page = Page.new @uri, @filters, @headers
         until page.nil?
           yield page
           page = page.next
