@@ -6,6 +6,7 @@ require 'open-uri'
 require 'set'
 require 'uri'
 require 'cgi'
+require 'json'
 
 require 'clever-ruby/version'
 
@@ -128,7 +129,16 @@ module Clever
     url = api_url url
     url, payload = create_payload method, url, params
 
-    headers[:Authorization] = 'Bearer ' + Clever.token if Clever.token
+    ua = {
+      bindings_version: Clever::VERSION,
+      lang: 'ruby',
+      lang_version: RUBY_VERSION.to_s + ' p' + RUBY_PATCHLEVEL.to_s,
+      publisher: 'clever'
+    }
+
+    headers[:authorization] = 'Bearer ' + Clever.token if Clever.token
+    headers[:user_agent] = 'Clever/RubyBindings/' + Clever::VERSION
+    headers[:x_clever_client_user_agent] = ua.to_json
 
     opts = {
       method: method,
