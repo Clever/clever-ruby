@@ -25,21 +25,28 @@ describe Clever do
 
   describe '.create_request_opts' do
     before do
-      method, url = "get", "quotes"
-      params = {education: 'powerful weapon'}
-      headers = {author: 'Nelson Mandela'}
+      method, url = 'get', 'quotes'
+      params = { education: 'powerful weapon' }
+      headers = { author: 'Nelson Mandela' }
       @options = Clever.create_request_opts(method, url, params, headers)
     end
     it 'sets method and url' do
-      assert_equal("get", @options[:method], "Method not set properly")
-      assert_equal("https://api.clever.com/quotes?education=powerful%20weapon", @options[:url], "URL not formed properly with params")
+      assert_equal('get', @options[:method], 'Method not set properly')
+      assert_equal(
+        'https://api.clever.com/quotes?education=powerful%20weapon',
+        @options[:url],
+        'URL not formed properly with params'
+      )
     end
     it 'adds tracking headers' do
       headers = @options[:headers]
-      assert(headers.key?(:authorization), "Did not set authorization header")
-      assert(headers.key?(:user_agent), "Did not set User Agent header")
-      assert(headers.key?(:x_clever_client_user_agent), "Did not set Clever Client User Agent header")
-      assert(headers.key?(:author), "Did not keep original header")
+      assert(headers.key?(:authorization), 'Did not set authorization header')
+      assert(headers.key?(:user_agent), 'Did not set User Agent header')
+      assert(
+        headers.key?(:x_clever_client_user_agent),
+        'Did not set Clever Client User Agent header'
+      )
+      assert(headers.key?(:author), 'Did not keep original header')
     end
   end
 end
