@@ -121,6 +121,18 @@ module Clever
     [url, payload]
   end
 
+  # Headers hash for user-agent tracking
+  # @api private
+  # @return [Hash] headers to add to request
+  def self.tracking_headers
+    {
+      bindings_version: Clever::VERSION,
+      lang: 'ruby',
+      lang_version: RUBY_VERSION.to_s + ' p' + RUBY_PATCHLEVEL.to_s,
+      publisher: 'clever'
+    }
+  end
+
   # Create options hash that specifies an HTTP request from request data
   # @api private
   # @return [Hash] parameters for executing a request
@@ -129,16 +141,9 @@ module Clever
     url = api_url url
     url, payload = create_payload method, url, params
 
-    ua = {
-      bindings_version: Clever::VERSION,
-      lang: 'ruby',
-      lang_version: RUBY_VERSION.to_s + ' p' + RUBY_PATCHLEVEL.to_s,
-      publisher: 'clever'
-    }
-
     headers[:authorization] = 'Bearer ' + Clever.token if Clever.token
     headers[:user_agent] = 'Clever/RubyBindings/' + Clever::VERSION
-    headers[:x_clever_client_user_agent] = ua.to_json
+    headers[:x_clever_client_user_agent] = tracking_headers.to_json
 
     opts = {
       method: method,
