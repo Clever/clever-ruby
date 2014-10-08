@@ -48,7 +48,6 @@ describe Clever do
       assert headers.key?(:author), 'Did not keep original header'
 
       custom_ua = JSON.parse(headers[:x_clever_client_user_agent], symbolize_names: true)
-      puts custom_ua
       assert custom_ua.key?(:lang), 'Did not set lang in custom user agent header'
       assert custom_ua.key?(:lang_version), 'Did not set lang_version in custom user agent header'
       assert custom_ua.key?(:platform), 'Did not set platform in custom user agent header'

@@ -137,8 +137,8 @@ module Clever
 
   def self.uname
     `uname -a 2>/dev/null`.strip if RUBY_PLATFORM =~ /linux|darwin/i
-  rescue => e
-    e.message
+  rescue SystemCallError
+    'cannot get uname'
   end
 
   # Create options hash that specifies an HTTP request from request data
