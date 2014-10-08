@@ -129,8 +129,16 @@ module Clever
       bindings_version: Clever::VERSION,
       lang: 'ruby',
       lang_version: RUBY_VERSION.to_s + ' p' + RUBY_PATCHLEVEL.to_s,
-      publisher: 'clever'
+      platform: RUBY_PLATFORM.to_s,
+      publisher: 'clever',
+      uname: uname
     }
+  end
+
+  def self.uname
+    `uname -a 2>/dev/null`.strip if RUBY_PLATFORM =~ /linux|darwin/i
+  rescue => e
+    e.message
   end
 
   # Create options hash that specifies an HTTP request from request data

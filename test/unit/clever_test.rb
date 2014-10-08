@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'json'
 
 # basic clever-ruby tests
 # TODO: organize better
@@ -45,6 +46,15 @@ describe Clever do
         headers.key?(:x_clever_client_user_agent),
         'Did not set Clever Client User Agent header')
       assert headers.key?(:author), 'Did not keep original header'
+
+      custom_ua = JSON.parse(headers[:x_clever_client_user_agent], symbolize_names: true)
+      puts custom_ua
+      assert custom_ua.key?(:lang), 'Did not set lang in custom user agent header'
+      assert custom_ua.key?(:lang_version), 'Did not set lang_version in custom user agent header'
+      assert custom_ua.key?(:platform), 'Did not set platform in custom user agent header'
+      assert custom_ua.key?(:uname), 'Did not set uname in custom user agent header'
+      assert custom_ua.key?(:publisher), 'Did not set publisher in custom user agent header'
+      assert custom_ua.key?(:bindings_version), 'Did not set bindings_version'
     end
   end
 end
