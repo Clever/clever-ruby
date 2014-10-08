@@ -41,7 +41,9 @@ describe Clever do
     it 'adds tracking headers' do
       headers = @options[:headers]
       assert headers.key?(:authorization), 'Did not set authorization header'
+      assert_match(/Bearer/, headers[:authorization])
       assert headers.key?(:user_agent), 'Did not set User Agent header'
+      assert_match %r{Clever/RubyBindings/}, headers[:user_agent]
       assert(
         headers.key?(:x_clever_client_user_agent),
         'Did not set Clever Client User Agent header')
@@ -49,10 +51,12 @@ describe Clever do
 
       custom_ua = JSON.parse(headers[:x_clever_client_user_agent], symbolize_names: true)
       assert custom_ua.key?(:lang), 'Did not set lang in custom user agent header'
+      assert_equal custom_ua[:lang], 'ruby', 'Lang is not set to ruby'
       assert custom_ua.key?(:lang_version), 'Did not set lang_version in custom user agent header'
       assert custom_ua.key?(:platform), 'Did not set platform in custom user agent header'
       assert custom_ua.key?(:uname), 'Did not set uname in custom user agent header'
       assert custom_ua.key?(:publisher), 'Did not set publisher in custom user agent header'
+      assert_equal custom_ua[:publisher], 'clever', 'Did not set publisher to clever'
       assert custom_ua.key?(:bindings_version), 'Did not set bindings_version'
     end
   end
