@@ -135,6 +135,9 @@ module Clever
     }
   end
 
+  # Retrieves system's uname
+  # @api private
+  # @return [String] uname with the system's uname
   def self.uname
     `uname -a 2>/dev/null`.strip if RUBY_PLATFORM =~ /linux|darwin/i
   rescue SystemCallError
