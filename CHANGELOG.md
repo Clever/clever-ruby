@@ -1,3 +1,11 @@
+## 0.10.0 (2014-10-09)
+
+* Add tracking headers to all api requeusts
+
+## 0.9.0 (2014-10-02)
+
+* Update district to accept optional auth token
+
 ## 0.8.0 (2014-09-12)
 
 * Add last method to lists of results for all resources
