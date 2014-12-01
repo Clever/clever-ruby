@@ -1,0 +1,197 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v1.1/districts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 13 Sep 2014 00:06:24 GMT
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '217'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 00:06:24 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 13 Sep 2014 00:06:24 GMT
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '518'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 00:06:24 GMT
+- request:
+    method: get
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/schools
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 13 Sep 2014 00:06:25 GMT
+      Etag:
+      - ! '"1657555549"'
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '1799'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+        5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
+        High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
+        Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"uri":"/v1.1/schools/530e595026403103360ff9fd"},{"data":{"created":"2014-02-26T21:14:56.668Z","district":"4fd43cc56d11340000000005","high_grade":"5","last_modified":"2014-02-26T21:14:56.670Z","location":{"address":"110
+        Pineapple Street","city":"Brooklyn","state":"NY","zip":"11201"},"low_grade":"Kindergarten","name":"Clever
+        Elementary School","nces_id":"360007000000","phone":"(718) 555-4567","principal":{"name":"Cecilia
+        Roderick","email":"ceciliar@mailinator.com"},"school_number":"13K123","sis_id":"13K123","state_id":"30890","id":"530e595026403103360ff9fe"},"uri":"/v1.1/schools/530e595026403103360ff9fe"},{"data":{"created":"2014-02-26T21:14:56.671Z","district":"4fd43cc56d11340000000005","high_grade":"8","last_modified":"2014-02-26T21:14:56.673Z","location":{"address":"322
+        Old Beach 88th Street","city":"Rockaway Beach","state":"NY","zip":"11693"},"low_grade":"6","name":"Clever
+        Middle School","nces_id":"360001000000","phone":"(718) 555-8989","principal":{"name":"Leonard
+        Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"27Q321","sis_id":"27Q321","state_id":"412","id":"530e595026403103360ff9ff"},"uri":"/v1.1/schools/530e595026403103360ff9ff"}],"paging":{"current":1,"total":1,"count":3},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"}]}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 00:06:25 GMT
+- request:
+    method: get
+    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/schools
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 13 Sep 2014 00:06:25 GMT
+      Etag:
+      - ! '"1657555549"'
+      Server:
+      - nginx/1.4.7
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '1799'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+        5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
+        High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
+        Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"uri":"/v1.1/schools/530e595026403103360ff9fd"},{"data":{"created":"2014-02-26T21:14:56.668Z","district":"4fd43cc56d11340000000005","high_grade":"5","last_modified":"2014-02-26T21:14:56.670Z","location":{"address":"110
+        Pineapple Street","city":"Brooklyn","state":"NY","zip":"11201"},"low_grade":"Kindergarten","name":"Clever
+        Elementary School","nces_id":"360007000000","phone":"(718) 555-4567","principal":{"name":"Cecilia
+        Roderick","email":"ceciliar@mailinator.com"},"school_number":"13K123","sis_id":"13K123","state_id":"30890","id":"530e595026403103360ff9fe"},"uri":"/v1.1/schools/530e595026403103360ff9fe"},{"data":{"created":"2014-02-26T21:14:56.671Z","district":"4fd43cc56d11340000000005","high_grade":"8","last_modified":"2014-02-26T21:14:56.673Z","location":{"address":"322
+        Old Beach 88th Street","city":"Rockaway Beach","state":"NY","zip":"11693"},"low_grade":"6","name":"Clever
+        Middle School","nces_id":"360001000000","phone":"(718) 555-8989","principal":{"name":"Leonard
+        Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"27Q321","sis_id":"27Q321","state_id":"412","id":"530e595026403103360ff9ff"},"uri":"/v1.1/schools/530e595026403103360ff9ff"}],"paging":{"current":1,"total":1,"count":3},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"}]}'
+    http_version: 
+  recorded_at: Sat, 13 Sep 2014 00:06:25 GMT
+recorded_with: VCR 2.9.3

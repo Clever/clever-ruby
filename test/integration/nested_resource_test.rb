@@ -22,4 +22,9 @@ describe Clever::NestedResource, :vcr do
       end
     end
   end
+
+  it 'must include auth_token in linked_resources' do
+    school = Clever::District.find.first.send(:schools).first
+    school.auth_token.must_equal 'DEMO_TOKEN'
+  end
 end
