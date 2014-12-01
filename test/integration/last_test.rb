@@ -24,22 +24,6 @@ describe 'last method', :vcr do
     end
   end
 
-  describe 'resource' do
-    it 'has working first and last methods' do
-      resources.each do |resource|
-        last = resource.last
-        last.must_be_instance_of resource
-
-        count = 0
-        resource.last(20).each do |e|
-          e.must_be_instance_of resource
-          e.must_equal last if count == 19
-          count += 1
-        end
-      end
-    end
-  end
-
   describe 'nested resource' do
     it 'has working first and last methods' do
       resources.each do |resource|
