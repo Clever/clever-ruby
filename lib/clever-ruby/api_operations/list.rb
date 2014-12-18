@@ -106,30 +106,6 @@ module Clever
           end
         end
 
-        # Query for the last element or n elements in the resource
-        # @api public
-        # @param num [nil, Integer] If nil, last elem; else, num elems to fetch
-        # @param filters [Hash] Filters to request with, as per Clever API spec
-        # @return [CleverObject, Clever::APIOperations::ResultsList] elem, or
-        #   elems found. If list, sorted in ascending order of ids.
-        # @example
-        #   last_elem = Clever::District.last
-        #   last_elems = Clever::District.last 20
-        #   last_elems.each do |e|
-        #     puts e.name
-        #   end
-        def last(num = nil, filters = {}, headers = {})
-          filters[:ending_before] = 'last'
-          if num.nil?
-            filters[:limit] = 1
-            response = Clever.request :get, url, filters, headers
-            Util.convert_to_clever_object response[:data].last
-          else
-            filters[:limit] = num
-            Clever::APIOperations::PageList.new(url, filters, headers).to_results_list
-          end
-        end
-
         # Requests number of elements matching the query
         # @api public
         # @param filters [Hash, nil] Query parameters to pass, as per Clever API spec
