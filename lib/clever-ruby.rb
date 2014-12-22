@@ -152,7 +152,7 @@ module Clever
     url = api_url url
     url, payload = create_payload method, url, params
 
-    headers[:authorization] = 'Bearer ' + Clever.token if Clever.token
+    headers[:Authorization] = 'Bearer ' + Clever.token if Clever.token
     headers[:user_agent] = 'Clever/RubyBindings/' + Clever::VERSION
     headers[:x_clever_client_user_agent] = tracking_headers.to_json
 
