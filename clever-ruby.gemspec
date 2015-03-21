@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'multi_json',    '~> 1.10.0'
   gem.add_runtime_dependency 'rest-client',   '~> 1.6.7'
-  gem.add_runtime_dependency 'activesupport', '~> 4.1.5'
+  gem.add_runtime_dependency 'activesupport', '>= 3.2.0', '< 4.3'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'minitest',      '~> 5.4.1'
@@ -32,4 +32,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'minitest-vcr',  '~> 0.1.1'
   gem.add_development_dependency 'webmock',       '~> 1.9.0'
   gem.add_development_dependency 'rubocop',       '~> 0.26.0'
+  gem.add_development_dependency 'appraisal',     '~> 1.0.2'
 end

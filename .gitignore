@@ -8,6 +8,7 @@ doc_coverage.txt
 .ruby-version
 .ruby-gemset
 Gemfile.lock
+*.gemfile.lock
 InstalledFiles
 _yardoc
 coverage
