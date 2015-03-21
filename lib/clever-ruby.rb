@@ -6,6 +6,7 @@ require 'open-uri'
 require 'set'
 require 'uri'
 require 'cgi'
+require 'json'
 
 require 'clever-ruby/version'
 
@@ -120,6 +121,29 @@ module Clever
     [url, payload]
   end
 
+  # Headers hash for user-agent tracking
+  # @api private
+  # @return [Hash] headers to add to request
+  def self.tracking_headers
+    {
+      bindings_version: Clever::VERSION,
+      lang: 'ruby',
+      lang_version: RUBY_VERSION.to_s + ' p' + RUBY_PATCHLEVEL.to_s,
+      platform: RUBY_PLATFORM.to_s,
+      publisher: 'clever',
+      uname: uname
+    }
+  end
+
+  # Retrieves system's uname
+  # @api private
+  # @return [String] uname with the system's uname
+  def self.uname
+    `uname -a 2>/dev/null`.strip if RUBY_PLATFORM =~ /linux|darwin/i
+  rescue SystemCallError
+    'cannot get uname'
+  end
+
   # Create options hash that specifies an HTTP request from request data
   # @api private
   # @return [Hash] parameters for executing a request
@@ -128,7 +152,9 @@ module Clever
     url = api_url url
     url, payload = create_payload method, url, params
 
-    headers[:Authorization] = 'Bearer ' + Clever.token if Clever.token
+    headers[:authorization] = 'Bearer ' + Clever.token if Clever.token
+    headers[:user_agent] = 'Clever/RubyBindings/' + Clever::VERSION
+    headers[:x_clever_client_user_agent] = tracking_headers.to_json
 
     opts = {
       method: method,
