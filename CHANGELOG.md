@@ -1,3 +1,7 @@
+## 0.10.1 (2014-10-09)
+
+* Update activesupport to 4.2.1
+
 ## 0.10.0 (2014-10-09)
 
 * Add tracking headers to all api requeusts
