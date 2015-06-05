@@ -1,3 +1,7 @@
+## 0.10.2 (2015-06-05)
+
+* Expose paging metadata in page objects, expose collection_count in results lists.
+
 ## 0.10.1 (2014-10-09)
 
 * Update activesupport to 4.2.1

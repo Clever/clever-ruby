@@ -37,5 +37,17 @@ module Clever
       @results_list.count
     end
     alias_method :size, :length
+
+    # Collect the total count of items in the collection from the first
+    # result's metadata
+    # @api public
+    # @return [Integer]
+    def collection_count
+      if length > 0
+        @results_list[0].collection_count
+      else
+        0
+      end
+    end
   end
 end

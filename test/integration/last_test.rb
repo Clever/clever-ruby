@@ -11,7 +11,7 @@ describe 'last method', :vcr do
                Clever::Event, Clever::Section, Clever::Teacher]
 
   describe 'page' do
-    it 'has working first and last methods' do
+    it 'has working first, last, and paging metadata methods' do
       resources.each do |resource|
         page = Clever::APIOperations::Page.new resource.url
         list = page.all
@@ -20,6 +20,9 @@ describe 'last method', :vcr do
         page.last.must_equal list.last
         page.first(10).must_equal list.first(10)
         page.last(10).must_equal list.last(10)
+
+        page.metadata.must_be_instance_of Hash
+        assert_operator page.metadata[:count], :>=, 0
       end
     end
   end
@@ -51,14 +54,14 @@ describe 'last method', :vcr do
           else
             nested.first.must_be_instance_of nested_resource
             nested.first(10).each do |e|
-              e.must_be_intsance_of nested_resource
+              e.must_be_instance_of nested_resource
             end
 
             last = nested.last
             last.must_be_instance_of nested_resource
             count = 0
             nested.last(10).each do |e|
-              e.must_be_intsance_of nested_resource
+              e.must_be_instance_of nested_resource
               e.must_equal last if count == 19
               count += 1
             end

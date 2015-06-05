@@ -38,6 +38,7 @@ describe Clever::APIOperations::List, :vcr do
       assert_equal expected, count, "Expected #{expected} #{name}s to exist, "\
         "but only #{count} were found. Perhaps the test data has changed?"
     end
+
   end
 
   resources.each do |resource|
