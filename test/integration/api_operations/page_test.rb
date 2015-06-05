@@ -8,7 +8,7 @@ describe Clever::APIOperations::Page, :vcr do
     end
   end
 
-  it "populates metadata from response" do
+  it 'populates metadata from response' do
     page = Clever::APIOperations::Page.new 'v1.1/districts'
     assert_instance_of Hash, page.metadata
     assert_equal page.metadata[:total], 2600
