@@ -28,6 +28,30 @@ module Clever
       fail NotImplementedError, 'status nested resource not yet implemented.'
     end
 
+    # Get district admins for the current district
+    # The response for a district does not include a link to the district admins URI, so
+    # this can't be a linked_resource.
+    # @api public
+    # @return [Object]
+    # @example
+    #   district = district.retrieve id
+    #   district_admins = district.district_admins
+    def district_admins(filters = {})
+      Clever::NestedResource.new '/v1.1/district_admins', filters, headers
+    end
+
+    # Get school admins for the current district
+    # The response for a district does not include a link to the school admins URI, so
+    # this can't be a linked_resource.
+    # @api public
+    # @return [Object]
+    # @example
+    #   district = district.retrieve id
+    #   school_admins = district.school_admins
+    def school_admins(filters = {})
+      Clever::NestedResource.new '/v1.1/school_admins', filters, headers
+    end
+
     # @see Clever::CleverObject.optional_attributes
     # @api private
     # @return [Array]
