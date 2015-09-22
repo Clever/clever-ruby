@@ -8,7 +8,8 @@ describe Clever::NestedResource, :vcr do
   end
 
   [Clever::District, Clever::School, Clever::Student,
-   Clever::Event, Clever::Section, Clever::Teacher].each do |resource|
+   Clever::Event, Clever::Section, Clever::Teacher,
+   Clever::DistrictAdmin, Clever::SchoolAdmin].each do |resource|
     next if resource.linked_resources.nil?
     resource.linked_resources.each do |link|
       it "retrieves a #{resource.shortname}'s #{link}" do

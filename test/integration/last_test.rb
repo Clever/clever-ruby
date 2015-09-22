@@ -8,7 +8,8 @@ describe 'last method', :vcr do
   end
 
   resources = [Clever::District, Clever::School, Clever::Student,
-               Clever::Event, Clever::Section, Clever::Teacher]
+               Clever::Event, Clever::Section, Clever::Teacher,
+               Clever::DistrictAdmin, Clever::SchoolAdmin]
 
   describe 'page' do
     it 'has working first and last methods' do

@@ -8,7 +8,10 @@ describe Clever::APIResource do
         section: Clever::Section,
         event: Clever::Event,
         teacher: Clever::Teacher,
-        student: Clever::Student }
+        student: Clever::Student,
+        district_admin: Clever::DistrictAdmin,
+        school_admin: Clever::SchoolAdmin
+      }
     end
 
     it 'returns nil on nonexistent resources' do
