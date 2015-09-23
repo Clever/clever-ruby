@@ -7,9 +7,10 @@ describe 'last method', :vcr do
     end
   end
 
+  # The DistrictAdmin resource does not support the last method.
   resources = [Clever::District, Clever::School, Clever::Student,
                Clever::Event, Clever::Section, Clever::Teacher,
-               Clever::DistrictAdmin, Clever::SchoolAdmin]
+               Clever::SchoolAdmin]
 
   describe 'page' do
     it 'has working first and last methods' do
