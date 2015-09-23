@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,24 +25,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:05:05 GMT
-      Etag:
-      - ! '"1408105812"'
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:40:52 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1186'
+      X-Ratelimit-Reset:
+      - '1443289303'
       Content-Length:
       - '1764'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
         5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
         High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
         Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"uri":"/v1.1/schools/530e595026403103360ff9fd"},{"data":{"created":"2014-02-26T21:14:56.668Z","district":"4fd43cc56d11340000000005","high_grade":"5","last_modified":"2014-02-26T21:14:56.670Z","location":{"address":"110
@@ -53,7 +57,7 @@ http_interactions:
         Middle School","nces_id":"360001000000","phone":"(718) 555-8989","principal":{"name":"Leonard
         Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"27Q321","sis_id":"27Q321","state_id":"412","id":"530e595026403103360ff9ff"},"uri":"/v1.1/schools/530e595026403103360ff9ff"}],"paging":{"current":1,"total":1,"count":3},"links":[{"rel":"self","uri":"/v1.1/schools"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:05:05 GMT
+  recorded_at: Sat, 26 Sep 2015 17:40:52 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/schools?count=true
@@ -62,7 +66,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -79,22 +83,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:05:05 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:40:52 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1185'
+      X-Ratelimit-Reset:
+      - '1443289303'
       Content-Length:
       - '69'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"count":3,"links":[{"rel":"self","uri":"/v1.1/schools?count=true"}]}'
+      encoding: UTF-8
+      string: '{"count":3,"links":[{"rel":"self","uri":"/v1.1/schools?count=true"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:05:05 GMT
+  recorded_at: Sat, 26 Sep 2015 17:40:53 GMT
 recorded_with: VCR 2.9.3

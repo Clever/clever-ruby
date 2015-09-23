@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,24 +25,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:46 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:32 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1097'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '217'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
+      encoding: UTF-8
+      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:07:46 GMT
+  recorded_at: Sat, 26 Sep 2015 17:37:32 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
@@ -51,7 +57,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -68,24 +74,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:46 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:32 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1096'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '518'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:07:46 GMT
+  recorded_at: Sat, 26 Sep 2015 17:37:32 GMT
 - request:
     method: get
     uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/sections
@@ -94,7 +106,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -982,17 +994,23 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:47 GMT
+      - Sat, 26 Sep 2015 17:37:32 GMT
       Etag:
-      - ! '"2104753808"'
-      Server:
-      - nginx/1.4.7
+      - '"-696284929"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1095'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '95741'
       Connection:
@@ -1221,17 +1239,23 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:48 GMT
+      - Sat, 26 Sep 2015 17:37:33 GMT
       Etag:
-      - ! '"967737503"'
-      Server:
-      - nginx/1.4.7
+      - '"-696284929"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1094'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '116608'
       Connection:

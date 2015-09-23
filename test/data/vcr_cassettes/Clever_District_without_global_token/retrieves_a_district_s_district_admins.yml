@@ -2,55 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      Authorization:
-      - Bearer DEMO_TOKEN
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
-      Access-Control-Allow-Methods:
-      - GET,PATCH,POST,DELETE
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sat, 26 Sep 2015 17:41:28 GMT
-      X-Powered-By:
-      - Express
-      X-Ratelimit-Bucket:
-      - bearer
-      X-Ratelimit-Limit:
-      - '1200'
-      X-Ratelimit-Remaining:
-      - '1113'
-      X-Ratelimit-Reset:
-      - '1443289303'
-      Content-Length:
-      - '217'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"uri":"/v1.1/districts/4fd43cc56d11340000000005"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/districts"}]}'
-    http_version: 
-  recorded_at: Sat, 26 Sep 2015 17:41:28 GMT
-- request:
-    method: get
     uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
@@ -78,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 26 Sep 2015 17:41:28 GMT
+      - Sat, 26 Sep 2015 17:41:31 GMT
       X-Powered-By:
       - Express
       X-Ratelimit-Bucket:
@@ -86,7 +37,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1200'
       X-Ratelimit-Remaining:
-      - '1112'
+      - '1105'
       X-Ratelimit-Reset:
       - '1443289303'
       Content-Length:
@@ -96,11 +47,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"},{"rel":"schools","uri":"/v1.1/districts/4fd43cc56d11340000000005/schools"},{"rel":"teachers","uri":"/v1.1/districts/4fd43cc56d11340000000005/teachers"},{"rel":"students","uri":"/v1.1/districts/4fd43cc56d11340000000005/students"},{"rel":"sections","uri":"/v1.1/districts/4fd43cc56d11340000000005/sections"},{"rel":"events","uri":"/v1.1/districts/4fd43cc56d11340000000005/events"}]}'
-    http_version: 
-  recorded_at: Sat, 26 Sep 2015 17:41:29 GMT
+    http_version:
+  recorded_at: Sat, 26 Sep 2015 17:41:31 GMT
 - request:
     method: get
-    uri: https://api.clever.com//v1.1/districts/4fd43cc56d11340000000005/events?created_since=2013-02-15T%202:30:42%200000
+    uri: https://api.clever.com//v1.1/district_admins
     body:
       encoding: US-ASCII
       string: ''
@@ -115,8 +66,8 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
       Access-Control-Allow-Headers:
       - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
@@ -127,7 +78,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 26 Sep 2015 17:41:29 GMT
+      - Sat, 26 Sep 2015 17:41:34 GMT
       X-Powered-By:
       - Express
       X-Ratelimit-Bucket:
@@ -135,17 +86,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1200'
       X-Ratelimit-Remaining:
-      - '1111'
+      - '1098'
       X-Ratelimit-Reset:
       - '1443289303'
       Content-Length:
-      - '174'
+      - '278'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"error":"Could not parse created_since ''2013-02-15T 2:30:42 0000''.
-        Please ensure it is either a valid ObjectID or a valid W3C datetime: http://www.w3.org/TR/NOTE-datetime."}'
-    http_version: 
-  recorded_at: Sat, 26 Sep 2015 17:41:29 GMT
+      string: '{"data":[{"id":"519edecb58b876b018000434","district":"4fd43cc56d11340000000005","email":"district-bigwig@example.com","name":{"first":"District","last":"Bigwig"}}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/district_admins"}]}'
+    http_version:
+  recorded_at: Sat, 26 Sep 2015 17:41:34 GMT
 recorded_with: VCR 2.9.3

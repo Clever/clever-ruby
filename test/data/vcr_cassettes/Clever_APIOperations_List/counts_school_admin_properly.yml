@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/sections?count=true
+    uri: https://api.clever.com/v1.1/school_admins?count=true
     body:
       encoding: US-ASCII
       string: ''
@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 26 Sep 2015 17:41:25 GMT
+      - Sat, 26 Sep 2015 17:41:03 GMT
       X-Powered-By:
       - Express
       X-Ratelimit-Bucket:
@@ -37,16 +37,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1200'
       X-Ratelimit-Remaining:
-      - '1120'
+      - '1157'
       X-Ratelimit-Reset:
       - '1443289303'
       Content-Length:
-      - '72'
+      - '75'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"count":379,"links":[{"rel":"self","uri":"/v1.1/sections?count=true"}]}'
-    http_version: 
-  recorded_at: Sat, 26 Sep 2015 17:41:26 GMT
+      string: '{"count":1,"links":[{"rel":"self","uri":"/v1.1/school_admins?count=true"}]}'
+    http_version:
+  recorded_at: Sat, 26 Sep 2015 17:41:03 GMT
 recorded_with: VCR 2.9.3

@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005?
+    uri: https://api.clever.com/v1.1/districts/4fd43cc56d11340000000005
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Accept:
-      - '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,15 +25,21 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 30 Sep 2014 19:54:10 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:52 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1175'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '518'
       Connection:
@@ -51,7 +57,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -68,17 +74,21 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 30 Sep 2014 19:54:10 GMT
-      Etag:
-      - '"-1604003112"'
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:52 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1174'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '44665'
       Connection:
@@ -185,7 +195,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -202,17 +212,21 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Tue, 30 Sep 2014 19:54:11 GMT
-      Etag:
-      - '"1331950855"'
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:52 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1173'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '5210'
       Connection:
