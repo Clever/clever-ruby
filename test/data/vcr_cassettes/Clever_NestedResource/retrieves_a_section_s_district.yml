@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,24 +25,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:36 GMT
+      - Sat, 26 Sep 2015 17:37:48 GMT
       Etag:
-      - ! '"1525695678"'
-      Server:
-      - nginx/1.4.7
+      - '"-682802249"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1186'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '113738'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
+      encoding: UTF-8
+      string: '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
         Guidance - 101 - B. Greene (Section 1)","period":"0","school":"530e595026403103360ff9fd","sis_id":"581","students":["530e5961049e75a9262cffd9","530e5961049e75a9262d0010","530e5961049e75a9262d004e","530e5961049e75a9262d0080","530e5962049e75a9262d0156","530e5963049e75a9262d01b7","530e5963049e75a9262d0253","530e5966049e75a9262d0418","530e5966049e75a9262d0475","530e5966049e75a9262d04b4","530e5967049e75a9262d0503","530e5968049e75a9262d05e9","530e5968049e75a9262d061f","530e5968049e75a9262d0632","530e5968049e75a9262d0647"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c11","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e5979049e75a9262d0af2"},"uri":"/v1.1/sections/530e5979049e75a9262d0af2"},{"data":{"course_name":"Group
         Guidance","course_number":"102","created":"2014-02-26T21:15:37.934Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-02-26T21:15:37.936Z","name":"Group
         Guidance - 102 - T. Vaux (Section 2)","period":"0","school":"530e595026403103360ff9fd","sis_id":"582","students":["530e5960049e75a9262cff4f","530e5960049e75a9262cff95","530e5961049e75a9262cffe0","530e5961049e75a9262d0027","530e5961049e75a9262d008d","530e5963049e75a9262d0180","530e5964049e75a9262d0300","530e5964049e75a9262d0302","530e5964049e75a9262d0304","530e5965049e75a9262d039e","530e5965049e75a9262d03b6","530e5965049e75a9262d03e8","530e5966049e75a9262d040c","530e5966049e75a9262d04cc","530e5967049e75a9262d05c0","530e5968049e75a9262d062f"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c12","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e5979049e75a9262d0af3"},"uri":"/v1.1/sections/530e5979049e75a9262d0af3"},{"data":{"course_name":"Group
@@ -315,7 +321,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -332,24 +338,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:37 GMT
+      - Sat, 26 Sep 2015 17:37:48 GMT
       Etag:
-      - ! '"-1019123713"'
-      Server:
-      - nginx/1.4.7
+      - '"93377604"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1185'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '1343'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
+      encoding: UTF-8
+      string: '{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
         Guidance - 101 - B. Greene (Section 1)","period":"0","school":"530e595026403103360ff9fd","sis_id":"581","students":["530e5961049e75a9262cffd9","530e5961049e75a9262d0010","530e5961049e75a9262d004e","530e5961049e75a9262d0080","530e5962049e75a9262d0156","530e5963049e75a9262d01b7","530e5963049e75a9262d0253","530e5966049e75a9262d0418","530e5966049e75a9262d0475","530e5966049e75a9262d04b4","530e5967049e75a9262d0503","530e5968049e75a9262d05e9","530e5968049e75a9262d061f","530e5968049e75a9262d0632","530e5968049e75a9262d0647"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c11","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e5979049e75a9262d0af2"},"links":[{"rel":"self","uri":"/v1.1/sections/530e5979049e75a9262d0af2"},{"rel":"district","uri":"/v1.1/sections/530e5979049e75a9262d0af2/district"},{"rel":"teacher","uri":"/v1.1/sections/530e5979049e75a9262d0af2/teacher"},{"rel":"students","uri":"/v1.1/sections/530e5979049e75a9262d0af2/students"},{"rel":"school","uri":"/v1.1/sections/530e5979049e75a9262d0af2/school"},{"rel":"events","uri":"/v1.1/sections/530e5979049e75a9262d0af2/events"}]}'
     http_version: 
   recorded_at: Sat, 13 Sep 2014 00:07:37 GMT
@@ -361,7 +373,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -378,22 +390,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:37 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:48 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1184'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '139'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"}]}'
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:07:37 GMT
+  recorded_at: Sat, 26 Sep 2015 17:37:49 GMT
 recorded_with: VCR 2.9.3

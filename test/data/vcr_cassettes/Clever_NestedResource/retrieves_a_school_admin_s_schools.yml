@@ -1,0 +1,205 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v1.1/school_admins
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 28 Sep 2015 15:45:43 GMT
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1199'
+      X-Ratelimit-Reset:
+      - '1443455203'
+      Content-Length:
+      - '352'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"data":{"district":"4fd43cc56d11340000000005","email":"thinkerton@example.com","name":{"first":"Think","last":"Thinkerton"},"schools":["530e595026403103360ff9fd"],"staff_id":"1212","title":"Principal","id":"5601b814141fd30001000017"},"uri":"/v1.1/school_admins/5601b814141fd30001000017"}],"links":[{"rel":"self","uri":"/v1.1/school_admins"}]}'
+    http_version:
+  recorded_at: Mon, 28 Sep 2015 15:45:44 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v1.1/school_admins/5601b814141fd30001000017
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 28 Sep 2015 15:45:44 GMT
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1198'
+      X-Ratelimit-Reset:
+      - '1443455203'
+      Content-Length:
+      - '392'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"district":"4fd43cc56d11340000000005","email":"thinkerton@example.com","name":{"first":"Think","last":"Thinkerton"},"schools":["530e595026403103360ff9fd"],"staff_id":"1212","title":"Principal","id":"5601b814141fd30001000017"},"links":[{"rel":"self","uri":"/v1.1/school_admins/5601b814141fd30001000017"},{"rel":"schools","uri":"/v1.1/school_admins/5601b814141fd30001000017/schools"}]}'
+    http_version:
+  recorded_at: Mon, 28 Sep 2015 15:45:44 GMT
+- request:
+    method: get
+    uri: https://api.clever.com//v1.1/school_admins/5601b814141fd30001000017/schools
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 28 Sep 2015 15:45:44 GMT
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1197'
+      X-Ratelimit-Reset:
+      - '1443455203'
+      Content-Length:
+      - '626'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+        5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
+        High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
+        Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"uri":"/v1.1/schools/530e595026403103360ff9fd"}],"links":[{"rel":"self","uri":"/v1.1/school_admins/5601b814141fd30001000017/schools"}]}'
+    http_version:
+  recorded_at: Mon, 28 Sep 2015 15:45:45 GMT
+- request:
+    method: get
+    uri: https://api.clever.com//v1.1/school_admins/5601b814141fd30001000017/schools
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer DEMO_TOKEN
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 28 Sep 2015 15:45:45 GMT
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1196'
+      X-Ratelimit-Reset:
+      - '1443455203'
+      Content-Length:
+      - '626'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+        5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
+        High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
+        Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"uri":"/v1.1/schools/530e595026403103360ff9fd"}],"links":[{"rel":"self","uri":"/v1.1/school_admins/5601b814141fd30001000017/schools"}]}'
+    http_version:
+  recorded_at: Mon, 28 Sep 2015 15:45:45 GMT
+recorded_with: VCR 2.9.3

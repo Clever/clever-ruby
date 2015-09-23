@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,24 +25,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:53 GMT
-      Etag:
-      - ! '"-409931571"'
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:40 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1076'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '44617'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2012-11-11T15:00:14.036Z","credentials":{"district_password":"Acoev0oow4","district_username":"spinka_leo"},"district":"4fd43cc56d11340000000005","email":"spinka.leo@example.net","last_modified":"2014-02-26T21:15:01.038Z","name":{"first":"Leo","last":"Spinka","middle":"R"},"school":"530e595026403103360ff9fe","sis_id":"11","teacher_number":"539224","title":"Grade
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2012-11-11T15:00:14.036Z","credentials":{"district_password":"Acoev0oow4","district_username":"spinka_leo"},"district":"4fd43cc56d11340000000005","email":"spinka.leo@example.net","last_modified":"2014-02-26T21:15:01.038Z","name":{"first":"Leo","last":"Spinka","middle":"R"},"school":"530e595026403103360ff9fe","sis_id":"11","teacher_number":"539224","title":"Grade
         3 Common Branch Teacher","id":"509fbd7ec474fab64a8e9d53"},"uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53"},{"data":{"created":"2012-11-27T15:04:48.474Z","credentials":{"district_password":"OMeitoo3v","district_username":"reuben.conn"},"district":"4fd43cc56d11340000000005","email":"conn_reuben@example.net","last_modified":"2014-02-26T21:15:01.234Z","name":{"first":"Reuben","last":"Conn","middle":"K"},"school":"530e595026403103360ff9ff","sis_id":"33","teacher_number":"215041","title":"Grade
         8 Mathematics Teacher","id":"50b4d690ad221ab95f1c6c39"},"uri":"/v1.1/teachers/50b4d690ad221ab95f1c6c39"},{"data":{"created":"2012-12-01T15:02:36.961Z","credentials":{"district_password":"ru3o8rusbf","district_username":"steven.ogden"},"district":"4fd43cc56d11340000000005","email":"ogden_steven@example.net","last_modified":"2014-02-26T21:15:01.485Z","name":{"first":"Steven","last":"Ogden","middle":"Q"},"school":"530e595026403103360ff9fd","sis_id":"81","teacher_number":"474958","title":"High
         School Science Teacher","id":"50ba1c0c4eda5d94372227eb"},"uri":"/v1.1/teachers/50ba1c0c4eda5d94372227eb"},{"data":{"created":"2012-12-05T15:00:02.670Z","credentials":{"district_password":"Coo0ooyahgh","district_username":"hauck.haylie"},"district":"4fd43cc56d11340000000005","email":"hauck.haylie@example.com","last_modified":"2014-02-26T21:15:01.358Z","name":{"first":"Haylie","last":"Hauck","middle":"J"},"school":"530e595026403103360ff9fd","sis_id":"48","teacher_number":"830340","title":"Grade
@@ -142,7 +146,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -159,22 +163,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:53 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:40 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1075'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '972'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"created":"2012-11-11T15:00:14.036Z","credentials":{"district_password":"Acoev0oow4","district_username":"spinka_leo"},"district":"4fd43cc56d11340000000005","email":"spinka.leo@example.net","last_modified":"2014-02-26T21:15:01.038Z","name":{"first":"Leo","last":"Spinka","middle":"R"},"school":"530e595026403103360ff9fe","sis_id":"11","teacher_number":"539224","title":"Grade
+      encoding: UTF-8
+      string: '{"data":{"created":"2012-11-11T15:00:14.036Z","credentials":{"district_password":"Acoev0oow4","district_username":"spinka_leo"},"district":"4fd43cc56d11340000000005","email":"spinka.leo@example.net","last_modified":"2014-02-26T21:15:01.038Z","name":{"first":"Leo","last":"Spinka","middle":"R"},"school":"530e595026403103360ff9fe","sis_id":"11","teacher_number":"539224","title":"Grade
         3 Common Branch Teacher","id":"509fbd7ec474fab64a8e9d53"},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53"},{"rel":"district","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/district"},{"rel":"school","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/school"},{"rel":"students","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/students"},{"rel":"sections","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/sections"},{"rel":"grade_levels","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/grade_levels"},{"rel":"events","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
     http_version: 
   recorded_at: Sat, 13 Sep 2014 00:07:53 GMT
@@ -186,7 +196,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -203,22 +213,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:53 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:40 GMT
+      Etag:
+      - '"323518025"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1074'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '134'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[],"paging":{"current":0,"total":0,"count":0},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
+      encoding: UTF-8
+      string: '{"data":[],"paging":{"current":0,"total":0,"count":0},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
     http_version: 
   recorded_at: Sat, 13 Sep 2014 00:07:53 GMT
 - request:
@@ -229,7 +247,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -246,22 +264,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:53 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:41 GMT
+      Etag:
+      - '"323518025"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1073'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '134'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[],"paging":{"current":0,"total":0,"count":0},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
+      encoding: UTF-8
+      string: '{"data":[],"paging":{"current":0,"total":0,"count":0},"links":[{"rel":"self","uri":"/v1.1/teachers/509fbd7ec474fab64a8e9d53/events"}]}'
     http_version: 
   recorded_at: Sat, 13 Sep 2014 00:07:53 GMT
 recorded_with: VCR 2.9.3
