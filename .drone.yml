@@ -1,4 +1,4 @@
-image: ruby1.9.3
+image: ruby2.0.0
 notify:
   email:
     recipients:
