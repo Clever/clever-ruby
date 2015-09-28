@@ -13,7 +13,7 @@ describe Clever::NestedResource, :vcr do
     resource.linked_resources.each do |link|
       it "retrieves a #{resource.shortname}'s #{link}" do
         result = resource.find.first.send link
-        if Clever::Util.singular?(link.to_s)
+        if Clever::APIResource.singular?(link.to_s)
           result.must_be_instance_of Clever::APIResource.named(link.to_s)
         else
           result.must_be_instance_of Clever::NestedResource
