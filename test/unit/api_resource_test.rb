@@ -1,16 +1,29 @@
 require 'test_helper'
 
 describe Clever::APIResource do
-  describe :named do
-    let :resources do
-      { district: { plural: 'districts', klass: Clever::District },
-        school: { plural: 'schools', klass: Clever::School },
-        section: { plural: 'sections', klass: Clever::Section },
-        event: { plural: 'events', klass: Clever::Event },
-        teacher: { plural: 'teachers', klass: Clever::Teacher },
-        student: { plural: 'students', klass: Clever::Student } }
+  let :resources do
+    { district: { plural: 'districts', klass: Clever::District },
+      school: { plural: 'schools', klass: Clever::School },
+      section: { plural: 'sections', klass: Clever::Section },
+      event: { plural: 'events', klass: Clever::Event },
+      teacher: { plural: 'teachers', klass: Clever::Teacher },
+      student: { plural: 'students', klass: Clever::Student } }
+  end
+
+  describe :singular do
+    it 'identifies singular and plural resource names' do
+      resources.each do |singular, klass_info|
+        Clever::APIResource.singular?(singular).must_equal true
+        Clever::APIResource.singular?(klass_info[:plural]).must_equal false
+      end
     end
 
+    it 'fails on non-resource names' do
+      -> { Clever::APIResource.singular?('thing') }.must_raise RuntimeError
+    end
+  end
+
+  describe :named do
     it 'returns nil on nonexistent resources' do
       Clever::APIResource.named('fake_resource').must_equal nil
     end
