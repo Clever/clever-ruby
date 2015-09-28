@@ -1,14 +1,6 @@
 module Clever
   # Library helper methods
   module Util
-    # Check if a given word is singular
-    # @api private
-    # @param word [String] Word to check
-    # @return [Boolean] False if plural, true if singular
-    def self.singular?(word)
-      word.singularize == word
-    end
-
     # Check if a given ID is a valid format (MongoDB BSON ObjectID)
     # @api private
     # @param id [String] ID to check
