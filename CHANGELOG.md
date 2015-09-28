@@ -1,6 +1,7 @@
 ## 0.11.0 (2015-09-28)
 
 * Allow timeout and open_timeout configurable
+* Allow nested resources more than 1 level deep
 
 ## 0.10.2 (2015-09-28)
 
