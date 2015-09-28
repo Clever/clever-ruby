@@ -1,3 +1,11 @@
+## 0.11.0 (2015-09-28)
+
+* Allow timeout and open_timeout configurable
+
+## 0.10.2 (2015-09-28)
+
+* Remove duplicated code, test against Ruby 2.0.0
+
 ## 0.10.1 (2014-10-09)
 
 * Update activesupport to 4.2.1

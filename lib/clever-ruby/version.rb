@@ -1,5 +1,6 @@
 # Clever Ruby library
 module Clever
-  # Version
-  VERSION = '0.10.2'
+  # Version. Follows semantic versioning, as described here:
+  # http://semver.org/
+  VERSION = '0.11.0'
 end
