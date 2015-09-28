@@ -45,6 +45,12 @@ To run all tests:
 $ rake test
 ```
 
+To run a specific test file, for example `test/unit/clever_test.rb`:
+
+```bash
+$ rake test TEST=test/unit/clever_test.rb
+```
+
 To run all tests and the linter ([rubocop](https://github.com/bbatsov/rubocop)):
 
 ```bash
