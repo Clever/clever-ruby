@@ -62,6 +62,20 @@ module Clever
       configuration.api_key
     end
 
+    # Retrieve the configured timeout
+    # @api private
+    # @return [Fixnum] Configuration timeout
+    def timeout
+      configuration.timeout
+    end
+
+    # Retrieve the configured open timeout
+    # @api private
+    # @return [Fixnum] Open timeout
+    def open_timeout
+      configuration.open_timeout
+    end
+
     # Retrieve your stored API token
     # @api private
     # @return [String] API token
@@ -160,9 +174,9 @@ module Clever
       method: method,
       url: url,
       headers: headers,
-      open_timeout: 30,
+      open_timeout: Clever.open_timeout,
       payload: payload,
-      timeout: 120
+      timeout: Clever.timeout
     }
     if Clever.api_key
       opts[:user] = Clever.api_key

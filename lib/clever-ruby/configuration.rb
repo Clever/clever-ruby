@@ -16,6 +16,16 @@ module Clever
     # @return [String]
     attr_accessor :api_base
 
+    # Access API timeout
+    # @api private
+    # @return [Fixnum]
+    attr_accessor :timeout
+
+    # Access API open timeout
+    # @api private
+    # @return [Fixnum]
+    attr_accessor :open_timeout
+
     # Initialize configuration
     # @api private
     # @return [Clever::Configuration]
@@ -23,6 +33,8 @@ module Clever
       @api_key  = nil
       @token = nil
       @api_base = 'https://api.clever.com/'
+      @timeout = 120
+      @open_timeout = 30
     end
   end
 end
