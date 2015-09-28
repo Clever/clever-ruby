@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,24 +25,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:45 GMT
+      - Sat, 26 Sep 2015 17:37:30 GMT
       Etag:
-      - ! '"-1704869160"'
-      Server:
-      - nginx/1.4.7
+      - '"-1672977800"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1101'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '66289'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:12.346Z","credentials":{"district_username":"stevez33","district_password":"auyik3tiTieL"},"district":"4fd43cc56d11340000000005","dob":"2/11/2007","ell_status":"N","email":"z.steve@example.net","frl_status":"Paid","gender":"M","grade":"Kindergarten","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.656Z","location":{"zip":"10459"},"name":{"first":"Steve","middle":"G","last":"Ziemann"},"race":"Black
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:12.346Z","credentials":{"district_username":"stevez33","district_password":"auyik3tiTieL"},"district":"4fd43cc56d11340000000005","dob":"2/11/2007","ell_status":"N","email":"z.steve@example.net","frl_status":"Paid","gender":"M","grade":"Kindergarten","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.656Z","location":{"zip":"10459"},"name":{"first":"Steve","middle":"G","last":"Ziemann"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"100095233","state_id":"231786324","student_number":"100095233","id":"530e5960049e75a9262cff1d"},"uri":"/v1.1/students/530e5960049e75a9262cff1d"},{"data":{"created":"2014-02-26T21:15:12.358Z","credentials":{"district_username":"douglasw58","district_password":"ahFii2nae"},"district":"4fd43cc56d11340000000005","dob":"6/18/1998","ell_status":"Y","email":"w_douglas@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.661Z","location":{"zip":"11004"},"name":{"first":"Douglas","middle":"S","last":"Wisoky"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"101565758","state_id":"498006597","student_number":"101565758","id":"530e5960049e75a9262cff1e"},"uri":"/v1.1/students/530e5960049e75a9262cff1e"},{"data":{"created":"2014-02-26T21:15:12.368Z","credentials":{"district_username":"joel42","district_password":"CaaDie0eboo"},"district":"4fd43cc56d11340000000005","dob":"7/4/1997","ell_status":"Y","email":"l.joe@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.664Z","location":{"zip":"10473"},"name":{"first":"Joe","middle":"S","last":"Lakin"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"106078142","state_id":"635493722","student_number":"106078142","id":"530e5960049e75a9262cff1f"},"uri":"/v1.1/students/530e5960049e75a9262cff1f"},{"data":{"created":"2014-02-26T21:15:12.374Z","credentials":{"district_username":"evalynb40","district_password":"ooXahwook2"},"district":"4fd43cc56d11340000000005","dob":"8/10/2006","ell_status":"N","email":"b_evalyn@example.org","frl_status":"Paid","gender":"F","grade":"1","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.668Z","location":{"zip":"10029"},"name":{"first":"Evalyn","middle":"J","last":"Bradtke"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"106091540","state_id":"552729322","student_number":"106091540","id":"530e5960049e75a9262cff20"},"uri":"/v1.1/students/530e5960049e75a9262cff20"},{"data":{"created":"2014-02-26T21:15:12.382Z","credentials":{"district_username":"coryt00","district_password":"ahW1taesao5"},"district":"4fd43cc56d11340000000005","dob":"7/21/1997","ell_status":"Y","email":"cory_t@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.673Z","location":{"zip":"10038"},"name":{"first":"Cory","middle":"V","last":"Thompson"},"race":"Black
@@ -124,7 +130,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -141,24 +147,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:45 GMT
+      - Sat, 26 Sep 2015 17:37:30 GMT
       Etag:
-      - ! '"1850740737"'
-      Server:
-      - nginx/1.4.7
+      - '"558167227"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1100'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '1151'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"created":"2014-02-26T21:15:12.346Z","credentials":{"district_username":"stevez33","district_password":"auyik3tiTieL"},"district":"4fd43cc56d11340000000005","dob":"2/11/2007","ell_status":"N","email":"z.steve@example.net","frl_status":"Paid","gender":"M","grade":"Kindergarten","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.656Z","location":{"zip":"10459"},"name":{"first":"Steve","middle":"G","last":"Ziemann"},"race":"Black
+      encoding: UTF-8
+      string: '{"data":{"created":"2014-02-26T21:15:12.346Z","credentials":{"district_username":"stevez33","district_password":"auyik3tiTieL"},"district":"4fd43cc56d11340000000005","dob":"2/11/2007","ell_status":"N","email":"z.steve@example.net","frl_status":"Paid","gender":"M","grade":"Kindergarten","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.656Z","location":{"zip":"10459"},"name":{"first":"Steve","middle":"G","last":"Ziemann"},"race":"Black
         or African American","school":"530e595026403103360ff9fe","sis_id":"100095233","state_id":"231786324","student_number":"100095233","id":"530e5960049e75a9262cff1d"},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff1d"},{"rel":"district","uri":"/v1.1/students/530e5960049e75a9262cff1d/district"},{"rel":"sections","uri":"/v1.1/students/530e5960049e75a9262cff1d/sections"},{"rel":"school","uri":"/v1.1/students/530e5960049e75a9262cff1d/school"},{"rel":"teachers","uri":"/v1.1/students/530e5960049e75a9262cff1d/teachers"},{"rel":"contacts","uri":"/v1.1/students/530e5960049e75a9262cff1d/contacts"},{"rel":"events","uri":"/v1.1/students/530e5960049e75a9262cff1d/events"}]}'
     http_version: 
   recorded_at: Sat, 13 Sep 2014 00:07:45 GMT
@@ -170,7 +182,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -187,22 +199,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:45 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:31 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1099'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '620'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.475Z","credentials":{"district_username":"schoen.seth","district_password":"aiX0iayai"},"district":"4fd43cc56d11340000000005","email":"seth_schoen@example.org","last_modified":"2014-02-26T21:15:01.477Z","name":{"first":"Seth","middle":"C","last":"Schoen"},"school":"530e595026403103360ff9fe","sis_id":"69","teacher_number":"256742","title":"Kindergarten
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:01.475Z","credentials":{"district_username":"schoen.seth","district_password":"aiX0iayai"},"district":"4fd43cc56d11340000000005","email":"seth_schoen@example.org","last_modified":"2014-02-26T21:15:01.477Z","name":{"first":"Seth","middle":"C","last":"Schoen"},"school":"530e595026403103360ff9fe","sis_id":"69","teacher_number":"256742","title":"Kindergarten
         Teacher","id":"530e5955d50c310f36112c03"},"uri":"/v1.1/teachers/530e5955d50c310f36112c03"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff1d/teachers"}]}'
     http_version: 
   recorded_at: Sat, 13 Sep 2014 00:07:45 GMT
@@ -214,7 +232,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -231,22 +249,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:45 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:31 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1098'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '620'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:01.475Z","credentials":{"district_username":"schoen.seth","district_password":"aiX0iayai"},"district":"4fd43cc56d11340000000005","email":"seth_schoen@example.org","last_modified":"2014-02-26T21:15:01.477Z","name":{"first":"Seth","middle":"C","last":"Schoen"},"school":"530e595026403103360ff9fe","sis_id":"69","teacher_number":"256742","title":"Kindergarten
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:01.475Z","credentials":{"district_username":"schoen.seth","district_password":"aiX0iayai"},"district":"4fd43cc56d11340000000005","email":"seth_schoen@example.org","last_modified":"2014-02-26T21:15:01.477Z","name":{"first":"Seth","middle":"C","last":"Schoen"},"school":"530e595026403103360ff9fe","sis_id":"69","teacher_number":"256742","title":"Kindergarten
         Teacher","id":"530e5955d50c310f36112c03"},"uri":"/v1.1/teachers/530e5955d50c310f36112c03"}],"paging":{"current":1,"total":1,"count":1},"links":[{"rel":"self","uri":"/v1.1/students/530e5960049e75a9262cff1d/teachers"}]}'
     http_version: 
   recorded_at: Sat, 13 Sep 2014 00:07:45 GMT

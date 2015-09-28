@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,7 +25,7 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
@@ -36,13 +36,21 @@ http_interactions:
       - nginx/1.4.7
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1190'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '1764'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
         5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
         High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
         Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"uri":"/v1.1/schools/530e595026403103360ff9fd"},{"data":{"created":"2014-02-26T21:14:56.668Z","district":"4fd43cc56d11340000000005","high_grade":"5","last_modified":"2014-02-26T21:14:56.670Z","location":{"address":"110
@@ -62,7 +70,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -93,8 +101,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+      encoding: UTF-8
+      string: '{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
         5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
         High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
         Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fd"},{"rel":"district","uri":"/v1.1/schools/530e595026403103360ff9fd/district"},{"rel":"teachers","uri":"/v1.1/schools/530e595026403103360ff9fd/teachers"},{"rel":"students","uri":"/v1.1/schools/530e595026403103360ff9fd/students"},{"rel":"sections","uri":"/v1.1/schools/530e595026403103360ff9fd/sections"},{"rel":"events","uri":"/v1.1/schools/530e595026403103360ff9fd/events"}]}'
@@ -108,7 +116,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -141,8 +149,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:12.358Z","credentials":{"district_username":"douglasw58","district_password":"ahFii2nae"},"district":"4fd43cc56d11340000000005","dob":"6/18/1998","ell_status":"Y","email":"w_douglas@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.661Z","location":{"zip":"11004"},"name":{"first":"Douglas","middle":"S","last":"Wisoky"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"101565758","state_id":"498006597","student_number":"101565758","id":"530e5960049e75a9262cff1e"},"uri":"/v1.1/students/530e5960049e75a9262cff1e"},{"data":{"created":"2014-02-26T21:15:12.368Z","credentials":{"district_username":"joel42","district_password":"CaaDie0eboo"},"district":"4fd43cc56d11340000000005","dob":"7/4/1997","ell_status":"Y","email":"l.joe@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.664Z","location":{"zip":"10473"},"name":{"first":"Joe","middle":"S","last":"Lakin"},"race":"Black
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:12.358Z","credentials":{"district_username":"douglasw58","district_password":"ahFii2nae"},"district":"4fd43cc56d11340000000005","dob":"6/18/1998","ell_status":"Y","email":"w_douglas@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.661Z","location":{"zip":"11004"},"name":{"first":"Douglas","middle":"S","last":"Wisoky"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"101565758","state_id":"498006597","student_number":"101565758","id":"530e5960049e75a9262cff1e"},"uri":"/v1.1/students/530e5960049e75a9262cff1e"},{"data":{"created":"2014-02-26T21:15:12.368Z","credentials":{"district_username":"joel42","district_password":"CaaDie0eboo"},"district":"4fd43cc56d11340000000005","dob":"7/4/1997","ell_status":"Y","email":"l.joe@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.664Z","location":{"zip":"10473"},"name":{"first":"Joe","middle":"S","last":"Lakin"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"106078142","state_id":"635493722","student_number":"106078142","id":"530e5960049e75a9262cff1f"},"uri":"/v1.1/students/530e5960049e75a9262cff1f"},{"data":{"created":"2014-02-26T21:15:12.382Z","credentials":{"district_username":"coryt00","district_password":"ahW1taesao5"},"district":"4fd43cc56d11340000000005","dob":"7/21/1997","ell_status":"Y","email":"cory_t@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.673Z","location":{"zip":"10038"},"name":{"first":"Cory","middle":"V","last":"Thompson"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"106867300","state_id":"863433981","student_number":"106867300","id":"530e5960049e75a9262cff21"},"uri":"/v1.1/students/530e5960049e75a9262cff21"},{"data":{"created":"2014-02-26T21:15:12.391Z","credentials":{"district_username":"juliar95","district_password":"bohTunaequ1oh"},"district":"4fd43cc56d11340000000005","dob":"1/29/1998","ell_status":"Y","email":"julia.r@example.org","frl_status":"Paid","gender":"F","grade":"9","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.679Z","location":{"zip":"11239"},"name":{"first":"Julia","middle":"B","last":"Runolfsdottir"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"108028995","state_id":"339598426","student_number":"108028995","id":"530e5960049e75a9262cff23"},"uri":"/v1.1/students/530e5960049e75a9262cff23"},{"data":{"created":"2014-02-26T21:15:12.422Z","credentials":{"district_username":"yvettec36","district_password":"ya5piX9Oh"},"district":"4fd43cc56d11340000000005","dob":"5/18/1997","ell_status":"N","email":"c_yvette@example.org","frl_status":"Paid","gender":"F","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.694Z","location":{"zip":"11385"},"name":{"first":"Yvette","middle":"W","last":"Cummings"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"112258136","state_id":"373187439","student_number":"112258136","id":"530e5960049e75a9262cff26"},"uri":"/v1.1/students/530e5960049e75a9262cff26"},{"data":{"created":"2014-02-26T21:15:12.430Z","credentials":{"district_username":"geraldp09","district_password":"ieg6piLoc"},"district":"4fd43cc56d11340000000005","dob":"8/27/1998","ell_status":"Y","email":"p.gerald@example.com","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.698Z","location":{"zip":"11691"},"name":{"first":"Gerald","middle":"J","last":"Parisian"},"race":"Two
@@ -218,7 +226,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -235,24 +243,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:40 GMT
-      Etag:
-      - ! '"249757394"'
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:46 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1189'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '66346'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:14.440Z","credentials":{"district_username":"josepht59","district_password":"aije9Go0"},"district":"4fd43cc56d11340000000005","dob":"5/17/1997","ell_status":"N","email":"t_joseph@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:41.678Z","location":{"zip":"11695"},"name":{"first":"Joseph","middle":"B","last":"Thiel"},"race":"Black
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:14.440Z","credentials":{"district_username":"josepht59","district_password":"aije9Go0"},"district":"4fd43cc56d11340000000005","dob":"5/17/1997","ell_status":"N","email":"t_joseph@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:41.678Z","location":{"zip":"11695"},"name":{"first":"Joseph","middle":"B","last":"Thiel"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"320437259","state_id":"183500753","student_number":"320437259","id":"530e5962049e75a9262d0102"},"uri":"/v1.1/students/530e5962049e75a9262d0102"},{"data":{"created":"2014-02-26T21:15:14.454Z","credentials":{"district_username":"nancyb33","district_password":"quiVu5aen"},"district":"4fd43cc56d11340000000005","dob":"9/26/1996","ell_status":"N","email":"b_nancy@example.org","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:41.684Z","location":{"zip":"10021"},"name":{"first":"Nancy","middle":"P","last":"Borer"},"race":"Two
         or More Races","school":"530e595026403103360ff9fd","sis_id":"321540033","state_id":"170613526","student_number":"321540033","id":"530e5962049e75a9262d0106"},"uri":"/v1.1/students/530e5962049e75a9262d0106"},{"data":{"created":"2014-02-26T21:15:14.514Z","credentials":{"district_username":"jeromea21","district_password":"idai0Xupoo"},"district":"4fd43cc56d11340000000005","dob":"1/6/1996","ell_status":"N","email":"a.jerome@example.org","frl_status":"Paid","gender":"M","grade":"11","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.717Z","location":{"zip":"10039"},"name":{"first":"Jerome","middle":"C","last":"Ankunding"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"329898621","state_id":"258035113","student_number":"329898621","id":"530e5962049e75a9262d010e"},"uri":"/v1.1/students/530e5962049e75a9262d010e"},{"data":{"created":"2014-02-26T21:15:14.526Z","credentials":{"district_username":"judithl34","district_password":"eiwu9Quupah"},"district":"4fd43cc56d11340000000005","dob":"3/27/1998","ell_status":"N","email":"judith_l@example.net","frl_status":"Paid","gender":"F","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.722Z","location":{"zip":"11236"},"name":{"first":"Judith","middle":"K","last":"Lindgren"},"race":"Two
@@ -345,24 +357,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:40 GMT
+      - Sat, 26 Sep 2015 17:37:47 GMT
       Etag:
-      - ! '"-1201581989"'
-      Server:
-      - nginx/1.4.7
+      - '"-1982196704"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1188'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '66430'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:16.632Z","credentials":{"district_username":"kimberlyk62","district_password":"nie6Ieb1"},"district":"4fd43cc56d11340000000005","dob":"12/28/1996","ell_status":"N","email":"k.kimberly@example.com","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.670Z","location":{"zip":"11691"},"name":{"first":"Kimberly","middle":"R","last":"Kutch"},"race":"Black
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:16.632Z","credentials":{"district_username":"kimberlyk62","district_password":"nie6Ieb1"},"district":"4fd43cc56d11340000000005","dob":"12/28/1996","ell_status":"N","email":"k.kimberly@example.com","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.670Z","location":{"zip":"11691"},"name":{"first":"Kimberly","middle":"R","last":"Kutch"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"531248862","state_id":"879810915","student_number":"531248862","id":"530e5964049e75a9262d02d5"},"uri":"/v1.1/students/530e5964049e75a9262d02d5"},{"data":{"created":"2014-02-26T21:15:16.638Z","credentials":{"district_username":"lindac62","district_password":"ki7AhahyahF"},"district":"4fd43cc56d11340000000005","dob":"12/9/1996","ell_status":"N","email":"linda_c@example.com","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:42.675Z","location":{"zip":"10303"},"name":{"first":"Linda","middle":"J","last":"Christiansen"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"531293162","state_id":"138529274","student_number":"531293162","id":"530e5964049e75a9262d02d6"},"uri":"/v1.1/students/530e5964049e75a9262d02d6"},{"data":{"created":"2014-02-26T21:15:16.678Z","credentials":{"district_username":"keithw08","district_password":"ahboh2EeBeY"},"district":"4fd43cc56d11340000000005","dob":"8/22/1996","ell_status":"N","email":"w.keith@example.org","frl_status":"Paid","gender":"M","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.685Z","location":{"zip":"10309"},"name":{"first":"Keith","middle":"V","last":"Wintheiser"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"534675808","state_id":"651155420","student_number":"534675808","id":"530e5964049e75a9262d02d9"},"uri":"/v1.1/students/530e5964049e75a9262d02d9"},{"data":{"created":"2014-02-26T21:15:16.740Z","credentials":{"district_username":"dianen73","district_password":"eel7Thohd"},"district":"4fd43cc56d11340000000005","dob":"6/16/1996","ell_status":"N","email":"n_diane@example.net","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:42.697Z","location":{"zip":"11691"},"name":{"first":"Diane","middle":"J","last":"Nader"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"541253373","state_id":"817987559","student_number":"541253373","id":"530e5964049e75a9262d02e7"},"uri":"/v1.1/students/530e5964049e75a9262d02e7"},{"data":{"created":"2014-02-26T21:15:16.755Z","credentials":{"district_username":"nolad22","district_password":"veL3queiNg4k"},"district":"4fd43cc56d11340000000005","dob":"8/1/1996","ell_status":"N","email":"nola_d@example.net","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.706Z","location":{"zip":"10011"},"name":{"first":"Nola","middle":"D","last":"Douglas"},"race":"Two
         or More Races","school":"530e595026403103360ff9fd","sis_id":"543793622","state_id":"634967954","student_number":"543793622","id":"530e5964049e75a9262d02eb"},"uri":"/v1.1/students/530e5964049e75a9262d02eb"},{"data":{"created":"2014-02-26T21:15:16.771Z","credentials":{"district_username":"weng93","district_password":"kiephee6Va"},"district":"4fd43cc56d11340000000005","dob":"2/11/1995","ell_status":"N","email":"wen_g@example.com","frl_status":"Paid","gender":"F","grade":"12","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.710Z","location":{"zip":"10020"},"name":{"first":"Wen","middle":"T","last":"Greenholt"},"race":"Two
@@ -456,24 +474,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:41 GMT
+      - Sat, 26 Sep 2015 17:37:47 GMT
       Etag:
-      - ! '"1311321495"'
-      Server:
-      - nginx/1.4.7
+      - '"-1982196704"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1187'
+      X-Ratelimit-Reset:
+      - '1443289122'
       Content-Length:
       - '66277'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:19.133Z","credentials":{"district_username":"dustyl08","district_password":"heif7ieC"},"district":"4fd43cc56d11340000000005","dob":"4/7/1995","ell_status":"N","email":"dusty.l@example.org","frl_status":"Paid","gender":"M","grade":"12","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.777Z","location":{"zip":"11236"},"name":{"first":"Dusty","middle":"P","last":"Littel"},"race":"American
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:19.133Z","credentials":{"district_username":"dustyl08","district_password":"heif7ieC"},"district":"4fd43cc56d11340000000005","dob":"4/7/1995","ell_status":"N","email":"dusty.l@example.org","frl_status":"Paid","gender":"M","grade":"12","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.777Z","location":{"zip":"11236"},"name":{"first":"Dusty","middle":"P","last":"Littel"},"race":"American
         Indian","school":"530e595026403103360ff9fd","sis_id":"790090708","state_id":"369187842","student_number":"790090708","id":"530e5967049e75a9262d04fe"},"uri":"/v1.1/students/530e5967049e75a9262d04fe"},{"data":{"created":"2014-02-26T21:15:19.140Z","credentials":{"district_username":"justinw31","district_password":"suTa7Jizoo"},"district":"4fd43cc56d11340000000005","dob":"1/21/1996","ell_status":"N","email":"justin.w@example.net","frl_status":"Paid","gender":"M","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:43.781Z","location":{"zip":"10466"},"name":{"first":"Justin","middle":"J","last":"Wolff"},"race":"Asian","school":"530e595026403103360ff9fd","sis_id":"792235731","state_id":"444026787","student_number":"792235731","id":"530e5967049e75a9262d04ff"},"uri":"/v1.1/students/530e5967049e75a9262d04ff"},{"data":{"created":"2014-02-26T21:15:19.147Z","credentials":{"district_username":"irisk36","district_password":"OhShui8Aitae"},"district":"4fd43cc56d11340000000005","dob":"4/29/1998","ell_status":"Y","email":"iris_k@example.net","frl_status":"Paid","gender":"F","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.783Z","location":{"zip":"10019"},"name":{"first":"Iris","middle":"J","last":"Kirlin"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"792374836","state_id":"493060769","student_number":"792374836","id":"530e5967049e75a9262d0501"},"uri":"/v1.1/students/530e5967049e75a9262d0501"},{"data":{"created":"2014-02-26T21:15:19.152Z","credentials":{"district_username":"williamh73","district_password":"roosh5Oo"},"district":"4fd43cc56d11340000000005","dob":"11/5/1997","ell_status":"Y","email":"william_h@example.com","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.787Z","location":{"zip":"10027"},"name":{"first":"William","middle":"M","last":"Hintz"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"792381473","state_id":"614809725","student_number":"792381473","id":"530e5967049e75a9262d0503"},"uri":"/v1.1/students/530e5967049e75a9262d0503"},{"data":{"created":"2014-02-26T21:15:19.178Z","credentials":{"district_username":"ambers79","district_password":"daiWei8kaif"},"district":"4fd43cc56d11340000000005","dob":"8/13/1995","ell_status":"N","email":"s_amber@example.net","frl_status":"Paid","gender":"F","grade":"12","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:43.799Z","location":{"zip":"11210"},"name":{"first":"Amber","middle":"A","last":"Schmeler"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"796330979","state_id":"359390982","student_number":"796330979","id":"530e5967049e75a9262d050c"},"uri":"/v1.1/students/530e5967049e75a9262d050c"},{"data":{"created":"2014-02-26T21:15:19.303Z","credentials":{"district_username":"davidd92","district_password":"ahNgaht2Oon"},"district":"4fd43cc56d11340000000005","dob":"5/14/1996","ell_status":"Y","email":"d_david@example.com","frl_status":"Paid","gender":"M","grade":"11","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.858Z","location":{"zip":"10003"},"name":{"first":"David","middle":"M","last":"Dietrich"},"race":"Asian","school":"530e595026403103360ff9fd","sis_id":"805220192","state_id":"790114527","student_number":"805220192","id":"530e5967049e75a9262d0527"},"uri":"/v1.1/students/530e5967049e75a9262d0527"},{"data":{"created":"2014-02-26T21:15:19.318Z","credentials":{"district_username":"patriciac10","district_password":"Quahph3ch"},"district":"4fd43cc56d11340000000005","dob":"5/10/1998","ell_status":"Y","email":"patricia_c@example.org","frl_status":"Paid","gender":"F","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.863Z","location":{"zip":"10030"},"name":{"first":"Patricia","middle":"B","last":"Casper"},"race":"Two
@@ -573,8 +597,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[],"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fd/students?starting_after=530e5968049e75a9262d064b"},{"rel":"prev","uri":"/v1.1/schools/530e595026403103360ff9fd/students?ending_before=530e5968049e75a9262d064b"}]}'
+      encoding: UTF-8
+      string: '{"data":[],"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fd/students?starting_after=530e5968049e75a9262d064b"},{"rel":"prev","uri":"/v1.1/schools/530e595026403103360ff9fd/students?ending_before=530e5968049e75a9262d064b"}]}'
     http_version: 
   recorded_at: Sat, 13 Sep 2014 00:07:41 GMT
 - request:
@@ -618,8 +642,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:12.358Z","credentials":{"district_username":"douglasw58","district_password":"ahFii2nae"},"district":"4fd43cc56d11340000000005","dob":"6/18/1998","ell_status":"Y","email":"w_douglas@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.661Z","location":{"zip":"11004"},"name":{"first":"Douglas","middle":"S","last":"Wisoky"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"101565758","state_id":"498006597","student_number":"101565758","id":"530e5960049e75a9262cff1e"},"uri":"/v1.1/students/530e5960049e75a9262cff1e"},{"data":{"created":"2014-02-26T21:15:12.368Z","credentials":{"district_username":"joel42","district_password":"CaaDie0eboo"},"district":"4fd43cc56d11340000000005","dob":"7/4/1997","ell_status":"Y","email":"l.joe@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.664Z","location":{"zip":"10473"},"name":{"first":"Joe","middle":"S","last":"Lakin"},"race":"Black
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:12.358Z","credentials":{"district_username":"douglasw58","district_password":"ahFii2nae"},"district":"4fd43cc56d11340000000005","dob":"6/18/1998","ell_status":"Y","email":"w_douglas@example.net","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.661Z","location":{"zip":"11004"},"name":{"first":"Douglas","middle":"S","last":"Wisoky"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"101565758","state_id":"498006597","student_number":"101565758","id":"530e5960049e75a9262cff1e"},"uri":"/v1.1/students/530e5960049e75a9262cff1e"},{"data":{"created":"2014-02-26T21:15:12.368Z","credentials":{"district_username":"joel42","district_password":"CaaDie0eboo"},"district":"4fd43cc56d11340000000005","dob":"7/4/1997","ell_status":"Y","email":"l.joe@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.664Z","location":{"zip":"10473"},"name":{"first":"Joe","middle":"S","last":"Lakin"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"106078142","state_id":"635493722","student_number":"106078142","id":"530e5960049e75a9262cff1f"},"uri":"/v1.1/students/530e5960049e75a9262cff1f"},{"data":{"created":"2014-02-26T21:15:12.382Z","credentials":{"district_username":"coryt00","district_password":"ahW1taesao5"},"district":"4fd43cc56d11340000000005","dob":"7/21/1997","ell_status":"Y","email":"cory_t@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.673Z","location":{"zip":"10038"},"name":{"first":"Cory","middle":"V","last":"Thompson"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"106867300","state_id":"863433981","student_number":"106867300","id":"530e5960049e75a9262cff21"},"uri":"/v1.1/students/530e5960049e75a9262cff21"},{"data":{"created":"2014-02-26T21:15:12.391Z","credentials":{"district_username":"juliar95","district_password":"bohTunaequ1oh"},"district":"4fd43cc56d11340000000005","dob":"1/29/1998","ell_status":"Y","email":"julia.r@example.org","frl_status":"Paid","gender":"F","grade":"9","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:40.679Z","location":{"zip":"11239"},"name":{"first":"Julia","middle":"B","last":"Runolfsdottir"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"108028995","state_id":"339598426","student_number":"108028995","id":"530e5960049e75a9262cff23"},"uri":"/v1.1/students/530e5960049e75a9262cff23"},{"data":{"created":"2014-02-26T21:15:12.422Z","credentials":{"district_username":"yvettec36","district_password":"ya5piX9Oh"},"district":"4fd43cc56d11340000000005","dob":"5/18/1997","ell_status":"N","email":"c_yvette@example.org","frl_status":"Paid","gender":"F","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.694Z","location":{"zip":"11385"},"name":{"first":"Yvette","middle":"W","last":"Cummings"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"112258136","state_id":"373187439","student_number":"112258136","id":"530e5960049e75a9262cff26"},"uri":"/v1.1/students/530e5960049e75a9262cff26"},{"data":{"created":"2014-02-26T21:15:12.430Z","credentials":{"district_username":"geraldp09","district_password":"ieg6piLoc"},"district":"4fd43cc56d11340000000005","dob":"8/27/1998","ell_status":"Y","email":"p.gerald@example.com","frl_status":"Paid","gender":"M","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:40.698Z","location":{"zip":"11691"},"name":{"first":"Gerald","middle":"J","last":"Parisian"},"race":"Two
@@ -728,8 +752,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:14.440Z","credentials":{"district_username":"josepht59","district_password":"aije9Go0"},"district":"4fd43cc56d11340000000005","dob":"5/17/1997","ell_status":"N","email":"t_joseph@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:41.678Z","location":{"zip":"11695"},"name":{"first":"Joseph","middle":"B","last":"Thiel"},"race":"Black
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:14.440Z","credentials":{"district_username":"josepht59","district_password":"aije9Go0"},"district":"4fd43cc56d11340000000005","dob":"5/17/1997","ell_status":"N","email":"t_joseph@example.net","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:41.678Z","location":{"zip":"11695"},"name":{"first":"Joseph","middle":"B","last":"Thiel"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"320437259","state_id":"183500753","student_number":"320437259","id":"530e5962049e75a9262d0102"},"uri":"/v1.1/students/530e5962049e75a9262d0102"},{"data":{"created":"2014-02-26T21:15:14.454Z","credentials":{"district_username":"nancyb33","district_password":"quiVu5aen"},"district":"4fd43cc56d11340000000005","dob":"9/26/1996","ell_status":"N","email":"b_nancy@example.org","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:41.684Z","location":{"zip":"10021"},"name":{"first":"Nancy","middle":"P","last":"Borer"},"race":"Two
         or More Races","school":"530e595026403103360ff9fd","sis_id":"321540033","state_id":"170613526","student_number":"321540033","id":"530e5962049e75a9262d0106"},"uri":"/v1.1/students/530e5962049e75a9262d0106"},{"data":{"created":"2014-02-26T21:15:14.514Z","credentials":{"district_username":"jeromea21","district_password":"idai0Xupoo"},"district":"4fd43cc56d11340000000005","dob":"1/6/1996","ell_status":"N","email":"a.jerome@example.org","frl_status":"Paid","gender":"M","grade":"11","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.717Z","location":{"zip":"10039"},"name":{"first":"Jerome","middle":"C","last":"Ankunding"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"329898621","state_id":"258035113","student_number":"329898621","id":"530e5962049e75a9262d010e"},"uri":"/v1.1/students/530e5962049e75a9262d010e"},{"data":{"created":"2014-02-26T21:15:14.526Z","credentials":{"district_username":"judithl34","district_password":"eiwu9Quupah"},"district":"4fd43cc56d11340000000005","dob":"3/27/1998","ell_status":"N","email":"judith_l@example.net","frl_status":"Paid","gender":"F","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:41.722Z","location":{"zip":"11236"},"name":{"first":"Judith","middle":"K","last":"Lindgren"},"race":"Two
@@ -838,8 +862,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:16.632Z","credentials":{"district_username":"kimberlyk62","district_password":"nie6Ieb1"},"district":"4fd43cc56d11340000000005","dob":"12/28/1996","ell_status":"N","email":"k.kimberly@example.com","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.670Z","location":{"zip":"11691"},"name":{"first":"Kimberly","middle":"R","last":"Kutch"},"race":"Black
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:16.632Z","credentials":{"district_username":"kimberlyk62","district_password":"nie6Ieb1"},"district":"4fd43cc56d11340000000005","dob":"12/28/1996","ell_status":"N","email":"k.kimberly@example.com","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.670Z","location":{"zip":"11691"},"name":{"first":"Kimberly","middle":"R","last":"Kutch"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"531248862","state_id":"879810915","student_number":"531248862","id":"530e5964049e75a9262d02d5"},"uri":"/v1.1/students/530e5964049e75a9262d02d5"},{"data":{"created":"2014-02-26T21:15:16.638Z","credentials":{"district_username":"lindac62","district_password":"ki7AhahyahF"},"district":"4fd43cc56d11340000000005","dob":"12/9/1996","ell_status":"N","email":"linda_c@example.com","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:42.675Z","location":{"zip":"10303"},"name":{"first":"Linda","middle":"J","last":"Christiansen"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"531293162","state_id":"138529274","student_number":"531293162","id":"530e5964049e75a9262d02d6"},"uri":"/v1.1/students/530e5964049e75a9262d02d6"},{"data":{"created":"2014-02-26T21:15:16.678Z","credentials":{"district_username":"keithw08","district_password":"ahboh2EeBeY"},"district":"4fd43cc56d11340000000005","dob":"8/22/1996","ell_status":"N","email":"w.keith@example.org","frl_status":"Paid","gender":"M","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.685Z","location":{"zip":"10309"},"name":{"first":"Keith","middle":"V","last":"Wintheiser"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"534675808","state_id":"651155420","student_number":"534675808","id":"530e5964049e75a9262d02d9"},"uri":"/v1.1/students/530e5964049e75a9262d02d9"},{"data":{"created":"2014-02-26T21:15:16.740Z","credentials":{"district_username":"dianen73","district_password":"eel7Thohd"},"district":"4fd43cc56d11340000000005","dob":"6/16/1996","ell_status":"N","email":"n_diane@example.net","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:42.697Z","location":{"zip":"11691"},"name":{"first":"Diane","middle":"J","last":"Nader"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"541253373","state_id":"817987559","student_number":"541253373","id":"530e5964049e75a9262d02e7"},"uri":"/v1.1/students/530e5964049e75a9262d02e7"},{"data":{"created":"2014-02-26T21:15:16.755Z","credentials":{"district_username":"nolad22","district_password":"veL3queiNg4k"},"district":"4fd43cc56d11340000000005","dob":"8/1/1996","ell_status":"N","email":"nola_d@example.net","frl_status":"Paid","gender":"F","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.706Z","location":{"zip":"10011"},"name":{"first":"Nola","middle":"D","last":"Douglas"},"race":"Two
         or More Races","school":"530e595026403103360ff9fd","sis_id":"543793622","state_id":"634967954","student_number":"543793622","id":"530e5964049e75a9262d02eb"},"uri":"/v1.1/students/530e5964049e75a9262d02eb"},{"data":{"created":"2014-02-26T21:15:16.771Z","credentials":{"district_username":"weng93","district_password":"kiephee6Va"},"district":"4fd43cc56d11340000000005","dob":"2/11/1995","ell_status":"N","email":"wen_g@example.com","frl_status":"Paid","gender":"F","grade":"12","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:42.710Z","location":{"zip":"10020"},"name":{"first":"Wen","middle":"T","last":"Greenholt"},"race":"Two
@@ -949,8 +973,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:15:19.133Z","credentials":{"district_username":"dustyl08","district_password":"heif7ieC"},"district":"4fd43cc56d11340000000005","dob":"4/7/1995","ell_status":"N","email":"dusty.l@example.org","frl_status":"Paid","gender":"M","grade":"12","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.777Z","location":{"zip":"11236"},"name":{"first":"Dusty","middle":"P","last":"Littel"},"race":"American
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:15:19.133Z","credentials":{"district_username":"dustyl08","district_password":"heif7ieC"},"district":"4fd43cc56d11340000000005","dob":"4/7/1995","ell_status":"N","email":"dusty.l@example.org","frl_status":"Paid","gender":"M","grade":"12","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.777Z","location":{"zip":"11236"},"name":{"first":"Dusty","middle":"P","last":"Littel"},"race":"American
         Indian","school":"530e595026403103360ff9fd","sis_id":"790090708","state_id":"369187842","student_number":"790090708","id":"530e5967049e75a9262d04fe"},"uri":"/v1.1/students/530e5967049e75a9262d04fe"},{"data":{"created":"2014-02-26T21:15:19.140Z","credentials":{"district_username":"justinw31","district_password":"suTa7Jizoo"},"district":"4fd43cc56d11340000000005","dob":"1/21/1996","ell_status":"N","email":"justin.w@example.net","frl_status":"Paid","gender":"M","grade":"11","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:43.781Z","location":{"zip":"10466"},"name":{"first":"Justin","middle":"J","last":"Wolff"},"race":"Asian","school":"530e595026403103360ff9fd","sis_id":"792235731","state_id":"444026787","student_number":"792235731","id":"530e5967049e75a9262d04ff"},"uri":"/v1.1/students/530e5967049e75a9262d04ff"},{"data":{"created":"2014-02-26T21:15:19.147Z","credentials":{"district_username":"irisk36","district_password":"OhShui8Aitae"},"district":"4fd43cc56d11340000000005","dob":"4/29/1998","ell_status":"Y","email":"iris_k@example.net","frl_status":"Paid","gender":"F","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.783Z","location":{"zip":"10019"},"name":{"first":"Iris","middle":"J","last":"Kirlin"},"race":"Caucasian","school":"530e595026403103360ff9fd","sis_id":"792374836","state_id":"493060769","student_number":"792374836","id":"530e5967049e75a9262d0501"},"uri":"/v1.1/students/530e5967049e75a9262d0501"},{"data":{"created":"2014-02-26T21:15:19.152Z","credentials":{"district_username":"williamh73","district_password":"roosh5Oo"},"district":"4fd43cc56d11340000000005","dob":"11/5/1997","ell_status":"Y","email":"william_h@example.com","frl_status":"Paid","gender":"M","grade":"10","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.787Z","location":{"zip":"10027"},"name":{"first":"William","middle":"M","last":"Hintz"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"792381473","state_id":"614809725","student_number":"792381473","id":"530e5967049e75a9262d0503"},"uri":"/v1.1/students/530e5967049e75a9262d0503"},{"data":{"created":"2014-02-26T21:15:19.178Z","credentials":{"district_username":"ambers79","district_password":"daiWei8kaif"},"district":"4fd43cc56d11340000000005","dob":"8/13/1995","ell_status":"N","email":"s_amber@example.net","frl_status":"Paid","gender":"F","grade":"12","hispanic_ethnicity":"Y","iep_status":"","last_modified":"2014-06-04T14:10:43.799Z","location":{"zip":"11210"},"name":{"first":"Amber","middle":"A","last":"Schmeler"},"race":"Black
         or African American","school":"530e595026403103360ff9fd","sis_id":"796330979","state_id":"359390982","student_number":"796330979","id":"530e5967049e75a9262d050c"},"uri":"/v1.1/students/530e5967049e75a9262d050c"},{"data":{"created":"2014-02-26T21:15:19.303Z","credentials":{"district_username":"davidd92","district_password":"ahNgaht2Oon"},"district":"4fd43cc56d11340000000005","dob":"5/14/1996","ell_status":"Y","email":"d_david@example.com","frl_status":"Paid","gender":"M","grade":"11","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.858Z","location":{"zip":"10003"},"name":{"first":"David","middle":"M","last":"Dietrich"},"race":"Asian","school":"530e595026403103360ff9fd","sis_id":"805220192","state_id":"790114527","student_number":"805220192","id":"530e5967049e75a9262d0527"},"uri":"/v1.1/students/530e5967049e75a9262d0527"},{"data":{"created":"2014-02-26T21:15:19.318Z","credentials":{"district_username":"patriciac10","district_password":"Quahph3ch"},"district":"4fd43cc56d11340000000005","dob":"5/10/1998","ell_status":"Y","email":"patricia_c@example.org","frl_status":"Paid","gender":"F","grade":"9","hispanic_ethnicity":"N","iep_status":"","last_modified":"2014-06-04T14:10:43.863Z","location":{"zip":"10030"},"name":{"first":"Patricia","middle":"B","last":"Casper"},"race":"Two
@@ -1050,8 +1074,8 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[],"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fd/students?starting_after=530e5968049e75a9262d064b"},{"rel":"prev","uri":"/v1.1/schools/530e595026403103360ff9fd/students?ending_before=530e5968049e75a9262d064b"}]}'
+      encoding: UTF-8
+      string: '{"data":[],"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fd/students?starting_after=530e5968049e75a9262d064b"},{"rel":"prev","uri":"/v1.1/schools/530e595026403103360ff9fd/students?ending_before=530e5968049e75a9262d064b"}]}'
     http_version: 
   recorded_at: Sat, 13 Sep 2014 00:07:43 GMT
 recorded_with: VCR 2.9.3

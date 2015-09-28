@@ -45,6 +45,12 @@ To run all tests:
 $ rake test
 ```
 
+To run a specific test file, for example `test/unit/clever_test.rb`:
+
+```bash
+$ rake test TEST=test/unit/clever_test.rb
+```
+
 To run all tests and the linter ([rubocop](https://github.com/bbatsov/rubocop)):
 
 ```bash
@@ -58,6 +64,16 @@ $ rake lint
 ```
 
 Running specific tests is not currently supported.
+
+### Updating VCR cassettes
+
+It is not currently possible to easily recreate the scenario in which the original VCR cassettes were recorded, especially for the events. If you need to update or add to the recorded requests and responses:
+
+* Using a Clever District Admin sandbox account, set up the data to include the updated or added situation.
+* In the tests, **temporarily** replace `DEMO_TOKEN` with the OAuth token of your sandbox district.
+* Remove the existing VCR cassettes that you would like to update so that they will get rerecorded.
+* Run the tests.
+* Using a combination of `git checkout -p`, `git add -p`, find-and-replace, `sed`/`awk`, etc. check into git the updated data and any updated formatting that you want to keep. **Check out and discard any recordings of your `Bearer Token` (so that the cassettes all contain `DEMO_TOKEN`)** and any other irrelevant data changes. Change the IDs of any objects in your added or updated response data to match those of the demo data.
 
 ## Documentation
 

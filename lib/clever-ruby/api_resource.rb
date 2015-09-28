@@ -27,14 +27,14 @@ module Clever
     # @api private
     # @return [String]
     def self.shortname
-      name.split('::')[-1].downcase.singularize
+      name.split('::')[-1].tableize.singularize
     end
 
     # Convert the name of a resource to its APIResource subclass
     # @api private
     # @return [APIResource]
     def self.named(name)
-      name = name.to_s.downcase.singularize
+      name = name.to_s.tableize.singularize
       matching = resources.select { |res| res.shortname == name }
       return nil if matching.empty?
       matching.first

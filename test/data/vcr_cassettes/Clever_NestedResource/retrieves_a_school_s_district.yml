@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,24 +25,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:53 GMT
-      Etag:
-      - ! '"1408105812"'
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:34 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1090'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '1764'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
         5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
         High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
         Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"uri":"/v1.1/schools/530e595026403103360ff9fd"},{"data":{"created":"2014-02-26T21:14:56.668Z","district":"4fd43cc56d11340000000005","high_grade":"5","last_modified":"2014-02-26T21:14:56.670Z","location":{"address":"110
@@ -52,7 +56,7 @@ http_interactions:
         Old Beach 88th Street","city":"Rockaway Beach","state":"NY","zip":"11693"},"low_grade":"6","name":"Clever
         Middle School","nces_id":"360001000000","phone":"(718) 555-8989","principal":{"name":"Leonard
         Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"27Q321","sis_id":"27Q321","state_id":"412","id":"530e595026403103360ff9ff"},"uri":"/v1.1/schools/530e595026403103360ff9ff"}],"paging":{"current":1,"total":1,"count":3},"links":[{"rel":"self","uri":"/v1.1/schools"}]}'
-    http_version: 
+    http_version:
   recorded_at: Sat, 13 Sep 2014 00:07:53 GMT
 - request:
     method: get
@@ -62,7 +66,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -79,26 +83,32 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:53 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:35 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1089'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '932'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+      encoding: UTF-8
+      string: '{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
         5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
         High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
         Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fd"},{"rel":"district","uri":"/v1.1/schools/530e595026403103360ff9fd/district"},{"rel":"teachers","uri":"/v1.1/schools/530e595026403103360ff9fd/teachers"},{"rel":"students","uri":"/v1.1/schools/530e595026403103360ff9fd/students"},{"rel":"sections","uri":"/v1.1/schools/530e595026403103360ff9fd/sections"},{"rel":"events","uri":"/v1.1/schools/530e595026403103360ff9fd/events"}]}'
-    http_version: 
+    http_version:
   recorded_at: Sat, 13 Sep 2014 00:07:53 GMT
 - request:
     method: get
@@ -108,7 +118,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -125,22 +135,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:07:53 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:35 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1088'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '139'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"}]}'
-    http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:07:53 GMT
+      encoding: UTF-8
+      string: '{"data":{"name":"Demo District","id":"4fd43cc56d11340000000005"},"links":[{"rel":"self","uri":"/v1.1/districts/4fd43cc56d11340000000005"}]}'
+    http_version:
+  recorded_at: Sat, 26 Sep 2015 17:37:35 GMT
 recorded_with: VCR 2.9.3

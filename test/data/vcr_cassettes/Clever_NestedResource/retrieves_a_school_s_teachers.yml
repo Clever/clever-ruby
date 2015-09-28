@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,24 +25,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:06:25 GMT
-      Etag:
-      - ! '"1408105812"'
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:26 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1112'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '1764'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
         5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
         High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
         Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"uri":"/v1.1/schools/530e595026403103360ff9fd"},{"data":{"created":"2014-02-26T21:14:56.668Z","district":"4fd43cc56d11340000000005","high_grade":"5","last_modified":"2014-02-26T21:14:56.670Z","location":{"address":"110
@@ -62,7 +66,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -79,22 +83,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:06:25 GMT
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:26 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1111'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '932'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
+      encoding: UTF-8
+      string: '{"data":{"created":"2014-02-26T21:14:56.662Z","district":"4fd43cc56d11340000000005","high_grade":"12","last_modified":"2014-02-26T21:14:56.665Z","location":{"address":"350
         5th Avenue","city":"New York","state":"NY","zip":"10001"},"low_grade":"9","name":"Clever
         High School","nces_id":"360008000000","phone":"(212) 555-1212","principal":{"name":"Theodora
         Khan","email":"tdkhan@mailinator.com"},"school_number":"02M800","sis_id":"02M800","state_id":"712345","id":"530e595026403103360ff9fd"},"links":[{"rel":"self","uri":"/v1.1/schools/530e595026403103360ff9fd"},{"rel":"district","uri":"/v1.1/schools/530e595026403103360ff9fd/district"},{"rel":"teachers","uri":"/v1.1/schools/530e595026403103360ff9fd/teachers"},{"rel":"students","uri":"/v1.1/schools/530e595026403103360ff9fd/students"},{"rel":"sections","uri":"/v1.1/schools/530e595026403103360ff9fd/sections"},{"rel":"events","uri":"/v1.1/schools/530e595026403103360ff9fd/events"}]}'
@@ -108,7 +118,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -125,24 +135,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:06:25 GMT
-      Etag:
-      - ! '"-1806389900"'
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:27 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1110'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '18088'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2012-12-01T15:02:36.961Z","credentials":{"district_password":"ru3o8rusbf","district_username":"steven.ogden"},"district":"4fd43cc56d11340000000005","email":"ogden_steven@example.net","last_modified":"2014-02-26T21:15:01.485Z","name":{"first":"Steven","last":"Ogden","middle":"Q"},"school":"530e595026403103360ff9fd","sis_id":"81","teacher_number":"474958","title":"High
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2012-12-01T15:02:36.961Z","credentials":{"district_password":"ru3o8rusbf","district_username":"steven.ogden"},"district":"4fd43cc56d11340000000005","email":"ogden_steven@example.net","last_modified":"2014-02-26T21:15:01.485Z","name":{"first":"Steven","last":"Ogden","middle":"Q"},"school":"530e595026403103360ff9fd","sis_id":"81","teacher_number":"474958","title":"High
         School Science Teacher","id":"50ba1c0c4eda5d94372227eb"},"uri":"/v1.1/teachers/50ba1c0c4eda5d94372227eb"},{"data":{"created":"2012-12-05T15:00:02.670Z","credentials":{"district_password":"Coo0ooyahgh","district_username":"hauck.haylie"},"district":"4fd43cc56d11340000000005","email":"hauck.haylie@example.com","last_modified":"2014-02-26T21:15:01.358Z","name":{"first":"Haylie","last":"Hauck","middle":"J"},"school":"530e595026403103360ff9fd","sis_id":"48","teacher_number":"830340","title":"Grade
         10 English Teacher","id":"50bf617202dfe7ca0154296f"},"uri":"/v1.1/teachers/50bf617202dfe7ca0154296f"},{"data":{"created":"2012-12-09T15:00:34.246Z","credentials":{"district_password":"ooDungei8ah","district_username":"doyle_rupert"},"district":"4fd43cc56d11340000000005","email":"doyle.rupert@example.net","last_modified":"2014-02-26T21:15:01.369Z","name":{"first":"Rupert","last":"Doyle","middle":"V"},"school":"530e595026403103360ff9fd","sis_id":"50","teacher_number":"473664","title":"Grade
         12 English Teacher","id":"50c4a79299ad702e0228e956"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e956"},{"data":{"created":"2012-12-09T15:00:34.248Z","credentials":{"district_password":"Lohneth3osh","district_username":"wolff.cali"},"district":"4fd43cc56d11340000000005","email":"cali_wolff@example.net","last_modified":"2014-02-26T21:15:01.417Z","name":{"first":"Cali","last":"Wolff","middle":"L"},"school":"530e595026403103360ff9fd","sis_id":"62","teacher_number":"762405","title":"Grade
@@ -189,7 +203,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -206,24 +220,28 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:06:25 GMT
-      Etag:
-      - ! '"-1806389900"'
-      Server:
-      - nginx/1.4.7
+      - Sat, 26 Sep 2015 17:37:27 GMT
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1109'
+      X-Ratelimit-Reset:
+      - '1443289062'
       Content-Length:
       - '18088'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"created":"2012-12-01T15:02:36.961Z","credentials":{"district_password":"ru3o8rusbf","district_username":"steven.ogden"},"district":"4fd43cc56d11340000000005","email":"ogden_steven@example.net","last_modified":"2014-02-26T21:15:01.485Z","name":{"first":"Steven","last":"Ogden","middle":"Q"},"school":"530e595026403103360ff9fd","sis_id":"81","teacher_number":"474958","title":"High
+      encoding: UTF-8
+      string: '{"data":[{"data":{"created":"2012-12-01T15:02:36.961Z","credentials":{"district_password":"ru3o8rusbf","district_username":"steven.ogden"},"district":"4fd43cc56d11340000000005","email":"ogden_steven@example.net","last_modified":"2014-02-26T21:15:01.485Z","name":{"first":"Steven","last":"Ogden","middle":"Q"},"school":"530e595026403103360ff9fd","sis_id":"81","teacher_number":"474958","title":"High
         School Science Teacher","id":"50ba1c0c4eda5d94372227eb"},"uri":"/v1.1/teachers/50ba1c0c4eda5d94372227eb"},{"data":{"created":"2012-12-05T15:00:02.670Z","credentials":{"district_password":"Coo0ooyahgh","district_username":"hauck.haylie"},"district":"4fd43cc56d11340000000005","email":"hauck.haylie@example.com","last_modified":"2014-02-26T21:15:01.358Z","name":{"first":"Haylie","last":"Hauck","middle":"J"},"school":"530e595026403103360ff9fd","sis_id":"48","teacher_number":"830340","title":"Grade
         10 English Teacher","id":"50bf617202dfe7ca0154296f"},"uri":"/v1.1/teachers/50bf617202dfe7ca0154296f"},{"data":{"created":"2012-12-09T15:00:34.246Z","credentials":{"district_password":"ooDungei8ah","district_username":"doyle_rupert"},"district":"4fd43cc56d11340000000005","email":"doyle.rupert@example.net","last_modified":"2014-02-26T21:15:01.369Z","name":{"first":"Rupert","last":"Doyle","middle":"V"},"school":"530e595026403103360ff9fd","sis_id":"50","teacher_number":"473664","title":"Grade
         12 English Teacher","id":"50c4a79299ad702e0228e956"},"uri":"/v1.1/teachers/50c4a79299ad702e0228e956"},{"data":{"created":"2012-12-09T15:00:34.248Z","credentials":{"district_password":"Lohneth3osh","district_username":"wolff.cali"},"district":"4fd43cc56d11340000000005","email":"cali_wolff@example.net","last_modified":"2014-02-26T21:15:01.417Z","name":{"first":"Cali","last":"Wolff","middle":"L"},"school":"530e595026403103360ff9fd","sis_id":"62","teacher_number":"762405","title":"Grade

@@ -56,6 +56,20 @@ describe 'Clever::District without global token', :vcr do
     end
   end
 
+  it "retrieves a district's district admins" do
+    VCR.use_cassette('Clever_District_without_global_token/retrieves_a_district_s_district_admins',
+                     allow_playback_repeats: true) do
+      assert_valid_object_list 'district_admins', 1, Clever::DistrictAdmin
+    end
+  end
+
+  it "retrieves a district's school admins" do
+    VCR.use_cassette('Clever_District_without_global_token/retrieves_a_district_s_school_admins',
+                     allow_playback_repeats: true) do
+      assert_valid_object_list 'school_admins', 1, Clever::SchoolAdmin
+    end
+  end
+
   # TODO: this is outdated and should be removed!
   describe 'pages methods' do
     it "pages a district's schools" do

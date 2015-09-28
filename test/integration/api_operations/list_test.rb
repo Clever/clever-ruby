@@ -1,12 +1,13 @@
 require 'test_helper'
 
 def resource_name(resource)
-  resource.name.split('::')[-1].downcase
+  resource.shortname
 end
 
 def resources
   [Clever::District, Clever::School, Clever::Teacher,
-   Clever::Student, Clever::Section, Clever::Event]
+   Clever::Student, Clever::Section, Clever::Event,
+   Clever::SchoolAdmin]
 end
 
 module Minitest
@@ -28,7 +29,8 @@ describe Clever::APIOperations::List, :vcr do
   end
 
   [[Clever::District, 1], [Clever::School, 3], [Clever::Teacher, 89],
-   [Clever::Student, 1004], [Clever::Section, 379], [Clever::Event, 7]].each do |test_data|
+   [Clever::Student, 1004], [Clever::Section, 379], [Clever::Event, 7],
+   [Clever::SchoolAdmin, 1]].each do |test_data|
     resource, expected = test_data
     name = resource_name resource
 

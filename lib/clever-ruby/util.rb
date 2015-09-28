@@ -43,21 +43,30 @@ module Clever
       when Array
         resp.map { |i| convert_to_clever_object i }
       when Hash
-        # Try converting to a known object class. If none available, fall back to generic
-        # APIResource.
-        if resp.key? :uri
-          uri = resp[:uri]
-        else
-          uri = resp[:links].select { |l| l[:rel] == 'self' }[0][:uri]
-        end
-
-        klass_name = %r{/v1.1/([a-z]+)/\S+$}.match(uri)[1]
-        klass = APIResource.named klass_name if klass_name
-        klass ||= CleverObject
-        klass.construct_from resp[:data]
+        klass = convert_to_object_class(resp)
+        klass.construct_from resp[:data] || resp
       else
         resp
       end
+    end
+
+    # Choose an object class appropriate to the data from Clever
+    # @api private
+    # @return [Class]
+    def self.convert_to_object_class(resp)
+      # Try converting to a known object class using the URI or links. If none available,
+      # assume it's a district admin since that API returns different data.
+      if resp.key? :uri
+        uri = resp[:uri]
+      elsif resp.key? :links
+        uri = resp[:links].select { |l| l[:rel] == 'self' }[0][:uri]
+      else
+        klass_name = 'district_admins'
+      end
+
+      klass_name ||= %r{/v1.1/([a-z_]+)/\S+$}.match(uri)[1]
+      klass = APIResource.named klass_name if klass_name
+      klass || CleverObject
     end
 
     # Check if a file is readable
