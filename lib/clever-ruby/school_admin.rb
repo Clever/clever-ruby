@@ -1,4 +1,5 @@
 module Clever
+  # School Admin resource
   class SchoolAdmin < APIResource
     include Clever::APIOperations::List
     @linked_resources = [:schools]

@@ -1,4 +1,5 @@
 module Clever
+  # District Admin resource
   class DistrictAdmin < APIResource
     include Clever::APIOperations::List
     @linked_resources = []
