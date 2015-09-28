@@ -2,6 +2,8 @@ module Clever
   # Event resource
   class Event < APIResource
     include Clever::APIOperations::List
+    @uri = 'events'
+    @plural = 'events'
 
     # Optional attributes
     # @see Clever::CleverObject.optional_attributes

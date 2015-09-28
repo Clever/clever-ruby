@@ -2,6 +2,8 @@ module Clever
   # District resource
   class District < APIResource
     include Clever::APIOperations::List
+    @plural = 'districts'
+    @uri = 'districts'
     @linked_resources = [:schools, :teachers, :sections, :students, :events]
 
     # Get admins for the current district

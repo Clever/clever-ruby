@@ -2,6 +2,8 @@ module Clever
   # Teacher resource
   class Teacher < APIResource
     include Clever::APIOperations::List
+    @uri = 'teachers'
+    @plural = 'teachers'
     @linked_resources = [:school, :district, :students, :sections, :events]
 
     # Optional attributes

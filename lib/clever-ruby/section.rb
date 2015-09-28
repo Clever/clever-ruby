@@ -2,6 +2,8 @@ module Clever
   # Section resource
   class Section < APIResource
     include Clever::APIOperations::List
+    @uri = 'sections'
+    @plural = 'sections'
     @linked_resources = [:school, :district, :students, :teacher, :events]
 
     # Optional attributes
