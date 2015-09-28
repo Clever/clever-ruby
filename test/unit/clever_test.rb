@@ -40,8 +40,8 @@ describe Clever do
     end
     it 'adds tracking headers' do
       headers = @options[:headers]
-      assert headers.key?(:authorization), 'Did not set authorization header'
-      assert_match(/Bearer/, headers[:authorization])
+      assert headers.key?(:Authorization), 'Did not set authorization header'
+      assert_match(/Bearer/, headers[:Authorization])
       assert headers.key?(:user_agent), 'Did not set User Agent header'
       assert_match %r{Clever/RubyBindings/}, headers[:user_agent]
       assert(

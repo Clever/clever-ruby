@@ -15,6 +15,10 @@ module Clever
         @headers = headers
 
         response = Clever.request :get, uri, filters, @headers
+
+        @auth_token = @headers[:Authorization].split[1]
+        response[:data].map { |x| x[:data][:auth_token] = @auth_token }
+
         @all = Util.convert_to_clever_object response[:data]
         @links = {}
         response[:links].each do |link|
