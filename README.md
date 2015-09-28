@@ -1,6 +1,6 @@
 # Clever::Ruby
 
-[Build status on Drone](https://ci.ops.clever.com/github.com/Clever/clever-ruby)
+[![Build Status](https://ci.ops.clever.com/api/badge/github.com/Clever/clever-ruby/status.svg?style=flat&branch=master)](https://ci.ops.clever.com/github.com/Clever/clever-ruby)
 
 Ruby bindings to the Clever API. [Documentation](http://rubydoc.info/gems/clever-ruby/frames)
 
