@@ -53,7 +53,6 @@ module Clever
       klass.plural != resource_name.downcase
     end
 
-
     # Get a canonical name for a resource
     # @api private
     # @return [String]
@@ -66,8 +65,9 @@ module Clever
     # @return [APIResource]
     def self.named(name)
       name = name.to_s.downcase
-      matching = resources.select { |res|
-        (name == res.shortname) || (name == res.plural) }
+      matching = resources.select do |res|
+        (name == res.shortname) || (name == res.plural)
+      end
       return nil if matching.empty?
       matching.first
     end
