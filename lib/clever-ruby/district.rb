@@ -31,14 +31,14 @@ module Clever
     end
 
     # Get school admins for the current district
-    # The response for a district does not include a link to the school admins URI, so
-    # this can't be a linked_resource.
     # @api public
     # @return [Object]
     # @example
     #   district = district.retrieve id
     #   school_admins = district.school_admins
     def school_admins(filters = {})
+      # The response for a district does not include a link to the school
+      # admins URI, so this can't be a linked_resource.
       Clever::NestedResource.new '/v1.1/school_admins', filters, headers
     end
 
