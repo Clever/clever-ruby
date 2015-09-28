@@ -8,12 +8,11 @@ module Clever
       # @api private
       # @return [Clever::APIOperations::Page]
       # @example
-      #   page = Page.new '/v1.1/districts'
+      #   page = Page.new 'v1.1/districts'
       def initialize(uri, filters = {}, headers = {})
         @uri = uri
         @filters = filters
         @headers = headers
-
         response = Clever.request :get, uri, filters, @headers
 
         @auth_token = @headers[:Authorization].split[1]
@@ -21,10 +20,18 @@ module Clever
 
         @all = Util.convert_to_clever_object response[:data]
         @links = {}
+        @metadata = response[:paging] || {}
         response[:links].each do |link|
           @links[link[:rel].to_sym] = link[:uri]
         end
       end
+
+      # Exposes paging metadata from the underlying API response
+      # @return [Hash] the "paging" node of the JSON response
+      # @example
+      #   page = Page.new 'v1.1/districts'
+      #   total_districts = page.metadata[:total]
+      attr_reader :metadata
 
       # Gets next page if one is present, nil otherwise
       # @api private

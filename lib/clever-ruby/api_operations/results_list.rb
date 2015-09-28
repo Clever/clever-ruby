@@ -11,6 +11,18 @@ module Clever
         @pages = pagelist
       end
 
+      # Collect the total count of items in the collection from the first
+      # page's metadata
+      # @api public
+      # @return [Integer]
+      def collection_count
+        if @pages.size > 0 && @pages[0].metadata && @pages[0].metadata[:count]
+          @pages[0].metadata[:count].to_i
+        else
+          0
+        end
+      end
+
       # Iterate over results list
       # @api public
       # @return [nil]

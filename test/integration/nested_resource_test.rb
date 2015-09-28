@@ -17,7 +17,9 @@ describe Clever::NestedResource, :vcr do
           result.must_be_instance_of Clever::APIResource.named(link.to_s)
         else
           result.must_be_instance_of Clever::NestedResource
-          result.size.must_equal result.count # check count request measures actual data size
+          result_size = result.size.to_i
+          result_size.must_equal result.count # check count request measures actual data size
+          result.respond_to?(:collection_count).must_equal true
         end
       end
     end
