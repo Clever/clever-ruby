@@ -1,3 +1,7 @@
+## 0.11.1 (2015-09-28)
+
+* Fix APIError throwing a TypeError when API requests fail
+
 ## 0.11.0 (2015-09-28)
 
 * Allow timeout and open_timeout configurable
