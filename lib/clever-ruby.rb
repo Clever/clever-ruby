@@ -320,13 +320,14 @@ module Clever
   # @api private
   # @return [AuthenticationError]
   def self.authentication_error(error, rcode, rbody, error_obj)
-    AuthenticationError.new error[:message], rcode, rbody, error_obj
+    AuthenticationError.new(error, rcode, rbody, error_obj)
   end
 
   # Generate an APIError
   # @api private
   # @return [APIError]
   def self.api_error(error, rcode, rbody, error_obj)
-    APIError.new error[:message], rcode, rbody, error_obj
+    error_msg = error.is_a?(Hash) ? error[:message] : error
+    APIError.new(error_msg, rcode, rbody, error_obj)
   end
 end
