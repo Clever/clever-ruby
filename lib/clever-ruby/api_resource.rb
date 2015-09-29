@@ -15,14 +15,17 @@ module Clever
       # @return [Array] List of resources nested under this resource
       attr_reader :linked_resources
 
-      # Get the plural form of a resource's name. For instance, for class
-      # Student, this would return "students".
+      # Get the plural form of a resource's name
+      #
+      # For instance, for class Student, returns "students"
       # @api private
       # @return [String] Plural name of a resource
       attr_reader :plural
 
-      # Get the URI corresponding to a resource. For instance, for class
-      # Student, urls start with /v1.1/students, so this returns "students"
+      # Get the URI corresponding to a resource
+      #
+      # For instance, for class Student, urls start with /v1.1/students, so
+      # this returns "students"
       # @api private
       # @return [String] URI corresponding to a resource
       attr_reader :uri
@@ -36,9 +39,10 @@ module Clever
       super
     end
 
-    # Check if the name of an APIResource is in its singular
-    # form. For instance, the Student API resource can be "student"
-    # or "students".
+    # Check if the name of an APIResource is in its singular form
+    #
+    # For instance, the Student API resource can be referred to as
+    # "student" or "students"; this returns true on the former.
     # @api private
     # @param word [String] APIResource name to check
     # @return [Boolean] False if plural, true if singular
