@@ -30,7 +30,7 @@ describe 'last method', :vcr do
         resource.linked_resources do |l|
           nested = resource.first.send l
           nested_resource = Clever::APIResource.named l
-          if Clever::Util.singular? l
+          if Clever::APIResource.singular? l
             nested.first.must_be_instance_of nested_resource
           else
             nested.first.must_be_instance_of nested_resource

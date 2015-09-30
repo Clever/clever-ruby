@@ -2,6 +2,8 @@ module Clever
   # Student resource
   class Student < APIResource
     include Clever::APIOperations::List
+    @uri = 'students'
+    @plural = 'students'
     @linked_resources = [:school, :district, :sections, :teachers, :events]
 
     # Get contacts for the current student

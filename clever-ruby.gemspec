@@ -21,7 +21,6 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'multi_json',    '~> 1.10.0'
   gem.add_runtime_dependency 'rest-client',   '~> 1.6.7'
-  gem.add_runtime_dependency 'activesupport', '~> 4.2.1'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'minitest',      '~> 5.4.1'

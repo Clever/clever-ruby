@@ -1,3 +1,7 @@
+## 0.12.0 (2015-09-28)
+
+* Remove inflector dependency
+
 ## 0.11.1 (2015-09-28)
 
 * Fix APIError throwing a TypeError when API requests fail

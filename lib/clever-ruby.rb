@@ -1,7 +1,6 @@
 # rubocop:disable FileName
 require 'rest_client'
 require 'multi_json'
-require 'active_support/inflector'
 require 'open-uri'
 require 'set'
 require 'uri'
