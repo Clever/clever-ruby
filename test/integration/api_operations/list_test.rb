@@ -1,7 +1,7 @@
 require 'test_helper'
 
 def resource_name(resource)
-  resource.name.split('::')[-1].downcase
+  resource.shortname
 end
 
 def resources
