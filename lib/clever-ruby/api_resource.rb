@@ -61,7 +61,7 @@ module Clever
     # @api private
     # @return [String]
     def self.shortname
-      name.split('::')[-1].downcase
+      name.split('::')[-1].gsub(/([a-z\d])([A-Z])/, '\1_\2'.freeze).downcase
     end
 
     # Convert the uri of a resource to its APIResource subclass
