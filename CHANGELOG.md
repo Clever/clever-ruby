@@ -1,3 +1,7 @@
+## Unreleased
+
+* Add support for school admins
+
 ## 0.12.0 (2015-09-28)
 
 * Remove inflector dependency

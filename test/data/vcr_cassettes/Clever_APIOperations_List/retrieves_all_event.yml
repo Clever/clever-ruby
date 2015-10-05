@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,24 +25,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:05:02 GMT
+      - Sat, 26 Sep 2015 17:40:31 GMT
       Etag:
-      - ! '"-214069741"'
-      Server:
-      - nginx/1.4.7
+      - '"438255836"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1078'
+      X-Ratelimit-Reset:
+      - '1443289242'
       Content-Length:
       - '9308'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"type":"sections.updated","data":{"object":{"course_name":"Grade
+      encoding: UTF-8
+      string: '{"data":[{"data":{"type":"sections.updated","data":{"object":{"course_name":"Grade
         3 Math, Class 301","course_number":"301","district":"4fd43cc56d11340000000005","grade":"3","name":"Grade
         3 Math, Class 301 - 301 - S. Block","period":"5","school":"530e595026403103360ff9fe","sis_id":"771","subject":"math","teacher":"530e5955d50c310f36112c15","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5962049e75a9262d00fb","530e5962049e75a9262d015a","530e5963049e75a9262d0219","530e5964049e75a9262d0270","530e5964049e75a9262d02cf","530e5964049e75a9262d02fc","530e5965049e75a9262d0341","530e5965049e75a9262d0343","530e5965049e75a9262d038d","530e5965049e75a9262d03a7","530e5966049e75a9262d0415","530e5966049e75a9262d0439","530e5966049e75a9262d0458","530e5966049e75a9262d04d5","530e5967049e75a9262d04f4","530e5967049e75a9262d051f"],"last_modified":"2014-07-07T15:46:35.850Z","created":"2014-02-26T21:15:38.738Z","id":"530e597a049e75a9262d0baf"},"previous_attributes":{"students":["530e5960049e75a9262cff56","530e5962049e75a9262d00fb","530e5962049e75a9262d015a","530e5963049e75a9262d0219","530e5964049e75a9262d0270","530e5964049e75a9262d02cf","530e5964049e75a9262d02fc","530e5965049e75a9262d0341","530e5965049e75a9262d0343","530e5965049e75a9262d038d","530e5965049e75a9262d03a7","530e5966049e75a9262d0415","530e5966049e75a9262d0439","530e5966049e75a9262d0458","530e5966049e75a9262d04d5","530e5967049e75a9262d04f4","530e5967049e75a9262d051f"]}},"created":"2014-08-28T18:01:13.872Z","id":"53ff6e6b322eced002000088"},"uri":"/v1.1/events/53ff6e6b322eced002000088"},{"data":{"type":"sections.updated","data":{"object":{"course_name":"Kindergarten
         Music, Class 001","course_number":"1","district":"4fd43cc56d11340000000005","grade":"Kindergarten","name":"Kindergarten
@@ -61,7 +67,7 @@ http_interactions:
         Science, Class 003","course_number":"3","district":"4fd43cc56d11340000000005","grade":"Kindergarten","name":"Kindergarten
         Science, Class 003 - 003 - J. Stark","period":"4","school":"530e595026403103360ff9fe","sis_id":"866","subject":"science","teacher":"50c20477987eda0d3d02d310","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"students":["530e5961049e75a9262cffbe","530e5961049e75a9262cffc3","530e5961049e75a9262d0000","530e5961049e75a9262d0036","530e5961049e75a9262d0074","530e5962049e75a9262d00c5","530e5963049e75a9262d01fa","530e5964049e75a9262d027e","530e5964049e75a9262d02a8","530e5964049e75a9262d02ab","530e5964049e75a9262d02f7","530e5965049e75a9262d03b2","530e5965049e75a9262d03bf","530e5966049e75a9262d040a","530e5966049e75a9262d0449","530e5967049e75a9262d051b","530e5967049e75a9262d0565","530e5968049e75a9262d05f0","530e5968049e75a9262d061e","530e5968049e75a9262d0623"],"last_modified":"2014-02-26T21:15:39.195Z","created":"2014-02-26T21:15:39.193Z","id":"530e597b049e75a9262d0c12"},"previous_attributes":{"subject":"homeroom/advisory"}},"created":"2014-08-28T18:01:14.088Z","id":"53ff6e6b322eced00200008e"},"uri":"/v1.1/events/53ff6e6b322eced00200008e"}],"paging":{"current":1,"total":1,"count":7},"links":[{"rel":"self","uri":"/v1.1/events"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:05:02 GMT
+  recorded_at: Sat, 26 Sep 2015 17:40:41 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/events?count=true
@@ -70,7 +76,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -87,7 +93,7 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
@@ -96,13 +102,21 @@ http_interactions:
       - nginx/1.4.7
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1195'
+      X-Ratelimit-Reset:
+      - '1443289303'
       Content-Length:
       - '68'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"count":7,"links":[{"rel":"self","uri":"/v1.1/events?count=true"}]}'
+      encoding: UTF-8
+      string: '{"count":7,"links":[{"rel":"self","uri":"/v1.1/events?count=true"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:05:02 GMT
+  recorded_at: Sat, 26 Sep 2015 17:40:48 GMT
 recorded_with: VCR 2.9.3

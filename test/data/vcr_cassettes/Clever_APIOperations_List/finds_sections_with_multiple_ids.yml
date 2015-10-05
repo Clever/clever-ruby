@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -25,24 +25,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:02:46 GMT
+      - Sat, 26 Sep 2015 17:41:26 GMT
       Etag:
-      - ! '"-1690172883"'
-      Server:
-      - nginx/1.4.7
+      - '"305945234"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1119'
+      X-Ratelimit-Reset:
+      - '1443289303'
       Content-Length:
       - '22346'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
+      encoding: UTF-8
+      string: '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
         Guidance - 101 - B. Greene (Section 1)","period":"0","school":"530e595026403103360ff9fd","sis_id":"581","students":["530e5961049e75a9262cffd9","530e5961049e75a9262d0010","530e5961049e75a9262d004e","530e5961049e75a9262d0080","530e5962049e75a9262d0156","530e5963049e75a9262d01b7","530e5963049e75a9262d0253","530e5966049e75a9262d0418","530e5966049e75a9262d0475","530e5966049e75a9262d04b4","530e5967049e75a9262d0503","530e5968049e75a9262d05e9","530e5968049e75a9262d061f","530e5968049e75a9262d0632","530e5968049e75a9262d0647"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c11","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e5979049e75a9262d0af2"},"uri":"/v1.1/sections/530e5979049e75a9262d0af2"},{"data":{"course_name":"Group
         Guidance","course_number":"102","created":"2014-02-26T21:15:37.934Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-02-26T21:15:37.936Z","name":"Group
         Guidance - 102 - T. Vaux (Section 2)","period":"0","school":"530e595026403103360ff9fd","sis_id":"582","students":["530e5960049e75a9262cff4f","530e5960049e75a9262cff95","530e5961049e75a9262cffe0","530e5961049e75a9262d0027","530e5961049e75a9262d008d","530e5963049e75a9262d0180","530e5964049e75a9262d0300","530e5964049e75a9262d0302","530e5964049e75a9262d0304","530e5965049e75a9262d039e","530e5965049e75a9262d03b6","530e5965049e75a9262d03e8","530e5966049e75a9262d040c","530e5966049e75a9262d04cc","530e5967049e75a9262d05c0","530e5968049e75a9262d062f"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c12","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e5979049e75a9262d0af3"},"uri":"/v1.1/sections/530e5979049e75a9262d0af3"},{"data":{"course_name":"Group
@@ -83,7 +89,7 @@ http_interactions:
         Guidance","course_number":"905","created":"2014-02-26T21:15:38.011Z","district":"4fd43cc56d11340000000005","grade":"9","last_modified":"2014-02-26T21:15:38.013Z","name":"Group
         Guidance - 905 - J. Cummings (Section 5)","period":"0","school":"530e595026403103360ff9fd","sis_id":"600","students":["530e5960049e75a9262cff1e","530e5960049e75a9262cff27","530e5960049e75a9262cff5b","530e5961049e75a9262cfffb","530e5961049e75a9262d0038","530e5961049e75a9262d0089","530e5962049e75a9262d00ba","530e5962049e75a9262d00e6","530e5963049e75a9262d0181","530e5963049e75a9262d020f","530e5963049e75a9262d021b","530e5964049e75a9262d02d3","530e5965049e75a9262d033c","530e5966049e75a9262d045e","530e5966049e75a9262d0496","530e5966049e75a9262d04a5","530e5968049e75a9262d063c"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c16","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e597a049e75a9262d0b05"},"uri":"/v1.1/sections/530e597a049e75a9262d0b05"}],"paging":{"current":1,"total":19,"count":379},"links":[{"rel":"self","uri":"/v1.1/sections?limit=20"},{"rel":"next","uri":"/v1.1/sections?limit=20&starting_after=530e597a049e75a9262d0b05"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:02:46 GMT
+  recorded_at: Sat, 26 Sep 2015 17:41:26 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/sections?where=%7B%22_id%22:%7B%22$in%22:%5B%22530e5979049e75a9262d0af2%22,%22530e5979049e75a9262d0af4%22,%22530e5979049e75a9262d0af6%22,%22530e5979049e75a9262d0af8%22,%22530e5979049e75a9262d0afa%22,%22530e5979049e75a9262d0afc%22,%22530e5979049e75a9262d0afe%22,%22530e5979049e75a9262d0b00%22,%22530e5979049e75a9262d0b02%22,%22530e597a049e75a9262d0b04%22%5D%7D%7D
@@ -92,7 +98,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - ! '*/*; q=0.5, application/xml'
+      - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Authorization:
@@ -109,24 +115,30 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET,PATCH,POST,DELETE
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 13 Sep 2014 00:02:47 GMT
+      - Sat, 26 Sep 2015 17:41:26 GMT
       Etag:
-      - ! '"-1277459956"'
-      Server:
-      - nginx/1.4.7
+      - '"-1689358430"'
       X-Powered-By:
       - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1118'
+      X-Ratelimit-Reset:
+      - '1443289303'
       Content-Length:
       - '11633'
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
+      encoding: UTF-8
+      string: '{"data":[{"data":{"course_name":"Group Guidance","course_number":"101","created":"2014-02-26T21:15:37.927Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-08-11T18:35:06.714Z","name":"Group
         Guidance - 101 - B. Greene (Section 1)","period":"0","school":"530e595026403103360ff9fd","sis_id":"581","students":["530e5961049e75a9262cffd9","530e5961049e75a9262d0010","530e5961049e75a9262d004e","530e5961049e75a9262d0080","530e5962049e75a9262d0156","530e5963049e75a9262d01b7","530e5963049e75a9262d0253","530e5966049e75a9262d0418","530e5966049e75a9262d0475","530e5966049e75a9262d04b4","530e5967049e75a9262d0503","530e5968049e75a9262d05e9","530e5968049e75a9262d061f","530e5968049e75a9262d0632","530e5968049e75a9262d0647"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c11","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e5979049e75a9262d0af2"},"uri":"/v1.1/sections/530e5979049e75a9262d0af2"},{"data":{"course_name":"Group
         Guidance","course_number":"103","created":"2014-02-26T21:15:37.938Z","district":"4fd43cc56d11340000000005","grade":"10","last_modified":"2014-02-26T21:15:37.940Z","name":"Group
         Guidance - 103 - E. Britcher (Section 3)","period":"0","school":"530e595026403103360ff9fd","sis_id":"583","students":["530e5960049e75a9262cff26","530e5961049e75a9262d0020","530e5961049e75a9262d0035","530e5962049e75a9262d00a5","530e5962049e75a9262d00f4","530e5962049e75a9262d0158","530e5964049e75a9262d026c","530e5964049e75a9262d0288","530e5964049e75a9262d02aa","530e5966049e75a9262d03f5","530e5967049e75a9262d0596","530e5967049e75a9262d05b3","530e5967049e75a9262d05bf","530e5968049e75a9262d05d5","530e5968049e75a9262d05f7","530e5968049e75a9262d05fc","530e5968049e75a9262d0603"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c13","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e5979049e75a9262d0af4"},"uri":"/v1.1/sections/530e5979049e75a9262d0af4"},{"data":{"course_name":"Group
@@ -147,5 +159,5 @@ http_interactions:
         Guidance","course_number":"904","created":"2014-02-26T21:15:38.006Z","district":"4fd43cc56d11340000000005","grade":"9","last_modified":"2014-02-26T21:15:38.008Z","name":"Group
         Guidance - 904 - J. Isaacs (Section 4)","period":"0","school":"530e595026403103360ff9fd","sis_id":"599","students":["530e5960049e75a9262cff23","530e5960049e75a9262cff3c","530e5961049e75a9262d007d","530e5962049e75a9262d0127","530e5962049e75a9262d0174","530e5963049e75a9262d019f","530e5963049e75a9262d01fb","530e5963049e75a9262d0231","530e5964049e75a9262d02a9","530e5965049e75a9262d0325","530e5965049e75a9262d03a5","530e5966049e75a9262d042b","530e5966049e75a9262d048d","530e5967049e75a9262d05b5","530e5967049e75a9262d05be","530e5968049e75a9262d0605","530e5968049e75a9262d0646"],"subject":"homeroom/advisory","teacher":"530e5955d50c310f36112c14","term":{"name":"Y1","start_date":"2012-08-01","end_date":"2013-06-01"},"id":"530e597a049e75a9262d0b04"},"uri":"/v1.1/sections/530e597a049e75a9262d0b04"}],"paging":{"current":1,"total":1,"count":10},"links":[{"rel":"self","uri":"/v1.1/sections?where=%7B%22_id%22:%7B%22$in%22:[%22530e5979049e75a9262d0af2%22,%22530e5979049e75a9262d0af4%22,%22530e5979049e75a9262d0af6%22,%22530e5979049e75a9262d0af8%22,%22530e5979049e75a9262d0afa%22,%22530e5979049e75a9262d0afc%22,%22530e5979049e75a9262d0afe%22,%22530e5979049e75a9262d0b00%22,%22530e5979049e75a9262d0b02%22,%22530e597a049e75a9262d0b04%22]%7D%7D"}]}'
     http_version: 
-  recorded_at: Sat, 13 Sep 2014 00:02:47 GMT
+  recorded_at: Sat, 26 Sep 2015 17:41:26 GMT
 recorded_with: VCR 2.9.3
