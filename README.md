@@ -63,8 +63,6 @@ The linter follows the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-
 $ rake lint
 ```
 
-Running specific tests is not currently supported.
-
 ### Updating VCR cassettes
 
 It is not currently possible to easily recreate the scenario in which the original VCR cassettes were recorded, especially for the events. If you need to update or add to the recorded requests and responses:
