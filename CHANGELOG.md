@@ -1,4 +1,4 @@
-## Unreleased
+## 0.13.0 (2015-10-05)
 
 * Add support for school admins
 
