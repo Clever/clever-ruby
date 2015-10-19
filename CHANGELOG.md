@@ -1,3 +1,7 @@
+## 0.13.1 (2015-10-19)
+
+* Fix bug where school_admins used incorrect event type
+
 ## 0.13.0 (2015-10-05)
 
 * Add support for school admins
