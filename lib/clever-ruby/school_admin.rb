@@ -4,6 +4,8 @@ module Clever
     include Clever::APIOperations::List
     @uri = 'school_admins'
     @plural = 'school_admins'
+    @event_name = 'schooladmins'
+
     @linked_resources = [:schools]
 
     # Optional attributes
