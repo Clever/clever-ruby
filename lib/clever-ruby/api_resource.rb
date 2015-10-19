@@ -29,6 +29,14 @@ module Clever
       # @api private
       # @return [String] URI corresponding to a resource
       attr_reader :uri
+
+      # Get the event name corresponding to a resource
+      #
+      # For some events, event type names have an inconsistent format with plurals and URIs.
+      # For example, SchoolAdmin events are "schooladmins"
+      # @api private
+      # @return [String] event type name of a resource
+      attr_reader :event_name
     end
 
     # Registers valid API resources
@@ -70,7 +78,7 @@ module Clever
     def self.named(name)
       name = name.to_s.downcase
       matching = resources.select do |res|
-        (name == res.shortname) || (name == res.plural)
+        (name == res.shortname) || (name == res.plural) || (name == res.event_name)
       end
       return nil if matching.empty?
       matching.first
