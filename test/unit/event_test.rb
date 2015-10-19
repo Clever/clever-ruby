@@ -42,5 +42,16 @@ describe Clever::Event do
     end
   end
 
+  describe 'school admin events' do
+    it 'creates a clever object for the object the event is about' do
+      @event = Clever::Event.construct_from(
+        type: 'schooladmins.created',
+        data: {
+          object: { id: '512bb9f2ca5e6fa77506133f' }
+        },
+        id: '512bb9f2ca5e6fa775061340'
+      )
+      @event.object.must_be_instance_of Clever::SchoolAdmin
+    end
   end
 end
