@@ -4,19 +4,7 @@ module Clever
     include Clever::APIOperations::List
     @uri = 'students'
     @plural = 'students'
-    @linked_resources = [:school, :district, :sections, :teachers, :events]
-
-    # Get contacts for the current student
-    # @todo This is not implemented!
-    # @api public
-    # @raise [NotImplementedError]
-    # @return [Object]
-    # @example
-    #   student = student.retrieve id
-    #   contacts = student.admins
-    def contacts
-      fail NotImplementedError, 'contacts nested resource not implemented yet.'
-    end
+    @linked_resources = [:school, :district, :sections, :teachers, :events, :contacts]
 
     # Optional attributes
     # @see Clever::CleverObject.optional_attributes

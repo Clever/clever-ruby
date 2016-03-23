@@ -17,7 +17,14 @@ module Clever
         response = Clever.request :get, uri, filters, @headers
 
         @auth_token = @headers[:Authorization].split[1]
-        response[:data].map { |x| x[:data][:auth_token] = @auth_token }
+        if uri.include? "contacts"
+          puts uri
+          puts response
+        end
+        response[:data].map { |x| 
+          x[:data] ||= Hash.new
+          x[:data][:auth_token] = @auth_token 
+        }
 
         @all = Util.convert_to_clever_object response[:data]
         @links = {}
