@@ -4,6 +4,10 @@
 
 Ruby bindings to the Clever API. [Documentation](http://rubydoc.info/gems/clever-ruby/frames)
 
+## Maintenance
+
+Clever is moving to a community supported model with our client libraries. We will still respond to and merge incoming PRs but are looking to turn over ownership of these libraries to the community. If you are interested, please contact our partner-engineering team at tech-support@clever.com.
+
 ## Installation
 
 Add this line to your application's Gemfile:
