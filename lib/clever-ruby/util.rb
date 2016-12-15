@@ -43,7 +43,7 @@ module Clever
           uri = resp[:links].select { |l| l[:rel] == 'self' }[0][:uri]
         end
 
-        klass_name = %r{/v1.1/([a-z_]+)/\S+$}.match(uri)[1]
+        klass_name = %r{v1.1/([a-z_]+)/\S+$}.match(uri)[1]
         klass = APIResource.named klass_name if klass_name
         klass ||= CleverObject
         klass.construct_from resp[:data]
