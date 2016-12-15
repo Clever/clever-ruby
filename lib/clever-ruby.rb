@@ -32,6 +32,7 @@ require 'clever-ruby/section'
 require 'clever-ruby/teacher'
 require 'clever-ruby/event'
 require 'clever-ruby/school_admin'
+require 'clever-ruby/district_admin'
 
 # Errors
 require 'clever-ruby/errors/clever_error'

@@ -4,6 +4,7 @@ def resource_name(resource)
   resource.shortname
 end
 
+# The DistrictAdmin resource does not support the count or limit parameters
 def resources
   [Clever::District, Clever::School, Clever::Teacher,
    Clever::Student, Clever::Section, Clever::Event,

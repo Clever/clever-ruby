@@ -15,6 +15,7 @@ module Clever
         @headers = headers
 
         response = Clever.request :get, uri, filters, @headers
+        standardize_response(response)
 
         @auth_token = @headers[:Authorization].split[1]
         response[:data].map { |x| x[:data][:auth_token] = @auth_token }
@@ -65,6 +66,29 @@ module Clever
       def last(num = nil)
         return @all.last num if num
         @all.last
+      end
+
+      private
+
+      # District_admins API returns slightly different response, so need to standardize it
+      # @api private
+      # @returns response with each elem in [:data] containing a hash with :data and :uri keys,
+      #   unless already in that format
+      # @example
+      #   input:
+      #     {data: [{id: 1, email: 'admin1@school.edu'},
+      #             {id: 2, email: 'admin2@school.edu'}]}
+      #   output:
+      #     {data: [{data: {id: 1, email: 'admin1@school.edu'}, uri: '/v1.1/district_admins/1'},
+      #             {data: {id: 2, email: 'admin2@school.edu'}, uri: '/v1.1/district_admins/2'}]}
+      def standardize_response(response)
+        return if response[:data].empty? || response[:data][0].key?(:data) # not district_admin
+        response[:data].each_with_index do |elem, i|
+          response[:data][i] = {
+            data: elem,
+            uri: "#{@uri}/#{elem[:id]}"
+          }
+        end
       end
     end
   end

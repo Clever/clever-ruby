@@ -18,6 +18,7 @@ describe Clever do
     assert_equal 'v1.1/teachers', Clever::Teacher.url
     assert_equal 'v1.1/events', Clever::Event.url
     assert_equal 'v1.1/school_admins', Clever::SchoolAdmin.url
+    assert_equal 'v1.1/district_admins', Clever::DistrictAdmin.url
   end
 
   it 'uri-encodes params' do
