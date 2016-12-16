@@ -5,14 +5,14 @@ def resource_name(resource)
 end
 
 # The DistrictAdmin resource does not support the count or limit parameters
-def resources_wo_district_admin
+def limitable_countable_resources
   [Clever::District, Clever::School, Clever::Teacher,
    Clever::Student, Clever::Section, Clever::Event,
    Clever::SchoolAdmin]
 end
 
 def resources
-  resources_wo_district_admin + [Clever::DistrictAdmin]
+  limitable_countable_resources + [Clever::DistrictAdmin]
 end
 
 module Minitest
@@ -63,7 +63,7 @@ describe Clever::APIOperations::List, :vcr do
     end
   end
 
-  resources_wo_district_admin.each do |resource|
+  limitable_countable_resources.each do |resource|
     name = resource_name resource
 
     it 'rejects invalid ids for Clever::District.find multiple' do
