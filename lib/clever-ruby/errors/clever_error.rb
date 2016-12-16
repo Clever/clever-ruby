@@ -1,5 +1,5 @@
 module Clever
-  # Represents an error outputted bythe Clever API
+  # Represents an error outputted by the Clever API
   class CleverError < StandardError
     # Access error Message
     # @api public

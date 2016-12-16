@@ -39,6 +39,7 @@ module Clever
     def district_admins(filters = {})
       # The response for a district does not include a link to the district
       # admins URI, so this can't be a linked_resource.
+      filters = filters.merge(show_links: true)
       Clever::NestedResource.new '/v1.1/district_admins', filters, headers
     end
 

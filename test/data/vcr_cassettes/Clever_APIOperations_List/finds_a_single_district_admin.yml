@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clever.com/v1.1/district_admins
+    uri: https://api.clever.com/v1.1/district_admins?show_links=true
     body:
       encoding: US-ASCII
       string: ''
@@ -29,21 +29,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 15 Dec 2016 23:01:30 GMT
+      - Fri, 16 Dec 2016 22:10:51 GMT
       X-Powered-By:
       - Express
       X-Request-Id:
-      - 9d50227f-fb49-41ac-8d5c-1c627f1da973
+      - 64e279a3-ebdd-48e4-9727-4402f095fa1d
       Content-Length:
-      - '753'
+      - '1009'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"519edecb58b876b018000652","district":"4fd43cc56d11340000000005","email":"demo
-        account@demo account.com","name":{"first":"Demo","last":"Account"}},{"id":"52a112ee3880c7c30b000966","district":"4fd43cc56d11340000000005","email":"aaron.sokol+launch@getclever.com","name":{"first":"Demo","last":"Account"}},{"id":"54a177d50a293fdb06000002","district":"4fd43cc56d11340000000005","email":"taylor.singletary+demo@clever.com","name":{"first":"Taylor","last":"Singletary"}},{"id":"555a7ec9982b720100000002","district":"4fd43cc56d11340000000005","email":"aashay.desai+demotoken@clever.com","name":{"last":"Desai","first":"Aashay"},"title":"DevRel"}],"paging":{"current":1,"total":1,"count":4},"links":[{"rel":"self","uri":"/v1.1/district_admins"}]}'
+      string: '{"data":[{"data":{"id":"519edecb58b876b018000652","district":"4fd43cc56d11340000000005","email":"demo
+        account@demo account.com","name":{"first":"Demo","last":"Account"}},"uri":"/v1.1/district_admins/519edecb58b876b018000652"},{"data":{"id":"52a112ee3880c7c30b000966","district":"4fd43cc56d11340000000005","email":"aaron.sokol+launch@getclever.com","name":{"first":"Demo","last":"Account"}},"uri":"/v1.1/district_admins/52a112ee3880c7c30b000966"},{"data":{"id":"54a177d50a293fdb06000002","district":"4fd43cc56d11340000000005","email":"taylor.singletary+demo@clever.com","name":{"first":"Taylor","last":"Singletary"}},"uri":"/v1.1/district_admins/54a177d50a293fdb06000002"},{"data":{"id":"555a7ec9982b720100000002","district":"4fd43cc56d11340000000005","email":"aashay.desai+demotoken@clever.com","name":{"last":"Desai","first":"Aashay"},"title":"DevRel"},"uri":"/v1.1/district_admins/555a7ec9982b720100000002"}],"paging":{"current":1,"total":1,"count":4},"links":[{"rel":"self","uri":"/v1.1/district_admins"}]}'
     http_version:
-  recorded_at: Thu, 15 Dec 2016 23:01:30 GMT
+  recorded_at: Fri, 16 Dec 2016 22:10:51 GMT
 - request:
     method: get
     uri: https://api.clever.com/v1.1/district_admins/555a7ec9982b720100000002
@@ -73,11 +73,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 15 Dec 2016 23:01:30 GMT
+      - Fri, 16 Dec 2016 22:10:51 GMT
       X-Powered-By:
       - Express
       X-Request-Id:
-      - 56497a99-3811-4ee1-af3a-dea331951d27
+      - 5ded6e6d-20c2-4e3f-b091-4fe57cee6b70
       Content-Length:
       - '262'
       Connection:
@@ -86,5 +86,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"data":{"id":"555a7ec9982b720100000002","district":"4fd43cc56d11340000000005","email":"aashay.desai+demotoken@clever.com","name":{"last":"Desai","first":"Aashay"},"title":"DevRel"},"links":[{"rel":"self","uri":"/v1.1/district_admins/555a7ec9982b720100000002"}]}'
     http_version:
-  recorded_at: Thu, 15 Dec 2016 23:01:30 GMT
+  recorded_at: Fri, 16 Dec 2016 22:10:52 GMT
 recorded_with: VCR 3.0.3
