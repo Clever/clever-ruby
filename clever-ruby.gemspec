@@ -22,7 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'multi_json',    '~> 1.1'
   gem.add_runtime_dependency 'rest-client',   '~> 1.6.7'
 
-  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'rake',          '~> 11.1.2'
   gem.add_development_dependency 'minitest',      '~> 5.4.1'
   gem.add_development_dependency 'yard',          '~> 0.8.7'
   gem.add_development_dependency 'yardstick',     '~> 0.9.9'
