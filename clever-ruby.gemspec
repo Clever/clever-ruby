@@ -31,4 +31,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'minitest-vcr',  '~> 0.1.1'
   gem.add_development_dependency 'webmock',       '~> 1.9.0'
   gem.add_development_dependency 'rubocop',       '~> 0.26.0'
+  gem.add_development_dependency 'byebug',        '~> 3.5'
 end

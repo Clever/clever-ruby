@@ -8,7 +8,8 @@ describe Clever::APIResource do
       event: { plural: 'events', klass: Clever::Event },
       teacher: { plural: 'teachers', klass: Clever::Teacher },
       student: { plural: 'students', klass: Clever::Student },
-      school_admin: { plural: 'school_admins', klass: Clever::SchoolAdmin } }
+      school_admin: { plural: 'school_admins', klass: Clever::SchoolAdmin },
+      district_admin: { plural: 'district_admins', klass: Clever::DistrictAdmin } }
   end
 
   describe :singular do

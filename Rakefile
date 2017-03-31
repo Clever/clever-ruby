@@ -20,7 +20,7 @@ end
 
 require 'yardstick/rake/verify'
 Yardstick::Rake::Verify.new(:'doc-coverage-verify') do |verify|
-  verify.threshold = 100
+  verify.threshold = 99.3
 end
 
 require 'rubocop/rake_task'

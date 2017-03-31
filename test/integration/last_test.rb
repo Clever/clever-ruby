@@ -7,6 +7,7 @@ describe 'last method', :vcr do
     end
   end
 
+  # The DistrictAdmin resource does not support the last method (limit parameter)
   resources = [Clever::District, Clever::School, Clever::Student,
                Clever::Event, Clever::Section, Clever::Teacher,
                Clever::SchoolAdmin]
