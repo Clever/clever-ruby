@@ -33,6 +33,10 @@ module Clever
       [:name, :title]
     end
 
+    # Get all district admins
+    # @api public
+    # @param filters [Hash] parameters to apply, as per the Clever API spec
+    # @return [Array] array of all elements matching the request
     def self.all(filters = {}, headers = {})
       filters = filters.merge(show_links: true)
       super
