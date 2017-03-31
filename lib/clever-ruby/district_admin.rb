@@ -19,7 +19,7 @@ module Clever
     #   has standard "data" and "uri" keys
     # @api public
     # 'num' argument is not implemented since district admins do not allow 'limit' param
-    def self.first(num = nil, filters = {}, headers = {})
+    def self.first(_num = nil, filters = {}, headers = {})
       filters = filters.merge(show_links: true)
       response = Clever.request :get, url, filters, headers
       Util.convert_to_clever_object response[:data].first
@@ -37,6 +37,5 @@ module Clever
       filters = filters.merge(show_links: true)
       super
     end
-
   end
 end
