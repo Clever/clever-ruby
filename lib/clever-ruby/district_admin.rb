@@ -32,5 +32,11 @@ module Clever
     def optional_attributes
       [:name, :title]
     end
+
+    def self.all(filters = {}, headers = {})
+      filters = filters.merge(show_links: true)
+      super
+    end
+
   end
 end
