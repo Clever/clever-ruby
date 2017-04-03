@@ -1,3 +1,11 @@
+## 0.14.0 (2017-03-31)
+
+* Add District Admins
+
+## 0.13.2 (2016-02-08)
+
+* Reduce constraint on multi_json
+
 ## 0.13.1 (2015-10-19)
 
 * Fix bug where school_admins used incorrect event type
