@@ -203,11 +203,79 @@ module CleverAPI
         {}.tap do |hash|
           data.each {|k, v| hash[k] = convert_to_type(v, sub_type) }
         end
+      when 'EventsResponse'
+        CleverAPI.const_get(return_type).new.tap do |model|
+          resp = model.build_from_hash data
+          resps = []
+          data[:data].each do |eventResponse| 
+            singleResp = parse_event_response(eventResponse[:data])
+            resps.push(singleResp)
+          end
+          resp.data = resps
+          return resp
+        end
+      when 'EventResponse'
+        parse_event_response data[:data]
       else
         # models, e.g. Pet
         CleverAPI.const_get(return_type).new.tap do |model|
           model.build_from_hash data
         end
+      end
+    end
+
+    def parse_event_response(data)
+      classObj = "Event"
+      if data[:type] == "districts.created"
+        classObj = "DistrictsCreated"
+      elsif data[:type] == "districts.updated"
+        classObj = "DistrictsUpdated"
+      elsif data[:type] == "districts.deleted"
+        classObj = "DistrictsDeleted"
+      elsif data[:type] == "schools.created"
+        classObj = "SchoolsCreated"
+      elsif data[:type] == "schools.updated"
+        classObj = "SchoolsUpdated"
+      elsif data[:type] == "schools.deleted"
+        classObj = "SchoolsDeleted"
+      elsif data[:type] == "sections.created"
+        classObj = "SectionsCreated"
+      elsif data[:type] == "sections.updated"
+        classObj = "SectionsUpdated"
+      elsif data[:type] == "sections.deleted"
+        classObj = "SectionsDeleted"
+      elsif data[:type] == "schooladmins.created"
+        classObj = "SchooladminsCreated"
+      elsif data[:type] == "schooladmins.updated"
+        classObj = "SchooladminsUpdated"
+      elsif data[:type] == "schooladmins.deleted"
+        classObj = "SchooladminsDeleted"
+      elsif data[:type] == "students.created"
+        classObj = "StudentsCreated"
+      elsif data[:type] == "students.updated"
+        classObj = "StudentsUpdated"
+      elsif data[:type] == "students.deleted"
+        classObj = "StudentsDeleted"
+      elsif data[:type] == "teachers.created"
+        classObj = "TeachersCreated"
+      elsif data[:type] == "teachers.updated"
+        classObj = "TeachersUpdated"
+      elsif data[:type] == "teachers.deleted"
+        classObj = "TeachersDeleted"
+      elsif data[:type] == "studentcontacts.created"
+        classObj = "StudentcontactsCreated"
+      elsif data[:type] == "studentcontacts.updated"
+        classObj = "StudentcontactsUpdated"
+      elsif data[:type] == "studentcontacts.deleted"
+        classObj = "StudentcontactsDeleted"
+        
+      CleverAPI.const_get(classObj).new.tap do |model|
+          parsed = model.build_from_hash data
+          CleverAPI.const_get("EventsResponse").new.tap do |model|
+            resp = model.build_from_hash data
+            resp.data = parsed
+            return resp
+          end
       end
     end
 
