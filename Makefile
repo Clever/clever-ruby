@@ -7,4 +7,4 @@ test:
 	echo "TODO test app"
 
 build:
-	#cd override && ./override.sh
+	cd override && ./override.sh
