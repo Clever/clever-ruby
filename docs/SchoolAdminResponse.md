@@ -1,4 +1,4 @@
-# CleverAPI::SchoolAdminResponse
+# Clever::SchoolAdminResponse
 
 ## Properties
 Name | Type | Description | Notes

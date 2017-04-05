@@ -1,4 +1,4 @@
-# CleverAPI::NotFound
+# Clever::NotFound
 
 ## Properties
 Name | Type | Description | Notes

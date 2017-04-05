@@ -1,4 +1,4 @@
-# CleverAPI::TeachersResponse
+# Clever::TeachersResponse
 
 ## Properties
 Name | Type | Description | Notes

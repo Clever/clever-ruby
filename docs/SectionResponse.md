@@ -1,4 +1,4 @@
-# CleverAPI::SectionResponse
+# Clever::SectionResponse
 
 ## Properties
 Name | Type | Description | Notes

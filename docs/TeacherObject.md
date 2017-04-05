@@ -1,4 +1,4 @@
-# CleverAPI::TeacherObject
+# Clever::TeacherObject
 
 ## Properties
 Name | Type | Description | Notes

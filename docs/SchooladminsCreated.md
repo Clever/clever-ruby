@@ -1,4 +1,4 @@
-# CleverAPI::SchooladminsCreated
+# Clever::SchooladminsCreated
 
 ## Properties
 Name | Type | Description | Notes

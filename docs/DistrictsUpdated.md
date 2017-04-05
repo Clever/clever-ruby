@@ -1,4 +1,4 @@
-# CleverAPI::DistrictsUpdated
+# Clever::DistrictsUpdated
 
 ## Properties
 Name | Type | Description | Notes

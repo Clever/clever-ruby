@@ -1,4 +1,4 @@
-# CleverAPI::Location
+# Clever::Location
 
 ## Properties
 Name | Type | Description | Notes

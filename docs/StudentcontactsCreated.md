@@ -1,4 +1,4 @@
-# CleverAPI::StudentcontactsCreated
+# Clever::StudentcontactsCreated
 
 ## Properties
 Name | Type | Description | Notes

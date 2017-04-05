@@ -1,4 +1,4 @@
-# CleverAPI::BadRequest
+# Clever::BadRequest
 
 ## Properties
 Name | Type | Description | Notes

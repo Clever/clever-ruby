@@ -1,4 +1,4 @@
-# CleverAPI::SectionObject
+# Clever::SectionObject
 
 ## Properties
 Name | Type | Description | Notes

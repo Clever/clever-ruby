@@ -1,54 +1,47 @@
-# CleverAPI::DefaultApi
+# Clever::DataApi
 
 All URIs are relative to *https://api.clever.com/v1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_contact**](DefaultApi.md#get_contact) | **GET** /contacts/{id} | Get only a specific studentcontact&#39;s information.
-[**get_contacts**](DefaultApi.md#get_contacts) | **GET** /contacts | Gets a list of student contacts you have access to.
-[**get_contacts_for_student**](DefaultApi.md#get_contacts_for_student) | **GET** /students/{id}/contacts | Retrieves all contacts for a student.
-[**get_district**](DefaultApi.md#get_district) | **GET** /districts/{id} | Get only a specific district&#39;s information.
-[**get_district_admin**](DefaultApi.md#get_district_admin) | **GET** /district_admins/{id} | Retrieves a district admin
-[**get_district_admins**](DefaultApi.md#get_district_admins) | **GET** /district_admins | Retrieves all users with admin access to a district.
-[**get_district_for_school**](DefaultApi.md#get_district_for_school) | **GET** /schools/{id}/district | Retrieves district information for a school.
-[**get_district_for_section**](DefaultApi.md#get_district_for_section) | **GET** /sections/{id}/district | Retrieves district information for a section.
-[**get_district_for_student**](DefaultApi.md#get_district_for_student) | **GET** /students/{id}/district | Retrieves district information for a student.
-[**get_district_for_student_contact**](DefaultApi.md#get_district_for_student_contact) | **GET** /contacts/{id}/district | Retrieves the district for a contact.
-[**get_district_for_teacher**](DefaultApi.md#get_district_for_teacher) | **GET** /teachers/{id}/district | Retrieves district information for a teacher.
-[**get_districts**](DefaultApi.md#get_districts) | **GET** /districts | Gets a list of districts you have access to.
-[**get_event**](DefaultApi.md#get_event) | **GET** /events/{id} | Retrieves a single event.
-[**get_events**](DefaultApi.md#get_events) | **GET** /events | Retrieves all events
-[**get_events_for_school**](DefaultApi.md#get_events_for_school) | **GET** /schools/{id}/events | Retrieves events for schools.
-[**get_events_for_school_admin**](DefaultApi.md#get_events_for_school_admin) | **GET** /school_admins/{id}/events | Retrieves events for school_admins.
-[**get_events_for_section**](DefaultApi.md#get_events_for_section) | **GET** /sections/{id}/events | Retrieves events for sections.
-[**get_events_for_student**](DefaultApi.md#get_events_for_student) | **GET** /students/{id}/events | Retrieves events for students.
-[**get_events_for_teacher**](DefaultApi.md#get_events_for_teacher) | **GET** /teachers/{id}/events | Retrieves events for teachers.
-[**get_grade_levels_for_teacher**](DefaultApi.md#get_grade_levels_for_teacher) | **GET** /teachers/{id}/grade_levels | Retrieves a list of all grade levels taught by a specific teacher.
-[**get_school**](DefaultApi.md#get_school) | **GET** /schools/{id} | Get only a specific school&#39;s information.
-[**get_school_admin**](DefaultApi.md#get_school_admin) | **GET** /school_admins/{id} | Get only a specific schooladmin&#39;s information.
-[**get_school_admins**](DefaultApi.md#get_school_admins) | **GET** /school_admins | Gets a list of school_admins you have access to.
-[**get_school_for_section**](DefaultApi.md#get_school_for_section) | **GET** /sections/{id}/school | Retrieves information about the school for a section
-[**get_school_for_student**](DefaultApi.md#get_school_for_student) | **GET** /students/{id}/school | Retrieves information about the school for a student
-[**get_school_for_teacher**](DefaultApi.md#get_school_for_teacher) | **GET** /teachers/{id}/school | Retrieves information about the school for a teacher
-[**get_schools**](DefaultApi.md#get_schools) | **GET** /schools | Gets a list of schools you have access to.
-[**get_schools_for_school_admin**](DefaultApi.md#get_schools_for_school_admin) | **GET** /school_admins/{id}/schools | Retrieves all schools for a school admin.
-[**get_section**](DefaultApi.md#get_section) | **GET** /sections/{id} | Get only a specific section&#39;s information.
-[**get_sections**](DefaultApi.md#get_sections) | **GET** /sections | Gets a list of sections you have access to.
-[**get_sections_for_school**](DefaultApi.md#get_sections_for_school) | **GET** /schools/{id}/sections | Retrieves a list of all sections for a specific school.
-[**get_sections_for_student**](DefaultApi.md#get_sections_for_student) | **GET** /students/{id}/sections | Retrieves a list of all sections for a student.
-[**get_sections_for_teacher**](DefaultApi.md#get_sections_for_teacher) | **GET** /teachers/{id}/sections | Retrieves a list of all sections for a teacher.
-[**get_student**](DefaultApi.md#get_student) | **GET** /students/{id} | Get only a specific student&#39;s information.
-[**get_student_for_contact**](DefaultApi.md#get_student_for_contact) | **GET** /contacts/{id}/student | Retrieves the student for a contact.
-[**get_students**](DefaultApi.md#get_students) | **GET** /students | Gets a list of students you have access to.
-[**get_students_for_school**](DefaultApi.md#get_students_for_school) | **GET** /schools/{id}/students | Retrieves a list of all students for a specific school.
-[**get_students_for_section**](DefaultApi.md#get_students_for_section) | **GET** /sections/{id}/students | Retrieves a list of all the section&#39;s students.
-[**get_students_for_teacher**](DefaultApi.md#get_students_for_teacher) | **GET** /teachers/{id}/students | Retrieves all students that a teacher has in their sections.
-[**get_teacher**](DefaultApi.md#get_teacher) | **GET** /teachers/{id} | Get only a specific teacher&#39;s information.
-[**get_teacher_for_section**](DefaultApi.md#get_teacher_for_section) | **GET** /sections/{id}/teacher | Retrieves information about the primary teacher of a section.
-[**get_teachers**](DefaultApi.md#get_teachers) | **GET** /teachers | Gets a list of teachers you have access to.
-[**get_teachers_for_school**](DefaultApi.md#get_teachers_for_school) | **GET** /schools/{id}/teachers | Retrieves a list of all teachers for a specific school.
-[**get_teachers_for_section**](DefaultApi.md#get_teachers_for_section) | **GET** /sections/{id}/teachers | Retrieves a list of all the section&#39;s teachers.
-[**get_teachers_for_student**](DefaultApi.md#get_teachers_for_student) | **GET** /students/{id}/teachers | Retrieves all teachers for a student.
+[**get_contact**](DataApi.md#get_contact) | **GET** /contacts/{id} | Get only a specific studentcontact&#39;s information.
+[**get_contacts**](DataApi.md#get_contacts) | **GET** /contacts | Gets a list of student contacts you have access to.
+[**get_contacts_for_student**](DataApi.md#get_contacts_for_student) | **GET** /students/{id}/contacts | Retrieves all contacts for a student.
+[**get_district**](DataApi.md#get_district) | **GET** /districts/{id} | Get only a specific district&#39;s information.
+[**get_district_admin**](DataApi.md#get_district_admin) | **GET** /district_admins/{id} | Retrieves a district admin
+[**get_district_admins**](DataApi.md#get_district_admins) | **GET** /district_admins | Retrieves all users with admin access to a district.
+[**get_district_for_school**](DataApi.md#get_district_for_school) | **GET** /schools/{id}/district | Retrieves district information for a school.
+[**get_district_for_section**](DataApi.md#get_district_for_section) | **GET** /sections/{id}/district | Retrieves district information for a section.
+[**get_district_for_student**](DataApi.md#get_district_for_student) | **GET** /students/{id}/district | Retrieves district information for a student.
+[**get_district_for_student_contact**](DataApi.md#get_district_for_student_contact) | **GET** /contacts/{id}/district | Retrieves the district for a contact.
+[**get_district_for_teacher**](DataApi.md#get_district_for_teacher) | **GET** /teachers/{id}/district | Retrieves district information for a teacher.
+[**get_districts**](DataApi.md#get_districts) | **GET** /districts | Gets a list of districts you have access to.
+[**get_grade_levels_for_teacher**](DataApi.md#get_grade_levels_for_teacher) | **GET** /teachers/{id}/grade_levels | Retrieves a list of all grade levels taught by a specific teacher.
+[**get_school**](DataApi.md#get_school) | **GET** /schools/{id} | Get only a specific school&#39;s information.
+[**get_school_admin**](DataApi.md#get_school_admin) | **GET** /school_admins/{id} | Get only a specific schooladmin&#39;s information.
+[**get_school_admins**](DataApi.md#get_school_admins) | **GET** /school_admins | Gets a list of school_admins you have access to.
+[**get_school_for_section**](DataApi.md#get_school_for_section) | **GET** /sections/{id}/school | Retrieves information about the school for a section
+[**get_school_for_student**](DataApi.md#get_school_for_student) | **GET** /students/{id}/school | Retrieves information about the school for a student
+[**get_school_for_teacher**](DataApi.md#get_school_for_teacher) | **GET** /teachers/{id}/school | Retrieves information about the school for a teacher
+[**get_schools**](DataApi.md#get_schools) | **GET** /schools | Gets a list of schools you have access to.
+[**get_schools_for_school_admin**](DataApi.md#get_schools_for_school_admin) | **GET** /school_admins/{id}/schools | Retrieves all schools for a school admin.
+[**get_section**](DataApi.md#get_section) | **GET** /sections/{id} | Get only a specific section&#39;s information.
+[**get_sections**](DataApi.md#get_sections) | **GET** /sections | Gets a list of sections you have access to.
+[**get_sections_for_school**](DataApi.md#get_sections_for_school) | **GET** /schools/{id}/sections | Retrieves a list of all sections for a specific school.
+[**get_sections_for_student**](DataApi.md#get_sections_for_student) | **GET** /students/{id}/sections | Retrieves a list of all sections for a student.
+[**get_sections_for_teacher**](DataApi.md#get_sections_for_teacher) | **GET** /teachers/{id}/sections | Retrieves a list of all sections for a teacher.
+[**get_student**](DataApi.md#get_student) | **GET** /students/{id} | Get only a specific student&#39;s information.
+[**get_student_for_contact**](DataApi.md#get_student_for_contact) | **GET** /contacts/{id}/student | Retrieves the student for a contact.
+[**get_students**](DataApi.md#get_students) | **GET** /students | Gets a list of students you have access to.
+[**get_students_for_school**](DataApi.md#get_students_for_school) | **GET** /schools/{id}/students | Retrieves a list of all students for a specific school.
+[**get_students_for_section**](DataApi.md#get_students_for_section) | **GET** /sections/{id}/students | Retrieves a list of all the section&#39;s students.
+[**get_students_for_teacher**](DataApi.md#get_students_for_teacher) | **GET** /teachers/{id}/students | Retrieves all students that a teacher has in their sections.
+[**get_teacher**](DataApi.md#get_teacher) | **GET** /teachers/{id} | Get only a specific teacher&#39;s information.
+[**get_teacher_for_section**](DataApi.md#get_teacher_for_section) | **GET** /sections/{id}/teacher | Retrieves information about the primary teacher of a section.
+[**get_teachers**](DataApi.md#get_teachers) | **GET** /teachers | Gets a list of teachers you have access to.
+[**get_teachers_for_school**](DataApi.md#get_teachers_for_school) | **GET** /schools/{id}/teachers | Retrieves a list of all teachers for a specific school.
+[**get_teachers_for_section**](DataApi.md#get_teachers_for_section) | **GET** /sections/{id}/teachers | Retrieves a list of all the section&#39;s teachers.
+[**get_teachers_for_student**](DataApi.md#get_teachers_for_student) | **GET** /students/{id}/teachers | Retrieves all teachers for a student.
 
 
 # **get_contact**
@@ -63,12 +56,12 @@ Returns a specific student contact
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -77,8 +70,8 @@ begin
   #Get only a specific studentcontact's information.
   result = api_instance.get_contact(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_contact: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_contact: #{e}"
 end
 ```
 
@@ -115,12 +108,12 @@ Returns a list of student contacts
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 opts = { 
   limit: 56, # Integer | 
@@ -132,8 +125,8 @@ begin
   #Gets a list of student contacts you have access to.
   result = api_instance.get_contacts(opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_contacts: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_contacts: #{e}"
 end
 ```
 
@@ -172,12 +165,12 @@ Returns the contacts for a student
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -189,8 +182,8 @@ begin
   #Retrieves all contacts for a student.
   result = api_instance.get_contacts_for_student(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_contacts_for_student: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_contacts_for_student: #{e}"
 end
 ```
 
@@ -228,12 +221,12 @@ Returns a specific district
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -242,8 +235,8 @@ begin
   #Get only a specific district's information.
   result = api_instance.get_district(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_district: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_district: #{e}"
 end
 ```
 
@@ -280,12 +273,12 @@ Returns a specific district admin
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -294,8 +287,8 @@ begin
   #Retrieves a district admin
   result = api_instance.get_district_admin(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_district_admin: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_district_admin: #{e}"
 end
 ```
 
@@ -332,12 +325,12 @@ Returns a list of district admins
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 opts = { 
   starting_after: "starting_after_example", # String | 
@@ -348,8 +341,8 @@ begin
   #Retrieves all users with admin access to a district.
   result = api_instance.get_district_admins(opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_district_admins: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_district_admins: #{e}"
 end
 ```
 
@@ -387,12 +380,12 @@ Returns the district for a school
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -401,8 +394,8 @@ begin
   #Retrieves district information for a school.
   result = api_instance.get_district_for_school(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_district_for_school: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_district_for_school: #{e}"
 end
 ```
 
@@ -439,12 +432,12 @@ Returns the district for a section
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -453,8 +446,8 @@ begin
   #Retrieves district information for a section.
   result = api_instance.get_district_for_section(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_district_for_section: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_district_for_section: #{e}"
 end
 ```
 
@@ -491,12 +484,12 @@ Returns the district for a student
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -505,8 +498,8 @@ begin
   #Retrieves district information for a student.
   result = api_instance.get_district_for_student(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_district_for_student: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_district_for_student: #{e}"
 end
 ```
 
@@ -543,12 +536,12 @@ Returns the district for a student contact
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -557,8 +550,8 @@ begin
   #Retrieves the district for a contact.
   result = api_instance.get_district_for_student_contact(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_district_for_student_contact: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_district_for_student_contact: #{e}"
 end
 ```
 
@@ -595,12 +588,12 @@ Returns the district for a teacher
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -609,8 +602,8 @@ begin
   #Retrieves district information for a teacher.
   result = api_instance.get_district_for_teacher(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_district_for_teacher: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_district_for_teacher: #{e}"
 end
 ```
 
@@ -647,12 +640,12 @@ Returns a list of districts
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 opts = { 
   limit: 56, # Integer | 
@@ -664,8 +657,8 @@ begin
   #Gets a list of districts you have access to.
   result = api_instance.get_districts(opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_districts: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_districts: #{e}"
 end
 ```
 
@@ -692,415 +685,6 @@ Name | Type | Description  | Notes
 
 
 
-# **get_event**
-> EventResponse get_event(id)
-
-Retrieves a single event.
-
-Returns the specific event
-
-### Example
-```ruby
-# load the gem
-require 'clever-api'
-# setup authorization
-CleverAPI.configure do |config|
-  # Configure OAuth2 access token for authorization: oauth
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = CleverAPI::DefaultApi.new
-
-id = "id_example" # String | 
-
-
-begin
-  #Retrieves a single event.
-  result = api_instance.get_event(id)
-  p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_event: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
-
-### Return type
-
-[**EventResponse**](EventResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **get_events**
-> EventsResponse get_events(opts)
-
-Retrieves all events
-
-Returns a list of events
-
-### Example
-```ruby
-# load the gem
-require 'clever-api'
-# setup authorization
-CleverAPI.configure do |config|
-  # Configure OAuth2 access token for authorization: oauth
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = CleverAPI::DefaultApi.new
-
-opts = { 
-  limit: 56, # Integer | 
-  starting_after: "starting_after_example", # String | 
-  ending_before: "ending_before_example" # String | 
-}
-
-begin
-  #Retrieves all events
-  result = api_instance.get_events(opts)
-  p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_events: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **limit** | **Integer**|  | [optional] 
- **starting_after** | **String**|  | [optional] 
- **ending_before** | **String**|  | [optional] 
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **get_events_for_school**
-> EventsResponse get_events_for_school(id, opts)
-
-Retrieves events for schools.
-
-Returns a list of events for a school
-
-### Example
-```ruby
-# load the gem
-require 'clever-api'
-# setup authorization
-CleverAPI.configure do |config|
-  # Configure OAuth2 access token for authorization: oauth
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = CleverAPI::DefaultApi.new
-
-id = "id_example" # String | 
-
-opts = { 
-  limit: 56, # Integer | 
-  starting_after: "starting_after_example", # String | 
-  ending_before: "ending_before_example" # String | 
-}
-
-begin
-  #Retrieves events for schools.
-  result = api_instance.get_events_for_school(id, opts)
-  p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_events_for_school: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **limit** | **Integer**|  | [optional] 
- **starting_after** | **String**|  | [optional] 
- **ending_before** | **String**|  | [optional] 
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **get_events_for_school_admin**
-> EventsResponse get_events_for_school_admin(id, opts)
-
-Retrieves events for school_admins.
-
-Returns a list of events for a school admin
-
-### Example
-```ruby
-# load the gem
-require 'clever-api'
-# setup authorization
-CleverAPI.configure do |config|
-  # Configure OAuth2 access token for authorization: oauth
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = CleverAPI::DefaultApi.new
-
-id = "id_example" # String | 
-
-opts = { 
-  limit: 56, # Integer | 
-  starting_after: "starting_after_example", # String | 
-  ending_before: "ending_before_example" # String | 
-}
-
-begin
-  #Retrieves events for school_admins.
-  result = api_instance.get_events_for_school_admin(id, opts)
-  p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_events_for_school_admin: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **limit** | **Integer**|  | [optional] 
- **starting_after** | **String**|  | [optional] 
- **ending_before** | **String**|  | [optional] 
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **get_events_for_section**
-> EventsResponse get_events_for_section(id, opts)
-
-Retrieves events for sections.
-
-Returns a list of events for a section
-
-### Example
-```ruby
-# load the gem
-require 'clever-api'
-# setup authorization
-CleverAPI.configure do |config|
-  # Configure OAuth2 access token for authorization: oauth
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = CleverAPI::DefaultApi.new
-
-id = "id_example" # String | 
-
-opts = { 
-  limit: 56, # Integer | 
-  starting_after: "starting_after_example", # String | 
-  ending_before: "ending_before_example" # String | 
-}
-
-begin
-  #Retrieves events for sections.
-  result = api_instance.get_events_for_section(id, opts)
-  p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_events_for_section: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **limit** | **Integer**|  | [optional] 
- **starting_after** | **String**|  | [optional] 
- **ending_before** | **String**|  | [optional] 
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **get_events_for_student**
-> EventsResponse get_events_for_student(id, opts)
-
-Retrieves events for students.
-
-Returns a list of events for a student
-
-### Example
-```ruby
-# load the gem
-require 'clever-api'
-# setup authorization
-CleverAPI.configure do |config|
-  # Configure OAuth2 access token for authorization: oauth
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = CleverAPI::DefaultApi.new
-
-id = "id_example" # String | 
-
-opts = { 
-  limit: 56, # Integer | 
-  starting_after: "starting_after_example", # String | 
-  ending_before: "ending_before_example" # String | 
-}
-
-begin
-  #Retrieves events for students.
-  result = api_instance.get_events_for_student(id, opts)
-  p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_events_for_student: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **limit** | **Integer**|  | [optional] 
- **starting_after** | **String**|  | [optional] 
- **ending_before** | **String**|  | [optional] 
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **get_events_for_teacher**
-> EventsResponse get_events_for_teacher(id, opts)
-
-Retrieves events for teachers.
-
-Returns a list of events for a teacher
-
-### Example
-```ruby
-# load the gem
-require 'clever-api'
-# setup authorization
-CleverAPI.configure do |config|
-  # Configure OAuth2 access token for authorization: oauth
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
-
-api_instance = CleverAPI::DefaultApi.new
-
-id = "id_example" # String | 
-
-opts = { 
-  limit: 56, # Integer | 
-  starting_after: "starting_after_example", # String | 
-  ending_before: "ending_before_example" # String | 
-}
-
-begin
-  #Retrieves events for teachers.
-  result = api_instance.get_events_for_teacher(id, opts)
-  p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_events_for_teacher: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **limit** | **Integer**|  | [optional] 
- **starting_after** | **String**|  | [optional] 
- **ending_before** | **String**|  | [optional] 
-
-### Return type
-
-[**EventsResponse**](EventsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
 # **get_grade_levels_for_teacher**
 > GradeLevelsResponse get_grade_levels_for_teacher(id)
 
@@ -1113,12 +697,12 @@ Returns the grade levels for sections a teacher teaches
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1127,8 +711,8 @@ begin
   #Retrieves a list of all grade levels taught by a specific teacher.
   result = api_instance.get_grade_levels_for_teacher(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_grade_levels_for_teacher: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_grade_levels_for_teacher: #{e}"
 end
 ```
 
@@ -1165,12 +749,12 @@ Returns a specific school
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1179,8 +763,8 @@ begin
   #Get only a specific school's information.
   result = api_instance.get_school(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_school: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_school: #{e}"
 end
 ```
 
@@ -1217,12 +801,12 @@ Returns a specific school admin
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1231,8 +815,8 @@ begin
   #Get only a specific schooladmin's information.
   result = api_instance.get_school_admin(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_school_admin: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_school_admin: #{e}"
 end
 ```
 
@@ -1269,12 +853,12 @@ Returns a list of school admins
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 opts = { 
   limit: 56, # Integer | 
@@ -1286,8 +870,8 @@ begin
   #Gets a list of school_admins you have access to.
   result = api_instance.get_school_admins(opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_school_admins: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_school_admins: #{e}"
 end
 ```
 
@@ -1326,12 +910,12 @@ Returns the school for a section
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1340,8 +924,8 @@ begin
   #Retrieves information about the school for a section
   result = api_instance.get_school_for_section(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_school_for_section: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_school_for_section: #{e}"
 end
 ```
 
@@ -1378,12 +962,12 @@ Returns the primary school for a student
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1392,8 +976,8 @@ begin
   #Retrieves information about the school for a student
   result = api_instance.get_school_for_student(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_school_for_student: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_school_for_student: #{e}"
 end
 ```
 
@@ -1430,12 +1014,12 @@ Retrieves school info for a teacher.
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1444,8 +1028,8 @@ begin
   #Retrieves information about the school for a teacher
   result = api_instance.get_school_for_teacher(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_school_for_teacher: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_school_for_teacher: #{e}"
 end
 ```
 
@@ -1482,12 +1066,12 @@ Returns a list of schools
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 opts = { 
   limit: 56, # Integer | 
@@ -1499,8 +1083,8 @@ begin
   #Gets a list of schools you have access to.
   result = api_instance.get_schools(opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_schools: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_schools: #{e}"
 end
 ```
 
@@ -1539,12 +1123,12 @@ Returns the schools for a school admin
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1558,8 +1142,8 @@ begin
   #Retrieves all schools for a school admin.
   result = api_instance.get_schools_for_school_admin(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_schools_for_school_admin: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_schools_for_school_admin: #{e}"
 end
 ```
 
@@ -1599,12 +1183,12 @@ Returns a specific section
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1613,8 +1197,8 @@ begin
   #Get only a specific section's information.
   result = api_instance.get_section(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_section: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_section: #{e}"
 end
 ```
 
@@ -1651,12 +1235,12 @@ Returns a list of sections
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 opts = { 
   limit: 56, # Integer | 
@@ -1668,8 +1252,8 @@ begin
   #Gets a list of sections you have access to.
   result = api_instance.get_sections(opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_sections: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_sections: #{e}"
 end
 ```
 
@@ -1708,12 +1292,12 @@ Returns the sections for a school
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1727,8 +1311,8 @@ begin
   #Retrieves a list of all sections for a specific school.
   result = api_instance.get_sections_for_school(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_sections_for_school: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_sections_for_school: #{e}"
 end
 ```
 
@@ -1768,12 +1352,12 @@ Returns the sections for a student
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1787,8 +1371,8 @@ begin
   #Retrieves a list of all sections for a student.
   result = api_instance.get_sections_for_student(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_sections_for_student: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_sections_for_student: #{e}"
 end
 ```
 
@@ -1828,12 +1412,12 @@ Returns the sections for a teacher
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1847,8 +1431,8 @@ begin
   #Retrieves a list of all sections for a teacher.
   result = api_instance.get_sections_for_teacher(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_sections_for_teacher: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_sections_for_teacher: #{e}"
 end
 ```
 
@@ -1888,12 +1472,12 @@ Returns a specific student
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1902,8 +1486,8 @@ begin
   #Get only a specific student's information.
   result = api_instance.get_student(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_student: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_student: #{e}"
 end
 ```
 
@@ -1940,12 +1524,12 @@ Returns the student for a student contact
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -1954,8 +1538,8 @@ begin
   #Retrieves the student for a contact.
   result = api_instance.get_student_for_contact(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_student_for_contact: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_student_for_contact: #{e}"
 end
 ```
 
@@ -1992,12 +1576,12 @@ Returns a list of students
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 opts = { 
   limit: 56, # Integer | 
@@ -2009,8 +1593,8 @@ begin
   #Gets a list of students you have access to.
   result = api_instance.get_students(opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_students: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_students: #{e}"
 end
 ```
 
@@ -2049,12 +1633,12 @@ Returns the students for a school
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -2068,8 +1652,8 @@ begin
   #Retrieves a list of all students for a specific school.
   result = api_instance.get_students_for_school(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_students_for_school: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_students_for_school: #{e}"
 end
 ```
 
@@ -2109,12 +1693,12 @@ Returns the students for a section
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -2128,8 +1712,8 @@ begin
   #Retrieves a list of all the section's students.
   result = api_instance.get_students_for_section(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_students_for_section: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_students_for_section: #{e}"
 end
 ```
 
@@ -2169,12 +1753,12 @@ Returns the students for a teacher
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -2188,8 +1772,8 @@ begin
   #Retrieves all students that a teacher has in their sections.
   result = api_instance.get_students_for_teacher(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_students_for_teacher: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_students_for_teacher: #{e}"
 end
 ```
 
@@ -2229,12 +1813,12 @@ Returns a specific teacher
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -2243,8 +1827,8 @@ begin
   #Get only a specific teacher's information.
   result = api_instance.get_teacher(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_teacher: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_teacher: #{e}"
 end
 ```
 
@@ -2281,12 +1865,12 @@ Returns the primary teacher for a section
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -2295,8 +1879,8 @@ begin
   #Retrieves information about the primary teacher of a section.
   result = api_instance.get_teacher_for_section(id)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_teacher_for_section: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_teacher_for_section: #{e}"
 end
 ```
 
@@ -2333,12 +1917,12 @@ Returns a list of teachers
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 opts = { 
   limit: 56, # Integer | 
@@ -2350,8 +1934,8 @@ begin
   #Gets a list of teachers you have access to.
   result = api_instance.get_teachers(opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_teachers: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_teachers: #{e}"
 end
 ```
 
@@ -2390,12 +1974,12 @@ Returns the teachers for a school
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -2409,8 +1993,8 @@ begin
   #Retrieves a list of all teachers for a specific school.
   result = api_instance.get_teachers_for_school(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_teachers_for_school: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_teachers_for_school: #{e}"
 end
 ```
 
@@ -2450,12 +2034,12 @@ Returns the teachers for a section
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -2469,8 +2053,8 @@ begin
   #Retrieves a list of all the section's teachers.
   result = api_instance.get_teachers_for_section(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_teachers_for_section: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_teachers_for_section: #{e}"
 end
 ```
 
@@ -2510,12 +2094,12 @@ Returns the teachers for a student
 # load the gem
 require 'clever-api'
 # setup authorization
-CleverAPI.configure do |config|
+Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = CleverAPI::DefaultApi.new
+api_instance = Clever::DataApi.new
 
 id = "id_example" # String | 
 
@@ -2529,8 +2113,8 @@ begin
   #Retrieves all teachers for a student.
   result = api_instance.get_teachers_for_student(id, opts)
   p result
-rescue CleverAPI::ApiError => e
-  puts "Exception when calling DefaultApi->get_teachers_for_student: #{e}"
+rescue Clever::ApiError => e
+  puts "Exception when calling DataApi->get_teachers_for_student: #{e}"
 end
 ```
 

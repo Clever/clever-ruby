@@ -1,4 +1,4 @@
-# CleverAPI::GradeLevelsResponse
+# Clever::GradeLevelsResponse
 
 ## Properties
 Name | Type | Description | Notes

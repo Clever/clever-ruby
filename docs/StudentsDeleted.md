@@ -1,4 +1,4 @@
-# CleverAPI::StudentsDeleted
+# Clever::StudentsDeleted
 
 ## Properties
 Name | Type | Description | Notes

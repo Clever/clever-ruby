@@ -16,7 +16,7 @@ require "clever-api/version"
 
 Gem::Specification.new do |s|
   s.name        = "clever-api"
-  s.version     = CleverAPI::VERSION
+  s.version     = Clever::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Swagger-Codegen"]
   s.email       = [""]

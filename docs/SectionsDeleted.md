@@ -1,4 +1,4 @@
-# CleverAPI::SectionsDeleted
+# Clever::SectionsDeleted
 
 ## Properties
 Name | Type | Description | Notes

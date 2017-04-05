@@ -1,4 +1,4 @@
-# CleverAPI::Event
+# Clever::Event
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# CleverAPI::DistrictAdminResponse
+# Clever::DistrictAdminResponse
 
 ## Properties
 Name | Type | Description | Notes

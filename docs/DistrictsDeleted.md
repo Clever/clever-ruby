@@ -1,4 +1,4 @@
-# CleverAPI::DistrictsDeleted
+# Clever::DistrictsDeleted
 
 ## Properties
 Name | Type | Description | Notes

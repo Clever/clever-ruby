@@ -1,4 +1,4 @@
-# CleverAPI::InternalError
+# Clever::InternalError
 
 ## Properties
 Name | Type | Description | Notes

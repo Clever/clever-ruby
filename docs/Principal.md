@@ -1,4 +1,4 @@
-# CleverAPI::Principal
+# Clever::Principal
 
 ## Properties
 Name | Type | Description | Notes

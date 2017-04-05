@@ -1,4 +1,4 @@
-# CleverAPI::Term
+# Clever::Term
 
 ## Properties
 Name | Type | Description | Notes

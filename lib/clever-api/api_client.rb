@@ -16,7 +16,7 @@ require 'tempfile'
 require 'typhoeus'
 require 'uri'
 
-module CleverAPI
+module Clever
   class ApiClient
     # The Configuration object holding settings to be used in the API client.
     attr_accessor :config
@@ -204,7 +204,7 @@ module CleverAPI
           data.each {|k, v| hash[k] = convert_to_type(v, sub_type) }
         end
       when 'EventsResponse'
-        CleverAPI.const_get(return_type).new.tap do |model|
+        Clever.const_get(return_type).new.tap do |model|
           resp = model.build_from_hash data
           resps = []
           data[:data].each do |eventResponse| 
@@ -218,7 +218,7 @@ module CleverAPI
         parse_event_response data[:data]
       else
         # models, e.g. Pet
-        CleverAPI.const_get(return_type).new.tap do |model|
+        Clever.const_get(return_type).new.tap do |model|
           model.build_from_hash data
         end
       end
@@ -226,9 +226,9 @@ module CleverAPI
 
     def parse_event_response(data)
       classObj = data[:type].split(".").collect(&:capitalize).join
-      CleverAPI.const_get(classObj).new.tap do |model|
+      Clever.const_get(classObj).new.tap do |model|
           parsed = model.build_from_hash data
-          CleverAPI.const_get("EventsResponse").new.tap do |model|
+          Clever.const_get("EventsResponse").new.tap do |model|
             resp = model.build_from_hash data
             resp.data = parsed
             return resp

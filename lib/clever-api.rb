@@ -83,12 +83,13 @@ require 'clever-api/models/teachers_updated'
 require 'clever-api/models/term'
 
 # APIs
-require 'clever-api/api/default_api'
+require 'clever-api/api/data_api'
+require 'clever-api/api/events_api'
 
-module CleverAPI
+module Clever
   class << self
     # Customize default settings for the SDK using block.
-    #   CleverAPI.configure do |config|
+    #   Clever.configure do |config|
     #     config.username = "xxx"
     #     config.password = "xxx"
     #   end
