@@ -7,3 +7,8 @@ cp api_client.rb ../lib/clever-ruby/
 
 # The tests don't do anything so let's remove them
 rm -r ../spec || true
+
+# Add the extension to the readme if it's not already there
+if ! grep -q -i '## Previous Versions' ../README.md; then
+	cat README-extension.md >> ../README.md
+fi
