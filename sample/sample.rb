@@ -1,4 +1,4 @@
-require 'clever-api'
+require 'clever-ruby'
 
 # Setup authorization
 Clever.configure do |config|
