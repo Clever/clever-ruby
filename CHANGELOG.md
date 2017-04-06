@@ -1,3 +1,7 @@
+## 1.0.0 (2017-04-05)
+
+* New auto-generated client library from v1.2
+
 ## 0.14.0 (2017-03-31)
 
 * Add District Admins
