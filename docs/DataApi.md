@@ -54,7 +54,7 @@ Returns a specific student contact
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -106,7 +106,7 @@ Returns a list of student contacts
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -163,7 +163,7 @@ Returns the contacts for a student
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -219,7 +219,7 @@ Returns a specific district
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -271,7 +271,7 @@ Returns a specific district admin
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -323,7 +323,7 @@ Returns a list of district admins
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -378,7 +378,7 @@ Returns the district for a school
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -430,7 +430,7 @@ Returns the district for a section
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -482,7 +482,7 @@ Returns the district for a student
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -534,7 +534,7 @@ Returns the district for a student contact
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -586,7 +586,7 @@ Returns the district for a teacher
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -638,7 +638,7 @@ Returns a list of districts
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -695,7 +695,7 @@ Returns the grade levels for sections a teacher teaches
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -747,7 +747,7 @@ Returns a specific school
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -799,7 +799,7 @@ Returns a specific school admin
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -851,7 +851,7 @@ Returns a list of school admins
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -908,7 +908,7 @@ Returns the school for a section
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -960,7 +960,7 @@ Returns the primary school for a student
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1012,7 +1012,7 @@ Retrieves school info for a teacher.
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1064,7 +1064,7 @@ Returns a list of schools
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1121,7 +1121,7 @@ Returns the schools for a school admin
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1181,7 +1181,7 @@ Returns a specific section
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1233,7 +1233,7 @@ Returns a list of sections
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1290,7 +1290,7 @@ Returns the sections for a school
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1350,7 +1350,7 @@ Returns the sections for a student
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1410,7 +1410,7 @@ Returns the sections for a teacher
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1470,7 +1470,7 @@ Returns a specific student
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1522,7 +1522,7 @@ Returns the student for a student contact
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1574,7 +1574,7 @@ Returns a list of students
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1631,7 +1631,7 @@ Returns the students for a school
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1691,7 +1691,7 @@ Returns the students for a section
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1751,7 +1751,7 @@ Returns the students for a teacher
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1811,7 +1811,7 @@ Returns a specific teacher
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1863,7 +1863,7 @@ Returns the primary teacher for a section
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1915,7 +1915,7 @@ Returns a list of teachers
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -1972,7 +1972,7 @@ Returns the teachers for a school
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -2032,7 +2032,7 @@ Returns the teachers for a section
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -2092,7 +2092,7 @@ Returns the teachers for a student
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth

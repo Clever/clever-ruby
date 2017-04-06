@@ -23,7 +23,7 @@ Returns the specific event
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -75,7 +75,7 @@ Returns a list of events
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -132,7 +132,7 @@ Returns a list of events for a school
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -192,7 +192,7 @@ Returns a list of events for a school admin
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -252,7 +252,7 @@ Returns a list of events for a section
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -312,7 +312,7 @@ Returns a list of events for a student
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
@@ -372,7 +372,7 @@ Returns a list of events for a teacher
 ### Example
 ```ruby
 # load the gem
-require 'clever-api'
+require 'clever-ruby'
 # setup authorization
 Clever.configure do |config|
   # Configure OAuth2 access token for authorization: oauth
