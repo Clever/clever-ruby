@@ -14,24 +14,28 @@ require 'date'
 module Clever
 
   class Event
-    attr_accessor :type
+    attr_accessor :created
 
     attr_accessor :id
+
+    attr_accessor :type
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'type' => :'type',
-        :'id' => :'id'
+        :'created' => :'created',
+        :'id' => :'id',
+        :'type' => :'type'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'type' => :'String',
-        :'id' => :'String'
+        :'created' => :'String',
+        :'id' => :'String',
+        :'type' => :'String'
       }
     end
 
@@ -43,12 +47,16 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.has_key?(:'created')
+        self.created = attributes[:'created']
       end
 
       if attributes.has_key?(:'id')
         self.id = attributes[:'id']
+      end
+
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
       end
 
     end
@@ -76,8 +84,9 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          type == o.type &&
-          id == o.id
+          created == o.created &&
+          id == o.id &&
+          type == o.type
     end
 
     # @see the `==` method
@@ -89,7 +98,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [type, id].hash
+      [created, id, type].hash
     end
 
     # Builds the object from hash

@@ -17,6 +17,7 @@ require 'clever-ruby/configuration'
 
 # Models
 require 'clever-ruby/models/bad_request'
+require 'clever-ruby/models/credentials'
 require 'clever-ruby/models/district'
 require 'clever-ruby/models/district_admin'
 require 'clever-ruby/models/district_admin_response'

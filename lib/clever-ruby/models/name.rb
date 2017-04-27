@@ -16,17 +16,17 @@ module Clever
   class Name
     attr_accessor :first
 
-    attr_accessor :middle
-
     attr_accessor :last
+
+    attr_accessor :middle
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'first' => :'first',
-        :'middle' => :'middle',
-        :'last' => :'last'
+        :'last' => :'last',
+        :'middle' => :'middle'
       }
     end
 
@@ -34,8 +34,8 @@ module Clever
     def self.swagger_types
       {
         :'first' => :'String',
-        :'middle' => :'String',
-        :'last' => :'String'
+        :'last' => :'String',
+        :'middle' => :'String'
       }
     end
 
@@ -51,12 +51,12 @@ module Clever
         self.first = attributes[:'first']
       end
 
-      if attributes.has_key?(:'middle')
-        self.middle = attributes[:'middle']
-      end
-
       if attributes.has_key?(:'last')
         self.last = attributes[:'last']
+      end
+
+      if attributes.has_key?(:'middle')
+        self.middle = attributes[:'middle']
       end
 
     end
@@ -80,8 +80,8 @@ module Clever
       return true if self.equal?(o)
       self.class == o.class &&
           first == o.first &&
-          middle == o.middle &&
-          last == o.last
+          last == o.last &&
+          middle == o.middle
     end
 
     # @see the `==` method
@@ -93,7 +93,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [first, middle, last].hash
+      [first, last, middle].hash
     end
 
     # Builds the object from hash

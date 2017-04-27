@@ -14,36 +14,36 @@ require 'date'
 module Clever
 
   class DistrictAdmin
+    attr_accessor :district
+
+    attr_accessor :email
+
     attr_accessor :id
 
     attr_accessor :name
 
-    attr_accessor :email
-
     attr_accessor :title
-
-    attr_accessor :district
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'district' => :'district',
+        :'email' => :'email',
         :'id' => :'id',
         :'name' => :'name',
-        :'email' => :'email',
-        :'title' => :'title',
-        :'district' => :'district'
+        :'title' => :'title'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'district' => :'String',
+        :'email' => :'String',
         :'id' => :'String',
         :'name' => :'Name',
-        :'email' => :'String',
-        :'title' => :'String',
-        :'district' => :'String'
+        :'title' => :'String'
       }
     end
 
@@ -55,6 +55,14 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'district')
+        self.district = attributes[:'district']
+      end
+
+      if attributes.has_key?(:'email')
+        self.email = attributes[:'email']
+      end
+
       if attributes.has_key?(:'id')
         self.id = attributes[:'id']
       end
@@ -63,16 +71,8 @@ module Clever
         self.name = attributes[:'name']
       end
 
-      if attributes.has_key?(:'email')
-        self.email = attributes[:'email']
-      end
-
       if attributes.has_key?(:'title')
         self.title = attributes[:'title']
-      end
-
-      if attributes.has_key?(:'district')
-        self.district = attributes[:'district']
       end
 
     end
@@ -95,11 +95,11 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          district == o.district &&
+          email == o.email &&
           id == o.id &&
           name == o.name &&
-          email == o.email &&
-          title == o.title &&
-          district == o.district
+          title == o.title
     end
 
     # @see the `==` method
@@ -111,7 +111,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, email, title, district].hash
+      [district, email, id, name, title].hash
     end
 
     # Builds the object from hash

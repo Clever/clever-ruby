@@ -16,17 +16,17 @@ module Clever
   class District
     attr_accessor :id
 
-    attr_accessor :name
-
     attr_accessor :mdr_number
+
+    attr_accessor :name
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'id' => :'id',
-        :'name' => :'name',
-        :'mdr_number' => :'mdr_number'
+        :'mdr_number' => :'mdr_number',
+        :'name' => :'name'
       }
     end
 
@@ -34,8 +34,8 @@ module Clever
     def self.swagger_types
       {
         :'id' => :'String',
-        :'name' => :'String',
-        :'mdr_number' => :'String'
+        :'mdr_number' => :'String',
+        :'name' => :'String'
       }
     end
 
@@ -51,12 +51,12 @@ module Clever
         self.id = attributes[:'id']
       end
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
       if attributes.has_key?(:'mdr_number')
         self.mdr_number = attributes[:'mdr_number']
+      end
+
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
       end
 
     end
@@ -80,8 +80,8 @@ module Clever
       return true if self.equal?(o)
       self.class == o.class &&
           id == o.id &&
-          name == o.name &&
-          mdr_number == o.mdr_number
+          mdr_number == o.mdr_number &&
+          name == o.name
     end
 
     # @see the `==` method
@@ -93,7 +93,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, mdr_number].hash
+      [id, mdr_number, name].hash
     end
 
     # Builds the object from hash

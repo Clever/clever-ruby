@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**district** | **String** |  | [optional] 
+**email** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
 **name** | [**Name**](Name.md) |  | [optional] 
-**email** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
-**district** | **String** |  | [optional] 
 
 

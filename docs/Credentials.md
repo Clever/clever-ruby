@@ -1,9 +1,8 @@
-# Clever::Principal
+# Clever::Credentials
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**district_username** | **String** |  | [optional] 
 
 

@@ -14,48 +14,69 @@ require 'date'
 module Clever
 
   class DistrictStatus
+    attr_accessor :error
+
     attr_accessor :id
+
+    attr_accessor :last_sync
+
+    attr_accessor :launch_date
+
+    attr_accessor :pause_end
+
+    attr_accessor :pause_start
 
     attr_accessor :sis_type
 
     attr_accessor :state
 
-    attr_accessor :last_sync
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
 
-    attr_accessor :error
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
 
-    attr_accessor :pause_start
-
-    attr_accessor :pause_end
-
-    attr_accessor :launch_state
-
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'sis_type' => :'sis_type',
-        :'state' => :'state',
-        :'last_sync' => :'last_sync',
         :'error' => :'error',
-        :'pause_start' => :'pause_start',
+        :'id' => :'id',
+        :'last_sync' => :'last_sync',
+        :'launch_date' => :'launch_date',
         :'pause_end' => :'pause_end',
-        :'launch_state' => :'launch_state'
+        :'pause_start' => :'pause_start',
+        :'sis_type' => :'sis_type',
+        :'state' => :'state'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
-        :'sis_type' => :'String',
-        :'state' => :'String',
-        :'last_sync' => :'String',
         :'error' => :'String',
-        :'pause_start' => :'String',
+        :'id' => :'String',
+        :'last_sync' => :'String',
+        :'launch_date' => :'String',
         :'pause_end' => :'String',
-        :'launch_state' => :'String'
+        :'pause_start' => :'String',
+        :'sis_type' => :'String',
+        :'state' => :'String'
       }
     end
 
@@ -67,8 +88,28 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'error')
+        self.error = attributes[:'error']
+      end
+
       if attributes.has_key?(:'id')
         self.id = attributes[:'id']
+      end
+
+      if attributes.has_key?(:'last_sync')
+        self.last_sync = attributes[:'last_sync']
+      end
+
+      if attributes.has_key?(:'launch_date')
+        self.launch_date = attributes[:'launch_date']
+      end
+
+      if attributes.has_key?(:'pause_end')
+        self.pause_end = attributes[:'pause_end']
+      end
+
+      if attributes.has_key?(:'pause_start')
+        self.pause_start = attributes[:'pause_start']
       end
 
       if attributes.has_key?(:'sis_type')
@@ -77,26 +118,6 @@ module Clever
 
       if attributes.has_key?(:'state')
         self.state = attributes[:'state']
-      end
-
-      if attributes.has_key?(:'last_sync')
-        self.last_sync = attributes[:'last_sync']
-      end
-
-      if attributes.has_key?(:'error')
-        self.error = attributes[:'error']
-      end
-
-      if attributes.has_key?(:'pause_start')
-        self.pause_start = attributes[:'pause_start']
-      end
-
-      if attributes.has_key?(:'pause_end')
-        self.pause_end = attributes[:'pause_end']
-      end
-
-      if attributes.has_key?(:'launch_state')
-        self.launch_state = attributes[:'launch_state']
       end
 
     end
@@ -111,7 +132,19 @@ module Clever
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      state_validator = EnumAttributeValidator.new('String', ["running", "pending", "error", "pause"])
+      return false unless state_validator.valid?(@state)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] state Object to be assigned
+    def state=(state)
+      validator = EnumAttributeValidator.new('String', ["running", "pending", "error", "pause"])
+      unless validator.valid?(state)
+        fail ArgumentError, "invalid value for 'state', must be one of #{validator.allowable_values}."
+      end
+      @state = state
     end
 
     # Checks equality by comparing each attribute.
@@ -119,14 +152,14 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          sis_type == o.sis_type &&
-          state == o.state &&
-          last_sync == o.last_sync &&
           error == o.error &&
-          pause_start == o.pause_start &&
+          id == o.id &&
+          last_sync == o.last_sync &&
+          launch_date == o.launch_date &&
           pause_end == o.pause_end &&
-          launch_state == o.launch_state
+          pause_start == o.pause_start &&
+          sis_type == o.sis_type &&
+          state == o.state
     end
 
     # @see the `==` method
@@ -138,7 +171,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, sis_type, state, last_sync, error, pause_start, pause_end, launch_state].hash
+      [error, id, last_sync, launch_date, pause_end, pause_start, sis_type, state].hash
     end
 
     # Builds the object from hash

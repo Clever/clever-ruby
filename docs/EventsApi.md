@@ -4,19 +4,19 @@ All URIs are relative to *https://api.clever.com/v1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_event**](EventsApi.md#get_event) | **GET** /events/{id} | Retrieves a single event.
-[**get_events**](EventsApi.md#get_events) | **GET** /events | Retrieves all events
-[**get_events_for_school**](EventsApi.md#get_events_for_school) | **GET** /schools/{id}/events | Retrieves events for schools.
-[**get_events_for_school_admin**](EventsApi.md#get_events_for_school_admin) | **GET** /school_admins/{id}/events | Retrieves events for school_admins.
-[**get_events_for_section**](EventsApi.md#get_events_for_section) | **GET** /sections/{id}/events | Retrieves events for sections.
-[**get_events_for_student**](EventsApi.md#get_events_for_student) | **GET** /students/{id}/events | Retrieves events for students.
-[**get_events_for_teacher**](EventsApi.md#get_events_for_teacher) | **GET** /teachers/{id}/events | Retrieves events for teachers.
+[**get_event**](EventsApi.md#get_event) | **GET** /events/{id} | 
+[**get_events**](EventsApi.md#get_events) | **GET** /events | 
+[**get_events_for_school**](EventsApi.md#get_events_for_school) | **GET** /schools/{id}/events | 
+[**get_events_for_school_admin**](EventsApi.md#get_events_for_school_admin) | **GET** /school_admins/{id}/events | 
+[**get_events_for_section**](EventsApi.md#get_events_for_section) | **GET** /sections/{id}/events | 
+[**get_events_for_student**](EventsApi.md#get_events_for_student) | **GET** /students/{id}/events | 
+[**get_events_for_teacher**](EventsApi.md#get_events_for_teacher) | **GET** /teachers/{id}/events | 
 
 
 # **get_event**
 > EventResponse get_event(id)
 
-Retrieves a single event.
+
 
 Returns the specific event
 
@@ -36,7 +36,6 @@ id = "id_example" # String |
 
 
 begin
-  #Retrieves a single event.
   result = api_instance.get_event(id)
   p result
 rescue Clever::ApiError => e
@@ -68,7 +67,7 @@ Name | Type | Description  | Notes
 # **get_events**
 > EventsResponse get_events(opts)
 
-Retrieves all events
+
 
 Returns a list of events
 
@@ -91,7 +90,6 @@ opts = {
 }
 
 begin
-  #Retrieves all events
   result = api_instance.get_events(opts)
   p result
 rescue Clever::ApiError => e
@@ -125,7 +123,7 @@ Name | Type | Description  | Notes
 # **get_events_for_school**
 > EventsResponse get_events_for_school(id, opts)
 
-Retrieves events for schools.
+
 
 Returns a list of events for a school
 
@@ -150,7 +148,6 @@ opts = {
 }
 
 begin
-  #Retrieves events for schools.
   result = api_instance.get_events_for_school(id, opts)
   p result
 rescue Clever::ApiError => e
@@ -185,7 +182,7 @@ Name | Type | Description  | Notes
 # **get_events_for_school_admin**
 > EventsResponse get_events_for_school_admin(id, opts)
 
-Retrieves events for school_admins.
+
 
 Returns a list of events for a school admin
 
@@ -210,7 +207,6 @@ opts = {
 }
 
 begin
-  #Retrieves events for school_admins.
   result = api_instance.get_events_for_school_admin(id, opts)
   p result
 rescue Clever::ApiError => e
@@ -245,7 +241,7 @@ Name | Type | Description  | Notes
 # **get_events_for_section**
 > EventsResponse get_events_for_section(id, opts)
 
-Retrieves events for sections.
+
 
 Returns a list of events for a section
 
@@ -270,7 +266,6 @@ opts = {
 }
 
 begin
-  #Retrieves events for sections.
   result = api_instance.get_events_for_section(id, opts)
   p result
 rescue Clever::ApiError => e
@@ -305,7 +300,7 @@ Name | Type | Description  | Notes
 # **get_events_for_student**
 > EventsResponse get_events_for_student(id, opts)
 
-Retrieves events for students.
+
 
 Returns a list of events for a student
 
@@ -330,7 +325,6 @@ opts = {
 }
 
 begin
-  #Retrieves events for students.
   result = api_instance.get_events_for_student(id, opts)
   p result
 rescue Clever::ApiError => e
@@ -365,7 +359,7 @@ Name | Type | Description  | Notes
 # **get_events_for_teacher**
 > EventsResponse get_events_for_teacher(id, opts)
 
-Retrieves events for teachers.
+
 
 Returns a list of events for a teacher
 
@@ -390,7 +384,6 @@ opts = {
 }
 
 begin
-  #Retrieves events for teachers.
   result = api_instance.get_events_for_teacher(id, opts)
   p result
 rescue Clever::ApiError => e

@@ -18,13 +18,13 @@ module Clever
 
     attr_accessor :city
 
-    attr_accessor :state
-
-    attr_accessor :zip
-
     attr_accessor :lat
 
     attr_accessor :lon
+
+    attr_accessor :state
+
+    attr_accessor :zip
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -32,10 +32,10 @@ module Clever
       {
         :'address' => :'address',
         :'city' => :'city',
-        :'state' => :'state',
-        :'zip' => :'zip',
         :'lat' => :'lat',
-        :'lon' => :'lon'
+        :'lon' => :'lon',
+        :'state' => :'state',
+        :'zip' => :'zip'
       }
     end
 
@@ -44,10 +44,10 @@ module Clever
       {
         :'address' => :'String',
         :'city' => :'String',
-        :'state' => :'String',
-        :'zip' => :'String',
         :'lat' => :'String',
-        :'lon' => :'String'
+        :'lon' => :'String',
+        :'state' => :'String',
+        :'zip' => :'String'
       }
     end
 
@@ -67,20 +67,20 @@ module Clever
         self.city = attributes[:'city']
       end
 
-      if attributes.has_key?(:'state')
-        self.state = attributes[:'state']
-      end
-
-      if attributes.has_key?(:'zip')
-        self.zip = attributes[:'zip']
-      end
-
       if attributes.has_key?(:'lat')
         self.lat = attributes[:'lat']
       end
 
       if attributes.has_key?(:'lon')
         self.lon = attributes[:'lon']
+      end
+
+      if attributes.has_key?(:'state')
+        self.state = attributes[:'state']
+      end
+
+      if attributes.has_key?(:'zip')
+        self.zip = attributes[:'zip']
       end
 
     end
@@ -105,10 +105,10 @@ module Clever
       self.class == o.class &&
           address == o.address &&
           city == o.city &&
-          state == o.state &&
-          zip == o.zip &&
           lat == o.lat &&
-          lon == o.lon
+          lon == o.lon &&
+          state == o.state &&
+          zip == o.zip
     end
 
     # @see the `==` method
@@ -120,7 +120,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [address, city, state, zip, lat, lon].hash
+      [address, city, lat, lon, state, zip].hash
     end
 
     # Builds the object from hash

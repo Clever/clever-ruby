@@ -14,28 +14,28 @@ require 'date'
 module Clever
 
   class Term
+    attr_accessor :end_date
+
     attr_accessor :name
 
     attr_accessor :start_date
-
-    attr_accessor :end_date
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'end_date' => :'end_date',
         :'name' => :'name',
-        :'start_date' => :'start_date',
-        :'end_date' => :'end_date'
+        :'start_date' => :'start_date'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'end_date' => :'String',
         :'name' => :'String',
-        :'start_date' => :'String',
-        :'end_date' => :'String'
+        :'start_date' => :'String'
       }
     end
 
@@ -47,16 +47,16 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
+      if attributes.has_key?(:'end_date')
+        self.end_date = attributes[:'end_date']
+      end
+
       if attributes.has_key?(:'name')
         self.name = attributes[:'name']
       end
 
       if attributes.has_key?(:'start_date')
         self.start_date = attributes[:'start_date']
-      end
-
-      if attributes.has_key?(:'end_date')
-        self.end_date = attributes[:'end_date']
       end
 
     end
@@ -79,9 +79,9 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          end_date == o.end_date &&
           name == o.name &&
-          start_date == o.start_date &&
-          end_date == o.end_date
+          start_date == o.start_date
     end
 
     # @see the `==` method
@@ -93,7 +93,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, start_date, end_date].hash
+      [end_date, name, start_date].hash
     end
 
     # Builds the object from hash
