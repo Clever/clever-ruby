@@ -14,8 +14,6 @@ require 'date'
 module Clever
 
   class Section
-    attr_accessor :id
-
     attr_accessor :course_description
 
     attr_accessor :course_name
@@ -27,6 +25,8 @@ module Clever
     attr_accessor :district
 
     attr_accessor :grade
+
+    attr_accessor :id
 
     attr_accessor :last_modified
 
@@ -50,17 +50,38 @@ module Clever
 
     attr_accessor :term
 
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
         :'course_description' => :'course_description',
         :'course_name' => :'course_name',
         :'course_number' => :'course_number',
         :'created' => :'created',
         :'district' => :'district',
         :'grade' => :'grade',
+        :'id' => :'id',
         :'last_modified' => :'last_modified',
         :'name' => :'name',
         :'period' => :'period',
@@ -78,13 +99,13 @@ module Clever
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
         :'course_description' => :'String',
         :'course_name' => :'String',
         :'course_number' => :'String',
         :'created' => :'String',
         :'district' => :'String',
         :'grade' => :'String',
+        :'id' => :'String',
         :'last_modified' => :'String',
         :'name' => :'String',
         :'period' => :'String',
@@ -106,10 +127,6 @@ module Clever
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
-      end
 
       if attributes.has_key?(:'course_description')
         self.course_description = attributes[:'course_description']
@@ -133,6 +150,10 @@ module Clever
 
       if attributes.has_key?(:'grade')
         self.grade = attributes[:'grade']
+      end
+
+      if attributes.has_key?(:'id')
+        self.id = attributes[:'id']
       end
 
       if attributes.has_key?(:'last_modified')
@@ -195,7 +216,31 @@ module Clever
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      grade_validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      return false unless grade_validator.valid?(@grade)
+      subject_validator = EnumAttributeValidator.new('String', ["english/language arts", "math", "science", "social studies", "language", "homeroom/advisory", "interventions/online learning", "technology and engineering", "PE and health", "arts and music", "other"])
+      return false unless subject_validator.valid?(@subject)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] grade Object to be assigned
+    def grade=(grade)
+      validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      unless validator.valid?(grade)
+        fail ArgumentError, "invalid value for 'grade', must be one of #{validator.allowable_values}."
+      end
+      @grade = grade
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] subject Object to be assigned
+    def subject=(subject)
+      validator = EnumAttributeValidator.new('String', ["english/language arts", "math", "science", "social studies", "language", "homeroom/advisory", "interventions/online learning", "technology and engineering", "PE and health", "arts and music", "other"])
+      unless validator.valid?(subject)
+        fail ArgumentError, "invalid value for 'subject', must be one of #{validator.allowable_values}."
+      end
+      @subject = subject
     end
 
     # Checks equality by comparing each attribute.
@@ -203,13 +248,13 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
           course_description == o.course_description &&
           course_name == o.course_name &&
           course_number == o.course_number &&
           created == o.created &&
           district == o.district &&
           grade == o.grade &&
+          id == o.id &&
           last_modified == o.last_modified &&
           name == o.name &&
           period == o.period &&
@@ -232,7 +277,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, course_description, course_name, course_number, created, district, grade, last_modified, name, period, school, section_number, sis_id, students, subject, teacher, teachers, term].hash
+      [course_description, course_name, course_number, created, district, grade, id, last_modified, name, period, school, section_number, sis_id, students, subject, teacher, teachers, term].hash
     end
 
     # Builds the object from hash

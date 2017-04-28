@@ -13,53 +13,21 @@ require 'date'
 
 module Clever
 
-  class StudentContact
-    attr_accessor :district
-
-    attr_accessor :email
-
-    attr_accessor :id
-
-    attr_accessor :name
-
-    attr_accessor :phone
-
-    attr_accessor :phone_type
-
-    attr_accessor :relationship
-
-    attr_accessor :student
-
-    attr_accessor :type
+  class Credentials
+    attr_accessor :district_username
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'district' => :'district',
-        :'email' => :'email',
-        :'id' => :'id',
-        :'name' => :'name',
-        :'phone' => :'phone',
-        :'phone_type' => :'phone_type',
-        :'relationship' => :'relationship',
-        :'student' => :'student',
-        :'type' => :'type'
+        :'district_username' => :'district_username'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'district' => :'String',
-        :'email' => :'String',
-        :'id' => :'String',
-        :'name' => :'String',
-        :'phone' => :'String',
-        :'phone_type' => :'String',
-        :'relationship' => :'String',
-        :'student' => :'String',
-        :'type' => :'String'
+        :'district_username' => :'String'
       }
     end
 
@@ -71,40 +39,8 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'district')
-        self.district = attributes[:'district']
-      end
-
-      if attributes.has_key?(:'email')
-        self.email = attributes[:'email']
-      end
-
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
-      end
-
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.has_key?(:'phone')
-        self.phone = attributes[:'phone']
-      end
-
-      if attributes.has_key?(:'phone_type')
-        self.phone_type = attributes[:'phone_type']
-      end
-
-      if attributes.has_key?(:'relationship')
-        self.relationship = attributes[:'relationship']
-      end
-
-      if attributes.has_key?(:'student')
-        self.student = attributes[:'student']
-      end
-
-      if attributes.has_key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.has_key?(:'district_username')
+        self.district_username = attributes[:'district_username']
       end
 
     end
@@ -127,15 +63,7 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          district == o.district &&
-          email == o.email &&
-          id == o.id &&
-          name == o.name &&
-          phone == o.phone &&
-          phone_type == o.phone_type &&
-          relationship == o.relationship &&
-          student == o.student &&
-          type == o.type
+          district_username == o.district_username
     end
 
     # @see the `==` method
@@ -147,7 +75,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [district, email, id, name, phone, phone_type, relationship, student, type].hash
+      [district_username].hash
     end
 
     # Builds the object from hash

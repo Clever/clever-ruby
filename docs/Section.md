@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
 **course_description** | **String** |  | [optional] 
 **course_name** | **String** |  | [optional] 
 **course_number** | **String** |  | [optional] 
 **created** | **String** |  | [optional] 
 **district** | **String** |  | [optional] 
 **grade** | **String** |  | [optional] 
+**id** | **String** |  | [optional] 
 **last_modified** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **period** | **String** |  | [optional] 

@@ -14,9 +14,9 @@ require 'date'
 module Clever
 
   class Student
-    attr_accessor :id
-
     attr_accessor :created
+
+    attr_accessor :credentials
 
     attr_accessor :district
 
@@ -26,13 +26,13 @@ module Clever
 
     attr_accessor :email
 
-    attr_accessor :frl_status
-
     attr_accessor :gender
 
     attr_accessor :grade
 
     attr_accessor :hispanic_ethnicity
+
+    attr_accessor :id
 
     attr_accessor :iep_status
 
@@ -54,20 +54,41 @@ module Clever
 
     attr_accessor :student_number
 
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
         :'created' => :'created',
+        :'credentials' => :'credentials',
         :'district' => :'district',
         :'dob' => :'dob',
         :'ell_status' => :'ell_status',
         :'email' => :'email',
-        :'frl_status' => :'frl_status',
         :'gender' => :'gender',
         :'grade' => :'grade',
         :'hispanic_ethnicity' => :'hispanic_ethnicity',
+        :'id' => :'id',
         :'iep_status' => :'iep_status',
         :'last_modified' => :'last_modified',
         :'location' => :'location',
@@ -84,16 +105,16 @@ module Clever
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
         :'created' => :'String',
+        :'credentials' => :'Credentials',
         :'district' => :'String',
         :'dob' => :'String',
         :'ell_status' => :'String',
         :'email' => :'String',
-        :'frl_status' => :'String',
         :'gender' => :'String',
         :'grade' => :'String',
         :'hispanic_ethnicity' => :'String',
+        :'id' => :'String',
         :'iep_status' => :'String',
         :'last_modified' => :'String',
         :'location' => :'Location',
@@ -115,12 +136,12 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
-      end
-
       if attributes.has_key?(:'created')
         self.created = attributes[:'created']
+      end
+
+      if attributes.has_key?(:'credentials')
+        self.credentials = attributes[:'credentials']
       end
 
       if attributes.has_key?(:'district')
@@ -139,10 +160,6 @@ module Clever
         self.email = attributes[:'email']
       end
 
-      if attributes.has_key?(:'frl_status')
-        self.frl_status = attributes[:'frl_status']
-      end
-
       if attributes.has_key?(:'gender')
         self.gender = attributes[:'gender']
       end
@@ -153,6 +170,10 @@ module Clever
 
       if attributes.has_key?(:'hispanic_ethnicity')
         self.hispanic_ethnicity = attributes[:'hispanic_ethnicity']
+      end
+
+      if attributes.has_key?(:'id')
+        self.id = attributes[:'id']
       end
 
       if attributes.has_key?(:'iep_status')
@@ -209,7 +230,67 @@ module Clever
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      ell_status_validator = EnumAttributeValidator.new('String', ["Y", "N", ""])
+      return false unless ell_status_validator.valid?(@ell_status)
+      gender_validator = EnumAttributeValidator.new('String', ["M", "F", ""])
+      return false unless gender_validator.valid?(@gender)
+      grade_validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      return false unless grade_validator.valid?(@grade)
+      hispanic_ethnicity_validator = EnumAttributeValidator.new('String', ["Y", "N", ""])
+      return false unless hispanic_ethnicity_validator.valid?(@hispanic_ethnicity)
+      race_validator = EnumAttributeValidator.new('String', ["Caucasian", "Asian", "Black or African American", "American Indian", "Hawaiian or Other Pacific Islander", "Two or More Races", "Unknown", ""])
+      return false unless race_validator.valid?(@race)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] ell_status Object to be assigned
+    def ell_status=(ell_status)
+      validator = EnumAttributeValidator.new('String', ["Y", "N", ""])
+      unless validator.valid?(ell_status)
+        fail ArgumentError, "invalid value for 'ell_status', must be one of #{validator.allowable_values}."
+      end
+      @ell_status = ell_status
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] gender Object to be assigned
+    def gender=(gender)
+      validator = EnumAttributeValidator.new('String', ["M", "F", ""])
+      unless validator.valid?(gender)
+        fail ArgumentError, "invalid value for 'gender', must be one of #{validator.allowable_values}."
+      end
+      @gender = gender
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] grade Object to be assigned
+    def grade=(grade)
+      validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      unless validator.valid?(grade)
+        fail ArgumentError, "invalid value for 'grade', must be one of #{validator.allowable_values}."
+      end
+      @grade = grade
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] hispanic_ethnicity Object to be assigned
+    def hispanic_ethnicity=(hispanic_ethnicity)
+      validator = EnumAttributeValidator.new('String', ["Y", "N", ""])
+      unless validator.valid?(hispanic_ethnicity)
+        fail ArgumentError, "invalid value for 'hispanic_ethnicity', must be one of #{validator.allowable_values}."
+      end
+      @hispanic_ethnicity = hispanic_ethnicity
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] race Object to be assigned
+    def race=(race)
+      validator = EnumAttributeValidator.new('String', ["Caucasian", "Asian", "Black or African American", "American Indian", "Hawaiian or Other Pacific Islander", "Two or More Races", "Unknown", ""])
+      unless validator.valid?(race)
+        fail ArgumentError, "invalid value for 'race', must be one of #{validator.allowable_values}."
+      end
+      @race = race
     end
 
     # Checks equality by comparing each attribute.
@@ -217,16 +298,16 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
           created == o.created &&
+          credentials == o.credentials &&
           district == o.district &&
           dob == o.dob &&
           ell_status == o.ell_status &&
           email == o.email &&
-          frl_status == o.frl_status &&
           gender == o.gender &&
           grade == o.grade &&
           hispanic_ethnicity == o.hispanic_ethnicity &&
+          id == o.id &&
           iep_status == o.iep_status &&
           last_modified == o.last_modified &&
           location == o.location &&
@@ -248,7 +329,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, created, district, dob, ell_status, email, frl_status, gender, grade, hispanic_ethnicity, iep_status, last_modified, location, name, race, school, schools, sis_id, state_id, student_number].hash
+      [created, credentials, district, dob, ell_status, email, gender, grade, hispanic_ethnicity, id, iep_status, last_modified, location, name, race, school, schools, sis_id, state_id, student_number].hash
     end
 
     # Builds the object from hash

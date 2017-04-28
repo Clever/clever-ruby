@@ -19,7 +19,7 @@ module Clever
       @api_client = api_client
     end
 
-    # Retrieves a single event.
+    # 
     # Returns the specific event
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -29,7 +29,7 @@ module Clever
       return data
     end
 
-    # Retrieves a single event.
+    # 
     # Returns the specific event
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -70,7 +70,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves all events
+    # 
     # Returns a list of events
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -82,7 +82,7 @@ module Clever
       return data
     end
 
-    # Retrieves all events
+    # 
     # Returns a list of events
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -126,7 +126,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves events for schools.
+    # 
     # Returns a list of events for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -139,7 +139,7 @@ module Clever
       return data
     end
 
-    # Retrieves events for schools.
+    # 
     # Returns a list of events for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -186,7 +186,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves events for school_admins.
+    # 
     # Returns a list of events for a school admin
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -199,7 +199,7 @@ module Clever
       return data
     end
 
-    # Retrieves events for school_admins.
+    # 
     # Returns a list of events for a school admin
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -246,7 +246,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves events for sections.
+    # 
     # Returns a list of events for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -259,7 +259,7 @@ module Clever
       return data
     end
 
-    # Retrieves events for sections.
+    # 
     # Returns a list of events for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -306,7 +306,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves events for students.
+    # 
     # Returns a list of events for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -319,7 +319,7 @@ module Clever
       return data
     end
 
-    # Retrieves events for students.
+    # 
     # Returns a list of events for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -366,7 +366,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves events for teachers.
+    # 
     # Returns a list of events for a teacher
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -379,7 +379,7 @@ module Clever
       return data
     end
 
-    # Retrieves events for teachers.
+    # 
     # Returns a list of events for a teacher
     # @param id 
     # @param [Hash] opts the optional parameters

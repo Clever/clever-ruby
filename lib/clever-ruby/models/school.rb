@@ -14,19 +14,21 @@ require 'date'
 module Clever
 
   class School
-    attr_accessor :id
-
     attr_accessor :created
 
     attr_accessor :district
 
     attr_accessor :high_grade
 
+    attr_accessor :id
+
     attr_accessor :last_modified
 
     attr_accessor :location
 
     attr_accessor :low_grade
+
+    attr_accessor :mdr_number
 
     attr_accessor :name
 
@@ -42,48 +44,67 @@ module Clever
 
     attr_accessor :state_id
 
-    attr_accessor :mdr_number
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
 
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
         :'created' => :'created',
         :'district' => :'district',
         :'high_grade' => :'high_grade',
+        :'id' => :'id',
         :'last_modified' => :'last_modified',
         :'location' => :'location',
         :'low_grade' => :'low_grade',
+        :'mdr_number' => :'mdr_number',
         :'name' => :'name',
         :'nces_id' => :'nces_id',
         :'phone' => :'phone',
         :'principal' => :'principal',
         :'school_number' => :'school_number',
         :'sis_id' => :'sis_id',
-        :'state_id' => :'state_id',
-        :'mdr_number' => :'mdr_number'
+        :'state_id' => :'state_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
         :'created' => :'String',
         :'district' => :'String',
         :'high_grade' => :'String',
+        :'id' => :'String',
         :'last_modified' => :'String',
         :'location' => :'Location',
         :'low_grade' => :'String',
+        :'mdr_number' => :'String',
         :'name' => :'String',
         :'nces_id' => :'String',
         :'phone' => :'String',
         :'principal' => :'Principal',
         :'school_number' => :'String',
         :'sis_id' => :'String',
-        :'state_id' => :'String',
-        :'mdr_number' => :'String'
+        :'state_id' => :'String'
       }
     end
 
@@ -94,10 +115,6 @@ module Clever
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
-
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
-      end
 
       if attributes.has_key?(:'created')
         self.created = attributes[:'created']
@@ -111,6 +128,10 @@ module Clever
         self.high_grade = attributes[:'high_grade']
       end
 
+      if attributes.has_key?(:'id')
+        self.id = attributes[:'id']
+      end
+
       if attributes.has_key?(:'last_modified')
         self.last_modified = attributes[:'last_modified']
       end
@@ -121,6 +142,10 @@ module Clever
 
       if attributes.has_key?(:'low_grade')
         self.low_grade = attributes[:'low_grade']
+      end
+
+      if attributes.has_key?(:'mdr_number')
+        self.mdr_number = attributes[:'mdr_number']
       end
 
       if attributes.has_key?(:'name')
@@ -151,10 +176,6 @@ module Clever
         self.state_id = attributes[:'state_id']
       end
 
-      if attributes.has_key?(:'mdr_number')
-        self.mdr_number = attributes[:'mdr_number']
-      end
-
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -167,7 +188,31 @@ module Clever
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      high_grade_validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      return false unless high_grade_validator.valid?(@high_grade)
+      low_grade_validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      return false unless low_grade_validator.valid?(@low_grade)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] high_grade Object to be assigned
+    def high_grade=(high_grade)
+      validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      unless validator.valid?(high_grade)
+        fail ArgumentError, "invalid value for 'high_grade', must be one of #{validator.allowable_values}."
+      end
+      @high_grade = high_grade
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] low_grade Object to be assigned
+    def low_grade=(low_grade)
+      validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      unless validator.valid?(low_grade)
+        fail ArgumentError, "invalid value for 'low_grade', must be one of #{validator.allowable_values}."
+      end
+      @low_grade = low_grade
     end
 
     # Checks equality by comparing each attribute.
@@ -175,21 +220,21 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
           created == o.created &&
           district == o.district &&
           high_grade == o.high_grade &&
+          id == o.id &&
           last_modified == o.last_modified &&
           location == o.location &&
           low_grade == o.low_grade &&
+          mdr_number == o.mdr_number &&
           name == o.name &&
           nces_id == o.nces_id &&
           phone == o.phone &&
           principal == o.principal &&
           school_number == o.school_number &&
           sis_id == o.sis_id &&
-          state_id == o.state_id &&
-          mdr_number == o.mdr_number
+          state_id == o.state_id
     end
 
     # @see the `==` method
@@ -201,7 +246,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, created, district, high_grade, last_modified, location, low_grade, name, nces_id, phone, principal, school_number, sis_id, state_id, mdr_number].hash
+      [created, district, high_grade, id, last_modified, location, low_grade, mdr_number, name, nces_id, phone, principal, school_number, sis_id, state_id].hash
     end
 
     # Builds the object from hash

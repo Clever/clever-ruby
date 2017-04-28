@@ -14,11 +14,13 @@ require 'date'
 module Clever
 
   class SchoolAdmin
-    attr_accessor :id
+    attr_accessor :credentials
 
     attr_accessor :district
 
     attr_accessor :email
+
+    attr_accessor :id
 
     attr_accessor :name
 
@@ -32,9 +34,10 @@ module Clever
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
+        :'credentials' => :'credentials',
         :'district' => :'district',
         :'email' => :'email',
+        :'id' => :'id',
         :'name' => :'name',
         :'schools' => :'schools',
         :'staff_id' => :'staff_id',
@@ -45,9 +48,10 @@ module Clever
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
+        :'credentials' => :'Credentials',
         :'district' => :'String',
         :'email' => :'String',
+        :'id' => :'String',
         :'name' => :'Name',
         :'schools' => :'Array<String>',
         :'staff_id' => :'String',
@@ -63,8 +67,8 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.has_key?(:'credentials')
+        self.credentials = attributes[:'credentials']
       end
 
       if attributes.has_key?(:'district')
@@ -73,6 +77,10 @@ module Clever
 
       if attributes.has_key?(:'email')
         self.email = attributes[:'email']
+      end
+
+      if attributes.has_key?(:'id')
+        self.id = attributes[:'id']
       end
 
       if attributes.has_key?(:'name')
@@ -113,9 +121,10 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
+          credentials == o.credentials &&
           district == o.district &&
           email == o.email &&
+          id == o.id &&
           name == o.name &&
           schools == o.schools &&
           staff_id == o.staff_id &&
@@ -131,7 +140,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, district, email, name, schools, staff_id, title].hash
+      [credentials, district, email, id, name, schools, staff_id, title].hash
     end
 
     # Builds the object from hash

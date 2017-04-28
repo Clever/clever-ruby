@@ -19,7 +19,7 @@ module Clever
       @api_client = api_client
     end
 
-    # Get only a specific studentcontact's information.
+    # 
     # Returns a specific student contact
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -29,7 +29,7 @@ module Clever
       return data
     end
 
-    # Get only a specific studentcontact&#39;s information.
+    # 
     # Returns a specific student contact
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -70,7 +70,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Gets a list of student contacts you have access to.
+    # 
     # Returns a list of student contacts
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -82,7 +82,7 @@ module Clever
       return data
     end
 
-    # Gets a list of student contacts you have access to.
+    # 
     # Returns a list of student contacts
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -126,7 +126,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves all contacts for a student.
+    # 
     # Returns the contacts for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -137,7 +137,7 @@ module Clever
       return data
     end
 
-    # Retrieves all contacts for a student.
+    # 
     # Returns the contacts for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -180,7 +180,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Get only a specific district's information.
+    # 
     # Returns a specific district
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -190,7 +190,7 @@ module Clever
       return data
     end
 
-    # Get only a specific district&#39;s information.
+    # 
     # Returns a specific district
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -231,7 +231,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves a district admin
+    # 
     # Returns a specific district admin
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -241,7 +241,7 @@ module Clever
       return data
     end
 
-    # Retrieves a district admin
+    # 
     # Returns a specific district admin
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -282,7 +282,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves all users with admin access to a district.
+    # 
     # Returns a list of district admins
     # @param [Hash] opts the optional parameters
     # @option opts [String] :starting_after 
@@ -293,7 +293,7 @@ module Clever
       return data
     end
 
-    # Retrieves all users with admin access to a district.
+    # 
     # Returns a list of district admins
     # @param [Hash] opts the optional parameters
     # @option opts [String] :starting_after 
@@ -335,7 +335,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves district information for a school.
+    # 
     # Returns the district for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -345,7 +345,7 @@ module Clever
       return data
     end
 
-    # Retrieves district information for a school.
+    # 
     # Returns the district for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -386,7 +386,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves district information for a section.
+    # 
     # Returns the district for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -396,7 +396,7 @@ module Clever
       return data
     end
 
-    # Retrieves district information for a section.
+    # 
     # Returns the district for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -437,7 +437,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves district information for a student.
+    # 
     # Returns the district for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -447,7 +447,7 @@ module Clever
       return data
     end
 
-    # Retrieves district information for a student.
+    # 
     # Returns the district for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -488,7 +488,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves the district for a contact.
+    # 
     # Returns the district for a student contact
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -498,7 +498,7 @@ module Clever
       return data
     end
 
-    # Retrieves the district for a contact.
+    # 
     # Returns the district for a student contact
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -539,7 +539,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves district information for a teacher.
+    # 
     # Returns the district for a teacher
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -549,7 +549,7 @@ module Clever
       return data
     end
 
-    # Retrieves district information for a teacher.
+    # 
     # Returns the district for a teacher
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -590,24 +590,69 @@ module Clever
       return data, status_code, headers
     end
 
-    # Gets a list of districts you have access to.
+    # 
+    # Returns the status of the district
+    # @param id 
+    # @param [Hash] opts the optional parameters
+    # @return [DistrictStatusResponse]
+    def get_district_status(id, opts = {})
+      data, _status_code, _headers = get_district_status_with_http_info(id, opts)
+      return data
+    end
+
+    # 
+    # Returns the status of the district
+    # @param id 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(DistrictStatusResponse, Fixnum, Hash)>] DistrictStatusResponse data, response status code and response headers
+    def get_district_status_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DataApi.get_district_status ..."
+      end
+      # verify the required parameter 'id' is set
+      fail ArgumentError, "Missing the required parameter 'id' when calling DataApi.get_district_status" if id.nil?
+      # resource path
+      local_var_path = "/districts/{id}/status".sub('{' + 'id' + '}', id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['oauth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'DistrictStatusResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DataApi#get_district_status\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
     # Returns a list of districts
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit 
-    # @option opts [String] :starting_after 
-    # @option opts [String] :ending_before 
     # @return [DistrictsResponse]
     def get_districts(opts = {})
       data, _status_code, _headers = get_districts_with_http_info(opts)
       return data
     end
 
-    # Gets a list of districts you have access to.
+    # 
     # Returns a list of districts
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :limit 
-    # @option opts [String] :starting_after 
-    # @option opts [String] :ending_before 
     # @return [Array<(DistrictsResponse, Fixnum, Hash)>] DistrictsResponse data, response status code and response headers
     def get_districts_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -618,9 +663,6 @@ module Clever
 
       # query parameters
       query_params = {}
-      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
-      query_params[:'starting_after'] = opts[:'starting_after'] if !opts[:'starting_after'].nil?
-      query_params[:'ending_before'] = opts[:'ending_before'] if !opts[:'ending_before'].nil?
 
       # header parameters
       header_params = {}
@@ -646,7 +688,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves a list of all grade levels taught by a specific teacher.
+    # 
     # Returns the grade levels for sections a teacher teaches
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -656,7 +698,7 @@ module Clever
       return data
     end
 
-    # Retrieves a list of all grade levels taught by a specific teacher.
+    # 
     # Returns the grade levels for sections a teacher teaches
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -697,7 +739,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Get only a specific school's information.
+    # 
     # Returns a specific school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -707,7 +749,7 @@ module Clever
       return data
     end
 
-    # Get only a specific school&#39;s information.
+    # 
     # Returns a specific school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -748,7 +790,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Get only a specific schooladmin's information.
+    # 
     # Returns a specific school admin
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -758,7 +800,7 @@ module Clever
       return data
     end
 
-    # Get only a specific schooladmin&#39;s information.
+    # 
     # Returns a specific school admin
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -799,7 +841,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Gets a list of school_admins you have access to.
+    # 
     # Returns a list of school admins
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -811,7 +853,7 @@ module Clever
       return data
     end
 
-    # Gets a list of school_admins you have access to.
+    # 
     # Returns a list of school admins
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -855,7 +897,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves information about the school for a section
+    # 
     # Returns the school for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -865,7 +907,7 @@ module Clever
       return data
     end
 
-    # Retrieves information about the school for a section
+    # 
     # Returns the school for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -906,7 +948,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves information about the school for a student
+    # 
     # Returns the primary school for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -916,7 +958,7 @@ module Clever
       return data
     end
 
-    # Retrieves information about the school for a student
+    # 
     # Returns the primary school for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -957,7 +999,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves information about the school for a teacher
+    # 
     # Retrieves school info for a teacher.
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -967,7 +1009,7 @@ module Clever
       return data
     end
 
-    # Retrieves information about the school for a teacher
+    # 
     # Retrieves school info for a teacher.
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1008,7 +1050,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Gets a list of schools you have access to.
+    # 
     # Returns a list of schools
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -1020,7 +1062,7 @@ module Clever
       return data
     end
 
-    # Gets a list of schools you have access to.
+    # 
     # Returns a list of schools
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -1064,7 +1106,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves all schools for a school admin.
+    # 
     # Returns the schools for a school admin
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1077,7 +1119,7 @@ module Clever
       return data
     end
 
-    # Retrieves all schools for a school admin.
+    # 
     # Returns the schools for a school admin
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1124,7 +1166,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Get only a specific section's information.
+    # 
     # Returns a specific section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1134,7 +1176,7 @@ module Clever
       return data
     end
 
-    # Get only a specific section&#39;s information.
+    # 
     # Returns a specific section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1175,7 +1217,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Gets a list of sections you have access to.
+    # 
     # Returns a list of sections
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -1187,7 +1229,7 @@ module Clever
       return data
     end
 
-    # Gets a list of sections you have access to.
+    # 
     # Returns a list of sections
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -1231,7 +1273,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves a list of all sections for a specific school.
+    # 
     # Returns the sections for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1244,7 +1286,7 @@ module Clever
       return data
     end
 
-    # Retrieves a list of all sections for a specific school.
+    # 
     # Returns the sections for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1291,7 +1333,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves a list of all sections for a student.
+    # 
     # Returns the sections for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1304,7 +1346,7 @@ module Clever
       return data
     end
 
-    # Retrieves a list of all sections for a student.
+    # 
     # Returns the sections for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1351,7 +1393,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves a list of all sections for a teacher.
+    # 
     # Returns the sections for a teacher
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1364,7 +1406,7 @@ module Clever
       return data
     end
 
-    # Retrieves a list of all sections for a teacher.
+    # 
     # Returns the sections for a teacher
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1411,7 +1453,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Get only a specific student's information.
+    # 
     # Returns a specific student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1421,7 +1463,7 @@ module Clever
       return data
     end
 
-    # Get only a specific student&#39;s information.
+    # 
     # Returns a specific student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1462,7 +1504,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves the student for a contact.
+    # 
     # Returns the student for a student contact
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1472,7 +1514,7 @@ module Clever
       return data
     end
 
-    # Retrieves the student for a contact.
+    # 
     # Returns the student for a student contact
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1513,7 +1555,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Gets a list of students you have access to.
+    # 
     # Returns a list of students
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -1525,7 +1567,7 @@ module Clever
       return data
     end
 
-    # Gets a list of students you have access to.
+    # 
     # Returns a list of students
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -1569,7 +1611,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves a list of all students for a specific school.
+    # 
     # Returns the students for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1582,7 +1624,7 @@ module Clever
       return data
     end
 
-    # Retrieves a list of all students for a specific school.
+    # 
     # Returns the students for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1629,7 +1671,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves a list of all the section's students.
+    # 
     # Returns the students for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1642,7 +1684,7 @@ module Clever
       return data
     end
 
-    # Retrieves a list of all the section&#39;s students.
+    # 
     # Returns the students for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1689,7 +1731,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves all students that a teacher has in their sections.
+    # 
     # Returns the students for a teacher
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1702,7 +1744,7 @@ module Clever
       return data
     end
 
-    # Retrieves all students that a teacher has in their sections.
+    # 
     # Returns the students for a teacher
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1749,7 +1791,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Get only a specific teacher's information.
+    # 
     # Returns a specific teacher
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1759,7 +1801,7 @@ module Clever
       return data
     end
 
-    # Get only a specific teacher&#39;s information.
+    # 
     # Returns a specific teacher
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1800,7 +1842,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves information about the primary teacher of a section.
+    # 
     # Returns the primary teacher for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1810,7 +1852,7 @@ module Clever
       return data
     end
 
-    # Retrieves information about the primary teacher of a section.
+    # 
     # Returns the primary teacher for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1851,7 +1893,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Gets a list of teachers you have access to.
+    # 
     # Returns a list of teachers
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -1863,7 +1905,7 @@ module Clever
       return data
     end
 
-    # Gets a list of teachers you have access to.
+    # 
     # Returns a list of teachers
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
@@ -1907,7 +1949,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves a list of all teachers for a specific school.
+    # 
     # Returns the teachers for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1920,7 +1962,7 @@ module Clever
       return data
     end
 
-    # Retrieves a list of all teachers for a specific school.
+    # 
     # Returns the teachers for a school
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1967,7 +2009,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves a list of all the section's teachers.
+    # 
     # Returns the teachers for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -1980,7 +2022,7 @@ module Clever
       return data
     end
 
-    # Retrieves a list of all the section&#39;s teachers.
+    # 
     # Returns the teachers for a section
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -2027,7 +2069,7 @@ module Clever
       return data, status_code, headers
     end
 
-    # Retrieves all teachers for a student.
+    # 
     # Returns the teachers for a student
     # @param id 
     # @param [Hash] opts the optional parameters
@@ -2040,7 +2082,7 @@ module Clever
       return data
     end
 
-    # Retrieves all teachers for a student.
+    # 
     # Returns the teachers for a student
     # @param id 
     # @param [Hash] opts the optional parameters

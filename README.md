@@ -66,7 +66,6 @@ id = "id_example" # String |
 
 
 begin
-  #Get only a specific studentcontact's information.
   result = api_instance.get_contact(id)
   p result
 rescue Clever::ApiError => e
@@ -81,56 +80,58 @@ All URIs are relative to *https://api.clever.com/v1.2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Clever::DataApi* | [**get_contact**](docs/DataApi.md#get_contact) | **GET** /contacts/{id} | Get only a specific studentcontact's information.
-*Clever::DataApi* | [**get_contacts**](docs/DataApi.md#get_contacts) | **GET** /contacts | Gets a list of student contacts you have access to.
-*Clever::DataApi* | [**get_contacts_for_student**](docs/DataApi.md#get_contacts_for_student) | **GET** /students/{id}/contacts | Retrieves all contacts for a student.
-*Clever::DataApi* | [**get_district**](docs/DataApi.md#get_district) | **GET** /districts/{id} | Get only a specific district's information.
-*Clever::DataApi* | [**get_district_admin**](docs/DataApi.md#get_district_admin) | **GET** /district_admins/{id} | Retrieves a district admin
-*Clever::DataApi* | [**get_district_admins**](docs/DataApi.md#get_district_admins) | **GET** /district_admins | Retrieves all users with admin access to a district.
-*Clever::DataApi* | [**get_district_for_school**](docs/DataApi.md#get_district_for_school) | **GET** /schools/{id}/district | Retrieves district information for a school.
-*Clever::DataApi* | [**get_district_for_section**](docs/DataApi.md#get_district_for_section) | **GET** /sections/{id}/district | Retrieves district information for a section.
-*Clever::DataApi* | [**get_district_for_student**](docs/DataApi.md#get_district_for_student) | **GET** /students/{id}/district | Retrieves district information for a student.
-*Clever::DataApi* | [**get_district_for_student_contact**](docs/DataApi.md#get_district_for_student_contact) | **GET** /contacts/{id}/district | Retrieves the district for a contact.
-*Clever::DataApi* | [**get_district_for_teacher**](docs/DataApi.md#get_district_for_teacher) | **GET** /teachers/{id}/district | Retrieves district information for a teacher.
-*Clever::DataApi* | [**get_districts**](docs/DataApi.md#get_districts) | **GET** /districts | Gets a list of districts you have access to.
-*Clever::DataApi* | [**get_grade_levels_for_teacher**](docs/DataApi.md#get_grade_levels_for_teacher) | **GET** /teachers/{id}/grade_levels | Retrieves a list of all grade levels taught by a specific teacher.
-*Clever::DataApi* | [**get_school**](docs/DataApi.md#get_school) | **GET** /schools/{id} | Get only a specific school's information.
-*Clever::DataApi* | [**get_school_admin**](docs/DataApi.md#get_school_admin) | **GET** /school_admins/{id} | Get only a specific schooladmin's information.
-*Clever::DataApi* | [**get_school_admins**](docs/DataApi.md#get_school_admins) | **GET** /school_admins | Gets a list of school_admins you have access to.
-*Clever::DataApi* | [**get_school_for_section**](docs/DataApi.md#get_school_for_section) | **GET** /sections/{id}/school | Retrieves information about the school for a section
-*Clever::DataApi* | [**get_school_for_student**](docs/DataApi.md#get_school_for_student) | **GET** /students/{id}/school | Retrieves information about the school for a student
-*Clever::DataApi* | [**get_school_for_teacher**](docs/DataApi.md#get_school_for_teacher) | **GET** /teachers/{id}/school | Retrieves information about the school for a teacher
-*Clever::DataApi* | [**get_schools**](docs/DataApi.md#get_schools) | **GET** /schools | Gets a list of schools you have access to.
-*Clever::DataApi* | [**get_schools_for_school_admin**](docs/DataApi.md#get_schools_for_school_admin) | **GET** /school_admins/{id}/schools | Retrieves all schools for a school admin.
-*Clever::DataApi* | [**get_section**](docs/DataApi.md#get_section) | **GET** /sections/{id} | Get only a specific section's information.
-*Clever::DataApi* | [**get_sections**](docs/DataApi.md#get_sections) | **GET** /sections | Gets a list of sections you have access to.
-*Clever::DataApi* | [**get_sections_for_school**](docs/DataApi.md#get_sections_for_school) | **GET** /schools/{id}/sections | Retrieves a list of all sections for a specific school.
-*Clever::DataApi* | [**get_sections_for_student**](docs/DataApi.md#get_sections_for_student) | **GET** /students/{id}/sections | Retrieves a list of all sections for a student.
-*Clever::DataApi* | [**get_sections_for_teacher**](docs/DataApi.md#get_sections_for_teacher) | **GET** /teachers/{id}/sections | Retrieves a list of all sections for a teacher.
-*Clever::DataApi* | [**get_student**](docs/DataApi.md#get_student) | **GET** /students/{id} | Get only a specific student's information.
-*Clever::DataApi* | [**get_student_for_contact**](docs/DataApi.md#get_student_for_contact) | **GET** /contacts/{id}/student | Retrieves the student for a contact.
-*Clever::DataApi* | [**get_students**](docs/DataApi.md#get_students) | **GET** /students | Gets a list of students you have access to.
-*Clever::DataApi* | [**get_students_for_school**](docs/DataApi.md#get_students_for_school) | **GET** /schools/{id}/students | Retrieves a list of all students for a specific school.
-*Clever::DataApi* | [**get_students_for_section**](docs/DataApi.md#get_students_for_section) | **GET** /sections/{id}/students | Retrieves a list of all the section's students.
-*Clever::DataApi* | [**get_students_for_teacher**](docs/DataApi.md#get_students_for_teacher) | **GET** /teachers/{id}/students | Retrieves all students that a teacher has in their sections.
-*Clever::DataApi* | [**get_teacher**](docs/DataApi.md#get_teacher) | **GET** /teachers/{id} | Get only a specific teacher's information.
-*Clever::DataApi* | [**get_teacher_for_section**](docs/DataApi.md#get_teacher_for_section) | **GET** /sections/{id}/teacher | Retrieves information about the primary teacher of a section.
-*Clever::DataApi* | [**get_teachers**](docs/DataApi.md#get_teachers) | **GET** /teachers | Gets a list of teachers you have access to.
-*Clever::DataApi* | [**get_teachers_for_school**](docs/DataApi.md#get_teachers_for_school) | **GET** /schools/{id}/teachers | Retrieves a list of all teachers for a specific school.
-*Clever::DataApi* | [**get_teachers_for_section**](docs/DataApi.md#get_teachers_for_section) | **GET** /sections/{id}/teachers | Retrieves a list of all the section's teachers.
-*Clever::DataApi* | [**get_teachers_for_student**](docs/DataApi.md#get_teachers_for_student) | **GET** /students/{id}/teachers | Retrieves all teachers for a student.
-*Clever::EventsApi* | [**get_event**](docs/EventsApi.md#get_event) | **GET** /events/{id} | Retrieves a single event.
-*Clever::EventsApi* | [**get_events**](docs/EventsApi.md#get_events) | **GET** /events | Retrieves all events
-*Clever::EventsApi* | [**get_events_for_school**](docs/EventsApi.md#get_events_for_school) | **GET** /schools/{id}/events | Retrieves events for schools.
-*Clever::EventsApi* | [**get_events_for_school_admin**](docs/EventsApi.md#get_events_for_school_admin) | **GET** /school_admins/{id}/events | Retrieves events for school_admins.
-*Clever::EventsApi* | [**get_events_for_section**](docs/EventsApi.md#get_events_for_section) | **GET** /sections/{id}/events | Retrieves events for sections.
-*Clever::EventsApi* | [**get_events_for_student**](docs/EventsApi.md#get_events_for_student) | **GET** /students/{id}/events | Retrieves events for students.
-*Clever::EventsApi* | [**get_events_for_teacher**](docs/EventsApi.md#get_events_for_teacher) | **GET** /teachers/{id}/events | Retrieves events for teachers.
+*Clever::DataApi* | [**get_contact**](docs/DataApi.md#get_contact) | **GET** /contacts/{id} | 
+*Clever::DataApi* | [**get_contacts**](docs/DataApi.md#get_contacts) | **GET** /contacts | 
+*Clever::DataApi* | [**get_contacts_for_student**](docs/DataApi.md#get_contacts_for_student) | **GET** /students/{id}/contacts | 
+*Clever::DataApi* | [**get_district**](docs/DataApi.md#get_district) | **GET** /districts/{id} | 
+*Clever::DataApi* | [**get_district_admin**](docs/DataApi.md#get_district_admin) | **GET** /district_admins/{id} | 
+*Clever::DataApi* | [**get_district_admins**](docs/DataApi.md#get_district_admins) | **GET** /district_admins | 
+*Clever::DataApi* | [**get_district_for_school**](docs/DataApi.md#get_district_for_school) | **GET** /schools/{id}/district | 
+*Clever::DataApi* | [**get_district_for_section**](docs/DataApi.md#get_district_for_section) | **GET** /sections/{id}/district | 
+*Clever::DataApi* | [**get_district_for_student**](docs/DataApi.md#get_district_for_student) | **GET** /students/{id}/district | 
+*Clever::DataApi* | [**get_district_for_student_contact**](docs/DataApi.md#get_district_for_student_contact) | **GET** /contacts/{id}/district | 
+*Clever::DataApi* | [**get_district_for_teacher**](docs/DataApi.md#get_district_for_teacher) | **GET** /teachers/{id}/district | 
+*Clever::DataApi* | [**get_district_status**](docs/DataApi.md#get_district_status) | **GET** /districts/{id}/status | 
+*Clever::DataApi* | [**get_districts**](docs/DataApi.md#get_districts) | **GET** /districts | 
+*Clever::DataApi* | [**get_grade_levels_for_teacher**](docs/DataApi.md#get_grade_levels_for_teacher) | **GET** /teachers/{id}/grade_levels | 
+*Clever::DataApi* | [**get_school**](docs/DataApi.md#get_school) | **GET** /schools/{id} | 
+*Clever::DataApi* | [**get_school_admin**](docs/DataApi.md#get_school_admin) | **GET** /school_admins/{id} | 
+*Clever::DataApi* | [**get_school_admins**](docs/DataApi.md#get_school_admins) | **GET** /school_admins | 
+*Clever::DataApi* | [**get_school_for_section**](docs/DataApi.md#get_school_for_section) | **GET** /sections/{id}/school | 
+*Clever::DataApi* | [**get_school_for_student**](docs/DataApi.md#get_school_for_student) | **GET** /students/{id}/school | 
+*Clever::DataApi* | [**get_school_for_teacher**](docs/DataApi.md#get_school_for_teacher) | **GET** /teachers/{id}/school | 
+*Clever::DataApi* | [**get_schools**](docs/DataApi.md#get_schools) | **GET** /schools | 
+*Clever::DataApi* | [**get_schools_for_school_admin**](docs/DataApi.md#get_schools_for_school_admin) | **GET** /school_admins/{id}/schools | 
+*Clever::DataApi* | [**get_section**](docs/DataApi.md#get_section) | **GET** /sections/{id} | 
+*Clever::DataApi* | [**get_sections**](docs/DataApi.md#get_sections) | **GET** /sections | 
+*Clever::DataApi* | [**get_sections_for_school**](docs/DataApi.md#get_sections_for_school) | **GET** /schools/{id}/sections | 
+*Clever::DataApi* | [**get_sections_for_student**](docs/DataApi.md#get_sections_for_student) | **GET** /students/{id}/sections | 
+*Clever::DataApi* | [**get_sections_for_teacher**](docs/DataApi.md#get_sections_for_teacher) | **GET** /teachers/{id}/sections | 
+*Clever::DataApi* | [**get_student**](docs/DataApi.md#get_student) | **GET** /students/{id} | 
+*Clever::DataApi* | [**get_student_for_contact**](docs/DataApi.md#get_student_for_contact) | **GET** /contacts/{id}/student | 
+*Clever::DataApi* | [**get_students**](docs/DataApi.md#get_students) | **GET** /students | 
+*Clever::DataApi* | [**get_students_for_school**](docs/DataApi.md#get_students_for_school) | **GET** /schools/{id}/students | 
+*Clever::DataApi* | [**get_students_for_section**](docs/DataApi.md#get_students_for_section) | **GET** /sections/{id}/students | 
+*Clever::DataApi* | [**get_students_for_teacher**](docs/DataApi.md#get_students_for_teacher) | **GET** /teachers/{id}/students | 
+*Clever::DataApi* | [**get_teacher**](docs/DataApi.md#get_teacher) | **GET** /teachers/{id} | 
+*Clever::DataApi* | [**get_teacher_for_section**](docs/DataApi.md#get_teacher_for_section) | **GET** /sections/{id}/teacher | 
+*Clever::DataApi* | [**get_teachers**](docs/DataApi.md#get_teachers) | **GET** /teachers | 
+*Clever::DataApi* | [**get_teachers_for_school**](docs/DataApi.md#get_teachers_for_school) | **GET** /schools/{id}/teachers | 
+*Clever::DataApi* | [**get_teachers_for_section**](docs/DataApi.md#get_teachers_for_section) | **GET** /sections/{id}/teachers | 
+*Clever::DataApi* | [**get_teachers_for_student**](docs/DataApi.md#get_teachers_for_student) | **GET** /students/{id}/teachers | 
+*Clever::EventsApi* | [**get_event**](docs/EventsApi.md#get_event) | **GET** /events/{id} | 
+*Clever::EventsApi* | [**get_events**](docs/EventsApi.md#get_events) | **GET** /events | 
+*Clever::EventsApi* | [**get_events_for_school**](docs/EventsApi.md#get_events_for_school) | **GET** /schools/{id}/events | 
+*Clever::EventsApi* | [**get_events_for_school_admin**](docs/EventsApi.md#get_events_for_school_admin) | **GET** /school_admins/{id}/events | 
+*Clever::EventsApi* | [**get_events_for_section**](docs/EventsApi.md#get_events_for_section) | **GET** /sections/{id}/events | 
+*Clever::EventsApi* | [**get_events_for_student**](docs/EventsApi.md#get_events_for_student) | **GET** /students/{id}/events | 
+*Clever::EventsApi* | [**get_events_for_teacher**](docs/EventsApi.md#get_events_for_teacher) | **GET** /teachers/{id}/events | 
 
 
 ## Documentation for Models
 
  - [Clever::BadRequest](docs/BadRequest.md)
+ - [Clever::Credentials](docs/Credentials.md)
  - [Clever::District](docs/District.md)
  - [Clever::DistrictAdmin](docs/DistrictAdmin.md)
  - [Clever::DistrictAdminResponse](docs/DistrictAdminResponse.md)
@@ -209,10 +210,10 @@ Class | Method | HTTP request | Description
 
 ## Previous Versions
 
-The current client supports v1.2 of the API. For v1.1 please use:
+The current client support v1.2 of the API. For v1.1 please use:
 
-- https://rubygems.org/gems/clever-ruby/versions/0.14.0
-- https://github.com/Clever/clever-ruby/tree/0.14
+https://rubygems.org/gems/clever-ruby/versions/0.14.0
+https://github.com/Clever/clever-ruby/tree/0.14
 
 
 ## Updating the Library
@@ -238,4 +239,3 @@ To add a new owner, you need to be an owner, then run this command: `gem owner c
 1. Update `CHANGELOG.md`
 1. `gem build clever-ruby.gemspec`
 1. `gem push clever-ruby-X.Y.Z.gem`
-
