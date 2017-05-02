@@ -1,3 +1,8 @@
+## 1.1.0 (2017-05-02)
+
+* Added support for enums
+* Fixed typo in district_admin.launch_date
+
 ## 1.0.0 (2017-04-05)
 
 * New auto-generated client library from v1.2
