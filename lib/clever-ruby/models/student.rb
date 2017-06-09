@@ -30,7 +30,11 @@ module Clever
 
     attr_accessor :grade
 
+    attr_accessor :graduation_year
+
     attr_accessor :hispanic_ethnicity
+
+    attr_accessor :home_language
 
     attr_accessor :id
 
@@ -53,6 +57,10 @@ module Clever
     attr_accessor :state_id
 
     attr_accessor :student_number
+
+    attr_accessor :unweighted_gpa
+
+    attr_accessor :weighted_gpa
 
     class EnumAttributeValidator
       attr_reader :datatype
@@ -87,7 +95,9 @@ module Clever
         :'email' => :'email',
         :'gender' => :'gender',
         :'grade' => :'grade',
+        :'graduation_year' => :'graduation_year',
         :'hispanic_ethnicity' => :'hispanic_ethnicity',
+        :'home_language' => :'home_language',
         :'id' => :'id',
         :'iep_status' => :'iep_status',
         :'last_modified' => :'last_modified',
@@ -98,7 +108,9 @@ module Clever
         :'schools' => :'schools',
         :'sis_id' => :'sis_id',
         :'state_id' => :'state_id',
-        :'student_number' => :'student_number'
+        :'student_number' => :'student_number',
+        :'unweighted_gpa' => :'unweighted_gpa',
+        :'weighted_gpa' => :'weighted_gpa'
       }
     end
 
@@ -113,7 +125,9 @@ module Clever
         :'email' => :'String',
         :'gender' => :'String',
         :'grade' => :'String',
+        :'graduation_year' => :'String',
         :'hispanic_ethnicity' => :'String',
+        :'home_language' => :'String',
         :'id' => :'String',
         :'iep_status' => :'String',
         :'last_modified' => :'String',
@@ -124,7 +138,9 @@ module Clever
         :'schools' => :'Array<String>',
         :'sis_id' => :'String',
         :'state_id' => :'String',
-        :'student_number' => :'String'
+        :'student_number' => :'String',
+        :'unweighted_gpa' => :'String',
+        :'weighted_gpa' => :'String'
       }
     end
 
@@ -168,8 +184,16 @@ module Clever
         self.grade = attributes[:'grade']
       end
 
+      if attributes.has_key?(:'graduation_year')
+        self.graduation_year = attributes[:'graduation_year']
+      end
+
       if attributes.has_key?(:'hispanic_ethnicity')
         self.hispanic_ethnicity = attributes[:'hispanic_ethnicity']
+      end
+
+      if attributes.has_key?(:'home_language')
+        self.home_language = attributes[:'home_language']
       end
 
       if attributes.has_key?(:'id')
@@ -218,6 +242,14 @@ module Clever
         self.student_number = attributes[:'student_number']
       end
 
+      if attributes.has_key?(:'unweighted_gpa')
+        self.unweighted_gpa = attributes[:'unweighted_gpa']
+      end
+
+      if attributes.has_key?(:'weighted_gpa')
+        self.weighted_gpa = attributes[:'weighted_gpa']
+      end
+
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -238,6 +270,8 @@ module Clever
       return false unless grade_validator.valid?(@grade)
       hispanic_ethnicity_validator = EnumAttributeValidator.new('String', ["Y", "N", ""])
       return false unless hispanic_ethnicity_validator.valid?(@hispanic_ethnicity)
+      home_language_validator = EnumAttributeValidator.new('String', ["English", "Albanian", "Amharic", "Arabic", "Bengali", "Bosnian", "Burmese", "Cantonese", "Chinese", "Dutch", "Farsi", "French", "German", "Hebrew", "Hindi", "Hmong", "Ilocano", "Japanese", "Javanese", "Karen", "Khmer", "Korean", "Laotian", "Latvian", "Malay", "Mandarin", "Nepali", "Oromo", "Polish", "Portuguese", "Punjabi", "Romanian", "Russian", "Samoan", "Serbian", "Somali", "Spanish", "Swahili", "Tagalog", "Tamil", "Telegu", "Thai", "Tigrinya", "Turkish", "Ukrainian", "Urdu", "Vietnamese"])
+      return false unless home_language_validator.valid?(@home_language)
       race_validator = EnumAttributeValidator.new('String', ["Caucasian", "Asian", "Black or African American", "American Indian", "Hawaiian or Other Pacific Islander", "Two or More Races", "Unknown", ""])
       return false unless race_validator.valid?(@race)
       return true
@@ -284,6 +318,16 @@ module Clever
     end
 
     # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] home_language Object to be assigned
+    def home_language=(home_language)
+      validator = EnumAttributeValidator.new('String', ["English", "Albanian", "Amharic", "Arabic", "Bengali", "Bosnian", "Burmese", "Cantonese", "Chinese", "Dutch", "Farsi", "French", "German", "Hebrew", "Hindi", "Hmong", "Ilocano", "Japanese", "Javanese", "Karen", "Khmer", "Korean", "Laotian", "Latvian", "Malay", "Mandarin", "Nepali", "Oromo", "Polish", "Portuguese", "Punjabi", "Romanian", "Russian", "Samoan", "Serbian", "Somali", "Spanish", "Swahili", "Tagalog", "Tamil", "Telegu", "Thai", "Tigrinya", "Turkish", "Ukrainian", "Urdu", "Vietnamese"])
+      unless validator.valid?(home_language)
+        fail ArgumentError, "invalid value for 'home_language', must be one of #{validator.allowable_values}."
+      end
+      @home_language = home_language
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
     # @param [Object] race Object to be assigned
     def race=(race)
       validator = EnumAttributeValidator.new('String', ["Caucasian", "Asian", "Black or African American", "American Indian", "Hawaiian or Other Pacific Islander", "Two or More Races", "Unknown", ""])
@@ -306,7 +350,9 @@ module Clever
           email == o.email &&
           gender == o.gender &&
           grade == o.grade &&
+          graduation_year == o.graduation_year &&
           hispanic_ethnicity == o.hispanic_ethnicity &&
+          home_language == o.home_language &&
           id == o.id &&
           iep_status == o.iep_status &&
           last_modified == o.last_modified &&
@@ -317,7 +363,9 @@ module Clever
           schools == o.schools &&
           sis_id == o.sis_id &&
           state_id == o.state_id &&
-          student_number == o.student_number
+          student_number == o.student_number &&
+          unweighted_gpa == o.unweighted_gpa &&
+          weighted_gpa == o.weighted_gpa
     end
 
     # @see the `==` method
@@ -329,7 +377,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [created, credentials, district, dob, ell_status, email, gender, grade, hispanic_ethnicity, id, iep_status, last_modified, location, name, race, school, schools, sis_id, state_id, student_number].hash
+      [created, credentials, district, dob, ell_status, email, gender, grade, graduation_year, hispanic_ethnicity, home_language, id, iep_status, last_modified, location, name, race, school, schools, sis_id, state_id, student_number, unweighted_gpa, weighted_gpa].hash
     end
 
     # Builds the object from hash

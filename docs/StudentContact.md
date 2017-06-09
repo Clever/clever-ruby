@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **phone** | **String** |  | [optional] 
 **phone_type** | **String** |  | [optional] 
 **relationship** | **String** |  | [optional] 
+**sis_id** | **String** |  | [optional] 
 **student** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 

@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **gender** | **String** |  | [optional] 
 **grade** | **String** |  | [optional] 
+**graduation_year** | **String** |  | [optional] 
 **hispanic_ethnicity** | **String** |  | [optional] 
+**home_language** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
 **iep_status** | **String** |  | [optional] 
 **last_modified** | **String** |  | [optional] 
@@ -23,5 +25,7 @@ Name | Type | Description | Notes
 **sis_id** | **String** |  | [optional] 
 **state_id** | **String** |  | [optional] 
 **student_number** | **String** |  | [optional] 
+**unweighted_gpa** | **String** |  | [optional] 
+**weighted_gpa** | **String** |  | [optional] 
 
 

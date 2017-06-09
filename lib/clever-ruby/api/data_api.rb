@@ -594,7 +594,7 @@ module Clever
     # Returns the status of the district
     # @param id 
     # @param [Hash] opts the optional parameters
-    # @return [DistrictStatusResponse]
+    # @return [DistrictStatusResponses]
     def get_district_status(id, opts = {})
       data, _status_code, _headers = get_district_status_with_http_info(id, opts)
       return data
@@ -604,7 +604,7 @@ module Clever
     # Returns the status of the district
     # @param id 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DistrictStatusResponse, Fixnum, Hash)>] DistrictStatusResponse data, response status code and response headers
+    # @return [Array<(DistrictStatusResponses, Fixnum, Hash)>] DistrictStatusResponses data, response status code and response headers
     def get_district_status_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DataApi.get_district_status ..."
@@ -634,7 +634,7 @@ module Clever
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'DistrictStatusResponse')
+        :return_type => 'DistrictStatusResponses')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DataApi#get_district_status\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 
 # **get_district_status**
-> DistrictStatusResponse get_district_status(id)
+> DistrictStatusResponses get_district_status(id)
 
 
 
@@ -656,7 +656,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DistrictStatusResponse**](DistrictStatusResponse.md)
+[**DistrictStatusResponses**](DistrictStatusResponses.md)
 
 ### Authorization
 
