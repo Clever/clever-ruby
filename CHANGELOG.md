@@ -1,3 +1,8 @@
+## 1.2.0 (2017-06-09)
+
+* Added new fields for students and student contacts
+* Fixed district status endpoint
+
 ## 1.1.0 (2017-05-02)
 
 * Added support for enums
