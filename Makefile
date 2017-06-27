@@ -4,7 +4,7 @@ SHELL := /bin/bash
 all: test build
 
 test:
-	echo "TODO test app"
+	bundle install && bundle exec rake spec
 
 build:
 	cd override && ./override.sh

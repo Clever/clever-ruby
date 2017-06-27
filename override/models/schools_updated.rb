@@ -155,7 +155,7 @@ module Clever
           end
         end
       else # model
-        temp_model = CleverAPI.const_get(type).new
+        temp_model = Clever.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end
