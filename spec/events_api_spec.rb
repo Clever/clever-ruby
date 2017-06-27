@@ -17,7 +17,7 @@ describe Clever::EventsApi do
 
   describe ".get_events" do
     context "given events exist" do
-      it "returns the events" do
+      it "does not raise an error" do
         expect{@api_instance.get_events}.to_not raise_error
       end
     end
