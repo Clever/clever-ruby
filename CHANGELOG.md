@@ -1,3 +1,7 @@
+## 1.2.1 (2017-06-27)
+
+* Fixed events models
+
 ## 1.2.0 (2017-06-09)
 
 * Added new fields for students and student contacts
