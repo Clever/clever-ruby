@@ -22,6 +22,8 @@ module Clever
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'type' => :'type',
+        :'id' => :'id',
         :'data' => :'data'
       }
     end
@@ -29,6 +31,8 @@ module Clever
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'type' => :'String',
+        :'id' => :'String',
         :'data' => :'StudentObject'
       }
     end
@@ -40,6 +44,14 @@ module Clever
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
+
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
+      end
+
+      if attributes.has_key?(:'id')
+        self.id = attributes[:'id']
+      end
 
       if attributes.has_key?(:'data')
         self.data = attributes[:'data']

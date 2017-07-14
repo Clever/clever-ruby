@@ -20,6 +20,15 @@ describe Clever::EventsApi do
       it "does not raise an error" do
         expect{@api_instance.get_events}.to_not raise_error
       end
+
+      context "students events" do
+        it "has the id and type" do
+          @api_instance.get_events.data.each do |event|
+            expect(event.data.id).not_to be nil
+            expect(event.data.type).not_to be nil
+          end
+        end
+      end
     end
   end
 end
