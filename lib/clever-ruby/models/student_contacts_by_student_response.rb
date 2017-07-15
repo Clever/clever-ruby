@@ -14,29 +14,21 @@ require 'date'
 
 module Clever
 
-  class Name
-    attr_accessor :first
-
-    attr_accessor :last
-
-    attr_accessor :middle
+  class StudentContactsByStudentResponse
+    attr_accessor :data
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'first' => :'first',
-        :'last' => :'last',
-        :'middle' => :'middle'
+        :'data' => :'data'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'first' => :'String',
-        :'last' => :'String',
-        :'middle' => :'String'
+        :'data' => :'Array<StudentContact>'
       }
     end
 
@@ -48,16 +40,10 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'first')
-        self.first = attributes[:'first']
-      end
-
-      if attributes.has_key?(:'last')
-        self.last = attributes[:'last']
-      end
-
-      if attributes.has_key?(:'middle')
-        self.middle = attributes[:'middle']
+      if attributes.has_key?(:'data')
+        if (value = attributes[:'data']).is_a?(Array)
+          self.data = value
+        end
       end
 
     end
@@ -80,9 +66,7 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          first == o.first &&
-          last == o.last &&
-          middle == o.middle
+          data == o.data
     end
 
     # @see the `==` method
@@ -94,7 +78,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [first, last, middle].hash
+      [data].hash
     end
 
     # Builds the object from hash

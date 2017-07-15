@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 
 # **get_contacts_for_student**
-> StudentContactsResponse get_contacts_for_student(id, opts)
+> StudentContactsByStudentResponse get_contacts_for_student(id, opts)
 
 
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StudentContactsResponse**](StudentContactsResponse.md)
+[**StudentContactsByStudentResponse**](StudentContactsByStudentResponse.md)
 
 ### Authorization
 
