@@ -129,87 +129,84 @@
         },
         {
             "data": {
-                "created": "2017-06-15T21:54:10.030Z",
+                "created": "2017-07-13T16:28:38.377Z",
                 "data": {
                     "object": {
-                        "district": "56e07f73944b620100000175",
-                        "ell_status": "N",
-                        "id": "58c81dcea3627927150003f0"
-                    },
-                    "previous_attributes": {
-                        "created": "2017-03-14T16:43:58.153Z",
+                        "created": "2017-07-11T16:05:51.740Z",
                         "credentials": {
-                            "district_username": "evalynb40"
+                            "district_username": "marthag20marthag20marthag20marthag20marthag20martha"
                         },
-                        "dob": "8/10/2006",
-                        "email": "b_evalyn@example.org",
+                        "district": "58da8a43cc70ab00017a1a87",
+                        "dob": "4/2/1998",
+                        "email": "g_martha@example.org",
                         "gender": "F",
-                        "grade": "1",
+                        "grade": "9",
                         "hispanic_ethnicity": "N",
+                        "id": "59496080827927905b00076d",
+                        "last_modified": "2017-07-11T16:05:51.740Z",
                         "location": {
-                            "zip": "10029"
+                            "zip": "11694"
                         },
                         "name": {
-                            "first": "Evalyn",
-                            "last": "Bradtke",
-                            "middle": "J"
+                            "first": "Martha",
+                            "last": "Greenholt",
+                            "middle": "T"
                         },
-                        "race": "Black or African American",
-                        "school": "58c81db226d0809114000007",
+                        "race": "Asian",
+                        "school": "58da8c58155b940248000006",
                         "schools": [
-                            "58c81db226d0809114000007"
+                            "58da8c58155b940248000006",
+                            "58da8c58155b940248000007"
                         ],
-                        "sis_id": "106091540",
-                        "state_id": "552729322",
-                        "student_number": "106091540"
+                        "sis_id": "9131139200",
+                        "state_id": "975729843",
+                        "student_number": "913113920"
                     }
                 },
-                "id": "594301ff7f264e3ca45e568e",
-                "type": "students.updated"
+                "id": "59679fb5893d055bc095ede7",
+                "type": "students.deleted"
             },
-            "uri": "/v1.2/events/594301ff7f264e3ca45e568e"
+            "uri": "/v1.2/events/59679fb5893d055bc095ede7"
         },
         {
             "data": {
-                "created": "2017-06-15T21:54:10.031Z",
+                "created": "2017-06-27T21:58:00.811Z",
                 "data": {
                     "object": {
-                        "district": "56e07f73944b620100000175",
-                        "ell_status": "Y",
-                        "id": "58c81dcea3627927150003f1"
-                    },
-                    "previous_attributes": {
-                        "created": "2017-03-14T16:43:58.154Z",
+                        "created": "2017-03-28T16:16:35.369Z",
                         "credentials": {
-                            "district_username": "coryt00"
+                            "district_username": "mial61"
                         },
-                        "dob": "7/21/1997",
-                        "email": "cory_t@example.net",
-                        "gender": "M",
-                        "grade": "10",
-                        "hispanic_ethnicity": "Y",
+                        "district": "58da8a43cc70ab00017a1a87",
+                        "dob": "11/10/2002",
+                        "email": "l_mia@example.org",
+                        "gender": "F",
+                        "grade": "5",
+                        "hispanic_ethnicity": "N",
+                        "id": "58da8c63d7dc0ca068000450",
+                        "last_modified": "2017-03-28T16:16:35.369Z",
                         "location": {
-                            "zip": "10038"
+                            "zip": "10002"
                         },
                         "name": {
-                            "first": "Cory",
-                            "last": "Thompson",
-                            "middle": "V"
+                            "first": "Mia",
+                            "last": "Lindgren",
+                            "middle": "J"
                         },
                         "race": "Black or African American",
-                        "school": "58c81db226d0809114000006",
+                        "school": "58da8c58155b940248000007",
                         "schools": [
-                            "58c81db226d0809114000006"
+                            "58da8c58155b940248000007"
                         ],
-                        "sis_id": "106867300",
-                        "state_id": "863433981",
-                        "student_number": "106867300"
+                        "sis_id": "189492161",
+                        "state_id": "661166974",
+                        "student_number": "189492161"
                     }
                 },
-                "id": "594301ff7f264e3ca45e568f",
-                "type": "students.updated"
+                "id": "5952d4e3ed859521b85c6283",
+                "type": "students.created"
             },
-            "uri": "/v1.2/events/594301ff7f264e3ca45e568f"
+            "uri": "/v1.2/events/5952d4e3ed859521b85c6283"
         }
     ],
     "links": [
