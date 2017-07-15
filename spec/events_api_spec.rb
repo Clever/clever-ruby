@@ -1,10 +1,9 @@
 require "clever-ruby"
 require 'webmock/rspec'
-WebMock.disable_net_connect!(allow_localhost: true)
-
 
 describe Clever::EventsApi do
   before(:each) do
+    WebMock.disable_net_connect!(allow_localhost: true)
     @api_instance = Clever::EventsApi.new
     Clever.configure do |config|
       config.access_token = 'DEMO_TOKEN'
