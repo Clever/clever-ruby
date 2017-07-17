@@ -1,7 +1,7 @@
 ## 1.3.0 (2017-07-17)
 
 * Fix Students.Created events to pull in ID and Type
-* Fix /students/<id>/contacts endpoint to read contacts correctly
+* Fix /students/ID/contacts endpoint to read contacts correctly
 
 ## 1.2.1 (2017-06-27)
 
