@@ -1,4 +1,4 @@
-# Clever::StudentContactsByStudentResponse
+# Clever::StudentContactsForStudentResponse
 
 ## Properties
 Name | Type | Description | Notes

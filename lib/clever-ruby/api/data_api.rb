@@ -134,7 +134,7 @@ module Clever
     # @param id 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
-    # @return [StudentContactsByStudentResponse]
+    # @return [StudentContactsForStudentResponse]
     def get_contacts_for_student(id, opts = {})
       data, _status_code, _headers = get_contacts_for_student_with_http_info(id, opts)
       return data
@@ -145,7 +145,7 @@ module Clever
     # @param id 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
-    # @return [Array<(StudentContactsByStudentResponse, Fixnum, Hash)>] StudentContactsByStudentResponse data, response status code and response headers
+    # @return [Array<(StudentContactsForStudentResponse, Fixnum, Hash)>] StudentContactsForStudentResponse data, response status code and response headers
     def get_contacts_for_student_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DataApi.get_contacts_for_student ..."
@@ -178,7 +178,7 @@ module Clever
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'StudentContactsByStudentResponse')
+        :return_type => 'StudentContactsForStudentResponse')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DataApi#get_contacts_for_student\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

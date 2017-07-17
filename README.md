@@ -167,7 +167,7 @@ Class | Method | HTTP request | Description
  - [Clever::StudentContact](docs/StudentContact.md)
  - [Clever::StudentContactObject](docs/StudentContactObject.md)
  - [Clever::StudentContactResponse](docs/StudentContactResponse.md)
- - [Clever::StudentContactsByStudentResponse](docs/StudentContactsByStudentResponse.md)
+ - [Clever::StudentContactsForStudentResponse](docs/StudentContactsForStudentResponse.md)
  - [Clever::StudentContactsResponse](docs/StudentContactsResponse.md)
  - [Clever::StudentObject](docs/StudentObject.md)
  - [Clever::StudentResponse](docs/StudentResponse.md)

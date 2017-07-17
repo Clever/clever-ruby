@@ -14,7 +14,7 @@ require 'date'
 
 module Clever
 
-  class StudentContactsByStudentResponse
+  class StudentContactsForStudentResponse
     attr_accessor :data
 
 
