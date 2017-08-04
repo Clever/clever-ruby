@@ -1,3 +1,7 @@
+## 1.2.3 (2017-08-04)
+
+* Fix DistrictStatus valid states
+
 ## 1.2.2 (2017-07-17)
 
 * Fix Students.Created events to pull in ID and Type
