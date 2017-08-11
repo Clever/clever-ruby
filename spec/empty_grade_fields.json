@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "data": {
+        "type": "schools.updated",
+        "data": {
+          "object": {
+            "last_modified": "2017-08-09T02:12:56.190Z",
+            "nces_id": "470455001816",
+            "district": "57a0b1d6def84101000000d8",
+            "phone": "(615) 555-5555",
+            "mdr_number": "1234568",
+            "high_grade": "",
+            "created": "2016-08-11T11:46:56.767Z",
+            "name": "Carroll-Oakland Elementary",
+            "school_number": "005",
+            "low_grade": "",
+            "sis_id": "005",
+            "location": {
+              "address": "4664 Huners Point PK",
+              "city": "Lebanon",
+              "state": "TN",
+              "zip": "37087"
+            },
+            "id": "57ac65b02eaddb2064000016"
+          },
+          "previous_attributes": {
+            "low_grade": "",
+            "high_grade": ""
+          }
+        },
+        "created": "2017-08-09T02:16:28.224Z",
+        "id": "598a70777c09dc346c8e4939"
+      },
+      "uri": "/v1.2/events/598a70777c09dc346c8e4939"
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "uri": "/v1.2/events?limit=5"
+    },
+    {
+      "rel": "next",
+      "uri": "/v1.2/events?limit=5&starting_after=594301ff7f264e3ca45e568f"
+    }
+  ],
+  "paging": {
+    "count": 1,
+    "current": 1,
+    "total": 2400
+  }
+}
