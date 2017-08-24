@@ -1,3 +1,8 @@
+## 1.2.4 (2017-08-24)
+
+* Revert unnecessary json dependency upgrade introduced in 1.2.2
+* Lock gem versions to allow Ruby 1.9 usage agai
+
 ## 1.2.3 (2017-08-04)
 
 * Fix DistrictStatus valid states
