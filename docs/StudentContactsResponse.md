@@ -4,5 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**Array&lt;StudentContactResponse&gt;**](StudentContactResponse.md) |  | [optional] 
+**links** | [**Array&lt;Link&gt;**](Link.md) |  | [optional] 
+**paging** | [**Paging**](Paging.md) |  | [optional] 
 
 

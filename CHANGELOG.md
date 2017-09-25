@@ -1,3 +1,7 @@
+## 1.2.5 (2017-09-25)
+
+* Add paging support
+
 ## 1.2.4 (2017-08-24)
 
 * Revert unnecessary json dependency upgrade introduced in 1.2.2

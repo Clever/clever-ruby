@@ -17,18 +17,26 @@ module Clever
   class EventsResponse
     attr_accessor :data
 
+    attr_accessor :links
+
+    attr_accessor :paging
+
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data' => :'data'
+        :'data' => :'data',
+        :'links' => :'links',
+        :'paging' => :'paging'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'data' => :'Array<EventResponse>'
+        :'data' => :'Array<EventResponse>',
+        :'links' => :'Array<Link>',
+        :'paging' => :'Paging'
       }
     end
 
@@ -44,6 +52,16 @@ module Clever
         if (value = attributes[:'data']).is_a?(Array)
           self.data = value
         end
+      end
+
+      if attributes.has_key?(:'links')
+        if (value = attributes[:'links']).is_a?(Array)
+          self.links = value
+        end
+      end
+
+      if attributes.has_key?(:'paging')
+        self.paging = attributes[:'paging']
       end
 
     end
@@ -66,7 +84,9 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data == o.data
+          data == o.data &&
+          links == o.links &&
+          paging == o.paging
     end
 
     # @see the `==` method
@@ -78,7 +98,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data].hash
+      [data, links, paging].hash
     end
 
     # Builds the object from hash

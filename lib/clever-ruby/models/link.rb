@@ -14,29 +14,25 @@ require 'date'
 
 module Clever
 
-  class DistrictsResponse
-    attr_accessor :data
+  class Link
+    attr_accessor :rel
 
-    attr_accessor :links
-
-    attr_accessor :paging
+    attr_accessor :uri
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data' => :'data',
-        :'links' => :'links',
-        :'paging' => :'paging'
+        :'rel' => :'rel',
+        :'uri' => :'uri'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'data' => :'Array<DistrictResponse>',
-        :'links' => :'Array<Link>',
-        :'paging' => :'Paging'
+        :'rel' => :'String',
+        :'uri' => :'String'
       }
     end
 
@@ -48,20 +44,12 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'data')
-        if (value = attributes[:'data']).is_a?(Array)
-          self.data = value
-        end
+      if attributes.has_key?(:'rel')
+        self.rel = attributes[:'rel']
       end
 
-      if attributes.has_key?(:'links')
-        if (value = attributes[:'links']).is_a?(Array)
-          self.links = value
-        end
-      end
-
-      if attributes.has_key?(:'paging')
-        self.paging = attributes[:'paging']
+      if attributes.has_key?(:'uri')
+        self.uri = attributes[:'uri']
       end
 
     end
@@ -84,9 +72,8 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data == o.data &&
-          links == o.links &&
-          paging == o.paging
+          rel == o.rel &&
+          uri == o.uri
     end
 
     # @see the `==` method
@@ -98,7 +85,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data, links, paging].hash
+      [rel, uri].hash
     end
 
     # Builds the object from hash

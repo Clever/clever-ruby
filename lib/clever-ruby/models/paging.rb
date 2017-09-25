@@ -14,29 +14,29 @@ require 'date'
 
 module Clever
 
-  class DistrictsResponse
-    attr_accessor :data
+  class Paging
+    attr_accessor :count
 
-    attr_accessor :links
+    attr_accessor :current
 
-    attr_accessor :paging
+    attr_accessor :total
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data' => :'data',
-        :'links' => :'links',
-        :'paging' => :'paging'
+        :'count' => :'count',
+        :'current' => :'current',
+        :'total' => :'total'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'data' => :'Array<DistrictResponse>',
-        :'links' => :'Array<Link>',
-        :'paging' => :'Paging'
+        :'count' => :'Integer',
+        :'current' => :'Integer',
+        :'total' => :'Integer'
       }
     end
 
@@ -48,20 +48,16 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'data')
-        if (value = attributes[:'data']).is_a?(Array)
-          self.data = value
-        end
+      if attributes.has_key?(:'count')
+        self.count = attributes[:'count']
       end
 
-      if attributes.has_key?(:'links')
-        if (value = attributes[:'links']).is_a?(Array)
-          self.links = value
-        end
+      if attributes.has_key?(:'current')
+        self.current = attributes[:'current']
       end
 
-      if attributes.has_key?(:'paging')
-        self.paging = attributes[:'paging']
+      if attributes.has_key?(:'total')
+        self.total = attributes[:'total']
       end
 
     end
@@ -84,9 +80,9 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data == o.data &&
-          links == o.links &&
-          paging == o.paging
+          count == o.count &&
+          current == o.current &&
+          total == o.total
     end
 
     # @see the `==` method
@@ -98,7 +94,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data, links, paging].hash
+      [count, current, total].hash
     end
 
     # Builds the object from hash
