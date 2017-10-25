@@ -3,9 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**course_description** | **String** |  | [optional] 
-**course_name** | **String** |  | [optional] 
-**course_number** | **String** |  | [optional] 
+**course** | **String** |  | [optional] 
 **created** | **String** |  | [optional] 
 **district** | **String** |  | [optional] 
 **grade** | **String** |  | [optional] 
@@ -20,6 +18,6 @@ Name | Type | Description | Notes
 **subject** | **String** |  | [optional] 
 **teacher** | **String** |  | [optional] 
 **teachers** | **Array&lt;String&gt;** |  | [optional] 
-**term** | [**Term**](Term.md) |  | [optional] 
+**term_id** | **String** |  | [optional] 
 
 
