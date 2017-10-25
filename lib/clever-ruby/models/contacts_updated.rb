@@ -11,10 +11,11 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 =end
 
 require 'date'
+require File.expand_path('../event.rb', __FILE__)
 
-module SwaggerClient
+module Clever
 
-  class ContactsUpdated
+  class ContactsUpdated < Event
     attr_accessor :created
 
     attr_accessor :id
@@ -168,7 +169,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = Clever.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

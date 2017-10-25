@@ -12,7 +12,7 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 
 require 'date'
 
-module SwaggerClient
+module Clever
 
   class TermResponse
     attr_accessor :data
@@ -136,7 +136,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = Clever.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end
