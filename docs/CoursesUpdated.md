@@ -1,4 +1,4 @@
-# SwaggerClient::CoursesUpdated
+# Clever::CoursesUpdated
 
 ## Properties
 Name | Type | Description | Notes

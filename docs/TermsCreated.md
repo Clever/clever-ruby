@@ -1,4 +1,4 @@
-# SwaggerClient::TermsCreated
+# Clever::TermsCreated
 
 ## Properties
 Name | Type | Description | Notes

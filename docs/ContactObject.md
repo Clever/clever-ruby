@@ -1,4 +1,4 @@
-# SwaggerClient::ContactObject
+# Clever::ContactObject
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::TermsUpdated
+# Clever::TermsUpdated
 
 ## Properties
 Name | Type | Description | Notes

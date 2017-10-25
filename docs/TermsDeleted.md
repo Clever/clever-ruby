@@ -1,4 +1,4 @@
-# SwaggerClient::TermsDeleted
+# Clever::TermsDeleted
 
 ## Properties
 Name | Type | Description | Notes

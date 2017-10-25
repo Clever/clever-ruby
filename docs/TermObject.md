@@ -1,4 +1,4 @@
-# SwaggerClient::TermObject
+# Clever::TermObject
 
 ## Properties
 Name | Type | Description | Notes

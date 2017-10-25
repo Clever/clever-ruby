@@ -1,4 +1,4 @@
-# SwaggerClient::CourseResponse
+# Clever::CourseResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::ContactsDeleted
+# Clever::ContactsDeleted
 
 ## Properties
 Name | Type | Description | Notes

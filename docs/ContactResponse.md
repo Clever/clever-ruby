@@ -1,4 +1,4 @@
-# SwaggerClient::ContactResponse
+# Clever::ContactResponse
 
 ## Properties
 Name | Type | Description | Notes

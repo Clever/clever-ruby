@@ -1,4 +1,4 @@
-# SwaggerClient::DistrictAdminObject
+# Clever::DistrictAdminObject
 
 ## Properties
 Name | Type | Description | Notes
