@@ -7,4 +7,4 @@ test:
 	bundle install && bundle exec rake spec
 
 build:
-	cd override && ./override.sh
+	./override/override.sh
