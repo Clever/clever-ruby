@@ -15,7 +15,7 @@ require File.expand_path('../event.rb', __FILE__)
 
 module Clever
 
-  class StudentsDeleted < Event
+  class CoursesDeleted < Event
     attr_accessor :created
 
     attr_accessor :id
@@ -41,7 +41,7 @@ module Clever
         :'created' => :'String',
         :'id' => :'String',
         :'type' => :'String',
-        :'data' => :'StudentObject'
+        :'data' => :'CourseObject'
       }
     end
 
