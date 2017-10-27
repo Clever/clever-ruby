@@ -134,6 +134,8 @@ module Clever
     # @param id 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
+    # @option opts [String] :starting_after 
+    # @option opts [String] :ending_before 
     # @return [ContactsResponse]
     def get_contacts_for_student(id, opts = {})
       data, _status_code, _headers = get_contacts_for_student_with_http_info(id, opts)
@@ -145,6 +147,8 @@ module Clever
     # @param id 
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :limit 
+    # @option opts [String] :starting_after 
+    # @option opts [String] :ending_before 
     # @return [Array<(ContactsResponse, Fixnum, Hash)>] ContactsResponse data, response status code and response headers
     def get_contacts_for_student_with_http_info(id, opts = {})
       if @api_client.config.debugging
@@ -160,6 +164,8 @@ module Clever
       # query parameters
       query_params = {}
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'starting_after'] = opts[:'starting_after'] if !opts[:'starting_after'].nil?
+      query_params[:'ending_before'] = opts[:'ending_before'] if !opts[:'ending_before'].nil?
 
       # header parameters
       header_params = {}
