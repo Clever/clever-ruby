@@ -456,6 +456,7 @@ module Clever
     # 
     # Returns a list of district admins
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit 
     # @option opts [String] :starting_after 
     # @option opts [String] :ending_before 
     # @return [DistrictAdminsResponse]
@@ -467,6 +468,7 @@ module Clever
     # 
     # Returns a list of district admins
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit 
     # @option opts [String] :starting_after 
     # @option opts [String] :ending_before 
     # @return [Array<(DistrictAdminsResponse, Fixnum, Hash)>] DistrictAdminsResponse data, response status code and response headers
@@ -479,6 +481,7 @@ module Clever
 
       # query parameters
       query_params = {}
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
       query_params[:'starting_after'] = opts[:'starting_after'] if !opts[:'starting_after'].nil?
       query_params[:'ending_before'] = opts[:'ending_before'] if !opts[:'ending_before'].nil?
 

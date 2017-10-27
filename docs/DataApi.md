@@ -499,6 +499,7 @@ end
 api_instance = Clever::DataApi.new
 
 opts = { 
+  limit: 56, # Integer | 
   starting_after: "starting_after_example", # String | 
   ending_before: "ending_before_example" # String | 
 }
@@ -515,6 +516,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**|  | [optional] 
  **starting_after** | **String**|  | [optional] 
  **ending_before** | **String**|  | [optional] 
 
