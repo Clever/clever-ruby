@@ -151,11 +151,23 @@ module Clever
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      phone_type_validator = EnumAttributeValidator.new('String', ["Cell", "Home", "Work", "Other", ""])
+      return false unless phone_type_validator.valid?(@phone_type)
       relationship_validator = EnumAttributeValidator.new('String', ["Parent", "Grandparent", "Self", "Aunt/Uncle", "Sibling", "Other", ""])
       return false unless relationship_validator.valid?(@relationship)
       type_validator = EnumAttributeValidator.new('String', ["Parent/Guardian", "Emergency", "Primary", "Secondary", "Family", "Other", ""])
       return false unless type_validator.valid?(@type)
       return true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] phone_type Object to be assigned
+    def phone_type=(phone_type)
+      validator = EnumAttributeValidator.new('String', ["Cell", "Home", "Work", "Other", ""])
+      unless validator.valid?(phone_type)
+        fail ArgumentError, "invalid value for 'phone_type', must be one of #{validator.allowable_values}."
+      end
+      @phone_type = phone_type
     end
 
     # Custom attribute writer method checking allowed values (enum).
