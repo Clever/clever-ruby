@@ -231,10 +231,10 @@ Class | Method | HTTP request | Description
 
 ## Previous Versions
 
-The current client support v1.2 of the API. For v1.1 please use:
+The current client support v2.0 of the API. For v1.2 please use:
 
-https://rubygems.org/gems/clever-ruby/versions/0.14.0
-https://github.com/Clever/clever-ruby/tree/0.14
+- https://rubygems.org/gems/clever-ruby/versions/1.2.4
+- https://github.com/Clever/clever-ruby/tree/v1.2.4
 
 
 ## Updating the Library
