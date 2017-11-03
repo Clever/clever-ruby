@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Array&lt;DistrictAdmin&gt;**](DistrictAdmin.md) |  | [optional] 
+**data** | [**Array&lt;DistrictAdminResponse&gt;**](DistrictAdminResponse.md) |  | [optional] 
 
 
