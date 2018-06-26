@@ -6,7 +6,7 @@ describe Clever::DataApi do
     WebMock.allow_net_connect!
     @api_instance = Clever::DataApi.new
     Clever.configure do |config|
-      config.access_token = 'DEMO_TOKEN'
+      config.access_token = 'TEST_TOKEN'
     end
   end
 

@@ -6,7 +6,7 @@ describe Clever::EventsApi do
     WebMock.disable_net_connect!(allow_localhost: true)
     @api_instance = Clever::EventsApi.new
     Clever.configure do |config|
-      config.access_token = 'DEMO_TOKEN'
+      config.access_token = 'TEST_TOKEN'
     end
 
     file = File.read('spec/events.json')
