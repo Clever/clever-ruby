@@ -12,7 +12,7 @@ describe Clever::DataApi do
 
   describe ".get_contacts_for_student" do
     it "returns array of StudentContacts" do
-      student_id = "530e5961049e75a9262cffe4"
+      student_id = "58da8c63d7dc0ca0680003ed"
       contacts = @api_instance.get_contacts_for_student(student_id).data
       expect(contacts.length).to eq(1)
       expect(contacts.first.class).to eq(Clever::StudentContact)
