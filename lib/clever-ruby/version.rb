@@ -11,5 +11,5 @@ Swagger Codegen version: 2.2.3
 =end
 
 module Clever
-  VERSION = "1.2.4"
+  VERSION = "1.2.5"
 end
