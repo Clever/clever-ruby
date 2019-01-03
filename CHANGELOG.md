@@ -1,3 +1,7 @@
+## 2.0.2 (2019-01-03)
+
+* Relax json dependency
+
 ## 2.0.1 (2018-05-15)
 
 * Change students home_language 'Telegu' to 'Telugu'
