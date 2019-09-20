@@ -1,3 +1,7 @@
+## 2.1.0 (2019-09-20)
+
+* Update to use API v2.1
+
 ## 2.0.2 (2019-01-03)
 
 * Relax json dependency

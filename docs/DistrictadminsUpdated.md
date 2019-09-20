@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **type** | **String** |  | 
 **data** | [**DistrictAdminObject**](DistrictAdminObject.md) |  | [optional] 
+**previous_attributes** | **Object** |  | [optional] 
 
 

@@ -1,6 +1,6 @@
 # Clever::EventsApi
 
-All URIs are relative to *https://api.clever.com/v2.0*
+All URIs are relative to *https://api.clever.com/v2.1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,7 +27,7 @@ end
 
 api_instance = Clever::EventsApi.new
 
-id = "id_example" # String | 
+id = 'id_example' # String | 
 
 
 begin
@@ -80,10 +80,10 @@ api_instance = Clever::EventsApi.new
 
 opts = { 
   limit: 56, # Integer | 
-  starting_after: "starting_after_example", # String | 
-  ending_before: "ending_before_example", # String | 
-  school: "school_example", # String | 
-  record_type: ["record_type_example"] # Array<String> | 
+  starting_after: 'starting_after_example', # String | 
+  ending_before: 'ending_before_example', # String | 
+  school: 'school_example', # String | 
+  record_type: ['record_type_example'] # Array<String> | 
 }
 
 begin
