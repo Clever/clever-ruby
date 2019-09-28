@@ -1,3 +1,6 @@
+# NOTICE
+This library is no longer maintained by Clever, but if you would like to generate your own using the swagger file, it is available at https://github.com/Clever/swagger-api.
+
 # clever-ruby
 
 Clever - the Ruby gem for the Clever API
