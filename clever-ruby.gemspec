@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 3.6', '>= 3.6.0'
   s.add_development_dependency 'vcr', '>= 3.0.1', '~> 5.1'
   s.add_development_dependency 'webmock', '>= 1.24.3', '~> 2.3'
-  s.add_development_dependency 'autotest', '~> 4.4', '>= 4.4.6'
+  s.add_development_dependency 'autotest', '>= 4.4.6', '~> 5.0'
   s.add_development_dependency 'autotest-rails-pure', '~> 4.1', '>= 4.1.2'
   s.add_development_dependency 'autotest-growl', '~> 0.2', '>= 0.2.16'
   s.add_development_dependency 'autotest-fsevent', '~> 0.2', '>= 0.2.12'
