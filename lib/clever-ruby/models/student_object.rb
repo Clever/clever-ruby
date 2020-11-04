@@ -15,20 +15,22 @@ require 'date'
 module Clever
 
   class StudentObject
-    attr_accessor :object
+    attr_accessor :object, :previous_object, :changed_attributes
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'object' => :'object'
+        :'object' => :'object',
+        :'previous_object' => :'previous_attributes'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'object' => :'Student'
+        :'object' => :'Student',
+        :'previous_object' => :'PreviousStudent'
       }
     end
 
@@ -95,6 +97,7 @@ module Clever
           self.send("#{key}=", _deserialize(type, attributes[self.class.attribute_map[key]]))
         end # or else data not found in attributes(hash), not an issue as the data can be optional
       end
+      self.changed_attributes = (self.previous_object&.to_hash || {}).keys
 
       self
     end

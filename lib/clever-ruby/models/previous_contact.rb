@@ -14,23 +14,56 @@ require 'date'
 
 module Clever
 
-  class ContactObject
-    attr_accessor :object, :previous_object, :changed_attributes
+  class Contact
+    attr_accessor :district
 
+    attr_accessor :email
+
+    attr_accessor :id
+
+    attr_accessor :name
+
+    attr_accessor :phone
+
+    attr_accessor :phone_type
+
+    attr_accessor :relationship
+
+    attr_accessor :sis_id
+
+    attr_accessor :students
+
+    attr_accessor :type
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'object' => :'object',
-        :'previous_object' => :'previous_attributes'
+        :'district' => :'district',
+        :'email' => :'email',
+        :'id' => :'id',
+        :'name' => :'name',
+        :'phone' => :'phone',
+        :'phone_type' => :'phone_type',
+        :'relationship' => :'relationship',
+        :'sis_id' => :'sis_id',
+        :'students' => :'students',
+        :'type' => :'type'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'object' => :'Contact',
-        :'previous_object' => :'PreviousContact'
+        :'district' => :'String',
+        :'email' => :'String',
+        :'id' => :'String',
+        :'name' => :'String',
+        :'phone' => :'String',
+        :'phone_type' => :'String',
+        :'relationship' => :'String',
+        :'sis_id' => :'String',
+        :'students' => :'Array<String>',
+        :'type' => :'String'
       }
     end
 
@@ -42,8 +75,46 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'object')
-        self.object = attributes[:'object']
+      if attributes.has_key?(:'district')
+        self.district = attributes[:'district']
+      end
+
+      if attributes.has_key?(:'email')
+        self.email = attributes[:'email']
+      end
+
+      if attributes.has_key?(:'id')
+        self.id = attributes[:'id']
+      end
+
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
+      end
+
+      if attributes.has_key?(:'phone')
+        self.phone = attributes[:'phone']
+      end
+
+      if attributes.has_key?(:'phone_type')
+        self.phone_type = attributes[:'phone_type']
+      end
+
+      if attributes.has_key?(:'relationship')
+        self.relationship = attributes[:'relationship']
+      end
+
+      if attributes.has_key?(:'sis_id')
+        self.sis_id = attributes[:'sis_id']
+      end
+
+      if attributes.has_key?(:'students')
+        if (value = attributes[:'students']).is_a?(Array)
+          self.students = value
+        end
+      end
+
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
       end
 
     end
@@ -58,7 +129,7 @@ module Clever
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return true
+      true
     end
 
     # Checks equality by comparing each attribute.
@@ -66,7 +137,16 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          object == o.object
+          district == o.district &&
+          email == o.email &&
+          id == o.id &&
+          name == o.name &&
+          phone == o.phone &&
+          phone_type == o.phone_type &&
+          relationship == o.relationship &&
+          sis_id == o.sis_id &&
+          students == o.students &&
+          type == o.type
     end
 
     # @see the `==` method
@@ -78,7 +158,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [object].hash
+      [district, email, id, name, phone, phone_type, relationship, sis_id, students, type].hash
     end
 
     # Builds the object from hash
@@ -97,7 +177,6 @@ module Clever
           self.send("#{key}=", _deserialize(type, attributes[self.class.attribute_map[key]]))
         end # or else data not found in attributes(hash), not an issue as the data can be optional
       end
-      previous_hash = self.previous_object&.to_hash || {}
 
       self
     end
