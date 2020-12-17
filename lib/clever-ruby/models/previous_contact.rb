@@ -14,7 +14,7 @@ require 'date'
 
 module Clever
 
-  class Contact
+  class PreviousContact
     attr_accessor :district
 
     attr_accessor :email
