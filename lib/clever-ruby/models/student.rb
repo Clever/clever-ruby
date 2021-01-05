@@ -267,7 +267,7 @@ module Clever
       return false unless ell_status_validator.valid?(@ell_status)
       gender_validator = EnumAttributeValidator.new('String', ["M", "F", ""])
       return false unless gender_validator.valid?(@gender)
-      grade_validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      grade_validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "TransitionalKindergarten", "Kindergarten", "InfantToddler", "Preschool", "PostGraduate", "Ungraded", "Other", ""])
       return false unless grade_validator.valid?(@grade)
       hispanic_ethnicity_validator = EnumAttributeValidator.new('String', ["Y", "N", ""])
       return false unless hispanic_ethnicity_validator.valid?(@hispanic_ethnicity)
@@ -301,7 +301,7 @@ module Clever
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] grade Object to be assigned
     def grade=(grade)
-      validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "TransitionalKindergarten", "Kindergarten", "InfantToddler", "Preschool", "PostGraduate", "Ungraded", "Other", ""])
       unless validator.valid?(grade)
         fail ArgumentError, "invalid value for 'grade', must be one of #{validator.allowable_values}."
       end

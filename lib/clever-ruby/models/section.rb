@@ -201,7 +201,7 @@ module Clever
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      grade_validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      grade_validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "TransitionalKindergarten", "Kindergarten", "InfantToddler", "Preschool", "PostGraduate", "Ungraded", "Other", ""])
       return false unless grade_validator.valid?(@grade)
       subject_validator = EnumAttributeValidator.new('String', ["english/language arts", "math", "science", "social studies", "language", "homeroom/advisory", "interventions/online learning", "technology and engineering", "PE and health", "arts and music", "other"])
       return false unless subject_validator.valid?(@subject)
@@ -211,7 +211,7 @@ module Clever
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] grade Object to be assigned
     def grade=(grade)
-      validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "Kindergarten", "PostGraduate", "Other"])
+      validator = EnumAttributeValidator.new('String', ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "PreKindergarten", "TransitionalKindergarten", "Kindergarten", "InfantToddler", "Preschool", "PostGraduate", "Ungraded", "Other", ""])
       unless validator.valid?(grade)
         fail ArgumentError, "invalid value for 'grade', must be one of #{validator.allowable_values}."
       end
