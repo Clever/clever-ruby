@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **ext** | **Object** |  | [optional] 
 **id** | **String** |  | [optional] 
-**name** | [**Name**](Name.md) |  | [optional] 
+**name** | [**AdminName**](AdminName.md) |  | [optional] 
 **schools** | **Array&lt;String&gt;** |  | [optional] 
 **staff_id** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 

@@ -13,24 +13,46 @@ Swagger Codegen version: 2.4.18
 require 'date'
 
 module Clever
-  class SchoolAdminsResponse
-    attr_accessor :data
+  class Link
+    attr_accessor :rel
 
-    attr_accessor :links
+    attr_accessor :uri
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data' => :'data',
-        :'links' => :'links'
+        :'rel' => :'rel',
+        :'uri' => :'uri'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'data' => :'Array<SchoolAdminResponse>',
-        :'links' => :'Array<Link>'
+        :'rel' => :'String',
+        :'uri' => :'String'
       }
     end
 
@@ -42,16 +64,12 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'data')
-        if (value = attributes[:'data']).is_a?(Array)
-          self.data = value
-        end
+      if attributes.has_key?(:'rel')
+        self.rel = attributes[:'rel']
       end
 
-      if attributes.has_key?(:'links')
-        if (value = attributes[:'links']).is_a?(Array)
-          self.links = value
-        end
+      if attributes.has_key?(:'uri')
+        self.uri = attributes[:'uri']
       end
     end
 
@@ -65,7 +83,19 @@ module Clever
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      rel_validator = EnumAttributeValidator.new('String', ['next', 'prev', 'self'])
+      return false unless rel_validator.valid?(@rel)
       true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] rel Object to be assigned
+    def rel=(rel)
+      validator = EnumAttributeValidator.new('String', ['next', 'prev', 'self'])
+      unless validator.valid?(rel)
+        fail ArgumentError, 'invalid value for "rel", must be one of #{validator.allowable_values}.'
+      end
+      @rel = rel
     end
 
     # Checks equality by comparing each attribute.
@@ -73,8 +103,8 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data == o.data &&
-          links == o.links
+          rel == o.rel &&
+          uri == o.uri
     end
 
     # @see the `==` method
@@ -86,7 +116,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data, links].hash
+      [rel, uri].hash
     end
 
     # Builds the object from hash

@@ -13,24 +13,24 @@ Swagger Codegen version: 2.4.18
 require 'date'
 
 module Clever
-  class SchoolAdminsResponse
-    attr_accessor :data
+  class AdminName
+    attr_accessor :first
 
-    attr_accessor :links
+    attr_accessor :last
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data' => :'data',
-        :'links' => :'links'
+        :'first' => :'first',
+        :'last' => :'last'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'data' => :'Array<SchoolAdminResponse>',
-        :'links' => :'Array<Link>'
+        :'first' => :'String',
+        :'last' => :'String'
       }
     end
 
@@ -42,16 +42,12 @@ module Clever
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'data')
-        if (value = attributes[:'data']).is_a?(Array)
-          self.data = value
-        end
+      if attributes.has_key?(:'first')
+        self.first = attributes[:'first']
       end
 
-      if attributes.has_key?(:'links')
-        if (value = attributes[:'links']).is_a?(Array)
-          self.links = value
-        end
+      if attributes.has_key?(:'last')
+        self.last = attributes[:'last']
       end
     end
 
@@ -73,8 +69,8 @@ module Clever
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          data == o.data &&
-          links == o.links
+          first == o.first &&
+          last == o.last
     end
 
     # @see the `==` method
@@ -86,7 +82,7 @@ module Clever
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [data, links].hash
+      [first, last].hash
     end
 
     # Builds the object from hash

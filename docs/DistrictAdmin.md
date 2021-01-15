@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **district** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
-**name** | [**Name**](Name.md) |  | [optional] 
+**name** | [**AdminName**](AdminName.md) |  | [optional] 
 **title** | **String** |  | [optional] 
 
 
