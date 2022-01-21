@@ -1,3 +1,7 @@
+## 2.0.3 (2022-01-21)
+
+* Support ruby 3.x
+
 ## 2.0.2 (2019-01-03)
 
 * Relax json dependency
